@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
  acts_as_authentic
 #  searchable_by :name, :surname1, :surname2, :email
 
-  belongs_to :group
-  belongs_to :dependency
+  belongs_to :rol
+  belongs_to :master
 
   validates_presence_of     :login #, :email
 #  validates_presence_of     :password
@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
 #  validates_length_of       :password, :within => 4..40
   validates_confirmation_of :password
   validates_length_of       :login,    :within => 3..40
-  attr_accessible :login, :email, :password, :password_confirmation, :group_id, :paterno, :materno, :name, :dependency_id, :rfc, :cedula
+
+  attr_accessible :login, :email, :password, :password_confirmation, :rol_id, :surname1, :surname2, :name, :master_id, :phone
+  
 #  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
   validates_format_of :login, :with => /^[A-Za-z.\d_]+$/, :message => "sin espacios"
 
@@ -55,5 +57,7 @@ class User < ActiveRecord::Base
    end
    return @dependencies
   end
+
+  
 
 end

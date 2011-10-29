@@ -2,7 +2,7 @@
 <div id="content-outer">
 <!-- start content -->
 <div id="content">
-<% form_for @user, :url => account_path do |form| %>
+<% form_for(@user) do |form| %>
 <%= form.error_messages %>
 <div id="page-heading"><h1>Registro de Nuevo Usuario</h1></div>
 
@@ -39,35 +39,46 @@
                       <th valign="top"><%= form.label :"Confirmar Contraseña" %></th>
                       <td><%= form.password_field :password_confirmation %></td>
                 </tr>
+
 		<tr>
                       <th valign="top"><%= form.label :"Tipo de rol" %></th>
                       <td><%= form.select(:rol_id, Rol.all.collect {|p| [ p.name, p.id ] })%></td>
                 </tr>
+
+
 		<tr>
                       <th valign="top"><h3>Datos Generales</h3></th>
                 </tr>
 		<tr>
                       <th valign="top"><%= form.label :'Nombre' %></th>
-                      <td><%= text_field_tag 'firstname' %></td>
+                      <td><%= form.text_field :name %></td>
                 </tr>
 		<tr>
                       <th valign="top"><%= form.label :'Apellido paterno' %></th>
-                      <td><%= text_field_tag 'lastname1' %></td>
+                      <td><%= form.text_field :surname1 %></td>
                 </tr>
 		<tr>
                       <th valign="top"><%= form.label :'Apellido materno' %></th>
-                      <td><%= text_field_tag 'lastname2' %></td>
+                      <td><%= form.text_field :surname2 %></td>
                 </tr>
+
+	        <tr>
+                      <th valign="top"><%= form.label :"Maestria" %></th>
+                      <td><%= form.select(:master_id, Master.all.collect {|p| [ p.name, p.id ] })%></td>
+                </tr>
+
+
+
 		<tr>
-                      <th valign="top"><%= form.label :'Cédula Profesional' %></th>
-                      <td><%= text_field_tag 'license' %></td>
+                      <th valign="top"><%= form.label :'Correo' %></th>
+                      <td><%= form.text_field :email %></td>
                 </tr>
 
 	        <tr>
 		<th>&nbsp;</th>
 		<td valign="top">
 			<%= form.submit 'Registrar', :class => 'form-submit' %>
-			<%= link_to 'Regresar', account_url, :class => 'form-reset' %>
+			<%= link_to 'Regresar', root_path, :class => 'form-reset' %>
 		</td>
 		<td></td>
 	</tr>

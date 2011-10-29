@@ -10,7 +10,6 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      # flash[:notice] = "Bienvenido al sistema de Embarazo!"
       redirect_back_or_default('/navigators')
     else
       render :action => :new

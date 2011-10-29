@@ -1,93 +1,63 @@
-<!-- start content-outer -->
-<div id="content-outer">
-<!-- start content -->
-<div id="content">
-<% form_for @user, :url => account_path do |f| %>
-<%= f.error_messages %>
-<div id="page-heading"><h1>Editar cuenta</h1></div>
+<div style="margin: auto; padding-left:50px; width: 900px;">
+<h1>Administrador de Usuarios</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
 
 
-<table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
-<tr>
-	<th rowspan="3" class="sized"><%= image_tag "./shared/side_shadowleft.jpg", :width => "20", :height => "300" %></th>
-        <th class="topleft"></th>
-	<td id="tbl-border-top">&nbsp;</td>
-	<th class="topright"></th>
-	<th rowspan="3" class="sized"><%= image_tag "./shared/side_shadowright.jpg", :width => "20", :height => "300" %></th>
-</tr>
-<tr>
-	<td id="tbl-border-left"></td>
-	<td>
-	<!--  start content-table-inner -->
-	<div id="content-table-inner">
-	
-	<table border="0" width="100%" cellpadding="0" cellspacing="0">
-	<tr valign="top">
-	<td>
-	
-		<!-- start id-form -->
-		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
-		<tr>
-			<%= f.label :Usuario%>&nbsp;
-			<%= current_user.login %><br />
-		</tr>
-		<tr>
-			<%= f.label :Contraseña, f.object.new_record? ? nil : "Cambiar Contraseña" %><br />
-			<%= f.password_field :password %><br />
-		</tr>
-		<tr>
-		        <%= f.label :"Confirmar Contraseña" %><br />
-		        <%= f.password_field :password_confirmation %><br />
-		</tr>
-	        <tr>
-		<td valign="top">
-			<br>
-			<%= f.submit "Actualizar", :class => 'form-submit' %>
-			<%= link_to "Regresar", account_path, :class => 'form-reset' %>
-		</td>
-		<td></td>
-	</tr>
-		    
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Paterno:</div>
+    <div class="cell_right"><%= f.text_field :surname1 %></div>
+  </div>
+</p>
 
-	        </table>
-	        <!-- end id-form  -->
-	</td>
-	<td>
-	
-	
-</td>
-</tr>
-<tr>
-<td><%= image_tag "./shared/blank.gif", :width => "695", :height =>"1" %></td>
-<td></td>
-</tr>
-</table>
- 
-<div class="clear"></div>
- 
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Materno:</div>
+    <div class="cell_right"><%= f.text_field :surname2 %></div>
+  </div>
+</p>
 
-</div>
-<!--  end content-table-inner  -->
-</td>
-<td id="tbl-border-right"></td>
-</tr>
-<tr>
-	<th class="sized bottomleft"></th>
-	<td id="tbl-border-bottom">&nbsp;</td>
-	<th class="sized bottomright"></th>
-</tr>
-</table>
+<p>
+  <div class="row">
+    <div class="cell_left">Nombre:</div>
+    <div class="cell_right"><%= f.text_field :name %></div>
+  </div>
+</p>
 
+<p>
+ <div class="row">
+    <div class="cell_left">Celular:</div>
+    <div class="cell_right"><%= f.text_field :phone %></div>
+  </div>
+</p>
 
-<div class="clear">&nbsp;</div>
-</div>
+<p>
+  <div class="row">
+    <div class="cell_left">Correo electronico:</div>
+    <div class="cell_right"><%= f.text_field :email %></div>
+  </div>
+</p>
 
-<!--  end content -->
-<div class="clear">&nbsp;</div>
-</div>
-<!--  end content-outer -->
+<p>
+  <div class="row">
+    <div class="cell_left">Tipo de Usuario:</div>
+    <div class="cell_right"><%=  @user.rol.name %></div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="cell_left">Maestria:</div>
+    <div class="cell_right"><%= f.select(:master_id, Master.all.collect {|p| [ p.name, p.id ] })%></div>
+  </div>
+</p>
+
+<p style="padding-left: 154px;">
+  <%= submit_tag 'Aceptar' %> | <%= link_to "Cancelar", root_path %>
+  </p>
 
 <% end %>
 
 
-
+</div>

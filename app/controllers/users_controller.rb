@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   #before_filter :require_no_user, :only => [ :create, :new]
   #before_filter :require_user, :only => [:show, :edit, :update, :create, :new]
 
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end
@@ -18,20 +22,29 @@ class UsersController < ApplicationController
   end
 
   def show
-     @user = @current_user
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
   end
 
   def edit
-    @user = @current_user
+    @user = User.find(params[:id])
+  end
+
+  def change_password
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = @current_user # makes our views "cleaner" and more consistent
-    if @user.update_attributes(params[:user])
-    	    flash[:notice] = "Cuenta actualizada!"
-      redirect_to account_url
-    else
-      render :action => :edit
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to(@user, :notice => 'Cuenta actualizada.') }
+      else
+        format.html { render :action => "edit" }
+      end
     end
   end
 end

@@ -1,0 +1,572 @@
+# Spanish as spoken in Mexico (es-MX) translations for Rails
+# by Edgar J. Suárez (edgar.js@gmail.com)
+
+es:
+  number:
+    percentage:
+      format:
+        delimiter: ""
+    currency:
+      format: "%u%n"
+      delimiter: ","
+      unit: "$"
+      precision: 2
+      separator: "."
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+      storage_units: [Bytes, KB, MB, GB, TB]
+    precision:
+      format:
+        delimiter: ""
+
+# Paginate Translate
+  previous: 'Anterior'
+  next: 'Siguiente'
+
+  date:
+    order: [:day, :month, :year]
+    abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
+    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+    day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    formats:
+      short: "%d de %b"
+      default: "%d/%m/%Y"
+      long: "%A, %d de %B de %Y"
+      customize: "%d de %B de %Y"
+  time:
+    formats:
+      short: "%d de %b a las %H:%M hrs"
+      default: "%a, %d de %b de %Y a las %H:%M:%S %Z"
+      long: "%A, %d de %B de %Y a las %I:%M %p"
+      human: "%I:%M %p"
+    am: "am"
+    pm: "pm"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "medio minuto"
+      less_than_x_seconds:
+        one: "menos de 1 segundo"
+        other: "menos de {{count}} segundos"
+      x_seconds:
+        one: "1 segundo"
+        other: "{{count}} segundos"
+      less_than_x_minutes:
+        one: "menos de 1 minuto"
+        other: "menos de {{count}} minutos"
+      x_minutes:
+        one: "1 minuto"
+        other: "{{count}} minutos"
+      about_x_hours:
+        one: "cerca de 1 hora"
+        other: "cerca de {{count}} horas"
+      x_days:
+        one: "1 día"
+        other: "{{count}} días"
+      about_x_months:
+        one: "cerca de 1 mes"
+        other: "cerca de {{count}} meses"
+      x_months:
+        one: "1 mes"
+        other: "{{count}} meses"
+      about_x_years:
+        other: "cerca de {{count}} años"
+        one: "cerca de 1 año"
+      over_x_years:
+        one: "más de 1 año"
+        other: "más de {{count}} años"
+        
+  authlogic:  
+    error_messages:  
+      login_blank: "no debe estar en blanco"  
+      login_not_found: "no es válido"  
+      login_invalid: "solo debe ingresar letras, números y -_@ sin espacios"  
+      consecutive_failed_logins_limit_exceeded: "Se sobrepaso el número consecutivo de logins, la cuenta fue desactivada"  
+      email_invalid: "debe ser un email válido."  
+      password_blank: "no debe estar en blanco"  
+      password_invalid: "no es válido"  
+      not_active: "Su cuenta no esta activa"  
+      not_confirmed: "Su cuenta no ha sido confirmada"  
+      not_approved: "Su cuenta no fue aprovada"  
+      no_authentication_details: "Usted no dio ningún detalle para la autenticación."  
+    models:  
+      user_session: "UsuarioSession (o lo que este usando)"  
+    attributes:  
+      user_session: # "(or whatever name you are using)"  
+        login: "Usuario"  
+        email: "email"  
+        password: "Contraseña"  
+        remember_me: "Recuerdame"    
+
+        
+        
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "{{model}} no pudo guardarse debido a 1 error"
+          other: "{{model}} no pudo guardarse debido a {{count}} errores"
+        body: "Revise que los siguientes campos sean válidos:"
+      messages:
+        inclusion: "esta fuera de el rango"
+        exclusion: "está reservado"
+        invalid: "es inválido"
+        invalid_date: "es una fecha inválida"
+        confirmation: "no coincide con la confirmación"
+        blank: "no puede estar en blanco"
+        empty: "no puede estar vacío"
+        not_a_number: "no es un número"
+        taken: "ya ha sido tomado"
+        less_than: "debe ser menor que {{count}}"
+        less_than_or_equal_to: "debe ser menor o igual que {{count}}"
+        greater_than: "debe ser mayor que {{count}}"
+        greater_than_or_equal_to: "debe ser mayor o igual que {{count}}"
+        too_short:
+          one: "es demasiado corto (mínimo 1 caracter)"
+          other: "es demasiado corto (mínimo {{count}} caracteres)"
+        too_long:
+          one: "es demasiado largo (máximo 1 caracter)"
+          other: "es demasiado largo (máximo {{count}} caracteres)"
+        equal_to: "debe ser igual a {{count}}"
+        wrong_length:
+          one: "longitud errónea (debe ser de 1 caracter)"
+          other: "longitud errónea (debe ser de {{count}} caracteres)"
+        accepted: "debe ser aceptado"
+        even: "debe ser un número par"
+        odd: "debe ser un número non"
+
+     # Append your own errors here or at the model/attributes scope.
+
+    models:
+     detection: "Hoja de Deteccion"
+     patient: "Paciente"
+     laboratory: "Resultados de Laboratorio"
+     controlcard: "Tarjeta de Control"
+     meeting: "Cita"
+     consultcard: "Tarjeta de Consulta"
+     somatometry: "Datos de Somatometría"
+     appointment: "Cita"
+     medical_history: "Historia Medica General"   
+     homeopathy: "Historia Medica de Homeopatía"
+     acupuncture: "Acupuntura"
+     opinion_questionary: "Cuestionario de Opinión"
+     progress_note: "Nota de Evolución"
+     diabete: "Cédula de riesgo de Enfermedad Crónica"
+     user_session: "Inicio de sesión"
+     pharmacy: "Farmacia"
+     exploration: "Historía Clínica de Fitoterapía 1a Vez"
+     neuroendocrine: "Diagnóstico Funcional Neuroendócrino"
+     follow: "Hoja de seguimiento"
+     acu_subsequent: "Historía Clínica Subsecuente de Acupuntura"
+     social_work: "Estudio Familiar"
+        # Overrides default messages
+
+    attributes:
+     psychology:
+        date: "Fecha"
+        weeks_of_gestation: "Semanas de Gestación"
+        good_health_q1: "1.- ¿Se ha sentido bien y con buena salud?"
+        exhausted_q2: "2.- ¿Se ha sentido agotado y sin fuerzas para nada"
+        sick_q3: "3.- ¿Ha tenido la sensacion de estar enfermo?"
+        headache_q4: "4.- ¿Ha tenido dolores de cabeza?"
+        chill_q5: "5.- ¿Ha tenido escalofríos o bochornos"
+        full_of_energy_q6: "6.- ¿Se ha sentido lleno de vida o energía?"
+        insomnia_q7: "7.- ¿Ha tenido dificultad para dormirse o consiliar el sueño?"
+        insomnia_all_night_q8: "8.- ¿Ha tenido dificultad para dormid e un jalón toda la noche?"
+        restless_nights_q9: "9.- ¿Ha pasado noches inquietas o intranquilas?"
+        satisfied_to_do_things_q10: "10.- ¿Se ha sentido satisfecho con su manera de hacer las cosas?"
+        enjoy_daily_activities_q11: "11.- ¿Disfruta sus actividades diarias?"
+        bad_mood_q12: "12.- ¿Se ha sentido irritado y de mal humor?"
+        afraid_q13: "13.- ¿Se ha sentido asustado y con mucho miedo sin que haya una buena razón?"
+        sad_q14: "14.- ¿Se ha sentido triste y deprimido?"
+        nervous_q15: "15.- ¿Se ha sentido nervioso y a punto de estallar constantemente?"
+        user_id: "Usuario"
+        dependency_id: "Dependencia"
+        patient_id: "Paciente"
+        
+     opinion_questionary:
+       appointment_id: "Cita"
+       c1: "Cuantos días transcurrieron...? "
+       c2: "Cuánto tiempo esperó...? "
+       c3: "Llegó puntualmente a la cita? "
+       c4: "El tiempo que permaneció en la sala de espera fue? "
+       c6_1: "El médico fue amable? "
+       c6_2: "El médico fue respetuoso? "
+       c6_3: "El médico cuidó su privacidad? "
+       c7: "El médico atendió el motivo por el que fue a consulta? "
+       c8_1: "El médico tomó nota sobre sus antecedentes de salud? "
+       c8_2: "El médico tomó nota sobre su estado de salud? "
+       c9_1: "El médico comprobó que usted entendiera su padecimiento? "
+       c9_2: "El médico comprobó que usted entendiera el tratamiento? "
+       c14: "Cuanto tiempo dedicó el médico a su consulta? "
+       c15: "La atención que le brindó el médico le pareció? "
+       c16_1: "Cómo fue la atención que le dio Archivo / RESPETUOSO? "
+       c16_2: "Cómo fue la atención que le dio Trabajo social / RESPETUOSO? "
+       c16_3: "Cómo fue la atención que le dio Enfermería / RESPETUOSO? "
+       c16_4: "Cómo fue la atención que le dio Droguería / RESPETUOSO? "
+       c16_5: "Cómo fue la atención que le dio Laboratorio / RESPETUOSO? "
+       c16_6: "Cómo fue la atención que le dio Imagen / RESPETUOSO? "
+       amab1: "Cómo fue la atención que le dio Archivo / AMABLE? "
+       amab2: "Cómo fue la atención que le dio Trabajo social / AMABLE? "
+       amab3: "Cómo fue la atención que le dio Enfermería / AMABLE? "
+       amab4: "Cómo fue la atención que le dio Droguería / AMABLE? "
+       amab5: "Cómo fue la atención que le dio Laboratorio / AMABLE? "
+       amab6: "Cómo fue la atención que le dio Imagen / AMABLE? "
+       c17_1: "Qué le pareció la atención que le dió Archivo? "
+       c17_2: "Qué le pareció la atención que le dió Trabajo social? "
+       c17_3: "Qué le pareció la atención que le dió Enfermería? "
+       c17_4: "Qué le pareció la atención que le dió Droguería? "
+       c17_5: "Qué le pareció la atención que le dió Laboratorio? "
+       c17_6: "Qué le pareció la atención que le dió Imagen? "
+       c18: "Recomendaría este centro de salud a familiares y amigos? "
+       atention_time: "El tiempo que el médico dedicó a su consulta le pareció? "
+     
+     follow:
+       escala_estres: "Escala de estrés"
+       humedad_pal: "Humedad de palmas"
+       temp_pies: "Temperatura de pies"
+       humedad_pla: "Humedad de plantas"
+       cal_sueño: "Calidad del sueño"
+       temp_manos: "Temperatura de manos"
+       somnolencia: "Somnolencia postprandial"
+       duracion: "Duración del sueño"
+       car_sueño: "Características de los sueños"
+       
+     social_work:
+       vivedf: "Lugar de Residencia"
+       servicio: "Servicio médico"
+       vivienda: "Cuantas personas habitan en la vivienda"
+       name1: "Estructura familiar / Nombre completo"
+       edad1: "Estructura familiar / Edad"
+       sex1: "Estructura familiar / Sexo"
+       parent1: "Estructura familiar / Parentesco"
+       edocivil1: "Estructura familiar / Estado civil"
+       escolaridad1: "Estructura familiar / Escolaridad"
+       completa1: "Estructura familiar / Escolaridad completa?"
+       papa_tele: "Cultura y recreación / Vio TV?"
+       papa_radio: "Cultura y recreación / Escucho radio?"
+       papa_leyo: "Cultura y recreación / Leyó un libro?"
+       papa_ejercicio: "Cultura y recreación / Practicó algun deporte?"
+       papa_asistio: "Cultura y recreación / Asistió a eventos culturales?"
+       papa_fiestas: "Cultura y recreación / Asistió a fiestas?"
+       papa_mandil: "Cultura y recreación / Realiza actividades domésticas?"
+       vivienda2: "Características de la vivienda / Tenencia de la vivienda"
+       cuartos: "Características de la vivienda / Distribución de la vivienda"
+       material: "Características de la vivienda / Material de las paredes de la vivienda"
+       piso: "Características de la vivienda / Material del piso de la vivienda"
+       techo: "Características de la vivienda / Material del techo de la vivienda"
+       energia: "Características de la vivienda / Cuenta con energía eléctrica?"
+       aguain: "Características de la vivienda / Cuenta con agua intradomiciliaria?"
+       drenaje: "Características de la vivienda / Cuenta con drenaje?"
+       gas: "Características de la vivienda / Cuenta con gas?"
+       alumbrado: "Características de la vivienda / Cuenta con alumbrado público?"
+       telfijo: "Características de la vivienda / Cuenta con teléfono fijo?"
+       telepaga: "Características de la vivienda / Cuenta con televisión de paga?"
+       internet: "Características de la vivienda / Cuenta con internet?"
+       estufa: "Características de la vivienda / Cuenta con estufa?"
+       refri: "Características de la vivienda / Cuenta con refrigerador?"
+       televisor: "Características de la vivienda / Cuenta con televisión?"
+       lavadora: "Características de la vivienda / Cuenta con lavadora?"
+       dvd: "Características de la vivienda / Cuenta con DVD?"
+       horno: "Características de la vivienda / Cuenta con horno de microondas?"
+       compu: "Características de la vivienda / Cuenta con computadora?"
+       automovil: "Características de la vivienda / Cuenta con automovil?"
+       trabaja: "Datos económicos / Actualmente trabaja?"
+     
+     neuroendocrine:
+       alfasimpatico: "Alfasimpatico"
+       parasimpatico: "Parasimpatico"
+       betasimpatico: "Betasimpatico"
+       histamina: "Histamina"
+       hormona_adrenocorticotropa: "Hormona adrenocorticotropa (acth)"
+       glucocorticoide: "Glucocorticoide"
+       glandula_suprarrenal: "Glándula suprarrenal"
+       androgeno_suprarrenal: "Andrógeno suprarrenal"
+       hormona_foliculoestimulante: "Hormona folículo-estímulante (fsh)"
+       hormona_luteinizante: "Hormona luteinizante (lh)"
+       estrogeno: "Estrógeno"
+       progestageno: "Progestágeno"
+       androgeno: "Andrógeno"
+       hormona_tiroides: "Hormona estimulante de tiroides"
+       tiroides: "Tiroides"
+       pancreas: "Pancreas"
+       insulina: "Insulina"
+       higado_biliares: "Hígado y vías biliares"
+       intestino: "Intestino"
+
+     pharmacy:
+       date: "Fecha"
+       medicament_id: "Medicamento"
+       caducity: "Fecha de caducidad"
+       operation: "Tipo de operación"
+       status: "Estado de la operación"
+       amount: "Cantidad"
+       patient_id: "Paciente"
+
+     detection:
+        patient_id: "Paciente"
+        securitytype_id: "Seguridad Social"
+        capilartype_id: "Glucemia Capilar"
+        apply_id: "Aplicado a"
+        user_id: "Usuario"
+        hip: "Cadera"
+        waist: "Cintura"
+        sistolica: "Sistólica"
+        diastolica: "Diastólica"
+        glucemiaresult: "Resultado Glucemia"
+        height: "Estatura"
+        weight: "Peso"
+        famdiabetes: "Familiar con diabetes"
+        foliogratuidad: "Folio gratuidad"
+        polidipsia: "Polidipsia"
+        poliuria: "Poliuria"
+        polifagia: "Polifagia"
+        date: "Fecha"
+     meeting:
+        date: "Fecha"
+        user_id: "Usuario"
+        patient_id: "Paciente"
+     patient:
+        firstname: "Apellido Paterno"
+        lastname1: "Apellido Materno"
+        lastname2: "Nombre"
+        street: "Calle"
+        ocupation_id: "Ocupación"
+        maritalstatus_id: "Estado Civil"
+        place_of_resident_id: "Lugar de Residencia"
+        square_id: "Colonia"
+        gender: "Sexo"
+        email: "Correo electrónico"
+        affiliation_id: "Tipo de Afiliación"
+        bornstate_id: "Lugar de Nacimiento"
+        schooling_id: "Escolaridad"
+        
+     somatometry:
+        temperature: "Temperatura"
+        capturedate: "Fecha de Captura"
+        currentweight: "Peso Actual"
+        idealweight: "Peso Ideal"
+        usualweight: "Peso Habitual"
+        systolic: "Tensión Arterial Sistólica"
+        diastolic: "Tensión Arterial Diastólica"
+        heartrate: "Frecuencia Cardiaca"
+        respiratoryrate: "Frecuencia Respiratoria"
+        size: "Talla"
+        pulse: "Pulso"
+        waist: "Cintura"
+        hip: "Cadera"
+        
+     appointment:
+        date_next_consult: "Fecha de Proxima Cita"
+        
+        
+     laboratory:
+        testtype_id: "tipo de prueba"
+        date: "Fecha"
+        testresult: "Resultado de la prueba"
+     controlcard:
+        date: "Fecha"
+        expedient: "Expediente"
+        foliogratuidad: "Folio Gratuidad"
+        obesidadpadres: "Obesidad Padres"
+        obesidadhermanos: "Obesidad Hermanos"
+        hipertensionpadres: "Hipertension Padres"
+        hipertensionhermanos: "Hipertension Hermanos"
+        diabetespadres: "Diabetes Padres"
+        diabeteshermanos: "Diabetes Hermanos"
+        dislipidemiapadres: "Dislipidemia Padres"
+        dislipidemiahermanos: "Dislipidemia Hermanos"
+        macrosomico: "Producto Macrosomico"
+        fechainiciotarjeta: "Fecha Inicio Tarjeta"
+        fechainiciosintomas: "Fecha Inicio Sintomas"
+        fechadiagnostico: "Fecha Diagnostico"
+        schooling_id: "Escolaridad"
+        ocupation_id: "Ocupacion"
+        maritalstatus_id: "Estado Civil"
+        meeting_id: "Fecha"
+     consultcard:
+        date: "Fecha"
+        height: "Estatura"
+        weight: "Peso"
+        hip: "Cadera"
+        waist: "Cintura"
+        icc: "ICC"
+        imc: "IMC"
+        sistolica: "Sistólica"
+        diastolica: "Daistólica"
+        glucemiacapilar: "Glucemia Capilar en Consulta"
+        glucemiaserica: "Glucemia Sérica"
+        hba1c: "HB A1c (%)"
+        colesterol: "Colesterol"
+        trigliceridos: "Trigliceridos"
+        proteinuria: "Proteinuria"
+        meeting_id: "Cita"
+        obsevaciones: "Observaciones"
+   
+     medical_history:
+        patient_id: "Error"
+        diagnostic1: "Diagnóstico 1"
+        diagnostic2: "Diagnóstico 2"
+        diagnostic3: "Diagnóstico 3"
+        amount: "Cantidad"
+        
+     acupuncture:
+        cat_espiritu_id: "Shen (espíritu)"
+        cat_estado_animo_pre_id: "Estado anímico predominante"
+        cat_caract_sueno_id: "Características del sueño"
+        cat_aver_clima_id: "Aversión de clima"
+        cat_pre_clima_id: "Preferencia de clima"
+        cat_apetito_id: "Apetito"
+        cat_preferencia_alimento_id: "Preferencia de alimentos"
+        cat_sensacion_corporal_id: "Sensación corporal"
+        cat_sabor_id: "Sabor"
+        cat_deseo_beber_id: "Deseo de beber líquidos"
+        cat_transpiracion_id: "Transpiración"
+        cat_color_id: "Color"
+        cat_forma_id: "Forma"
+        cat_saburra_id: "Saburra"
+        cat_profundidad_id: "Profundidad"
+        cat_frecuencia_id: "Frecuencia"
+        cat_amplitud_id: "Amplitud"
+        cat_fuerza_id: "Fuerza"
+        cat_forma_cualidad_id: "Forma y cualidad"
+        acu_constitucion_id: "Constitución"
+        cat_tinte_id: "Tintes"
+        padecimiento: "Padecimiento"
+        sindromatico: "Sindromático"
+        alopatico: "Alopático"
+        tratamiento: "Principio y meta terapéutica"
+        cat_visual_pain_id: "Visual analógica"
+        cat_verbal_pain_id: "Verbal"
+        patient_id: "Paciente"
+        
+     acu_subsequent:
+        main_symptom: "Síntomas principales"
+        evolution: "Resumen clínico y evolución"
+        finding: "Hallazgos"
+        extraordinary: "Extraordinarios"
+        diag_org: "Diagnóstico de órganos y visceras"
+        diag_can: "Diagnóstico de canales y colaterales"
+        therapeutic: "Principios terapéuticos"
+        acupuntos: "Selección de Acupuntos"
+        organs: "Órganos"
+        viscera: "Visceras"
+        cat_caract_sueno_id: "Sueño"
+        cat_color_id: "Color lengua"
+        cat_forma_id: "Forma lengua"
+        cat_saburra_id: "Saburra lengua"
+        cat_profundidad_id: "Profundidad"
+        cat_frecuencia_id: "Frecuencia"
+        cat_amplitud_id: "Amplitud"
+        cat_fuerza_id: "Fuerza" 
+        cat_forma_cualidad_id: "Forma y cualidad"
+        shen: "Shen"
+        organs2: "Órganos 2"
+        viscera2: "Visceras 2"
+        extraordinary2: "Extraordinarios 2"
+        
+        
+        
+     homeopathy:
+       cat_constitucion_id: "Constitución"
+       cat_sintomas_sobresaliente_id: "Sintomas sobresalientes"
+       cat_agravacione_id: "Agravaciones"
+       cat_lateralidad_id: "Lateralidad"
+       cat_estado_mental_id: "Estado mental"
+       cat_posicion_id: "Posiciones"
+       cat_horario_id: "Horarios"
+       cat_climatico_id: "Climaticos"
+       cat_climatico_agravacion: "Climaticos"
+       cat_horario_agravacion: "Horarios"
+       cat_posicion_agravacion: "Posiciones"
+       mental: "Descripción de Estado Mental"
+       cat_home_deseo_id: "Deseo de"
+       cat_home_piel_id: "Piel"
+       cat_home_lengua_id: "Lengua"
+       cat_home_sabor_id: "Sabor boca"
+       
+     progress_note:
+       subjetivo: "Subjetivo"
+       objetivo: "Objetivo"
+       analisis: "Análisis"
+       plan_diag: "Plan Diagnóstico"
+       plan_trata: "Plan Tratamiento"
+       plan_educa: "Plan Educativo"
+       
+     diabete:
+       a2: "Consumo de tabaco"
+       a3: "Consumo de alcohol"
+       a4: "Consumo de grasas animales"
+       a5: "Consumo de frutas, verduras"
+       c1: "Cáncer de cualquier tipo"
+       c2: "Pólipos, verrugas, lunares que crecen"
+       c3: "Quemaduras solares con ampollas"
+       b1: "Pólipos, verrugas, lunares que crecen"
+       b2: "Gastritis o úlcera gástrica"
+       b3: "Colítis o enteritís crónica"
+       b4: "Infecciones virales"
+       b5: "Quemaduras solares con ampollas"
+       d1: "Cáncer de cualquier tipo"
+       d2: "Pólipos, verrugas, lunares que crecen"
+       d3: "Quemaduras solares con ampollas"
+       
+     exploration:
+       patient_id: "Paciente"
+       conducta: "Conducta"
+       constitucion: "Constitución"
+       masa_muscular: "Masa muscular"
+       masa_adiposa: "Masa adiposa"
+       implantacion_cabello: "Implantación cabello"
+       vello_facial: "Vello facial"
+       acne: "Acné"
+       tamaño_pupilar: "Tamaño pupilar"
+       reactividad_pupilar: "Reactividad pupilar"
+       chvosteck: "Chvosteck"
+       hidratacion_mucosas: "Hidratación mucosas"
+       saburra_lingual: "Saburra lingual"
+       impronta_dental: "Impronta dental"
+       fisuras_linguales: "Fisuras linguales"
+       congestion_sublingual: "Congestión sublingual"
+       paladar_blando: "Paladar blando"
+       paladar_duro: "Paladar duro"
+       faringe: "Faringe"
+       pilares_anteriores: "Pilares anteriores"
+       amigdalas: "Amigdalas"
+       parotidas: "Parotidas"
+       glandulas_submaxilares: "Glandulas submaxilares"
+       tiroides: "Tiroides"
+       esternon: "Esternón"
+       higado: "Higado"
+       abdomen: "Abdomen"
+       temperatura_manos: "Temperatura manos"
+       humedad_palmas: "Humedad palmas"
+       palmas_manos: "Palmas manos"
+       pulsos_perifericos: "Pulsos perifericos"
+       uñas: "Uñas"
+       temp_pies: "Temperatura pies"
+       humedad_plantas: "Humedad plantas"
+       superficie_plantar: "Superficie plantar"
+       edema: "Edema"
+       vello_corporal: "Vello corporal"
+       dermografismo: "Dermografismo"
+       lesiones_piel: "Lesiones piel"
+       reflejos_estiramiento_muscular: "Reflejos estiramiento muscular"
+       lesiones_piel_desc: "Lesiones de la piel"
+       
+     user_session:
+       login: "Usuario"
+       password: "Contraseña"
+       
+       
+         
+       
+        
+     # Overrides model and default messages.
