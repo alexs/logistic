@@ -1,0 +1,248 @@
+<h1>Editing violency</h1>
+
+<% form_for(@violency) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.datetime_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :edad %><br />
+    <%= f.text_field :edad %>
+  </p>
+  <p>
+    <%= f.label :estudios %><br />
+    <%= f.text_field :estudios %>
+  </p>
+  <p>
+    <%= f.label :registro %><br />
+    <%= f.text_field :registro %>
+  </p>
+  <p>
+    <%= f.label :civil %><br />
+    <%= f.text_field :civil %>
+  </p>
+  <p>
+    <%= f.label :ocupacion %><br />
+    <%= f.text_field :ocupacion %>
+  </p>
+  <p>
+    <%= f.label :esta %><br />
+    <%= f.check_box :esta %>
+  </p>
+  <p>
+    <%= f.label :deseaba %><br />
+    <%= f.check_box :deseaba %>
+  </p>
+  <p>
+    <%= f.label :planeo %><br />
+    <%= f.check_box :planeo %>
+  </p>
+  <p>
+    <%= f.label :acepto %><br />
+    <%= f.check_box :acepto %>
+  </p>
+  <p>
+    <%= f.label :numhijos %><br />
+    <%= f.text_field :numhijos %>
+  </p>
+  <p>
+    <%= f.label :pardeseaba %><br />
+    <%= f.text_field :pardeseaba %>
+  </p>
+  <p>
+    <%= f.label :parplaneo %><br />
+    <%= f.text_field :parplaneo %>
+  </p>
+  <p>
+    <%= f.label :paracepto %><br />
+    <%= f.text_field :paracepto %>
+  </p>
+  <p>
+    <%= f.label :actual %><br />
+    <%= f.check_box :actual %>
+  </p>
+  <p>
+    <%= f.label :meses %><br />
+    <%= f.check_box :meses %>
+  </p>
+  <p>
+    <%= f.label :violencia %><br />
+    <%= f.check_box :violencia %>
+  </p>
+  <p>
+    <%= f.label :relacion_años %><br />
+    <%= f.text_field :relacion_años %>
+  </p>
+  <p>
+    <%= f.label :relacion_meses %><br />
+    <%= f.text_field :relacion_meses %>
+  </p>
+  <p>
+    <%= f.label :relacion_semanas %><br />
+    <%= f.text_field :relacion_semanas %>
+  </p>
+  <p>
+    <%= f.label :relacion_dias %><br />
+    <%= f.text_field :relacion_dias %>
+  </p>
+  <p>
+    <%= f.label :edadpar %><br />
+    <%= f.text_field :edadpar %>
+  </p>
+  <p>
+    <%= f.label :avientaobjeto %><br />
+    <%= f.check_box :avientaobjeto %>
+  </p>
+  <p>
+    <%= f.label :tuerza %><br />
+    <%= f.check_box :tuerza %>
+  </p>
+  <p>
+    <%= f.label :amenace %><br />
+    <%= f.check_box :amenace %>
+  </p>
+  <p>
+    <%= f.label :destruir %><br />
+    <%= f.check_box :destruir %>
+  </p>
+  <p>
+    <%= f.label :fuerzafisica %><br />
+    <%= f.check_box :fuerzafisica %>
+  </p>
+  <p>
+    <%= f.label :menosprecie %><br />
+    <%= f.check_box :menosprecie %>
+  </p>
+  <p>
+    <%= f.label :celoso %><br />
+    <%= f.check_box :celoso %>
+  </p>
+  <p>
+    <%= f.label :sospeche %><br />
+    <%= f.check_box :sospeche %>
+  </p>
+  <p>
+    <%= f.label :insulte %><br />
+    <%= f.check_box :insulte %>
+  </p>
+  <p>
+    <%= f.label :proposito %><br />
+    <%= f.check_box :proposito %>
+  </p>
+  <p>
+    <%= f.label :machete %><br />
+    <%= f.check_box :machete %>
+  </p>
+  <p>
+    <%= f.label :miedo %><br />
+    <%= f.check_box :miedo %>
+  </p>
+  <p>
+    <%= f.label :domestico %><br />
+    <%= f.check_box :domestico %>
+  </p>
+  <p>
+    <%= f.label :asfixiar %><br />
+    <%= f.check_box :asfixiar %>
+  </p>
+  <p>
+    <%= f.label :relaciones %><br />
+    <%= f.check_box :relaciones %>
+  </p>
+  <p>
+    <%= f.label :matarla %><br />
+    <%= f.check_box :matarla %>
+  </p>
+  <p>
+    <%= f.label :puño %><br />
+    <%= f.check_box :puño %>
+  </p>
+  <p>
+    <%= f.label :dispuesta %><br />
+    <%= f.check_box :dispuesta %>
+  </p>
+  <p>
+    <%= f.label :patee %><br />
+    <%= f.check_box :patee %>
+  </p>
+  <p>
+    <%= f.label :cuchillo %><br />
+    <%= f.check_box :cuchillo %>
+  </p>
+  <p>
+    <%= f.label :estomago %><br />
+    <%= f.check_box :estomago %>
+  </p>
+  <p>
+    <%= f.label :jalonee %><br />
+    <%= f.check_box :jalonee %>
+  </p>
+  <p>
+    <%= f.label :pistola %><br />
+    <%= f.check_box :pistola %>
+  </p>
+  <p>
+    <%= f.label :fea %><br />
+    <%= f.check_box :fea %>
+  </p>
+  <p>
+    <%= f.label :cosa %><br />
+    <%= f.check_box :cosa %>
+  </p>
+  <p>
+    <%= f.label :mueble %><br />
+    <%= f.check_box :mueble %>
+  </p>
+  <p>
+    <%= f.label :rifle %><br />
+    <%= f.check_box :rifle %>
+  </p>
+  <p>
+    <%= f.label :veces %><br />
+    <%= f.text_field :veces %>
+  </p>
+  <p>
+    <%= f.label :violenta %><br />
+    <%= f.check_box :violenta %>
+  </p>
+  <p>
+    <%= f.label :insulta %><br />
+    <%= f.check_box :insulta %>
+  </p>
+  <p>
+    <%= f.label :aguanta %><br />
+    <%= f.check_box :aguanta %>
+  </p>
+  <p>
+    <%= f.label :anteriores %><br />
+    <%= f.check_box :anteriores %>
+  </p>
+  <p>
+    <%= f.label :fisica %><br />
+    <%= f.text_field :fisica %>
+  </p>
+  <p>
+    <%= f.label :emocional %><br />
+    <%= f.text_field :emocional %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @violency %> |
+<%= link_to 'Back', violencies_path %>

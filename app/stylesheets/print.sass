@@ -1,0 +1,88 @@
+@import partials/base
+$short_field: 60px
+body
+  background:
+    image: image-url("body_bg.jpg")
+    repeat: repeat-x
+    position: top left
+  float: none
+.principal
+  +container
+  background-color: #fff
+  border: solid
+  overflow: visible
+  #header
+    +column(!blueprint-grid-columns)
+    background: $blueprint_table_header_color
+    background:
+      image: image-url("header.png")
+      repeat: no-repeat
+      position: top left
+    height: 136px
+    visibility: none
+  #content
+    +column(8, true)
+    .indicator
+      +border-radius(6px)
+      color: #FFF
+      text-align: center
+      background-color: #FF0000
+      position: relative
+      border: solid
+      border-color: #FF0000
+      left: 775px
+      width: 110px
+      height: 16px
+      font-size: 12px
+  #footer
+    +column(8)
+    background:
+      image: image-url("footer.png")
+      repeat: no-repeat
+      position: bottom center
+    height: 80px
+.menu
+  visibility: hidden
+#content #workspace
+  margin: 10px 10px 10px 10px
+  padding-bottom: 25px
+  #clean
+    padding-bottom: 250px
+#content #workspace
+  font-size: 13px
+  font-family: Arial,Helvetica,sans-serif
+  +blueprint-form-borders(#207DD4,#DA9A22,#35567B)
+  +blueprint-form-sizes
+#patient_show
+  visibility: visible
+  display: block
+  position: top center
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
+    width: 100%
+.table_header, .table_result
+  table
+    $table-color : #7a98c6
+    +outer-table-borders(1px, #0080FF)
+    +inner-table-borders(ipx, #0080FF)
+    +alternating-rows-and-columns(#E0ECF8, #F2F2F2, #111)
+    .name
+      width: 200px
+    .lastname
+      width: 150px
+    .date_next_consult
+      width: 100px
+    .presumptive_diagnosis
+      width: 150px
+    .applicant_doctor
+      width: 150px 
+    .age
+      width: 60px
+    .address
+      width: 300px
+    .actions
+      width: 100px

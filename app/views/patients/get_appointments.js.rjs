@@ -1,0 +1,2 @@
+html = @appointments.empty? ? {:partial => 'not_appointment'} : {:partial => 'appointments'}
+page.replace_html "workspace", html

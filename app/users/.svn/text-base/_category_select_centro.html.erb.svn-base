@@ -1,0 +1,29 @@
+
+<p>
+<%=  label_tag 'Jurisdicción' %><br />
+<%= select_tag 'dependency',  "<option selected='selected'>  </option>" + (options_from_collection_for_select(@dependencies, 'id', 'name')) %>
+   </p>
+
+
+  <div id="centros">
+ <p>
+   <%= label_tag "Centro de Salud" %><br />
+   <%= select_tag 'centro_hospital', ["Seleccione un centro o dependencia"] %>
+ </p>
+  </div>
+
+
+  <%= observe_field 'dependency',
+ :url => {:controller => 'users',
+ :action => 'get_centros'},
+ :update => 'centro_hospital',
+ :with => 'select_juris_id'
+ %>
+
+
+ <%= observe_field 'centro_hospital',
+:url => {:controller => 'users',:action => 'get_results'},
+:loading => "$('loading_indicator').show();",
+:complete => "$('loading_indicator').hide();",
+:update => 'results',
+:with => 'select_centro_id'%>

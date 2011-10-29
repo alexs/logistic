@@ -1,0 +1,16 @@
+<h1>Editing schooling</h1>
+
+<% form_for(@schooling) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @schooling %> |
+<%= link_to 'Back', schoolings_path %>

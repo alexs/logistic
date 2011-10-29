@@ -1,0 +1,610 @@
+- remote_form_for @clinical_history, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages 
+  %p
+    = f.label "Familiar responsable:"
+    = f.text_field :responsible_family 
+    = f.label "Parentesco:"
+    = f.text_field :relationship
+    = f.hidden_field :patient_id 
+  %br
+    %h1.questionary_title ANTECEDENTES HEREDOFAMILIARES
+    %hr
+  %br
+  .clinical_form
+    %table
+      %tr.odd
+        %th PADECIMIENTO
+        %th MADRE
+        %th PADRE
+        %th HIJOS
+        %th HERMANOS
+        %th ESPOSO
+        %th OTROS
+      %tr.even
+        %td Cardiovasculares
+        %td.numeric 
+          = f.check_box :cardiovascular_mother
+        %td.numeric
+          = f.check_box :cardiovascular_father
+        %td.numeric
+          = f.check_box :cardiovascular_children
+        %td.numeric
+          = f.check_box :cardiovascular_brothers 
+        %td.numeric
+          = f.check_box :cardiovascular_husband 
+        %td.numeric
+          = f.text_field :cardiovascular_others 
+      %tr.odd
+        %td Diabetes Mellitus
+        %td.numeric
+          = f.check_box :diabetes_mother 
+        %td.numeric
+          = f.check_box :diabetes_father 
+        %td.numeric
+          = f.check_box :diabetes_children 
+        %td.numeric
+          = f.check_box :diabetes_brothers 
+        %td.numeric
+          = f.check_box :diabetes_husband 
+        %td.numeric
+          = f.text_field :diabetes_others 
+      %tr.even
+        %td Neoplásicos
+        %td.numeric
+          = f.check_box :neoplastic_mother
+        %td.numeric
+          = f.check_box :neoplastic_father
+        %td.numeric
+          = f.check_box :neoplastic_children 
+        %td.numeric
+          = f.check_box :neoplastic_brothers 
+        %td.numeric
+          = f.check_box :neoplastic_husband 
+        %td.numeric
+          = f.text_field :neoplastic_others 
+      %tr.odd
+        %td Infecciosos
+        %td.numeric
+          = f.check_box :infectious_mother 
+        %td.numeric
+          = f.check_box :infectious_father 
+        %td.numeric
+          = f.check_box :infectious_children 
+        %td.numeric
+          = f.check_box :infectious_brothers 
+        %td.numeric
+          = f.check_box :infectious_husband 
+        %td.numeric
+          = f.text_field :infectious_others
+      %tr.even
+        %td Toxicomanías
+        %td.numeric
+          = f.check_box :toxicomanias_mother
+        %td.numeric
+          = f.check_box :toxicomanias_father 
+        %td.numeric
+          = f.check_box :toxicomanias_children 
+        %td.numeric
+          = f.check_box :toxicomanias_brothers 
+        %td.numeric
+          = f.check_box :toxicomanias_husband 
+        %td.numeric
+          = f.text_field :toxicomanias_others 
+      %tr.odd
+        %td SX Down/malformados
+        %td.numeric
+          = f.check_box :malformed_mother
+        %td.numeric
+          = f.check_box :malformed_father
+        %td.numeric
+          = f.check_box :malformed_children
+        %td.numeric
+          = f.check_box :malformed_brothers
+        %td.numeric
+          = f.check_box :malformed_husband
+        %td.numeric  
+          = f.text_field :malformed_others 
+  %br
+    %h1.questionary_title ANTECEDENTES PERSONALES NO PATOLÓGICOS
+    %hr
+  %br
+  
+  %p
+    = f.label "Alimentación: "
+    = f.radio_button(:feed,16) + "Suficiente"
+    = f.radio_button(:feed,17) + "Pobre"
+    = f.radio_button(:feed,18) + "Adecuada"
+    = f.radio_button(:feed,19) + "Excesiva"
+    = f.radio_button(:feed,20) + "Dieta no habitual"
+  %p
+    = f.label "Vitaminas: "
+    = f.check_box :vitamins
+    = f.label "Hierro: "
+    = f.check_box :iron
+    = f.label "Ácido folico: "
+    = f.check_box :folic_acid
+    = f.label "Cafeína: "
+    = f.check_box :caffeine
+    = f.label "Drogas: "
+    = f.check_box :drugs 
+    = f.label "Medicamentos: "
+    = f.check_box :medicaments
+    %br
+    = f.label "Mencione Cuáles: "
+    = f.text_field :medicaments_details, :size => 70 
+  %p
+    = f.label "Alcoholismo: "
+    = f.radio_button(:alcoholism,21) + "Sí"
+    = f.radio_button(:alcoholism,5) + "No"
+    = f.radio_button(:alcoholism,22) + "Antes del embarazo"
+    = f.radio_button(:alcoholism,23) + "Durante el embarazo"
+    = f.label "¿Cuántas veces a la semana?:"
+    = f.text_field :alcoholism_times, :size => 4
+  %p
+    = f.label "Tabaquísmo: "
+    = f.radio_button(:smoking,21) + "Sí"
+    = f.radio_button(:smoking,5) + "No"
+    = f.radio_button(:smoking,22) + "Antes del embarazo"
+    = f.radio_button(:smoking,23) + "Durante el embarazo"
+    = f.label "¿Cuántos cigarrillos al dia?:"
+    = f.text_field :cigarretes_day, :size => 4
+    %br
+      ¿Hay alguien que fuma en el hogar?
+      = f.radio_button(:fuman_hogar, "true")
+      Sí
+      = f.radio_button(:fuman_hogar, "false")
+      No
+  %p
+    Vacunas:
+    = f.label "Toxina tetánica 1a. "
+    = f.check_box :toxina_tetanica_1
+    = f.label "2a."
+    = f.check_box :toxina_tetanica_2 
+    = f.label "Influenza H1N1"
+    = f.check_box :influenza_h1n1
+    = f.label "influenza estacional"
+    = f.check_box :influenza_estacional
+    = f.label "Grupo sanguineo"
+    = f.select(:grupo_sanguineo, { "A" => "A", "B" => "B", "O" => "O", "AB" => "AB"}, {:include_blank => true})
+    = f.label "RH"
+    = f.select(:rh, { "+" => "+", "-" => "-"}, {:include_blank => true})
+    = f.label "TIENE ANTICUERPOS IRREGULARES: "
+    = f.radio_button(:anticuerpos_irregulares, "true")
+    Sí
+    = f.radio_button(:anticuerpos_irregulares, "false")
+    No
+
+  %br
+    %h1.questionary_title ANTECEDENTES PERSONALES PATOLOGICOS
+    %hr
+  %br
+  %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th
+          %th Sí
+        %tr.even
+          %td Hipertensión
+          %td.numeric
+            = f.check_box :hipertension
+          %td Enfermedad hepática
+          %td.numeric
+            = f.check_box :enfermedad_hepatica
+          %td Infecciosos
+          %td.numeric
+            = f.check_box :infecciosos
+          %td Complicaciones anestésicas
+          %td.numeric
+            = f.check_box :complicaciones_anestesicas
+        %tr.odd
+          %td Cardiopatía
+          %td.numeric
+            = f.check_box :cardiopatia
+          %td Varices-flebitis
+          %td.numeric
+            = f.check_box  :varices_flebitis
+          %td Neumopatías-asma
+          %td.numeric
+            = f.check_box :neumopatias_asma
+          %td Inmunizaciones
+          %td.numeric
+            = f.check_box  :inmunizaciones
+        %tr.even
+          %td Hipirlipidemia
+          %td.numeric
+            = f.check_box :hiperlipidemia
+          %td Función tiroidea
+          %td.numeric
+            = f.check_box :funcion_tiroidea
+          %td Alergias
+          %td.numeric
+            = f.check_box :alergias
+          %td Anomalías uterinas
+          %td.numeric
+            = f.check_box  :anomalias_uterinas
+        %tr.odd
+          %td Enfermedad renal
+          %td.numeric
+            = f.check_box :enfermedad_renal
+          %td Traumatismo
+          %td.numeric
+            = f.check_box :traumatismo
+          %td Mamas
+          %td.numeric
+            = f.check_box :mamas
+          %td Infertilidad
+          %td.numeric
+            = f.check_box :infertilidad
+        %tr.even
+          %td Neurológicas epilepsia
+          %td.numeric
+            = f.check_box :neurologicas_epilepsia
+          %td Diabetes
+          %td.numeric
+            = f.check_box :diabetes
+          %td Cirugía genecológica
+          %td.numeric
+            = f.check_box :cirugia_genecologica
+          %td Transplantes
+          %td.numeric
+            = f.check_box :transplantes
+        %tr.odd
+          %td Psiquiátricas-depresión
+          %td.numeric
+            = f.check_box :psiquiatricas_depresion
+          %td Cáncer
+          %td.numeric
+            = f.check_box :cancer
+          %td Cirugías generales
+          %td.numeric
+            = f.check_box :cirugias_generales
+          %td Genéticos
+          %td.numeric
+            = f.check_box :geneticos
+  %br
+    %h1.questionary_title ANTECEDENTES GINECO-OBSTETRICOS
+    %hr
+  %br
+  %p
+    = f.label "Menarquia: "
+    = f.text_field :menarquia, :size => 5
+    = f.label "Patrón menstrual: "
+    = f.text_field :patron_menstrual, :size => 5
+    = f.label "FUM: "
+    = f.date_select :fum, :size => 5
+    = f.label "IVSA: "
+    = f.text_field :ivsa, :size => 6
+    %br
+    = f.label "Papanicolau normal: "
+    = f.check_box :papanicolau_normal
+    = f.label "Papanicolau normal fecha: "
+    = f.date_select :papanicolau_normal_fecha
+    %br
+    = f.label "Papanicolau anormal: "
+    = f.check_box :papanicolau_anormal
+    = f.label "Papanicolau anormal fecha: "
+    = f.date_select :papanicolau_anormal_fecha
+    %br
+    = f.label "Número de parejas"
+    = f.text_field :num_parejas, :size => 6
+  %p
+    = f.label "Método anticonceptivo: "
+    = f.text_field :papanicolau_method, :size => 5
+    = f.label "Gesta: "
+    = f.text_field :gesta, :size => 5
+    = f.label "Partos: "
+    = f.text_field :partos, :size => 5
+    = f.label "Cesáreas: "
+    = f.text_field :cesareas, :size => 5
+    = f.label "Abortos: "
+    = f.text_field :abortos, :size => 5
+    = f.label "Ectópicos: "
+    = f.text_field :ectopicos, :size => 5
+  %p
+    = f.label "Molas: "
+    = f.text_field :molas, :size => 5
+  %p
+    %h1 Embarazos pasados
+    %hr
+  %p
+    #past_pregnants
+      %table
+        - f.fields_for :past_pregnants do |builder|
+          = render 'past_pregnantfields', :f => builder
+        %br      
+        %br  
+          = link_to_add_fields "Ingresar datos de otro embarazo pasado", f, :past_pregnants
+        %br
+  %br
+    %h1.questionary_title DATOS DEL EMBARAZO
+    %hr
+  %br
+  %p
+    = f.label "Altura del fondo uterino: "
+    = f.text_field :altura_fondo_uterino, :size => 5
+    CMS
+  %p
+    = f.label "Número de fetos"
+    = f.text_field :num_fetos, :size => 5  
+    = f.label "FCF"
+    = f.text_field :fcf, :size => 5
+  %p
+    = f.label "En caso de ser negativo se aplicó gammaglobulina en embarazo previo, SI(seleccionado) No(no seleccionar)"
+    = f.check_box :gammaglobulina
+  %p
+    = f.label "Antecentes de hidropsfeta: (selecciona en caso de ser afirmativo, deja en blanco en caso negativo)"
+    = f.check_box :hidrops_feta
+  
+  %p
+    = f.label "Peso antes del embarazo: "
+    = f.text_field :peso_anterior, :size => 5
+    Kg.
+  %p
+    = f.label "Comentarios: "
+    = f.text_area :comentarios
+  %br
+    %h1.questionary_title INTERROGATORIO POR APARATOS Y SISTEMAS
+    %hr
+  %br
+  %p
+    Genitales
+    %br
+    Prurito    
+    = f.radio_button(:gen_prurito, "true")
+    Sí
+    = f.radio_button(:gen_prurito, "false")
+    No
+    %br
+    Ardor
+    = f.radio_button(:gen_ardor, "true")
+    Sí
+    = f.radio_button(:gen_ardor, "false")
+    No
+    %br
+    Urinario:
+    = f.text_field :urinario
+    %br
+    Ardor
+    = f.radio_button(:ardor, "true")
+    Sí
+    = f.radio_button(:ardor, "false")
+    No
+    %br
+    Polaquiuria
+    = f.radio_button(:polaquiuria, "true")
+    Sí
+    = f.radio_button(:polaquiuria, "false")
+    No
+  %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th SISTEMA
+          %th SDP
+          %th COMENTARIO
+        %tr.even
+          %td Digestivo
+          %td.numeric
+            = f.check_box :inte_digestivo
+          %td
+            = f.text_field :inte_digestivo_desc
+        %tr.odd
+          %td Cardiocirculatorio
+          %td.numeric
+            = f.check_box :inte_cardiocirculatorio
+          %td
+            = f.text_field :inte_cardiocirculatorio_desc
+        %tr.even
+          %td Musculoesquelético
+          %td.numeric
+            = f.check_box :inte_musculoesqueletico
+          %td
+            = f.text_field :inte_musculoesqueletico_desc
+        %tr.odd
+          %td Neurológico
+          %td.numeric
+            = f.check_box :inte_neurologico
+          %td
+            = f.text_field :inte_neurologico_desc
+        %tr.even
+          %td Genitales
+          %td.numeric
+            = f.check_box :genitales
+          %td
+            = f.text_field :genitales_desc
+  %br
+    %h1.questionary_title EXPLORACIÓN FÍSICA
+    %hr
+  %br
+  %p
+    %br
+    Tenesmo Vesical
+    = f.radio_button(:tenesmo_vesical, "true")
+    Sí
+    = f.radio_button(:tenesmo_vesical, "false")
+    No
+  %br
+  %p
+    = f.label "Presión arterial diastólica: "
+    = f.text_field :diastolica, :size => 5
+    = f.label "Presión arterial sistólica: "
+    = f.text_field :sistolica, :size => 5
+  %p
+    = f.label :temperatura 
+    = f.text_field :temperatura 
+  
+  %p
+    = f.label :peso 
+    = f.text_field :peso  
+  %p
+    = f.label :talla 
+    = f.text_field :talla 
+  
+  %p
+    = f.label :masa_corporal 
+    = f.text_field :masa_corporal 
+  
+    .clinical_form
+      %table
+        %tr.odd
+          %th AREA
+          %th SDP
+          %th COMENTARIO
+        %tr.even
+          %td Cabeza-cuello-tiroides
+          %td.numeric
+            = f.check_box :cabeza_cuello_tiroides
+          %td
+            = f.text_field :cabeza_cuello_tiroides_desc
+          %td.numeric
+        %tr.odd
+          %td Cardiorespiratorio
+          %td.numeric
+            = f.check_box :cardiorespiratorio_desc
+          %td
+            = f.text_field :cardiorespiratorio_desc
+        %tr.even
+          %td Mamas
+          %td.numeric
+            = f.check_box :explora_mamas
+          %td
+            = f.text_field :explora_mamas_desc
+        %tr.odd
+          %td Abdomen
+          %td.numeric
+            = f.check_box :abdomen
+          %td
+            = f.text_field :abdomen_desc
+        %tr.even
+          %td Extremidades
+          %td.numeric
+            = f.check_box :extremidades
+          %td
+            = f.text_field :extremidades_desc
+  %p
+    = f.label :cervix 
+    = f.text_field :cervix 
+  
+  %p
+    = f.label :fluidos 
+    = f.check_box :fluidos 
+  
+  %p
+    = f.label :sangrado 
+    = f.check_box :sangrado 
+  
+  %p
+    = f.label :dilatacion 
+    = f.select(:dilatacion, { "0-2" => "1", "3-4" => "2", "5-6" => "3", "+7" => "4"}, {:include_blank => true})
+
+  %p
+    = f.label :longitud
+    = f.select(:longitud, { "largo" => "1", "semiborrado" => "2", "corto" => "3"}, {:include_blank => true})
+
+  %p
+    = f.label :consistencia
+    = f.select(:consistencia, { "resistente" => "1", "intermedio" => "2", "blando" => "3"}, {:include_blank => true})
+
+  %p
+    = f.label :posicion
+    = f.text_field :posicion, :size => 4
+  
+  %p
+    = f.label :borramientos 
+    = f.check_box :borramientos 
+  
+  %p
+    = f.label :reblandecimientos 
+    = f.check_box :reblandecimientos
+    %br
+    Salida de liquido vaginal:
+    = f.radio_button(:salida_liquido_vaginal, "true")
+    Sí
+    = f.radio_button(:salida_liquido_vaginal, "false")
+    No
+    |
+    Fetido:
+    = f.radio_button(:vaginal_fetido, "true")
+    Sí
+    = f.radio_button(:vaginal_fetido, "false")
+    No
+    %br
+    Leucorrea:
+    = f.radio_button(:gen_leucorrea, "true")
+    Sí
+    = f.radio_button(:gen_leucorrea, "false")
+    No
+    |
+    Fetido:
+    = f.radio_button(:leucorrea_fetido, "true")
+    Sí
+    = f.radio_button(:leucorrea_fetido, "false")
+    No
+    |
+    = f.select(:leucorrea_tipo, { "escaso" => "1", "moderado" => "2", "abundante" => "3"}, {:include_blank => true})
+    %br
+    Sangrado Vaginal
+    = f.radio_button(:gen_sangrado_vaginal, "true")
+    Sí
+    = f.radio_button(:gen_sangrado_vaginal, "false")
+    No
+    |
+    = f.select(:sangrado_tipo, { "fresco" => "1", "antiguio" => "2"}, {:include_blank => true})
+    %br
+    Fondo de saco
+    = f.select(:fondo_saco, { "libro" => "1", "abombados" => "2"}, {:include_blank => true})
+    |
+    Dolor al movilizar el útero:
+    = f.radio_button(:gen_sangrado_vaginal, "true")
+    Sí
+    = f.radio_button(:gen_sangrado_vaginal, "false")
+    No
+  %p
+
+  %br
+    %h1.questionary_title IMPRESIóN DIAGNÓSTICA
+    %hr
+  %br
+  %p
+    = f.text_area :impresion_diagnostica
+  %br
+    %h1.questionary_title TRATAMIENTO
+    %hr
+  %br
+  %p
+    = f.label "Inicio de ácido fólico"
+    = f.text_field :inicio_acido_folico 
+    SDG,
+    = f.label "Inicio de multivitaminas"
+    = f.text_field :inicio_multivitaminas
+    SDG,
+    = f.label "Inicio de suplementos"
+    = f.text_field :inicio_suplementos
+    SDG,
+    = f.label "Inicio de hierro"
+    = f.text_field :inicio_hierro
+    SDG,
+    = f.label "Inicio de aspirinas"
+    = f.text_field :inicio_aspirina
+    SDG
+  %p
+    = f.hidden_field :patient_id, :value => @clinical_history.patient_id
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :dependency_id, :value => current_user.dependency_id
+  %hr
+  %p
+  .guardado{:style => "display:none;"}
+    = image_tag("checked.png") 
+    Se ha guardado correctamente
+  .guardar
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, porfavor espere

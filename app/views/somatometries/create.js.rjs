@@ -1,0 +1,1 @@
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_somatometry').show(); $('.status_somatometry_not_captured').hide(); $('.status_somatometry_captured').show(); $('.somatometry_link').hide();"

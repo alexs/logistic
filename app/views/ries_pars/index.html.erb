@@ -1,0 +1,32 @@
+<h1>Listing ries_pars</h1>
+
+<table>
+  <tr>
+    <th>No preparada emb</th>
+    <th>No razon</th>
+    <th>Considero problema grande</th>
+    <th>Cosas infancia</th>
+    <th>No apoyo pareja</th>
+    <th>No personas necesito</th>
+    <th>Desconfianza madre</th>
+  </tr>
+
+<% @ries_pars.each do |ries_par| %>
+  <tr>
+    <td><%=h ries_par.no_preparada_emb %></td>
+    <td><%=h ries_par.no_razon %></td>
+    <td><%=h ries_par.considero_problema_grande %></td>
+    <td><%=h ries_par.cosas_infancia %></td>
+    <td><%=h ries_par.no_apoyo_pareja %></td>
+    <td><%=h ries_par.no_personas_necesito %></td>
+    <td><%=h ries_par.desconfianza_madre %></td>
+    <td><%= link_to 'Show', ries_par %></td>
+    <td><%= link_to 'Edit', edit_ries_par_path(ries_par) %></td>
+    <td><%= link_to 'Destroy', ries_par, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ries_par', new_ries_par_path %>

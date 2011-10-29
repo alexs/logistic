@@ -1,0 +1,2 @@
+page.replace_html 'workspace', :partial => 'show'
+page.visual_effect :highlight, 'workspace'

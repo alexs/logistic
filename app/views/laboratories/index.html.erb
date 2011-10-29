@@ -1,0 +1,166 @@
+<h1>Listing laboratories</h1>
+
+<table>
+  <tr>
+	  <th>Usuario</th>
+    <th>Hemoglobina</th>
+    <th>Hematocrito</th>
+    <th>Cmhc</th>
+    <th>Leucocitos</th>
+    <th>Cuenta diferencial</th>
+    <th>Linfocitos</th>
+    <th>Monocitos</th>
+    <th>Eosinofilos</th>
+    <th>Basofilos</th>
+    <th>Neut segmen</th>
+    <th>Neut banda</th>
+    <th>Alteraciones</th>
+    <th>Reticulocitos</th>
+    <th>Plaquetas</th>
+    <th>Sed globular</th>
+    <th>Grupo sanguineo</th>
+    <th>Factor rh</th>
+    <th>T protrombina</th>
+    <th>T parcial tromb</th>
+    <th>Glucosa</th>
+    <th>Hb glicosilada</th>
+    <th>Urea</th>
+    <th>Acido urico</th>
+    <th>Creatinina</th>
+    <th>Colesterol total</th>
+    <th>Trigliceridos</th>
+    <th>Hdl</th>
+    <th>Ldl</th>
+    <th>Bilirrubina total</th>
+    <th>Bilirubina directa</th>
+    <th>Bilirrubina indirecta</th>
+    <th>Alat tgp</th>
+    <th>Asat tgo</th>
+    <th>F alcalina</th>
+    <th>Vdrl</th>
+    <th>Antiestreptolisinas</th>
+    <th>Factor reumatoide</th>
+    <th>Proteina c reactiva</th>
+    <th>Prueba embarazo</th>
+    <th>Inmunologia otros</th>
+    <th>Coproparasitoscopico1</th>
+    <th>Coproparasitoscopico2</th>
+    <th>Coproparasitoscopico3</th>
+    <th>Fisico quimico</th>
+    <th>Color</th>
+    <th>Ph</th>
+    <th>Densidad</th>
+    <th>Glucosa</th>
+    <th>Cetona</th>
+    <th>Proteina</th>
+    <th>Nitrito</th>
+    <th>Bilirrubina</th>
+    <th>Hemoglobina</th>
+    <th>Sedimento</th>
+    <th>Leucocitos</th>
+    <th>Eritrocitos</th>
+    <th>Cel epiteliales</th>
+    <th>Bacterias</th>
+    <th>Cristales</th>
+    <th>Cilindros</th>
+    <th>Exudado gram</th>
+    <th>Basiloscopia baar1</th>
+    <th>Basiloscopia baar2</th>
+    <th>Basiloscopia baar3</th>
+    <th>Cultivo</th>
+    <th>Microbiologia otros</th>
+    <th>Tolerancia glucosa ayuno</th>
+    <th>Tolerancia glucosa 1hora</th>
+    <th>Tolerancia glucosa 2horas</th>
+    <th>Tolerancia glucosa observaciones</th>
+    <th>Num registro</th>
+    <th>Nombre</th>
+    <th>Fecha reporte</th>
+  </tr>
+
+<% @laboratories.each do |laboratory| %>
+  <tr>
+	  <td><%=h laboratory.appoiment.patient.firstname %></td>
+    <td><%=h laboratory.hemoglobina %></td>
+    <td><%=h laboratory.hematocrito %></td>
+    <td><%=h laboratory.cmhc %></td>
+    <td><%=h laboratory.leucocitos %></td>
+    <td><%=h laboratory.cuenta_diferencial %></td>
+    <td><%=h laboratory.linfocitos %></td>
+    <td><%=h laboratory.monocitos %></td>
+    <td><%=h laboratory.eosinofilos %></td>
+    <td><%=h laboratory.basofilos %></td>
+    <td><%=h laboratory.neut_segmen %></td>
+    <td><%=h laboratory.neut_banda %></td>
+    <td><%=h laboratory.alteraciones %></td>
+    <td><%=h laboratory.reticulocitos %></td>
+    <td><%=h laboratory.plaquetas %></td>
+    <td><%=h laboratory.sed_globular %></td>
+    <td><%=h laboratory.grupo_sanguineo %></td>
+    <td><%=h laboratory.factor_rh %></td>
+    <td><%=h laboratory.t_protrombina %></td>
+    <td><%=h laboratory.t_parcial_tromb %></td>
+    <td><%=h laboratory.glucosa %></td>
+    <td><%=h laboratory.hb_glicosilada %></td>
+    <td><%=h laboratory.urea %></td>
+    <td><%=h laboratory.acido_urico %></td>
+    <td><%=h laboratory.creatinina %></td>
+    <td><%=h laboratory.colesterol_total %></td>
+    <td><%=h laboratory.trigliceridos %></td>
+    <td><%=h laboratory.hdl %></td>
+    <td><%=h laboratory.ldl %></td>
+    <td><%=h laboratory.bilirrubina_total %></td>
+    <td><%=h laboratory.bilirubina_directa %></td>
+    <td><%=h laboratory.bilirrubina_indirecta %></td>
+    <td><%=h laboratory.alat_tgp %></td>
+    <td><%=h laboratory.asat_tgo %></td>
+    <td><%=h laboratory.f_alcalina %></td>
+    <td><%=h laboratory.vdrl %></td>
+    <td><%=h laboratory.antiestreptolisinas %></td>
+    <td><%=h laboratory.factor_reumatoide %></td>
+    <td><%=h laboratory.proteina_c_reactiva %></td>
+    <td><%=h laboratory.prueba_embarazo %></td>
+    <td><%=h laboratory.inmunologia_otros %></td>
+    <td><%=h laboratory.coproparasitoscopico1 %></td>
+    <td><%=h laboratory.coproparasitoscopico2 %></td>
+    <td><%=h laboratory.coproparasitoscopico3 %></td>
+    <td><%=h laboratory.fisico_quimico %></td>
+    <td><%=h laboratory.color %></td>
+    <td><%=h laboratory.ph %></td>
+    <td><%=h laboratory.densidad %></td>
+    <td><%=h laboratory.glucosa %></td>
+    <td><%=h laboratory.cetona %></td>
+    <td><%=h laboratory.proteina %></td>
+    <td><%=h laboratory.nitrito %></td>
+    <td><%=h laboratory.bilirrubina %></td>
+    <td><%=h laboratory.hemoglobina %></td>
+    <td><%=h laboratory.sedimento %></td>
+    <td><%=h laboratory.leucocitos %></td>
+    <td><%=h laboratory.eritrocitos %></td>
+    <td><%=h laboratory.cel_epiteliales %></td>
+    <td><%=h laboratory.bacterias %></td>
+    <td><%=h laboratory.cristales %></td>
+    <td><%=h laboratory.cilindros %></td>
+    <td><%=h laboratory.exudado_gram %></td>
+    <td><%=h laboratory.basiloscopia_baar1 %></td>
+    <td><%=h laboratory.basiloscopia_baar2 %></td>
+    <td><%=h laboratory.basiloscopia_baar3 %></td>
+    <td><%=h laboratory.cultivo %></td>
+    <td><%=h laboratory.microbiologia_otros %></td>
+    <td><%=h laboratory.tolerancia_glucosa_ayuno %></td>
+    <td><%=h laboratory.tolerancia_glucosa_1hora %></td>
+    <td><%=h laboratory.tolerancia_glucosa_2horas %></td>
+    <td><%=h laboratory.tolerancia_glucosa_observaciones %></td>
+    <td><%=h laboratory.num_registro %></td>
+    <td><%=h laboratory.nombre %></td>
+    <td><%=h laboratory.fecha_reporte %></td>
+    <td><%= link_to 'Show', laboratory %></td>
+    <td><%= link_to 'Edit', edit_laboratory_path(laboratory) %></td>
+    <td><%= link_to 'Destroy', laboratory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New laboratory', new_laboratory_path %>

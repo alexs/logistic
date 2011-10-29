@@ -1,0 +1,21 @@
+- remote_form_for @appoiment, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        = f.hidden_field :patient_id, :value => @appoiment.patient_id
+        = f.label "Diagnostico Presuntivo:"
+        = f.text_field :presumptive_diagnosis
+    %tr
+      %td
+        = f.label "Fecha próxima de consulta:"
+        = f.date_select :date_next_consult
+    %tr
+      %td
+        = f.label "Médico Solicitante:"
+        = f.text_field :applicant_doctor
+  .guardar
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, porfavor espere

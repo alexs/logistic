@@ -1,0 +1,2 @@
+page<<"$('#create_questionary_dialog').dialog('destroy');"
+page<<"$('.status_appoiment').css('display','inline');"

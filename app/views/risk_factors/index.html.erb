@@ -1,0 +1,80 @@
+<h1>Listing risk_factors</h1>
+
+<table>
+  <tr>
+    <th>Toxicos quimicos</th>
+    <th>Toxico quimicos modif</th>
+    <th>Trabaja muchas horas</th>
+    <th>Trabaja muchas horas modif</th>
+    <th>Parado</th>
+    <th>Parado modif</th>
+    <th>Objetos pesados</th>
+    <th>Objetos pesados modif</th>
+    <th>Ruido</th>
+    <th>Ruido modif</th>
+    <th>Estres</th>
+    <th>Estres modif</th>
+    <th>Enfermedades infecciosas</th>
+    <th>Enfermedades infecciosas modif</th>
+    <th>Automedica</th>
+    <th>Automedica modif</th>
+    <th>Automedica cantidad</th>
+    <th>Fuma</th>
+    <th>Fuma modif</th>
+    <th>Fuma cantidad</th>
+    <th>Alcohol</th>
+    <th>Alcohol modif</th>
+    <th>Alcohol cantidad</th>
+    <th>Drogas</th>
+    <th>Drogas modif</th>
+    <th>Drogas cantidad</th>
+    <th>Nutricion</th>
+    <th>Nutricion modif</th>
+    <th>Patient</th>
+    <th>User</th>
+    <th>Dependency</th>
+  </tr>
+
+<% @risk_factors.each do |risk_factor| %>
+  <tr>
+    <td><%=h risk_factor.toxicos_quimicos %></td>
+    <td><%=h risk_factor.toxico_quimicos_modif %></td>
+    <td><%=h risk_factor.trabaja_muchas_horas %></td>
+    <td><%=h risk_factor.trabaja_muchas_horas_modif %></td>
+    <td><%=h risk_factor.parado %></td>
+    <td><%=h risk_factor.parado_modif %></td>
+    <td><%=h risk_factor.objetos_pesados %></td>
+    <td><%=h risk_factor.objetos_pesados_modif %></td>
+    <td><%=h risk_factor.ruido %></td>
+    <td><%=h risk_factor.ruido_modif %></td>
+    <td><%=h risk_factor.estres %></td>
+    <td><%=h risk_factor.estres_modif %></td>
+    <td><%=h risk_factor.enfermedades_infecciosas %></td>
+    <td><%=h risk_factor.enfermedades_infecciosas_modif %></td>
+    <td><%=h risk_factor.automedica %></td>
+    <td><%=h risk_factor.automedica_modif %></td>
+    <td><%=h risk_factor.automedica_cantidad %></td>
+    <td><%=h risk_factor.fuma %></td>
+    <td><%=h risk_factor.fuma_modif %></td>
+    <td><%=h risk_factor.fuma_cantidad %></td>
+    <td><%=h risk_factor.alcohol %></td>
+    <td><%=h risk_factor.alcohol_modif %></td>
+    <td><%=h risk_factor.alcohol_cantidad %></td>
+    <td><%=h risk_factor.drogas %></td>
+    <td><%=h risk_factor.drogas_modif %></td>
+    <td><%=h risk_factor.drogas_cantidad %></td>
+    <td><%=h risk_factor.nutricion %></td>
+    <td><%=h risk_factor.nutricion_modif %></td>
+    <td><%=h risk_factor.patient_id %></td>
+    <td><%=h risk_factor.user_id %></td>
+    <td><%=h risk_factor.dependency_id %></td>
+    <td><%= link_to 'Show', risk_factor %></td>
+    <td><%= link_to 'Edit', edit_risk_factor_path(risk_factor) %></td>
+    <td><%= link_to 'Destroy', risk_factor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New risk_factor', new_risk_factor_path %>

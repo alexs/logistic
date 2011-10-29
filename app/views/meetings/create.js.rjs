@@ -1,0 +1,12 @@
+if @meeting
+  @hour = params[:date]["hour"]
+  @minute = params[:date]["minute"]
+  @meeting.starttime = (@meeting.starttime.to_time + @hour.to_i.hours + @minute.to_i.minutes).iso8601
+
+  if @meeting.save
+    page<<"$('#calendar').fullCalendar( 'refetchEvents' )"
+    page<<"$('#create_event_dialog').dialog('destroy')"
+  else
+    page.alert @meeting.errors.full_messages(',').join("\n")
+  end
+end

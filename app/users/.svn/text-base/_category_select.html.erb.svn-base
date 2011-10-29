@@ -1,0 +1,2 @@
+<% @categories = Category.find(:all, :conditions => {:id => [7]}) %>
+<%= select_tag("category", "<option selected='selected'>  </option>" + (options_for_select(@categories.collect {|cat| [cat.name, cat.id ]}.sort))) %>

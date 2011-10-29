@@ -1,0 +1,43 @@
+<p>
+  <b>Date:</b>
+  <%=h @somatometry.date %>
+</p>
+
+<p>
+  <b>Talla:</b>
+  <%=h @somatometry.talla %>
+</p>
+
+<p>
+  <b>Sistolica:</b>
+  <%=h @somatometry.sistolica %>
+</p>
+
+<p>
+  <b>Diastolica:</b>
+  <%=h @somatometry.diastolica %>
+</p>
+
+<p>
+  <b>Peso:</b>
+  <%=h @somatometry.peso %>
+</p>
+
+<p>
+  <b>Temperatura:</b>
+  <%=h @somatometry.temperatura %>
+</p>
+
+<p>
+  <b>Fc:</b>
+  <%=h @somatometry.fc %>
+</p>
+
+<p>
+  <b>Fr:</b>
+  <%=h @somatometry.fr %>
+</p>
+<br />
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@somatometry.patient_id}"}, :method => :get, :layout => false %>
+</p>

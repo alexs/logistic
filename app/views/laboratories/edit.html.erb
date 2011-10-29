@@ -1,0 +1,332 @@
+<h1>Editing laboratory</h1>
+
+<% form_for(@laboratory) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :date_next_consult %><br />
+    <%= f.date_select :date_next_consult %>
+  </p>
+  <p>
+    <%= f.label :presumptive_diagnosis %><br />
+    <%= f.text_field :presumptive_diagnosis %>
+  </p>
+  <p>
+    <%= f.label :applicant_doctor %><br />
+    <%= f.text_field :applicant_doctor %>
+  </p>
+  <p>
+    <%= f.label :hemoglobina %><br />
+    <%= f.text_field :hemoglobina %>
+  </p>
+  <p>
+    <%= f.label :hematocrito %><br />
+    <%= f.text_field :hematocrito %>
+  </p>
+  <p>
+    <%= f.label :cmhc %><br />
+    <%= f.text_field :cmhc %>
+  </p>
+  <p>
+    <%= f.label :leucocitos %><br />
+    <%= f.text_field :leucocitos %>
+  </p>
+  <p>
+    <%= f.label :cuenta_diferencial %><br />
+    <%= f.text_field :cuenta_diferencial %>
+  </p>
+  <p>
+    <%= f.label :linfocitos %><br />
+    <%= f.text_field :linfocitos %>
+  </p>
+  <p>
+    <%= f.label :monocitos %><br />
+    <%= f.text_field :monocitos %>
+  </p>
+  <p>
+    <%= f.label :eosinofilos %><br />
+    <%= f.text_field :eosinofilos %>
+  </p>
+  <p>
+    <%= f.label :basofilos %><br />
+    <%= f.text_field :basofilos %>
+  </p>
+  <p>
+    <%= f.label :neut_segmen %><br />
+    <%= f.text_field :neut_segmen %>
+  </p>
+  <p>
+    <%= f.label :neut_banda %><br />
+    <%= f.text_field :neut_banda %>
+  </p>
+  <p>
+    <%= f.label :alteraciones %><br />
+    <%= f.text_field :alteraciones %>
+  </p>
+  <p>
+    <%= f.label :reticulocitos %><br />
+    <%= f.text_field :reticulocitos %>
+  </p>
+  <p>
+    <%= f.label :plaquetas %><br />
+    <%= f.text_field :plaquetas %>
+  </p>
+  <p>
+    <%= f.label :sed_globular %><br />
+    <%= f.text_field :sed_globular %>
+  </p>
+  <p>
+    <%= f.label :grupo_sanguineo %><br />
+    <%= f.text_field :grupo_sanguineo %>
+  </p>
+  <p>
+    <%= f.label :factor_rh %><br />
+    <%= f.text_field :factor_rh %>
+  </p>
+  <p>
+    <%= f.label :t_protrombina %><br />
+    <%= f.text_field :t_protrombina %>
+  </p>
+  <p>
+    <%= f.label :t_parcial_tromb %><br />
+    <%= f.text_field :t_parcial_tromb %>
+  </p>
+  <p>
+    <%= f.label :glucosa %><br />
+    <%= f.text_field :glucosa %>
+  </p>
+  <p>
+    <%= f.label :hb_glicosilada %><br />
+    <%= f.text_field :hb_glicosilada %>
+  </p>
+  <p>
+    <%= f.label :urea %><br />
+    <%= f.text_field :urea %>
+  </p>
+  <p>
+    <%= f.label :acido_urico %><br />
+    <%= f.text_field :acido_urico %>
+  </p>
+  <p>
+    <%= f.label :creatinina %><br />
+    <%= f.text_field :creatinina %>
+  </p>
+  <p>
+    <%= f.label :colesterol_total %><br />
+    <%= f.text_field :colesterol_total %>
+  </p>
+  <p>
+    <%= f.label :trigliceridos %><br />
+    <%= f.text_field :trigliceridos %>
+  </p>
+  <p>
+    <%= f.label :hdl %><br />
+    <%= f.text_field :hdl %>
+  </p>
+  <p>
+    <%= f.label :ldl %><br />
+    <%= f.text_field :ldl %>
+  </p>
+  <p>
+    <%= f.label :bilirrubina_total %><br />
+    <%= f.text_field :bilirrubina_total %>
+  </p>
+  <p>
+    <%= f.label :bilirubina_directa %><br />
+    <%= f.text_field :bilirubina_directa %>
+  </p>
+  <p>
+    <%= f.label :bilirrubina_indirecta %><br />
+    <%= f.text_field :bilirrubina_indirecta %>
+  </p>
+  <p>
+    <%= f.label :alat_tgp %><br />
+    <%= f.text_field :alat_tgp %>
+  </p>
+  <p>
+    <%= f.label :asat_tgo %><br />
+    <%= f.text_field :asat_tgo %>
+  </p>
+  <p>
+    <%= f.label :f_alcalina %><br />
+    <%= f.text_field :f_alcalina %>
+  </p>
+  <p>
+    <%= f.label :vdrl %><br />
+    <%= f.text_field :vdrl %>
+  </p>
+  <p>
+    <%= f.label :antiestreptolisinas %><br />
+    <%= f.text_field :antiestreptolisinas %>
+  </p>
+  <p>
+    <%= f.label :factor_reumatoide %><br />
+    <%= f.text_field :factor_reumatoide %>
+  </p>
+  <p>
+    <%= f.label :proteina_c_reactiva %><br />
+    <%= f.text_field :proteina_c_reactiva %>
+  </p>
+  <p>
+    <%= f.label :prueba_embarazo %><br />
+    <%= f.text_field :prueba_embarazo %>
+  </p>
+  <p>
+    <%= f.label :inmunologia_otros %><br />
+    <%= f.text_field :inmunologia_otros %>
+  </p>
+  <p>
+    <%= f.label :coproparasitoscopico1 %><br />
+    <%= f.text_field :coproparasitoscopico1 %>
+  </p>
+  <p>
+    <%= f.label :coproparasitoscopico2 %><br />
+    <%= f.text_field :coproparasitoscopico2 %>
+  </p>
+  <p>
+    <%= f.label :coproparasitoscopico3 %><br />
+    <%= f.text_field :coproparasitoscopico3 %>
+  </p>
+  <p>
+    <%= f.label :fisico_quimico %><br />
+    <%= f.text_field :fisico_quimico %>
+  </p>
+  <p>
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </p>
+  <p>
+    <%= f.label :ph %><br />
+    <%= f.text_field :ph %>
+  </p>
+  <p>
+    <%= f.label :densidad %><br />
+    <%= f.text_field :densidad %>
+  </p>
+  <p>
+    <%= f.label :glucosa %><br />
+    <%= f.text_field :glucosa %>
+  </p>
+  <p>
+    <%= f.label :cetona %><br />
+    <%= f.text_field :cetona %>
+  </p>
+  <p>
+    <%= f.label :proteina %><br />
+    <%= f.text_field :proteina %>
+  </p>
+  <p>
+    <%= f.label :nitrito %><br />
+    <%= f.text_field :nitrito %>
+  </p>
+  <p>
+    <%= f.label :bilirrubina %><br />
+    <%= f.text_field :bilirrubina %>
+  </p>
+  <p>
+    <%= f.label :hemoglobina %><br />
+    <%= f.text_field :hemoglobina %>
+  </p>
+  <p>
+    <%= f.label :sedimento %><br />
+    <%= f.text_field :sedimento %>
+  </p>
+  <p>
+    <%= f.label :leucocitos %><br />
+    <%= f.text_field :leucocitos %>
+  </p>
+  <p>
+    <%= f.label :eritrocitos %><br />
+    <%= f.text_field :eritrocitos %>
+  </p>
+  <p>
+    <%= f.label :cel_epiteliales %><br />
+    <%= f.text_field :cel_epiteliales %>
+  </p>
+  <p>
+    <%= f.label :bacterias %><br />
+    <%= f.text_field :bacterias %>
+  </p>
+  <p>
+    <%= f.label :cristales %><br />
+    <%= f.text_field :cristales %>
+  </p>
+  <p>
+    <%= f.label :cilindros %><br />
+    <%= f.text_field :cilindros %>
+  </p>
+  <p>
+    <%= f.label :exudado_gram %><br />
+    <%= f.text_field :exudado_gram %>
+  </p>
+  <p>
+    <%= f.label :basiloscopia_baar1 %><br />
+    <%= f.text_field :basiloscopia_baar1 %>
+  </p>
+  <p>
+    <%= f.label :basiloscopia_baar2 %><br />
+    <%= f.text_field :basiloscopia_baar2 %>
+  </p>
+  <p>
+    <%= f.label :basiloscopia_baar3 %><br />
+    <%= f.text_field :basiloscopia_baar3 %>
+  </p>
+  <p>
+    <%= f.label :cultivo %><br />
+    <%= f.text_field :cultivo %>
+  </p>
+  <p>
+    <%= f.label :microbiologia_otros %><br />
+    <%= f.text_field :microbiologia_otros %>
+  </p>
+  <p>
+    <%= f.label :tolerancia_glucosa_ayuno %><br />
+    <%= f.text_field :tolerancia_glucosa_ayuno %>
+  </p>
+  <p>
+    <%= f.label :tolerancia_glucosa_1hora %><br />
+    <%= f.text_field :tolerancia_glucosa_1hora %>
+  </p>
+  <p>
+    <%= f.label :tolerancia_glucosa_2horas %><br />
+    <%= f.text_field :tolerancia_glucosa_2horas %>
+  </p>
+  <p>
+    <%= f.label :tolerancia_glucosa_observaciones %><br />
+    <%= f.text_field :tolerancia_glucosa_observaciones %>
+  </p>
+  <p>
+    <%= f.label :num_registro %><br />
+    <%= f.text_field :num_registro %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :fecha_reporte %><br />
+    <%= f.date_select :fecha_reporte %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @laboratory %> |
+<%= link_to 'Back', laboratories_path %>

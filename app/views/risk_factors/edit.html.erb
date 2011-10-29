@@ -1,0 +1,136 @@
+<h1>Editing risk_factor</h1>
+
+<% form_for(@risk_factor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :toxicos_quimicos %><br />
+    <%= f.check_box :toxicos_quimicos %>
+  </p>
+  <p>
+    <%= f.label :toxico_quimicos_modif %><br />
+    <%= f.check_box :toxico_quimicos_modif %>
+  </p>
+  <p>
+    <%= f.label :trabaja_muchas_horas %><br />
+    <%= f.check_box :trabaja_muchas_horas %>
+  </p>
+  <p>
+    <%= f.label :trabaja_muchas_horas_modif %><br />
+    <%= f.check_box :trabaja_muchas_horas_modif %>
+  </p>
+  <p>
+    <%= f.label :parado %><br />
+    <%= f.check_box :parado %>
+  </p>
+  <p>
+    <%= f.label :parado_modif %><br />
+    <%= f.check_box :parado_modif %>
+  </p>
+  <p>
+    <%= f.label :objetos_pesados %><br />
+    <%= f.check_box :objetos_pesados %>
+  </p>
+  <p>
+    <%= f.label :objetos_pesados_modif %><br />
+    <%= f.check_box :objetos_pesados_modif %>
+  </p>
+  <p>
+    <%= f.label :ruido %><br />
+    <%= f.check_box :ruido %>
+  </p>
+  <p>
+    <%= f.label :ruido_modif %><br />
+    <%= f.check_box :ruido_modif %>
+  </p>
+  <p>
+    <%= f.label :estres %><br />
+    <%= f.check_box :estres %>
+  </p>
+  <p>
+    <%= f.label :estres_modif %><br />
+    <%= f.check_box :estres_modif %>
+  </p>
+  <p>
+    <%= f.label :enfermedades_infecciosas %><br />
+    <%= f.check_box :enfermedades_infecciosas %>
+  </p>
+  <p>
+    <%= f.label :enfermedades_infecciosas_modif %><br />
+    <%= f.check_box :enfermedades_infecciosas_modif %>
+  </p>
+  <p>
+    <%= f.label :automedica %><br />
+    <%= f.check_box :automedica %>
+  </p>
+  <p>
+    <%= f.label :automedica_modif %><br />
+    <%= f.check_box :automedica_modif %>
+  </p>
+  <p>
+    <%= f.label :automedica_cantidad %><br />
+    <%= f.text_field :automedica_cantidad %>
+  </p>
+  <p>
+    <%= f.label :fuma %><br />
+    <%= f.check_box :fuma %>
+  </p>
+  <p>
+    <%= f.label :fuma_modif %><br />
+    <%= f.check_box :fuma_modif %>
+  </p>
+  <p>
+    <%= f.label :fuma_cantidad %><br />
+    <%= f.text_field :fuma_cantidad %>
+  </p>
+  <p>
+    <%= f.label :alcohol %><br />
+    <%= f.check_box :alcohol %>
+  </p>
+  <p>
+    <%= f.label :alcohol_modif %><br />
+    <%= f.check_box :alcohol_modif %>
+  </p>
+  <p>
+    <%= f.label :alcohol_cantidad %><br />
+    <%= f.text_field :alcohol_cantidad %>
+  </p>
+  <p>
+    <%= f.label :drogas %><br />
+    <%= f.check_box :drogas %>
+  </p>
+  <p>
+    <%= f.label :drogas_modif %><br />
+    <%= f.check_box :drogas_modif %>
+  </p>
+  <p>
+    <%= f.label :drogas_cantidad %><br />
+    <%= f.text_field :drogas_cantidad %>
+  </p>
+  <p>
+    <%= f.label :nutricion %><br />
+    <%= f.check_box :nutricion %>
+  </p>
+  <p>
+    <%= f.label :nutricion_modif %><br />
+    <%= f.check_box :nutricion_modif %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @risk_factor %> |
+<%= link_to 'Back', risk_factors_path %>

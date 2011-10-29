@@ -1,0 +1,6 @@
+%p
+ = link_to_remote 'Nueva Cita', :url => {:action => :new}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+%p
+ #calendar
+ #create_event_dialog{ :stylefood => 'display:none' }
+  #create_event

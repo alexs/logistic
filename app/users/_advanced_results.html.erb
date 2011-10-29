@@ -1,0 +1,41 @@
+<br />
+<%= image_tag('progress_bar.gif', :id => 'loading_indicator', :style => 'display:none') %>
+
+<br />
+
+            <% if current_user.group.id == 3 %>
+            <br />
+               <%= !@users.nil? ? "Registros encontrados = #{@users.size}" : "" %>
+               <br /><br />
+            <% end %>
+
+
+
+    <h1>Usuarios del Sistema</h1>
+    <br />
+
+
+<div class="table_result">
+<table>
+<% if @users.size > 0 %>
+  <tr>
+    <th>Nombre</th>
+    <th>Login</th>
+    <th>Depedendencia</th>
+    <th>Tipo de Usuario</th>
+  </tr>
+     <% end %>
+
+
+  <% for user in @users %>
+  <tr>
+    <td><%= user.full_name %></td>
+    <td><%= user.login %></td>
+    <td><%= user.dependency.name   + " " + user.dependency.category.name%></td>
+    <td><%= user.group.name %></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />

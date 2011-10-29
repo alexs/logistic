@@ -1,0 +1,28 @@
+<p>
+  <b>Ocupation:</b>
+  <%=h SocioeconomicOcupation.find(@socioeconomic.ocupation).name %>
+</p>
+
+<p>
+  <b>Ingreso:</b>
+  <%=h get_income(@socioeconomic.ingreso) %>
+</p>
+
+<p>
+  <b>Situacion economica:</b>
+  <%=h @socioeconomic.economic_situation.name + " " + @socioeconomic.economic_situation.desc %>
+</p>
+
+<p>
+  <b>Vivienda:</b>
+  <%=h @socioeconomic.tipo_vivienda.name %>
+</p>
+
+<p>
+  <b>Dormitorios:</b>
+  <%=h get_dormitorio(@socioeconomic.dormitorios) %>
+</p>
+<br />
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@socioeconomic.patient_id}"}, :method => :get, :layout => false %>
+</p>

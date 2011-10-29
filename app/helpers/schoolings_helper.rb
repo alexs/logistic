@@ -1,0 +1,2 @@
+module SchoolingsHelper
+end

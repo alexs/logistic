@@ -1,0 +1,2 @@
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_first_time').show(); $('.status_first_time_two').hide();"
+

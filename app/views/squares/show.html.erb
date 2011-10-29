@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @square.name %>
+</p>
+
+<p>
+  <b>Cp:</b>
+  <%=h @square.cp %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%=h @square.county %>
+</p>
+
+
+<%= link_to 'Edit', edit_square_path(@square) %> |
+<%= link_to 'Back', squares_path %>

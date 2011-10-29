@@ -1,0 +1,39 @@
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@ries_par.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<br />
+<br />
+<p>
+  <b>1.No estaba Preparada para embarazarme:</b>
+  <%=h answer_ries(@ries_par.no_preparada_emb) %>
+</p>
+
+<p>
+  <b>En caso de que haya deseado embarazarse, escriba dos acciones que hizo para prepararse:</b>
+  <%=h @ries_par.no_razon %>
+</p>
+
+<p>
+  <b>2.Considero que actualmente tengo un problema muy grande, o se me han juntado demasiados:</b>
+  <%=h answer_ries(@ries_par.considero_problema_grande) %>
+</p>
+
+<p>
+  <b>3.Sé que pasé por cosas en mi infancia que me avergüenzan o me daban mucho miedo.</b>
+  <%=h answer_ries(@ries_par.cosas_infancia) %>
+</p>
+
+<p>
+  <b>4.No cuento con el apoyo suficiente de mi pareja:</b>
+  <%=h answer_ries(@ries_par.no_apoyo_pareja) %>
+</p>
+
+<p>
+  <b>5.Considero que no cuento con personas que me puedan ayudar cuando lo necesito.</b>
+  <%=h answer_ries(@ries_par.no_personas_necesito) %>
+</p>
+
+<p>
+  <b>6.Tengo desconfianza en la forma que puedo ser como madre.</b>
+  <%=h answer_ries(@ries_par.desconfianza_madre) %>
+</p>

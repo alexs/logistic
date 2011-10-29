@@ -1,0 +1,106 @@
+- remote_form_for @ries_par, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        Responda Marcando el cuadro que corresponde
+    %tr
+      %td
+        1. No estaba Preparada para embarazarme
+      %td
+        = questions(f,:no_preparada_emb,1)
+      %td
+        = questions(f,:no_preparada_emb,2)
+      %td
+        = questions(f,:no_preparada_emb,3)
+      %td
+        = questions(f,:no_preparada_emb,4)
+      %td
+        = questions(f,:no_preparada_emb,5)
+    %br
+    %tr
+      %td
+        En caso de que haya deseado embarazarse, escriba dos acciones que hizo para prepararse
+      %td{:colspan => "5"}
+        = f.text_field :no_razon
+    %br
+    %tr
+      %td
+        2.Considero que actualmente tengo un problema muy grande, o se me han juntado demasiados
+      %td
+        = questions(f,:considero_problema_grande,1)
+      %td
+        = questions(f,:considero_problema_grande,2)
+      %td
+        = questions(f,:considero_problema_grande,3)
+      %td
+        = questions(f,:considero_problema_grande,4)
+      %td
+        = questions(f,:considero_problema_grande,5)
+    %br
+    %tr
+      %td
+        3.Sé que pasé por cosas en mi infancia que me avergüenzan o me daban mucho miedo.
+      %td
+        = questions(f,:cosas_infancia,1)
+      %td
+        = questions(f,:cosas_infancia,2)
+      %td
+        = questions(f,:cosas_infancia,3)
+      %td
+        = questions(f,:cosas_infancia,4)
+      %td
+        = questions(f,:cosas_infancia,5)
+    %br
+    %tr
+      %td
+        4.No cuento con el apoyo suficiente de mi pareja
+      %td
+        = questions(f,:no_apoyo_pareja,1)
+      %td
+        = questions(f,:no_apoyo_pareja,2)
+      %td
+        = questions(f,:no_apoyo_pareja,3)
+      %td
+        = questions(f,:no_apoyo_pareja,4)
+      %td
+        = questions(f,:no_apoyo_pareja,5)
+    %br
+    %tr
+      %td
+        5.Considero que no cuento con personas que me puedan ayudar cuando lo necesito.
+      %td
+        = questions(f,:no_personas_necesito,1)
+      %td
+        = questions(f,:no_personas_necesito,2)
+      %td
+        = questions(f,:no_personas_necesito,3)
+      %td
+        = questions(f,:no_personas_necesito,4)
+      %td
+        = questions(f,:no_personas_necesito,5)
+    %br
+    %tr
+      %td
+        6.Tengo desconfianza en la forma que puedo ser como madre.
+      %td
+        = questions(f,:desconfianza_madre,1)
+      %td
+        = questions(f,:desconfianza_madre,2)
+      %td
+        = questions(f,:desconfianza_madre,3)
+      %td
+        = questions(f,:desconfianza_madre,4)
+      %td
+        = questions(f,:desconfianza_madre,5)
+
+  %p
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :dependency_id, :value => current_user.dependency_id
+    = f.hidden_field :patient_id, :value => @ries_par.patient_id
+
+    .guardar
+      = f.submit 'Guardar'
+    .creating{:style => "display:none;"}Guardando, por favor espere

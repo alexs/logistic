@@ -1,0 +1,6 @@
+No Tiene citas asignadas de Laboratorio
+ 
+#menu_patient 
+= link_to_remote "Programar Cita Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+#create_questionary_dialog{ :stylefood => 'display:none' }
+  #create_questionary

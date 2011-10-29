@@ -1,0 +1,2 @@
+%option{ :selected => 'selected' ? " " : nil}Elige una colonia
+= options_for_select(@squares.collect {|col| [col.name + " " + col.cp, col.id ]}.sort)

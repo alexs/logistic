@@ -1,0 +1,145 @@
+<% remote_form_for @first_time, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+   Fecha en que se captura o capturó: <%= f.date_select :date, :value => Date.today %>
+  <table>
+    <th>
+      Basicos:
+    </th>
+    <tr>
+      <td>
+        <br />
+        FCF: <%= f.text_field :fcf, :size => 5  %>
+        MOV FETALES: <%= f.text_field :mov_fetales, :size => 5  %>
+      </td>
+    </tr>
+    <hr>
+    <tr>
+      <td>
+        <% @historia = ClinicalHistory.find_by_patient_id(@first_time.patient_id) %>
+        <% if !@historia.nil? %>
+          <% @gesta = !@historia.gesta.nil? ? @historia.gesta : "" %>
+          <% @parto = !@historia.partos.nil? ? @historia.partos : "" %>
+          <% @cesarea = !@historia.cesareas.nil? ? @historia.cesareas : "" %>
+          <% @aborto = !@historia.abortos.nil? ? @historia.abortos : "" %>
+        <% end %>
+        G: <%= f.text_field :gestados, :size => 5, :value => @gesta %>
+        P: <%= f.text_field :partos, :size => 5, :value =>  @parto   %>
+        C: <%= f.text_field :cesareas, :size => 5, :value => @cesarea  %>
+        A: <%= f.text_field :abortos, :size => 5, :value => @aborto  %>
+        Semanas de gestación: <%= f.text_field :semanas_gestacion, :size => 5 %>
+        <br />
+        FUM: <%= f.date_select :fum %>
+        Edad Gestacional Incierta USG: <%= f.text_field  :edad_gestacional_ugs, :size => 10 %>
+        <br />
+        Otros Diagnósticos: <%= f.text_area :otros_diagnosticos, :size => "60x3" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br />
+        <br />
+        ANTECEDENTES DE IMPORTANCIA
+        <br />
+        <br />
+        Quirúrgicos: <%= f.text_field :quirurgicos %>
+        Transfusionales: <%= f.text_field :transfusionales %>
+        Alergicos: <%= f.text_field :alergicos %>
+        Internamientos: <%= f.text_field :internamientos %>
+        <br />
+        <br />
+        Inmunizaciones: Tt<%= f.check_box :inmunizaciones_tt %>
+        Td<%= f.check_box :inmunizaciones_td %>
+        Influenza<%= f.check_box :inmunizaciones_influenza %>
+        Hepatitis B<%= f.check_box :inmunizaciones_hepatitisb %>
+        <br />
+        <br />
+        Subjetivo:
+        <br />
+        <br />
+        Cefalea:<%= f.check_box :cefalea %> Acúfenos:<%= f.check_box :acufenos %> Fosfenos:<%= f.check_box :fosfenos %> Nauseas:<%= f.check_box :nauseas %> Vómito:<%= f.check_box :vomito %> Epigastralgía:<%= f.check_box :epigastralgia %> Edema:<%= f.check_box :edema %> Percepción de Movimientos Fetales: <%= f.check_box :percepcion_mov_fetales %> Actividad Uterina: <%= f.check_box :actividad_uterina %> Fiebre:<%= f.check_box :fiebre %> Dolor Lumbar:<%= f.check_box :dolor_lumbar %>
+        <br />
+        <br />
+        Pérdidas trasvaginales: Leucorrea<%= f.check_box :perdidas_trasvaginales_leucorrea %> Líquido:<%= f.check_box :perdidas_trasvaginales_liquido %> Sangre:<%= f.check_box :perdidas_trasvaginales_sangre %>
+        <br />
+        <br />
+        Sintomatología Urinaria: Disuria:<%= f.check_box :sintomato_urinaria_disuria %>  Tenesmo Vesical:<%= f.check_box :sintomato_urinaria_tenesmo_vesical %> Poliuria:<%= f.check_box :sintomato_urinaria_poliuria %>
+        <br />
+        <br />
+        Objetivo: Exploración Física
+        <br />        
+        Mamas:
+        <br />
+        Pezón: <%= question2(f,:pezon,1) %> <%= question2(f,:pezon,2) %> <%= question2(f,:pezon,3) %>
+        <br />
+        Fondo uterino:<%= f.text_field :fondo_uterino, :size => 5 %>
+        cm | Frecuencia cardia fetal:<%= f.text_field :frecuencia_cardiaca_fetal, :size => 5 %>Xmin
+        <br />
+        Situación: <%= question2(f,:situacion,13) %>
+        <%= question2(f,:situacion,14) %>
+        <%= question2(f,:situacion,15) %>
+        <br />
+        Dorso: <%= question2(f,:dorso,16) %>
+        <%= question2(f,:dorso,17) %>  <%= f.text_field :dorso_desc %>
+        <br />
+        Movimientos fetales: <%= question2(f,:movimientos_fetal,18) %> <%= question2(f,:movimientos_fetal,19) %> <%= question2(f,:movimientos_fetal,20) %>
+        <br />
+        <br />
+        Tacto vaginal: Longitud:<%= f.text_field :tacto_vaginal_longitud, :size => 7 %>cm | Dilatacion:<%= f.text_field :tacto_dilatacion %>
+        <br />
+        Giordano:<%= f.check_box :giordano %>
+        <br />
+        Extremidades Inferiores: Edema Bimaleolar:<%= f.check_box :edema_bimaleolar %> Reflejos:
+        1<%= f.radio_button(:reflejos,1) %>
+        2<%= f.radio_button(:reflejos,2) %>
+        3<%= f.radio_button(:reflejos,3) %>
+        4<%= f.radio_button(:reflejos,4) %>
+        5<%= f.radio_button(:reflejos,5) %>
+        <br />
+        Resultados de Laboratorio y/o gabinete: <%= f.text_area :resultados_laboratorio, :size => "60x3"  %>
+        <br />
+        Análisis: <br />
+        <%= f.text_area :analisis, :size => "60x3" %>
+        <br />
+        <br />
+        Plan
+        <br />
+        1.- Método de Planificación Elegido:
+        <%= question2(f,:metodo_planificacion,4) %>
+        <%= question2(f,:metodo_planificacion,5) %>
+        <%= question2(f,:metodo_planificacion,6) %>
+        <%= question2(f,:metodo_planificacion,7) %>
+        <br />
+        Preservativo pendiente: <%= f.text_area :metodo_planificacion_pendiente, :size => "60x3" %>
+        <br />
+        Tratamiento Médico: <%= f.text_area :tratamiento, :size => "60x3"%>
+        <br />
+        Datos de alarma: <%= f.text_area :datos_alarma, :size => "60x3"%>
+        <br />
+        Referenciado a: 
+        <%= question2(f,:referenciado_a,8) %>
+        <%= question2(f,:referenciado_a,9) %>
+        <br>
+        Cita siguiente consulta: <%= f.date_select :cita_sig_consulta %>
+        <br />
+        Pronóstico:
+        <%= question2(f,:pronostico,10) %>
+        <%= question2(f,:pronostico,11) %>
+        <%= question2(f,:pronostico,12) %>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+    <%= f.hidden_field :patient_id, :value => @first_time.patient_id  %>
+    <%= f.hidden_field :somatometry_id, :value => @first_time.somatometry_id  %>
+  </p>
+
+  <div class="guardar">
+    <%= f.submit 'Guardar' %>
+  </div>
+  <div class="creating" style = "display:none">
+    Guardando, porfavor espere...
+   </div>
+<% end %>

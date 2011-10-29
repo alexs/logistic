@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Sistema de logistica - Congreso MASS</title>
+
+   <%= javascript_include_tag :defaults %>
+
+   <%= stylesheet_link_tag 'application' %>
+   <%= stylesheet_link_tag 'scaffold' %>
+   <%= stylesheet_link_tag 'screen' %>
+        <!--[if IE]>
+        <link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
+        <![endif]-->
+
+
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header_left">
+        <%= image_tag('../images/header.png', :size => '300x71') %>
+      </div>
+      <div class="header_right">
+
+        <!--<%= pluralize User.logged_in.count, "user" %> currently logged in<br />--> <!-- This based on last_request_at, if they were active < 10 minutes they are logged in -->
+
+
+        <% if !current_user %>
+        <%= link_to "Registrar", new_account_path %> |
+        <%= link_to "Ingresar", new_user_session_path %>
+        <% else %>
+
+        <b>Usuario:</b>
+        <%=h current_user.doctor.fullname %> 
+        <% if current_user.doctor.appointmenttype_id != 0 %>
+        |&nbsp;<b>Especialidad:</b>
+        <%=h current_user.doctor.specialty %> 
+        <% end %><br>
+        <%= link_to 'Mi Cuenta ', edit_account_path %> |
+        <%= link_to "Salir", user_session_path, :method => :delete, :confirm => "Esta seguro que quiere salir?" %>
+        <p>
+        <%=l Time.now.to_date, :format => :customize %>
+        </p>
+        <% end %>
+
+
+
+
+        <p style="color: green"><%= flash[:notice] %></p>
+      </div>
+    </div>
+
+    <div>
+<ul class="menu">
+<% if current_user %>
+
+<!--<li class="top"><a href="" target="_self" class="top_link"><span>Inicio</span></a>-->
+
+<% if permitted_to? :edit, :patients %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Archivo</span></a>
+<ul class="sub">
+<li><%= link_to 'Alta de Paciente' ,new_patient_path if permitted_to? :new, :patients %></li>
+<li><%= link_to 'Busqueda de Paciente' ,patients_path if permitted_to? :index, :patients %></li>
+<li><%= link_to 'Lista de Citas' ,appointments_path if permitted_to? :index, :appointments %></li>
+<li><%= link_to 'Asignar Cita Rayos X' , :controller => 'xrays', :action =>'search_folio' %></li>
+<li><%= link_to 'Asignar Cita Laboratorio' , :controller => 'labs', :action =>'requested_lab' %></li>
+</ul>
+</li>
+<li class="top"><a href="" target="_self" class="top_link"><span>Indicadores</span></a>
+<ul class="sub">
+<li><%= link_to "Pacientes", "/indicadores/indicadores1.xls", :target => "_blank" %></li>
+</ul>
+</li> 
+
+<% end %>
+
+<% if permitted_to? :index, :social_works %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Trabajo social</span></a>
+<ul class="sub">
+<li><%= link_to 'Busqueda de Paciente' ,patients_path if permitted_to? :index, :social_works %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :general, :indicators %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Usuarios</span></a>
+<ul class="sub">
+<li><%= link_to 'Relación de usuarios', list_doctors_path %></li>
+<li><%= link_to 'Alta de nuevo usuario', new_user_path %></li>
+</ul>
+</li>
+<li class="top"><a href="" target="_self" class="top_link"><span>Indicadores</span></a>
+<ul class="sub">
+<li><%= link_to 'Relacion de indicadores', general_indicators_path %></li>
+</ul>
+</li>
+<li class="top"><a href="" target="_self" class="top_link"><span>Pacientes</span></a>
+<ul class="sub">
+<li><%= link_to 'Relacion de pacientes', patients_path %></li>
+</ul>
+</li>
+<li class="top"><a href="" target="_self" class="top_link"><span>Citas</span></a>
+<ul class="sub">
+<li><%= link_to 'Relacion de citas', appointments_path %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :index, :pharmacies %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Droguería</span></a>
+<ul class="sub">
+<li><%= link_to 'Recetados', pharmacies_path if permitted_to? :index, :pharmacies %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :index, :daily_sheets %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Estadigrafo</span></a>
+<ul class="sub">
+<li><%= link_to 'Hoja Diaria de Consulta Externa', daily_sheets_path if permitted_to? :index, :daily_sheets %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :new, :diabetes %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Pacientes</span></a>
+<ul class="sub">
+<li><%= link_to 'Lista de Citas', appointments_path if permitted_to? :new, :diabetes %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :new, :medical_histories %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Pacientes</span></a>
+<ul class="sub">
+<li><%= link_to 'Lista de Citas', doctors_path if permitted_to? :new, :medical_histories %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :index, :xrays %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Rayos X</span></a>
+<ul class="sub">
+<li><%= link_to 'Rayos X Solicitados', xrays_path if permitted_to? :index, :xrays %></li>
+</ul>
+</li>
+<% end %>
+
+<% if permitted_to? :index, :labs %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Laboratorio</span></a>
+<ul class="sub">
+<li><%= link_to 'Estudios de Laboratorio Solicitados', labs_path if permitted_to? :index, :labs %></li>
+</ul>
+</li>
+<% end %>
+
+<% if current_user.doctor.specialty== "Homeopatía" %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Guías Clínicas</span></a>
+<ul class="sub">
+<li><%= link_to "Artritis Reumatoide", "/guias/homeopatia/artritisreumatoide.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Colon Irritable", "/guias/homeopatia/colonirritable.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Infecciones Respiratorias Agudas", "/guias/homeopatia/infeccionesrespiratorias.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Asma", "/guias/homeopatia/asma.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Dispepsia", "/guias/homeopatia/dispepsia.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Otitis Media Aguda", "/guias/homeopatia/otitismediaaguda.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Faringoamigdalitis", "/guias/homeopatia/faringoamigdalitis.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Depresión", "/guias/homeopatia/depresion.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Hipertensión Arterial", "/guias/homeopatia/hipertensionarterial.pdf" , :target => "_blank" %></li>
+</ul>
+</li>
+<% end %>
+
+<% if current_user.doctor.specialty== "Fitoterapia" %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Guías Clínicas</span></a>
+<ul class="sub">
+<li><%= link_to "Asma", "/guias/fitoterapia/asma1.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Colelitiasis", "/guias/fitoterapia/colelitiasis.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Colon irritable", "/guias/fitoterapia/colonirritable.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Depresión", "/guias/fitoterapia/depresion.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Diabetes Mellitus Tipo 2", "/guias/fitoterapia/diabetesmellitustipo2.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Hipertensión Arterial", "/guias/fitoterapia/hipertensionarterial.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Infecciones Amibiasis Intestinal", "/guias/fitoterapia/infeccionesamibiasisintestinal.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Infecciones Respiratorias Agudas", "/guias/fitoterapia/infeccionesrespiratoriasagudas.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Infecciones de Vias Urinarias", "/guias/fitoterapia/infeccionesviasurinarias.pdf" , :target => "_blank" %></li>
+</ul>
+</li>
+<% end %>
+
+<% if current_user.doctor.specialty== "Acupuntura" %>
+<li class="top"><a href="" target="_self" class="top_link"><span>Guías Clínicas</span></a>
+<ul class="sub">
+<li><%= link_to "Artritis Reumatoide", "/guias/acupuntura/artritisreumatoide.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Asma", "/guias/acupuntura/asma.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Colon Irritable", "/guias/acupuntura/colonirritable.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Depresión", "/guias/acupuntura/depresion.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Diabetes", "/guias/acupuntura/diabetes.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Dolor", "/guias/acupuntura/dolor.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Hipertensión Arterial", "/guias/acupuntura/hipertensionarterial.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Infecciones Agudas Vias Superiores", "/guias/acupuntura/infeccionesagudasviassuperiores.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Lumbalgia", "/guias/acupuntura/lumbalgia.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Neuralgia Trigemino", "/guias/acupuntura/neuralgiatrigemino.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Paralisis Facial Bell", "/guias/acupuntura/paralisisfacialbell.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Sindrome Climaterico", "/guias/acupuntura/sindromeclimaterico.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Sobrepeso y Obesidad", "/guias/acupuntura/sobrepesoobesidad.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Tinnitus", "/guias/acupuntura/tinnitus.pdf" , :target => "_blank" %></li>
+<li><%= link_to "Trastornos Vasculares Perifericos", "/guias/acupuntura/trastornosvascularesperifericos.pdf" , :target => "_blank" %></li>
+</ul>
+</li>
+<% end %>
+
+
+
+<!--<ul class="top"><a href="" target="_self" class="top_link"><span>Droguería</span></a>-->
+
+
+<!--<li class="top"><a href="" target="_self" class="top_link"><span>Catalogos</span></a>-->
+<ul class="sub">
+<li><%= link_to 'Shen (espíritu)' ,cat_espiritus_path %></li>
+<li><%= link_to 'Estado Anímico' ,cat_estado_animo_pres_path %></li>
+<li><%= link_to 'Características del Sueño' ,cat_caract_suenos_path %></li>
+
+
+</ul>
+</li>
+<!--<li class="top"><span><%= link_to "Salir", user_session_path, :method => :delete, :confirm => "Esta seguro que quiere salir?", :class => "top_link" %></span>-->
+<% end %>
+</ul>
+</div>
+
+
+
+
+    <div>
+      <%= yield %>
+    </div>
+<!-- start footer -->
+<div id="footer">
+        <!--  start footer-left -->
+        <div id="footer-left">
+        Congreso MASS - FCA UNAM. 2011 <a href="">http://www.fca.unam.mx/congresomass/</a> Derechos Reservados.</div>
+        <!--  end footer-left -->
+        <div class="clear">&nbsp;</div>
+</div>
+<!-- end footer -->
+  </body>
+</html>

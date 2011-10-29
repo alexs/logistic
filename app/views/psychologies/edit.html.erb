@@ -1,0 +1,92 @@
+<h1>Editing psychology</h1>
+
+<% form_for(@psychology) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :pregnant %><br />
+    <%= f.check_box :pregnant %>
+  </p>
+  <p>
+    <%= f.label :weeks_of_gestation %><br />
+    <%= f.text_field :weeks_of_gestation %>
+  </p>
+  <p>
+    <%= f.label :good_health_q1 %><br />
+    <%= f.text_field :good_health_q1 %>
+  </p>
+  <p>
+    <%= f.label :exhausted_q2 %><br />
+    <%= f.text_field :exhausted_q2 %>
+  </p>
+  <p>
+    <%= f.label :sick_q3 %><br />
+    <%= f.text_field :sick_q3 %>
+  </p>
+  <p>
+    <%= f.label :headache_q4 %><br />
+    <%= f.text_field :headache_q4 %>
+  </p>
+  <p>
+    <%= f.label :chill_q5 %><br />
+    <%= f.text_field :chill_q5 %>
+  </p>
+  <p>
+    <%= f.label :full_of_energy_q6 %><br />
+    <%= f.text_field :full_of_energy_q6 %>
+  </p>
+  <p>
+    <%= f.label :insomnia_q7 %><br />
+    <%= f.text_field :insomnia_q7 %>
+  </p>
+  <p>
+    <%= f.label :insomnia_all_night_q8 %><br />
+    <%= f.text_field :insomnia_all_night_q8 %>
+  </p>
+  <p>
+    <%= f.label :restless_nights_q9 %><br />
+    <%= f.text_field :restless_nights_q9 %>
+  </p>
+  <p>
+    <%= f.label :satisfied_to_do_things_q10 %><br />
+    <%= f.text_field :satisfied_to_do_things_q10 %>
+  </p>
+  <p>
+    <%= f.label :enjoy_daily_activities_q11 %><br />
+    <%= f.text_field :enjoy_daily_activities_q11 %>
+  </p>
+  <p>
+    <%= f.label :bad_mood_q12 %><br />
+    <%= f.text_field :bad_mood_q12 %>
+  </p>
+  <p>
+    <%= f.label :afraid_q13 %><br />
+    <%= f.text_field :afraid_q13 %>
+  </p>
+  <p>
+    <%= f.label :sad_q14 %><br />
+    <%= f.text_field :sad_q14 %>
+  </p>
+  <p>
+    <%= f.label :nervous_q15 %><br />
+    <%= f.text_field :nervous_q15 %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @psychology %> |
+<%= link_to 'Back', psychologies_path %>

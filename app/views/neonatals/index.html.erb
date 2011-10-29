@@ -1,0 +1,42 @@
+<h1>Listing neonatals</h1>
+
+<table>
+  <tr>
+    <th>Patient</th>
+    <th>User</th>
+    <th>Peso</th>
+    <th>Edad gestacional</th>
+    <th>Trofismo</th>
+    <th>Calificacion apgar</th>
+    <th>Sirveman</th>
+    <th>Morbilidad materna</th>
+    <th>Morbilidad neonatal</th>
+    <th>Muerte neonatal</th>
+    <th>Tasa mortalidad</th>
+    <th>Muerte perinatal</th>
+  </tr>
+
+<% @neonatals.each do |neonatal| %>
+  <tr>
+    <td><%=h neonatal.patient %></td>
+    <td><%=h neonatal.user %></td>
+    <td><%=h neonatal.peso %></td>
+    <td><%=h neonatal.edad_gestacional %></td>
+    <td><%=h neonatal.trofismo %></td>
+    <td><%=h neonatal.calificacion_apgar %></td>
+    <td><%=h neonatal.sirveman %></td>
+    <td><%=h neonatal.morbilidad_materna %></td>
+    <td><%=h neonatal.morbilidad_neonatal %></td>
+    <td><%=h neonatal.muerte_neonatal %></td>
+    <td><%=h neonatal.tasa_mortalidad %></td>
+    <td><%=h neonatal.muerte_perinatal %></td>
+    <td><%= link_to 'Show', neonatal %></td>
+    <td><%= link_to 'Edit', edit_neonatal_path(neonatal) %></td>
+    <td><%= link_to 'Destroy', neonatal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New neonatal', new_neonatal_path %>

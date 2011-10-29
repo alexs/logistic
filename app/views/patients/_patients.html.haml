@@ -1,0 +1,16 @@
+.table_result
+  - @patients.each do |patient|
+    %table
+      %tr{:class => "#{cycle ('odd', 'even')}"}
+        %td.name
+          = patient.fullname
+        %td.age
+          = patient.age.to_s + " " + "años"
+        %td.address
+          = patient.full_address
+        %td.actions
+          = link_to_remote "Seleccionar", :update => "workspace", :url => { :controller => "patients", :action => "show", :id => "#{patient.id}"}, :method => :get, :layout => false
+        %td.actions
+          = link_to_remote "Citas Laboratorio", :url => { :controller => "patients", :action => "appointments", :id => patient.id }, :method => :get
+%br
+Total de pacientes encontrados: #{@patients.size}

@@ -1,0 +1,252 @@
+<h1>Editing first_time</h1>
+
+<% form_for(@first_time) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sistolica %><br />
+    <%= f.text_field :sistolica %>
+  </p>
+  <p>
+    <%= f.label :diastolica %><br />
+    <%= f.text_field :diastolica %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :temp %><br />
+    <%= f.text_field :temp %>
+  </p>
+  <p>
+    <%= f.label :fc %><br />
+    <%= f.text_field :fc %>
+  </p>
+  <p>
+    <%= f.label :fr %><br />
+    <%= f.text_field :fr %>
+  </p>
+  <p>
+    <%= f.label :fcf %><br />
+    <%= f.text_field :fcf %>
+  </p>
+  <p>
+    <%= f.label :mov_fetales %><br />
+    <%= f.text_field :mov_fetales %>
+  </p>
+  <p>
+    <%= f.label :gestados %><br />
+    <%= f.text_field :gestados %>
+  </p>
+  <p>
+    <%= f.label :partos %><br />
+    <%= f.text_field :partos %>
+  </p>
+  <p>
+    <%= f.label :cesareas %><br />
+    <%= f.text_field :cesareas %>
+  </p>
+  <p>
+    <%= f.label :abortos %><br />
+    <%= f.text_field :abortos %>
+  </p>
+  <p>
+    <%= f.label :semanas_gestacion %><br />
+    <%= f.text_field :semanas_gestacion %>
+  </p>
+  <p>
+    <%= f.label :fum %><br />
+    <%= f.date_select :fum %>
+  </p>
+  <p>
+    <%= f.label :edad_gestacional_ugs %><br />
+    <%= f.text_field :edad_gestacional_ugs %>
+  </p>
+  <p>
+    <%= f.label :otros_diagnosticos %><br />
+    <%= f.text_area :otros_diagnosticos %>
+  </p>
+  <p>
+    <%= f.label :quirurgicos %><br />
+    <%= f.text_field :quirurgicos %>
+  </p>
+  <p>
+    <%= f.label :transfusionales %><br />
+    <%= f.text_field :transfusionales %>
+  </p>
+  <p>
+    <%= f.label :alergicos %><br />
+    <%= f.text_field :alergicos %>
+  </p>
+  <p>
+    <%= f.label :internamientos %><br />
+    <%= f.text_field :internamientos %>
+  </p>
+  <p>
+    <%= f.label :inmunizaciones_tt %><br />
+    <%= f.check_box :inmunizaciones_tt %>
+  </p>
+  <p>
+    <%= f.label :inmunizaciones_td %><br />
+    <%= f.check_box :inmunizaciones_td %>
+  </p>
+  <p>
+    <%= f.label :inmunizaciones_influenza %><br />
+    <%= f.check_box :inmunizaciones_influenza %>
+  </p>
+  <p>
+    <%= f.label :inmunizaciones_hepatitisb %><br />
+    <%= f.check_box :inmunizaciones_hepatitisb %>
+  </p>
+  <p>
+    <%= f.label :cefalea %><br />
+    <%= f.check_box :cefalea %>
+  </p>
+  <p>
+    <%= f.label :acufenos %><br />
+    <%= f.check_box :acufenos %>
+  </p>
+  <p>
+    <%= f.label :fosfenos %><br />
+    <%= f.check_box :fosfenos %>
+  </p>
+  <p>
+    <%= f.label :nauseas %><br />
+    <%= f.check_box :nauseas %>
+  </p>
+  <p>
+    <%= f.label :vomito %><br />
+    <%= f.check_box :vomito %>
+  </p>
+  <p>
+    <%= f.label :epigastralgia %><br />
+    <%= f.check_box :epigastralgia %>
+  </p>
+  <p>
+    <%= f.label :edema %><br />
+    <%= f.check_box :edema %>
+  </p>
+  <p>
+    <%= f.label :percepcion_mov_fetales %><br />
+    <%= f.check_box :percepcion_mov_fetales %>
+  </p>
+  <p>
+    <%= f.label :actividad_uterina %><br />
+    <%= f.check_box :actividad_uterina %>
+  </p>
+  <p>
+    <%= f.label :fiebre %><br />
+    <%= f.check_box :fiebre %>
+  </p>
+  <p>
+    <%= f.label :dolor_lumbar %><br />
+    <%= f.check_box :dolor_lumbar %>
+  </p>
+  <p>
+    <%= f.label :perdidas_trasvaginales_leucorrea %><br />
+    <%= f.check_box :perdidas_trasvaginales_leucorrea %>
+  </p>
+  <p>
+    <%= f.label :perdidas_trasvaginales_liquido %><br />
+    <%= f.check_box :perdidas_trasvaginales_liquido %>
+  </p>
+  <p>
+    <%= f.label :perdidas_trasvaginales_sangre %><br />
+    <%= f.check_box :perdidas_trasvaginales_sangre %>
+  </p>
+  <p>
+    <%= f.label :sintomato_urinaria_disuria %><br />
+    <%= f.check_box :sintomato_urinaria_disuria %>
+  </p>
+  <p>
+    <%= f.label :sintomato_urinaria_tenesmo_vesical %><br />
+    <%= f.check_box :sintomato_urinaria_tenesmo_vesical %>
+  </p>
+  <p>
+    <%= f.label :sintomato_urinaria_poliuria %><br />
+    <%= f.check_box :sintomato_urinaria_poliuria %>
+  </p>
+  <p>
+    <%= f.label :pezon %><br />
+    <%= f.text_field :pezon %>
+  </p>
+  <p>
+    <%= f.label :fondo_uterino %><br />
+    <%= f.check_box :fondo_uterino %>
+  </p>
+  <p>
+    <%= f.label :tacto_vaginal_longitud %><br />
+    <%= f.text_field :tacto_vaginal_longitud %>
+  </p>
+  <p>
+    <%= f.label :tacto_dilatacion %><br />
+    <%= f.text_field :tacto_dilatacion %>
+  </p>
+  <p>
+    <%= f.label :giordano %><br />
+    <%= f.check_box :giordano %>
+  </p>
+  <p>
+    <%= f.label :edema_bimaleolar %><br />
+    <%= f.check_box :edema_bimaleolar %>
+  </p>
+  <p>
+    <%= f.label :reflejos %><br />
+    <%= f.text_field :reflejos %>
+  </p>
+  <p>
+    <%= f.label :resultados_laboratorio %><br />
+    <%= f.text_area :resultados_laboratorio %>
+  </p>
+  <p>
+    <%= f.label :analisis %><br />
+    <%= f.text_area :analisis %>
+  </p>
+  <p>
+    <%= f.label :metodo_planificacion %><br />
+    <%= f.text_field :metodo_planificacion %>
+  </p>
+  <p>
+    <%= f.label :metodo_planificacion_pendiente %><br />
+    <%= f.text_area :metodo_planificacion_pendiente %>
+  </p>
+  <p>
+    <%= f.label :tratamiento %><br />
+    <%= f.text_area :tratamiento %>
+  </p>
+  <p>
+    <%= f.label :datos_alarma %><br />
+    <%= f.text_area :datos_alarma %>
+  </p>
+  <p>
+    <%= f.label :referenciado_a %><br />
+    <%= f.text_field :referenciado_a %>
+  </p>
+  <p>
+    <%= f.label :cita_sig_consulta %><br />
+    <%= f.date_select :cita_sig_consulta %>
+  </p>
+  <p>
+    <%= f.label :pronostico %><br />
+    <%= f.text_field :pronostico %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :dependency %><br />
+    <%= f.text_field :dependency %>
+  </p>
+  <p>
+    <%= f.label :patient %><br />
+    <%= f.text_field :patient %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @first_time %> |
+<%= link_to 'Back', first_times_path %>

@@ -1,0 +1,24 @@
+%p
+  Año:
+  = f.text_field :year, :class => "short_field"
+  SG:
+  = f.text_field :sg
+  Tipo embarazo:
+  = f.text_field :pregnant_type
+  Resolución
+  = f.text_field :resolve
+  Peso
+  = f.text_field :peso, :class => "short_field"
+  Sexo: Masculino
+  = f.radio_button(:sexo, "true")
+  Femenino
+  = f.radio_button(:sexo, "false")
+  ¿Vivo? Vivo
+  = f.radio_button(:vivo, "true")
+  Muerto
+  = f.radio_button(:vivo, "false")
+  ¿Sano? Sano
+  = f.radio_button(:sano, "true")
+  Enfermo
+  = f.radio_button(:sano, "false")
+%hr

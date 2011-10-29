@@ -1,0 +1,43 @@
+<% remote_form_for @neonatal, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+
+    <%= f.hidden_field :patient_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id.to_i %>
+
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :edad_gestacional %><br />
+    <%= f.text_field :edad_gestacional %>
+  </p>
+  <p>
+    <%= f.label :trofismo %><br />
+    <%= f.select(:trofismo, {"Recien Nacido Hipertrófico" => "1", "Recien Nacido Eutrófico" => "2","Recien Nacido Hipotónico" => "3"}, {:include_blank => true}) %>
+  </p>
+  <p>
+    Calificación APGAR<br />
+    <%= f.text_field :calificacion_apgar %>
+  </p>
+  <p>
+    <%= f.label :silverman %><br />
+    <%= f.text_field :sirveman %>
+  </p>
+  <p>
+    <%= f.label :morbilidad_materna %><br />
+    <%= f.text_field :morbilidad_materna %>
+  </p>
+  <p>
+    <%= f.label :morbilidad_neonatal %><br />
+    <%= f.text_field :morbilidad_neonatal %>
+  </p>
+  <p>
+    <%= f.label :muerte_neonatal %><br />
+ <%= f.select(:muerte_neonatal, {"Muerte Neonatal Precoz (MNP)" => "1", "Muerte Neonatal Tardía (MNT)" => "2"}, {:include_blank => true}) %>
+  </p>
+
+  <p>
+    <%= f.submit 'Guardar' %>
+  </p>
+<% end %>

@@ -1,0 +1,151 @@
+<% remote_form_for @visit, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :patient_id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <hr />
+  <b>Cuidados Generales</b>  <p>
+    ¿Como cada 3 h? <br />
+    <%= f.radio_button(:come_3_horas, "true") %>Si
+    <%= f.radio_button(:come_3_horas, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Come al seno materno" %><br />
+    <%= f.radio_button(:come_seno_materno, "true") %>Si
+    <%= f.radio_button(:come_seno_materno, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Coordina succión-deglución" %><br />
+    <%= f.radio_button(:succion_deglucion, "true") %>Si
+    <%= f.radio_button(:succion_deglucion, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Esta recibiendo baño de sol" %><br />
+    <%= f.radio_button(:bano_sol, "true") %>Si
+    <%= f.radio_button(:bano_sol, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Esta evacuando" %><br />
+    <%= f.radio_button(:evacuando, "true") %>Si
+    <%= f.radio_button(:evacuando, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Esta orinando" %><br />
+    <%= f.radio_button(:orinando, "true") %>Si
+    <%= f.radio_button(:orinando, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Duerme Boca arriba" %><br />
+    <%= f.radio_button(:boca_arriba, "true") %>Si
+    <%= f.radio_button(:boca_arriba, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Lo bañan diario" %><br />
+    <%= f.radio_button(:baño_diario, "true") %>Si
+    <%= f.radio_button(:baño_diario, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Le lava el cordón umbilical" %><br />
+    <%= f.radio_button(:lava_cordon, "true") %>Si
+    <%= f.radio_button(:lava_cordon, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Se tomo el tamiz neonatal" %><br />
+    <%= f.radio_button(:tamiz_neonatal, "true") %>Si
+    <%= f.radio_button(:tamiz_neonatal, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Se aplico vacuna BCG y Hepatitis B" %><br />
+    <%= f.radio_button(:vacuna_bcg_hepatitis_b, "true") %>Si
+    <%= f.radio_button(:vacuna_bcg_hepatitis_b, "false") %>No
+  </p>
+  <hr />
+  <b>Vigilancia Especial </b>
+  <p>
+    <%= f.label "Esta amarillo" %><br />
+    <%= f.text_field :amarillo %>
+  </p>
+  <hr />
+  <b>El vinculo  Materno esta:</b>
+  <p>
+    <%= f.label "Está bien hidratado" %><br />
+    <%= f.radio_button(:materno_hidratado, "true") %>Si
+    <%= f.radio_button(:materno_hidratado, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Ha presentado fiebre" %><br />
+    <%= f.radio_button(:materno_fiebre, "true") %>Si
+    <%= f.radio_button(:materno_fiebre, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Despierta y llora vigorosamente" %><br />
+    <%= f.radio_button(:materno_despierta_llora, "true") %>Si
+    <%= f.radio_button(:materno_despierta_llora, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Tiene secresión amarilla en  los ojos" %><br />
+    <%= f.radio_button(:materno_secresion_amarilla_ojos, "true") %>Si
+    <%= f.radio_button(:materno_secresion_amarilla_ojos, "false") %>No
+  </p>
+  <p>
+    <%= f.label "El área peri-umbilical esta roja, irritada " %><br />
+    <%= f.radio_button(:materno_peri_umbilical_roja, "true") %>Si
+    <%= f.radio_button(:materno_peri_umbilical_roja, "false") %>No
+  </p>
+  <p>
+    <%= f.label "El área peri-umbilical tiene secresión" %><br />
+    <%= f.radio_button(:materno_peri_umbilical_secresion, "true") %>Si
+    <%= f.radio_button(:materno_peri_umbilical_secresion, "false") %>No
+  </p>
+  <p>
+    <%= f.label "Succiona seno materno" %><br />
+    <%= f.radio_button(:materno_succiona_seno, "true") %>Si
+    <%= f.radio_button(:materno_succiona_seno, "false") %>No
+  </p>
+  <hr />
+  <b>Interrogue</b>
+  <p>
+    <%= f.label "1. ¿ Que cantidad de Loquios o sanguaza ha tenido en las ultimas 24 horas?" %><br />
+    <%= f.text_area :cantidad_loquios, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label "2. ¿Las mamas están Inflamadas?" %><br />
+    <%= f.text_area :mamas_inflamadas, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label "3. ¿Hay salida de calostro de las mamas?" %><br />
+    <%= f.text_area :salida_calostro, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label "4. ¿Como esta la sutura en caso de cesárea o episiorrafia?" %><br />
+    <%= f.text_area :sutura_estado, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label "5. ¿Cómo se siente la madre emocionalmente ?" %><br />
+    <%= f.text_area :madre_emocionalmente, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label "6. ¿La madre cuenta con apoyo familiar?" %><br />
+    <%= f.text_area :madre_apoyo_familiar, :size => "40X20" %>
+  </p>
+<hr />
+<b>Explore Signos Vitales</b>
+  <p>
+    <%= f.label "Tensión Arterial Diastolica" %><br />
+    <%= f.text_field :temsion_arterial_diastolica, :size => "4" %>mmHg
+  </p>
+  <p>
+    <%= f.label "Tensión Arterial Sistolica" %><br />
+    <%= f.text_field :tension_arterial_sistolica, :size => "4" %>mmHg
+  </p>
+  <p>
+    <%= f.label "Frecuencia cardiaca" %><br />
+    <%= f.text_field :frecuencia_cardiaca, :size => "4" %>x minuto 
+  </p>
+  <p>
+    <%= f.label "Temperatura" %><br />
+    <%= f.text_field :temperatura, :size => "4" %>°C
+  </p>
+  <p>
+    <%= f.submit 'Guardar' %>
+  </p>
+<% end %>

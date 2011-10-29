@@ -1,0 +1,211 @@
+#patient_show
+  %table{:border => 1}
+    %tr
+      %th{:colspan => 3, :class => "even"}
+        Datos de paciente
+    %tr
+      %td
+        Nombre: 
+        %b #{@patient.fullname}
+      %td
+        Edad: 
+        %b #{@patient.age} años
+      %td
+        Sexo: 
+        %b #{@patient.sex}
+    %tr
+      %td
+        Domicilio: 
+        %b #{@patient.full_address}
+      %td{:colspan=> 2}
+        Telefono:  
+        %b #{@patient.phone}
+    %tr
+      %td
+        CUIP(Clave Unica Identificadora de Paciente): 
+        %b #{@patient.cuip}
+      %td
+        Correo electrónico:
+        %b #{@patient.mail}
+
+  %br      
+  .button
+    = link_to_remote "Clasificación del embarazo", :url => {:controller => 'classifications', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    
+#menu_patient
+  %fieldset
+    %legend
+      Trabajo social
+    .button
+      - if @patient.socioeconomic.nil?
+        .socioeconomic_link
+          = link_to_remote "Ficha Socio Económica Inicial", :url => {:controller => 'socioeconomics', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_socioeconomics{ :style => 'display:none'}
+          = image_tag("checked.png")
+          = link_to_remote "Ficha Socioeconómica inicial", :url => {:controller => 'socioeconomics', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        = link_to_remote "Ficha Socioeconómica inicial", :url => {:controller => 'socioeconomics', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
+    .button 
+      - if @patient.psychologies.size < 1
+        .psychologies_link
+          = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_psychologies{ :style => 'display:none'}
+          = image_tag("checked.png")
+          = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        .status_psychologies{ :style => 'display:inline'}
+          = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+    .button
+      - if @patient.violency.nil?
+        .violencies_link
+          = link_to_remote "Violencia Familiar", :url => {:controller => 'violencies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_violencies{ :style => 'display:none'}
+          = image_tag("checked.png")
+          = link_to_remote "Violencia Familiar", :url => {:controller => 'violencies', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        .status_violencies{ :style => 'display:inline'}
+          = link_to_remote "Violencia Familiar", :url => {:controller => 'violencies', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+    .button
+      - if @patient.ries_par.nil?
+        .ries_par_link
+          = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ries_par{ :style => 'display:none'}
+          = image_tag("checked.png")
+          = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        .status_ries_par{ :style => 'display:inline'}
+          = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+
+
+  %fieldset
+    %legend
+      Enfermería
+    .button 
+      - if Somatometry.find_last_by_patient_id_and_date(@patient.id,Date.today).nil?
+        .somatometry_link
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_somatometry{ :style => 'display:none'}
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_somatometry{ :style => 'display:inline'}
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+
+  %fieldset
+    %legend
+      Médico
+    .button 
+      - if @patient.clinical_histories.size < 1
+        .clinical_link
+          = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_clinical{ :style => 'display:none'}
+          = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_clinical{ :style => 'display:inline'}
+          = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+ 
+    .button
+      - if !Somatometry.find_last_by_patient_id_and_date(@patient.id,Date.today).nil?
+        = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_first_time{ :style => 'display:none'}
+          = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        - if @patient.first_times.size > 0
+          .status_first_time_two
+            = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        .status_somatometry_not_captured{ :style => 'display:inline'}
+          No se ha capturado somatometría.
+          %br
+            (Primera Vez y Subsecuentes)
+        .status_somatometry_captured{ :style => 'display:none'}
+          = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_first_time{ :style => 'display:none'}
+          = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+
+    .button
+      = link_to_remote "Factores de Riesgo Modificables", :url => {:controller => 'risk_factors', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+
+    .button
+      - if @patient.variable_fetal.nil?
+        .variable_fetal_link
+          = link_to_remote "Variables Fetales", :url => {:controller => 'variable_fetals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_variable_fetal{:style => 'display:none'}
+          = link_to_remote "Variables Fetales", :url => {:controller => 'variable_fetals', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        = link_to_remote "Variables Fetales", :url => {:controller => 'variable_fetals', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_variable_fetal{ :style => 'display:inline'}
+          = image_tag("checked.png")
+
+  %fieldset
+    %legend
+      Médico Materno-Fetal
+    .button
+      - if @patient.ultra_sounds.size < 1
+        .ultrasound1_link
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound1{:style => 'display:none'}
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_ultrasound1{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
+
+
+    .button
+      - if @patient.ultra2_sounds.size < 1
+        .ultrasound2_link
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound2{ :style => 'display:none'}
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_ultrasound2{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
+
+    .button
+      - if @patient.ultra3_sounds.size < 1
+        .ultrasound3_link
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound3{ :style => 'display:none'}
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_ultrasound3{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
+
+
+  %fieldset
+    %legend
+      Laboratorio
+    .button
+      = link_to_remote "Programar Cita para Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+
+  %fieldset
+    %legend
+      Parto y Puerperio
+    .button
+      - if @patient.neonatal.nil?
+        .neonatal_link
+          = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_neonatal{:style => 'display:none'}
+          = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_neonatal
+          = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+    .button    
+      = link_to_remote "Visita Domiciliaria Después de 24 horas de la madre", :url => {:controller => 'visits', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+#create_questionary_dialog{ :stylefood => 'display:none' }
+  #create_questionary

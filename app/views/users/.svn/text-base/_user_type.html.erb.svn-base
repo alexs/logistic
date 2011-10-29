@@ -1,0 +1,6 @@
+<% if current_user.group.id == 1 %>
+<%= f.select( :group_id, Group.find(:all, :conditions => ['id = ? OR id = ?',1,2]).collect {|p| [ p.name, p.id ] }.sort) %>
+<% else if current_user.group.id ==3 %>
+<%= f.select( :group_id, Group.find(:all).collect {|p| [ p.name, p.id ] }.sort) %>
+<% end %>
+<% end %>

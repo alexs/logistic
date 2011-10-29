@@ -1,0 +1,492 @@
+<h1>Editing clinical_history</h1>
+
+<% form_for(@clinical_history) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :responsible_family %><br />
+    <%= f.text_field :responsible_family %>
+  </p>
+  <p>
+    <%= f.label :relationship %><br />
+    <%= f.text_field :relationship %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_mother %><br />
+    <%= f.check_box :cardiovascular_mother %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_father %><br />
+    <%= f.check_box :cardiovascular_father %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_children %><br />
+    <%= f.check_box :cardiovascular_children %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_brothers %><br />
+    <%= f.check_box :cardiovascular_brothers %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_husband %><br />
+    <%= f.check_box :cardiovascular_husband %>
+  </p>
+  <p>
+    <%= f.label :cardiovascular_others %><br />
+    <%= f.text_field :cardiovascular_others %>
+  </p>
+  <p>
+    <%= f.label :diabetes_mother %><br />
+    <%= f.check_box :diabetes_mother %>
+  </p>
+  <p>
+    <%= f.label :diabetes_father %><br />
+    <%= f.check_box :diabetes_father %>
+  </p>
+  <p>
+    <%= f.label :diabetes_children %><br />
+    <%= f.check_box :diabetes_children %>
+  </p>
+  <p>
+    <%= f.label :diabetes_brothers %><br />
+    <%= f.check_box :diabetes_brothers %>
+  </p>
+  <p>
+    <%= f.label :diabetes_husband %><br />
+    <%= f.check_box :diabetes_husband %>
+  </p>
+  <p>
+    <%= f.label :diabetes_others %><br />
+    <%= f.text_field :diabetes_others %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_mother %><br />
+    <%= f.check_box :neoplastic_mother %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_father %><br />
+    <%= f.check_box :neoplastic_father %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_children %><br />
+    <%= f.check_box :neoplastic_children %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_brothers %><br />
+    <%= f.check_box :neoplastic_brothers %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_husband %><br />
+    <%= f.check_box :neoplastic_husband %>
+  </p>
+  <p>
+    <%= f.label :neoplastic_others %><br />
+    <%= f.text_field :neoplastic_others %>
+  </p>
+  <p>
+    <%= f.label :infectious_mother %><br />
+    <%= f.check_box :infectious_mother %>
+  </p>
+  <p>
+    <%= f.label :infectious_father %><br />
+    <%= f.check_box :infectious_father %>
+  </p>
+  <p>
+    <%= f.label :infectious_children %><br />
+    <%= f.check_box :infectious_children %>
+  </p>
+  <p>
+    <%= f.label :infectious_brothers %><br />
+    <%= f.check_box :infectious_brothers %>
+  </p>
+  <p>
+    <%= f.label :infectious_husband %><br />
+    <%= f.check_box :infectious_husband %>
+  </p>
+  <p>
+    <%= f.label :infectious_others %><br />
+    <%= f.text_field :infectious_others %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_mother %><br />
+    <%= f.check_box :toxicomanias_mother %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_father %><br />
+    <%= f.check_box :toxicomanias_father %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_children %><br />
+    <%= f.check_box :toxicomanias_children %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_brothers %><br />
+    <%= f.check_box :toxicomanias_brothers %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_husband %><br />
+    <%= f.check_box :toxicomanias_husband %>
+  </p>
+  <p>
+    <%= f.label :toxicomanias_others %><br />
+    <%= f.text_field :toxicomanias_others %>
+  </p>
+  <p>
+    <%= f.label :malformed_mother %><br />
+    <%= f.check_box :malformed_mother %>
+  </p>
+  <p>
+    <%= f.label :malformed_father %><br />
+    <%= f.check_box :malformed_father %>
+  </p>
+  <p>
+    <%= f.label :malformed_children %><br />
+    <%= f.check_box :malformed_children %>
+  </p>
+  <p>
+    <%= f.label :malformed_brothers %><br />
+    <%= f.check_box :malformed_brothers %>
+  </p>
+  <p>
+    <%= f.label :malformed_husband %><br />
+    <%= f.check_box :malformed_husband %>
+  </p>
+  <p>
+    <%= f.label :malformed_others %><br />
+    <%= f.text_field :malformed_others %>
+  </p>
+  <p>
+    <%= f.label :feed %><br />
+    <%= f.text_field :feed %>
+  </p>
+  <p>
+    <%= f.label :vitamins %><br />
+    <%= f.check_box :vitamins %>
+  </p>
+  <p>
+    <%= f.label :iron %><br />
+    <%= f.check_box :iron %>
+  </p>
+  <p>
+    <%= f.label :folic_acid %><br />
+    <%= f.check_box :folic_acid %>
+  </p>
+  <p>
+    <%= f.label :caffeine %><br />
+    <%= f.check_box :caffeine %>
+  </p>
+  <p>
+    <%= f.label :drugs %><br />
+    <%= f.check_box :drugs %>
+  </p>
+  <p>
+    <%= f.label :medicaments %><br />
+    <%= f.check_box :medicaments %>
+  </p>
+  <p>
+    <%= f.label :medicaments_details %><br />
+    <%= f.text_field :medicaments_details %>
+  </p>
+  <p>
+    <%= f.label :alcoholism %><br />
+    <%= f.text_field :alcoholism %>
+  </p>
+  <p>
+    <%= f.label :smoking %><br />
+    <%= f.text_field :smoking %>
+  </p>
+  <p>
+    <%= f.label :toxina_tetanica_1 %><br />
+    <%= f.check_box :toxina_tetanica_1 %>
+  </p>
+  <p>
+    <%= f.label :toxina_tetanica_2 %><br />
+    <%= f.check_box :toxina_tetanica_2 %>
+  </p>
+  <p>
+    <%= f.label :influenza_h1n1 %><br />
+    <%= f.check_box :influenza_h1n1 %>
+  </p>
+  <p>
+    <%= f.label :influenza_estacional %><br />
+    <%= f.check_box :influenza_estacional %>
+  </p>
+  <p>
+    <%= f.label :hipertension %><br />
+    <%= f.check_box :hipertension %>
+  </p>
+  <p>
+    <%= f.label :cardiopatia %><br />
+    <%= f.check_box :cardiopatia %>
+  </p>
+  <p>
+    <%= f.label :hiperlipidemia %><br />
+    <%= f.check_box :hiperlipidemia %>
+  </p>
+  <p>
+    <%= f.label :enfermedad_renal %><br />
+    <%= f.check_box :enfermedad_renal %>
+  </p>
+  <p>
+    <%= f.label :neurologicas_epilepsia %><br />
+    <%= f.check_box :neurologicas_epilepsia %>
+  </p>
+  <p>
+    <%= f.label :psiquiatricas_depresion %><br />
+    <%= f.check_box :psiquiatricas_depresion %>
+  </p>
+  <p>
+    <%= f.label :enfermedad_hepatica %><br />
+    <%= f.check_box :enfermedad_hepatica %>
+  </p>
+  <p>
+    <%= f.label :varices_flebitis %><br />
+    <%= f.check_box :varices_flebitis %>
+  </p>
+  <p>
+    <%= f.label :funcion_tiroidea %><br />
+    <%= f.check_box :funcion_tiroidea %>
+  </p>
+  <p>
+    <%= f.label :traumatismo %><br />
+    <%= f.check_box :traumatismo %>
+  </p>
+  <p>
+    <%= f.label :diabetes %><br />
+    <%= f.check_box :diabetes %>
+  </p>
+  <p>
+    <%= f.label :cancer %><br />
+    <%= f.check_box :cancer %>
+  </p>
+  <p>
+    <%= f.label :infecciosos %><br />
+    <%= f.check_box :infecciosos %>
+  </p>
+  <p>
+    <%= f.label :neumopatias_asma %><br />
+    <%= f.check_box :neumopatias_asma %>
+  </p>
+  <p>
+    <%= f.label :alergias %><br />
+    <%= f.check_box :alergias %>
+  </p>
+  <p>
+    <%= f.label :mamas %><br />
+    <%= f.check_box :mamas %>
+  </p>
+  <p>
+    <%= f.label :cirugia_genecologica %><br />
+    <%= f.check_box :cirugia_genecologica %>
+  </p>
+  <p>
+    <%= f.label :cirugias_generales %><br />
+    <%= f.check_box :cirugias_generales %>
+  </p>
+  <p>
+    <%= f.label :complicaciones_anestesicas %><br />
+    <%= f.check_box :complicaciones_anestesicas %>
+  </p>
+  <p>
+    <%= f.label :inmunizaciones %><br />
+    <%= f.check_box :inmunizaciones %>
+  </p>
+  <p>
+    <%= f.label :anomalias_uterinas %><br />
+    <%= f.check_box :anomalias_uterinas %>
+  </p>
+  <p>
+    <%= f.label :infertilidad %><br />
+    <%= f.check_box :infertilidad %>
+  </p>
+  <p>
+    <%= f.label :transplantes %><br />
+    <%= f.check_box :transplantes %>
+  </p>
+  <p>
+    <%= f.label :geneticos %><br />
+    <%= f.check_box :geneticos %>
+  </p>
+  <p>
+    <%= f.label :menarquia %><br />
+    <%= f.text_field :menarquia %>
+  </p>
+  <p>
+    <%= f.label :patron_menstrual %><br />
+    <%= f.text_field :patron_menstrual %>
+  </p>
+  <p>
+    <%= f.label :fum %><br />
+    <%= f.date_select :fum %>
+  </p>
+  <p>
+    <%= f.label :ivsa %><br />
+    <%= f.check_box :ivsa %>
+  </p>
+  <p>
+    <%= f.label :papanicolau %><br />
+    <%= f.check_box :papanicolau %>
+  </p>
+  <p>
+    <%= f.label :papanicolau_method %><br />
+    <%= f.text_field :papanicolau_method %>
+  </p>
+  <p>
+    <%= f.label :gesta %><br />
+    <%= f.text_field :gesta %>
+  </p>
+  <p>
+    <%= f.label :partos %><br />
+    <%= f.text_field :partos %>
+  </p>
+  <p>
+    <%= f.label :cesareas %><br />
+    <%= f.text_field :cesareas %>
+  </p>
+  <p>
+    <%= f.label :abortos %><br />
+    <%= f.text_field :abortos %>
+  </p>
+  <p>
+    <%= f.label :ectopicos %><br />
+    <%= f.text_field :ectopicos %>
+  </p>
+  <p>
+    <%= f.label :molas %><br />
+    <%= f.text_field :molas %>
+  </p>
+  <p>
+    <%= f.label :fecha_probable_parto %><br />
+    <%= f.date_select :fecha_probable_parto %>
+  </p>
+  <p>
+    <%= f.label :altura_fondo_uterino %><br />
+    <%= f.text_field :altura_fondo_uterino %>
+  </p>
+  <p>
+    <%= f.label :num_fetos %><br />
+    <%= f.text_field :num_fetos %>
+  </p>
+  <p>
+    <%= f.label :fcf %><br />
+    <%= f.text_field :fcf %>
+  </p>
+  <p>
+    <%= f.label :ritmico %><br />
+    <%= f.check_box :ritmico %>
+  </p>
+  <p>
+    <%= f.label :no_audible %><br />
+    <%= f.check_box :no_audible %>
+  </p>
+  <p>
+    <%= f.label :grupo_rh %><br />
+    <%= f.text_field :grupo_rh %>
+  </p>
+  <p>
+    <%= f.label :gammaglobulina %><br />
+    <%= f.check_box :gammaglobulina %>
+  </p>
+  <p>
+    <%= f.label :hidrops_feta %><br />
+    <%= f.check_box :hidrops_feta %>
+  </p>
+  <p>
+    <%= f.label :anticuerpos_irregulares %><br />
+    <%= f.check_box :anticuerpos_irregulares %>
+  </p>
+  <p>
+    <%= f.label :peso_anterior %><br />
+    <%= f.text_field :peso_anterior %>
+  </p>
+  <p>
+    <%= f.label :comentarios %><br />
+    <%= f.text_area :comentarios %>
+  </p>
+  <p>
+    <%= f.label :diastolica %><br />
+    <%= f.text_field :diastolica %>
+  </p>
+  <p>
+    <%= f.label :sistolica %><br />
+    <%= f.text_field :sistolica %>
+  </p>
+  <p>
+    <%= f.label :temperatura %><br />
+    <%= f.text_field :temperatura %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :talla %><br />
+    <%= f.text_field :talla %>
+  </p>
+  <p>
+    <%= f.label :masa_corporal %><br />
+    <%= f.text_field :masa_corporal %>
+  </p>
+  <p>
+    <%= f.label :cervix %><br />
+    <%= f.text_field :cervix %>
+  </p>
+  <p>
+    <%= f.label :fluidos %><br />
+    <%= f.check_box :fluidos %>
+  </p>
+  <p>
+    <%= f.label :sangrado %><br />
+    <%= f.check_box :sangrado %>
+  </p>
+  <p>
+    <%= f.label :dilatacion %><br />
+    <%= f.check_box :dilatacion %>
+  </p>
+  <p>
+    <%= f.label :borramientos %><br />
+    <%= f.check_box :borramientos %>
+  </p>
+  <p>
+    <%= f.label :reblandecimientos %><br />
+    <%= f.check_box :reblandecimientos %>
+  </p>
+  <p>
+    <%= f.label :inicio_acido_folico %><br />
+    <%= f.check_box :inicio_acido_folico %>
+  </p>
+  <p>
+    <%= f.label :inicio_multivitaminas %><br />
+    <%= f.check_box :inicio_multivitaminas %>
+  </p>
+  <p>
+    <%= f.label :inicio_suplementos %><br />
+    <%= f.check_box :inicio_suplementos %>
+  </p>
+  <p>
+    <%= f.label :inicio_hierro %><br />
+    <%= f.check_box :inicio_hierro %>
+  </p>
+  <p>
+    <%= f.label :inicio_aspirina %><br />
+    <%= f.check_box :inicio_aspirina %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @clinical_history %> |
+<%= link_to 'Back', clinical_histories_path %>

@@ -1,0 +1,525 @@
+<% remote_form_for :classification, @classification, :url => classification_path(@classification), :html => { :method => :put, :class => "edit_classification", :id => "edit_classification_#{@classification.id}" } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    Edad: <%= @classification.age %>
+  </p>
+  <p>
+    Peso: <%= f.text_field :weight, :size => 5 %> Kg.
+  </p>
+  <p>
+    Talla: <%= f.text_field :height, :size => 5 %> cm.
+  </p>
+<table>
+  <tr>
+    <td>   
+      Nivel socioeconómico: 
+    </td>
+    <td>
+      <%= question_classification(f,:socioeconomic_level,1) %>
+    </td>
+    <td>
+      <%= question_classification(f,:socioeconomic_level,2) %>
+    </td>
+    <td>
+      <%= question_classification(f,:socioeconomic_level,3) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Estado civil: 
+    </td>
+    <td colspan="3">
+      <%= f.select :maritalstatus_id, Maritalstatus.all.collect {|p| [ p.name, p.id ] } %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Escolaridad:
+    </td>
+    <td colspan="3">
+      <%= f.select :schooling_id, Schooling.all.collect {|p| [ p.name, p.id ] } %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Actitud frente al embarazo: 
+    </td>
+    <td>
+      <%= question_classification(f,:attitude_to_pregnancy,4) %>
+    </td>
+    <td>
+      <%= question_classification(f,:attitude_to_pregnancy,5) %>
+    </td>
+    <td>
+      <%= question_classification(f,:attitude_to_pregnancy,6) %>
+    </td>
+  </tr>
+
+
+  <tr>
+    <th colspan="4">II Antecedentes</th>
+  </tr>
+
+ <tr>
+    <td>   
+      Paridad: 
+    </td>
+    <td>
+      <%= question_classification(f,:parity,7) %>
+    </td>
+    <td>
+      <%= question_classification(f,:parity,8) %>
+    </td>
+    <td>
+      <%= question_classification(f,:parity,9) %>
+    </td>
+  </tr>
+
+ <tr>
+    <td>   
+      Parto anterior: 
+    </td>
+    <td>
+      <%= question_classification(f,:last_pregnant,10) %>
+    </td>
+    <td>
+      <%= question_classification(f,:last_pregnant,11) %><br />
+      <%= question_classification(f,:last_pregnant,12) %>
+    </td>
+    <td>
+      <%= question_classification(f,:last_pregnant,13) %>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td>   
+      Abortos consecutivos: 
+    </td>
+    <td>
+      <%= question_classification(f,:consecutives_aborts,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:consecutives_aborts,15) %><br />
+    </td>
+    <td>
+      <%= question_classification(f,:consecutives_aborts,16) %>
+    </td>
+  </tr>
+
+ <tr>
+    <td>   
+      Cesáreas previas: 
+    </td>
+    <td>
+      <%= question_classification(f,:prior_cesarean,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:prior_cesarean,17) %><br />
+    </td>
+    <td>
+      <%= question_classification(f,:prior_cesarean,16) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Partos menores a 37SDG: 
+    </td>
+    <td>
+      <%= question_classification(f,:childbirth_lower_37_weeks,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:childbirth_lower_37_weeks,18) %><br />
+    </td>
+    <td>
+      <%= question_classification(f,:childbirth_lower_37_weeks,19) %>
+    </td>
+  </tr>
+
+
+ <tr>
+    <td>   
+      Preeclampsia/eclampsia: 
+    </td>
+    <td>
+      <%= question_classification(f,:preeclampsia_eclampsia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:preeclampsia_eclampsia,20) %><br />
+    </td>
+    <td>
+
+    </td>
+  </tr>
+
+
+ <tr>
+    <td>   
+      Hijos 2500 grs. o menos. 
+    </td>
+    <td>
+      <%= question_classification(f,:children_low_25_grams,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:children_low_25_grams,18) %>
+    </td>
+    <td>
+      <%= question_classification(f,:children_low_25_grams,19) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Hijos 4000 grs. o más. 
+    </td>
+    <td>
+      <%= question_classification(f,:children_more_40_grams,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:children_more_40_grams,18) %>
+    </td>
+    <td>
+      <%= question_classification(f,:children_more_40_grams,19) %>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td>   
+      Muertes perinatales
+    </td>
+    <td>
+      <%= question_classification(f, :perinatals_deads,14) %>
+    </td>
+    <td>
+      <%= question_classification(f, :perinatals_deads,18) %>
+    </td>
+    <td>
+      <%= question_classification(f, :perinatals_deads,19) %>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td>   
+      Hijo malformado
+    </td>
+    <td>
+      <%= question_classification(f, :children_with_congenitals_defects,14) %>
+    </td>
+    <td>
+      <%= question_classification(f, :children_with_congenitals_defects,18) %>
+    </td>
+    <td>
+      <%= question_classification(f, :children_with_congenitals_defects,19) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Cirugía previa
+    </td>
+    <td>
+      <%= question_classification(f, :last_surgery,14) %>
+    </td>
+    <td>
+      <%= question_classification(f, :last_surgery,21) %>
+    </td>
+    <td>
+      <%= question_classification(f, :last_surgery,22) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Antecedentes diabéticos
+    </td>
+    <td>
+      <%= question_classification(f, :history_diabetes,14) %>
+    </td>
+    <td>
+      <%= question_classification(f, :history_diabetes,23) %>
+    </td>
+    <td>
+      <%= question_classification(f, :history_diabetes,24) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>   
+      Antecedentes hipertensivos
+    </td>
+    <td>
+      <%= question_classification(f, :history_hypertension,14) %>
+    </td>
+    <td>
+      <%= question_classification(f, :history_hypertension,23) %>
+    </td>
+    <td>
+      <%= question_classification(f, :history_hypertension,24) %>
+    </td>
+  </tr>
+
+  <tr>
+    <th colspan="4">III Embarazo actual</th>
+  </tr>
+
+ <tr>
+   <td>   
+      Hemoglobina (gramos)
+    </td>
+    <td>
+      <%= question_classification(f, :hemoglobin,25) %>
+    </td>
+    <td>
+      <%= question_classification(f, :hemoglobin,26) %>
+    </td>
+    <td>
+      <%= question_classification(f, :hemoglobin,27) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+      Factor RH
+    </td>
+    <td>
+      <%= question_classification(f,:rh_factor,28) %>
+    </td>
+    <td>
+      <%= question_classification(f,:rh_factor,29) %>
+    </td>
+    <td>
+      <%= question_classification(f,:rh_factor,30) %>
+    </td>
+  </tr>
+
+ <tr>
+   <td>   
+      Tabaquismo
+    </td>
+    <td>
+      <%= question_classification(f,:smoking,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:smoking,20) %>
+    </td>
+    <td>
+      <%= question_classification(f,:smoking,31) %>
+    </td>
+  </tr>
+ <tr>
+   <td>   
+      Alcoholismo
+    </td>
+    <td>
+      <%= question_classification(f,:alcoholism,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:alcoholism,20) %>
+    </td>
+    <td>
+      <%= question_classification(f,:alcoholism,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+      Toxicomanias
+    </td>
+    <td>
+      <%= question_classification(f,:addiction,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:addiction,20) %>
+    </td>
+    <td>
+      <%= question_classification(f,:addiction,31) %>
+    </td>
+  </tr>
+<tr>
+   <td>   
+      Diabetes Mellitus
+    </td>
+    <td>
+      <%= question_classification(f,:diabetes,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:diabetes,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:diabetes,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+      Hipertensión crónica
+    </td>
+    <td>
+      <%= question_classification(f,:hypertension_cronic,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:hypertension_cronic,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:hypertension_cronic,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+      Preclampsia
+    </td>
+    <td>
+      <%= question_classification(f,:preeclampsia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:preeclampsia,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:preeclampsia,31) %>
+    </td>
+  </tr>
+
+<tr>
+   <td>   
+      Epilepsia
+    </td>
+    <td>
+      <%= question_classification(f,:epilepsia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:epilepsia,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:epilepsia,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+      Cardiopatía
+    </td>
+    <td>
+      <%= question_classification(f,:cardiopatia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:cardiopatia,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:cardiopatia,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Colagenopatía
+    </td>
+    <td>
+      <%= question_classification(f,:colagenopatia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:colagenopatia,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:colagenopatia,31) %>
+    </td>
+  </tr>
+
+ <tr>
+   <td>   
+     Nefropatías
+    </td>
+    <td>
+      <%= question_classification(f,:nefropatia,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:nefropatia,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:nefropatia,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Endocrinopatias
+    </td>
+    <td>
+      <%= question_classification(f,:endocrinopatias,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:endocrinopatias,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:endocrinopatias,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Consanguinidad
+    </td>
+    <td>
+      <%= question_classification(f,:consanguinidad,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:consanguinidad,32) %>
+    </td>
+    <td>
+      <%= question_classification(f,:consanguinidad,20) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Amenaza de aborto
+    </td>
+    <td>
+      <%= question_classification(f,:amenaza_aborto,14) %>
+    </td>
+    <td>
+      <%= question_classification(f,:amenaza_aborto,33) %>
+    </td>
+    <td>
+      <%= question_classification(f,:amenaza_aborto,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Amenaza parto pretérmino
+    </td>
+    <td>
+      <%= question_classification(f,:amenaza_parto_pretermino,14) %>
+    </td>
+    <td>
+
+    </td>
+    <td>
+      <%= question_classification(f,:amenaza_parto_pretermino,31) %>
+    </td>
+  </tr>
+
+  <tr>
+   <td>   
+     Ruptura de membranas
+   </td> 
+   <td></td>
+   <td></td>
+   <td>
+      <%= question_classification(f,:ruptura_membranas,34) %>
+    </td>
+  </tr>
+</table>
+<br />
+  <p>
+    <%= f.submit 'Actualizar' %>
+  </p>
+<% end %>
+

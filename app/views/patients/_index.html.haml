@@ -1,0 +1,22 @@
+%h1 Búsqueda de pacientes.
+%p
+ - remote_form_for @patient, :url => {:action => :get_patient}, :loading => "$('patient_container').empty(); $('.looking').show();", :complete => "$('.looking').hide();" do |patient|
+  = text_field_tag 'patient[search]', nil
+  = submit_to_remote('submit_get_patient', 'Buscar', :url => { :controller => 'patients', :action => 'get_patient'})
+%p
+ #looking{:style => 'display:none'} Buscando...
+ %br
+  .table_header
+   %table
+    %tr
+     %th.name
+      %h1 Nombre
+     %th.age
+      %h1 Edad
+     %th.address
+      %h1 Domicilio
+     %th.actions
+      %h1 Acciones
+     %th.actions
+      %h1 Historial
+  #patient_container

@@ -1,0 +1,314 @@
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@first_time.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<br />
+<p>
+  <b>Sistolica:</b>
+  <%=h @first_time.somatometry.sistolica %>
+</p>
+
+<p>
+  <b>Diastolica:</b>
+  <%=h @first_time.somatometry.diastolica %>
+</p>
+
+<p>
+  <b>Peso:</b>
+  <%=h @first_time.somatometry.peso %>
+</p>
+
+<p>
+  <b>Temperatura:</b>
+  <%=h @first_time.somatometry.temperatura %>
+</p>
+
+<p>
+  <b>Frecuencia cardiaca:</b>
+  <%=h @first_time.somatometry.fc %>
+</p>
+
+<p>
+  <b>Fr:</b>
+  <%=h @first_time.somatometry.fr %>
+</p>
+
+<p>
+  <b>Fcf:</b>
+  <%=h @first_time.fcf %>
+</p>
+
+<p>
+  <b>Mov fetales:</b>
+  <%=h @first_time.mov_fetales %>
+</p>
+
+<p>
+  <b>Gestados:</b>
+  <%=h @first_time.gestados %>
+</p>
+
+<p>
+  <b>Partos:</b>
+  <%=h @first_time.partos %>
+</p>
+
+<p>
+  <b>Cesareas:</b>
+  <%=h @first_time.cesareas %>
+</p>
+
+<p>
+  <b>Abortos:</b>
+  <%=h @first_time.abortos %>
+</p>
+
+<p>
+  <b>Semanas gestacion:</b>
+  <%=h @first_time.semanas_gestacion %>
+</p>
+
+<p>
+  <b>Fum:</b>
+  <%=h @first_time.fum %>
+</p>
+
+<p>
+  <b>Edad gestacional ugs:</b>
+  <%=h @first_time.edad_gestacional_ugs %>
+</p>
+
+<p>
+  <b>Otros diagnosticos:</b>
+  <%=h @first_time.otros_diagnosticos %>
+</p>
+
+<p>
+  <b>Quirurgicos:</b>
+  <%=h @first_time.quirurgicos %>
+</p>
+
+<p>
+  <b>Transfusionales:</b>
+  <%=h @first_time.transfusionales %>
+</p>
+
+<p>
+  <b>Alergicos:</b>
+  <%=h @first_time.alergicos %>
+</p>
+
+<p>
+  <b>Internamientos:</b>
+  <%=h @first_time.internamientos %>
+</p>
+
+<p>
+  <b>Inmunizaciones tt:</b>
+  <%=h get_boolean(@first_time.inmunizaciones_tt) %>
+</p>
+
+<p>
+  <b>Inmunizaciones td:</b>
+  <%=h get_boolean(@first_time.inmunizaciones_td) %>
+</p>
+
+<p>
+  <b>Inmunizaciones influenza:</b>
+  <%=h get_boolean(@first_time.inmunizaciones_influenza) %>
+</p>
+
+<p>
+  <b>Inmunizaciones hepatitisb:</b>
+  <%=h get_boolean(@first_time.inmunizaciones_hepatitisb) %>
+</p>
+
+<p>
+  <b>Cefalea:</b>
+  <%=h get_boolean(@first_time.cefalea) %>
+</p>
+
+<p>
+  <b>Acufenos:</b>
+  <%=h get_boolean(@first_time.acufenos) %>
+</p>
+
+<p>
+  <b>Fosfenos:</b>
+  <%=h get_boolean(@first_time.fosfenos) %>
+</p>
+
+<p>
+  <b>Nauseas:</b>
+  <%=h get_boolean(@first_time.nauseas) %>
+</p>
+
+<p>
+  <b>Vomito:</b>
+  <%=h get_boolean(@first_time.vomito) %>
+</p>
+
+<p>
+  <b>Epigastralgia:</b>
+  <%=h get_boolean(@first_time.epigastralgia) %>
+</p>
+
+<p>
+  <b>Edema:</b>
+  <%=h get_boolean(@first_time.edema) %>
+</p>
+
+<p>
+  <b>Percepcion mov fetales:</b>
+  <%=h get_boolean(@first_time.percepcion_mov_fetales) %>
+</p>
+
+<p>
+  <b>Actividad uterina:</b>
+  <%=h get_boolean(@first_time.actividad_uterina) %>
+</p>
+
+
+<p>
+  <b>Fiebre:</b>
+  <%=h get_boolean(@first_time.fiebre) %>
+</p>
+
+<p>
+  <b>Dolor lumbar:</b>
+  <%=h get_boolean(@first_time.dolor_lumbar) %>
+</p>
+
+<p>
+  <b>Perdidas trasvaginales leucorrea:</b>
+  <%=h get_boolean(@first_time.perdidas_trasvaginales_leucorrea) %>
+</p>
+
+<p>
+  <b>Perdidas trasvaginales liquido:</b>
+  <%=h get_boolean(@first_time.perdidas_trasvaginales_liquido) %>
+</p>
+
+<p>
+  <b>Perdidas trasvaginales sangre:</b>
+  <%=h get_boolean(@first_time.perdidas_trasvaginales_sangre) %>
+</p>
+
+<p>
+  <b>Sintomato urinaria disuria:</b>
+  <%=h get_boolean(@first_time.sintomato_urinaria_disuria) %>
+</p>
+
+<p>
+  <b>Sintomato urinaria tenesmo vesical:</b>
+  <%=h get_boolean(@first_time.sintomato_urinaria_tenesmo_vesical) %>
+</p>
+
+<p>
+  <b>Sintomato urinaria poliuria:</b>
+  <%=h get_boolean(@first_time.sintomato_urinaria_poliuria) %>
+</p>
+
+<p>
+  <b>Pezon:</b>
+  <%=h answer_subsequent(@first_time.pezon) %>
+</p>
+
+<p>
+  <b>Fondo uterino:</b>
+  <%=h @first_time.fondo_uterino %>
+</p>
+
+<p>
+  <b>Frecuencia cardiaca fetal:</b>
+  <%=h answer_subsequent(@first_time.frecuencia_cardiaca_fetal) %>
+</p>
+
+<p>
+  <b>Situación:</b>
+  <%=h answer_subsequent(@first_time.situacion) %>
+</p>
+
+<p>
+  <b>Dorso:</b>
+  <%=h answer_subsequent(@first_time.dorso) %>
+</p>
+
+<p>
+  <b>Dorso descripción::</b>
+  <%=h @first_time.dorso_desc %>
+</p>
+
+<p>
+  <b>Movimientos fetales:</b>
+  <%=h answer_subsequent(@first_time.movimientos_fetal) %>
+</p>
+
+<p>
+  <b>Tacto vaginal longitud:</b>
+  <%=h @first_time.tacto_vaginal_longitud %>
+</p>
+
+<p>
+  <b>Tacto dilatacion:</b>
+  <%=h @first_time.tacto_dilatacion %>
+</p>
+
+<p>
+  <b>Giordano:</b>
+  <%=h get_boolean(@first_time.giordano) %>
+</p>
+
+<p>
+  <b>Edema bimaleolar:</b>
+  <%=h get_boolean(@first_time.edema_bimaleolar) %>
+</p>
+
+<p>
+  <b>Reflejos:</b>
+  <%=h @first_time.reflejos %>
+</p>
+
+<p>
+  <b>Resultados laboratorio:</b>
+  <%=h @first_time.resultados_laboratorio %>
+</p>
+
+<p>
+  <b>Analisis:</b>
+  <%=h @first_time.analisis %>
+</p>
+
+<p>
+  <b>Metodo planificacion:</b>
+  <%=h answer_subsequent(@first_time.metodo_planificacion) %>
+</p>
+
+<p>
+  <b>Metodo planificacion pendiente:</b>
+  <%=h @first_time.metodo_planificacion_pendiente %>
+</p>
+
+<p>
+  <b>Tratamiento:</b>
+  <%=h @first_time.tratamiento %>
+</p>
+
+<p>
+  <b>Datos alarma:</b>
+  <%=h @first_time.datos_alarma %>
+</p>
+
+<p>
+  <b>Referenciado a:</b>
+  <%=h answer_subsequent(@first_time.referenciado_a) %>
+</p>
+
+<p>
+  <b>Cita sig consulta:</b>
+  <%= l @first_time.cita_sig_consulta, :format => :long %>
+</p>
+
+<p>
+  <b>Pronostico:</b>
+  <%=h answer_subsequent(@first_time.pronostico) %>
+</p>

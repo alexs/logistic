@@ -1,0 +1,128 @@
+<h1>Editing visit</h1>
+
+<% form_for(@visit) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :come_3_horas %><br />
+    <%= f.check_box :come_3_horas %>
+  </p>
+  <p>
+    <%= f.label :come_seno_materno %><br />
+    <%= f.check_box :come_seno_materno %>
+  </p>
+  <p>
+    <%= f.label :succion_deglucion %><br />
+    <%= f.check_box :succion_deglucion %>
+  </p>
+  <p>
+    <%= f.label :bano_sol %><br />
+    <%= f.check_box :bano_sol %>
+  </p>
+  <p>
+    <%= f.label :evacuando %><br />
+    <%= f.check_box :evacuando %>
+  </p>
+  <p>
+    <%= f.label :orinando %><br />
+    <%= f.check_box :orinando %>
+  </p>
+  <p>
+    <%= f.label :boca_arriba %><br />
+    <%= f.check_box :boca_arriba %>
+  </p>
+  <p>
+    <%= f.label :baño_diario %><br />
+    <%= f.check_box :baño_diario %>
+  </p>
+  <p>
+    <%= f.label :lava_cordon %><br />
+    <%= f.check_box :lava_cordon %>
+  </p>
+  <p>
+    <%= f.label :tamiz_neonatal %><br />
+    <%= f.check_box :tamiz_neonatal %>
+  </p>
+  <p>
+    <%= f.label :vacuna_bcg_hepatitis_b %><br />
+    <%= f.check_box :vacuna_bcg_hepatitis_b %>
+  </p>
+  <p>
+    <%= f.label :amarillo %><br />
+    <%= f.text_field :amarillo %>
+  </p>
+  <p>
+    <%= f.label :materno_hidratado %><br />
+    <%= f.check_box :materno_hidratado %>
+  </p>
+  <p>
+    <%= f.label :materno_fiebre %><br />
+    <%= f.check_box :materno_fiebre %>
+  </p>
+  <p>
+    <%= f.label :materno_despierta_llora %><br />
+    <%= f.check_box :materno_despierta_llora %>
+  </p>
+  <p>
+    <%= f.label :materno_secresion_amarilla_ojos %><br />
+    <%= f.check_box :materno_secresion_amarilla_ojos %>
+  </p>
+  <p>
+    <%= f.label :materno_peri_umbilical_roja %><br />
+    <%= f.check_box :materno_peri_umbilical_roja %>
+  </p>
+  <p>
+    <%= f.label :materno_peri_umbilical_secresion %><br />
+    <%= f.check_box :materno_peri_umbilical_secresion %>
+  </p>
+  <p>
+    <%= f.label :materno_succiona_seno %><br />
+    <%= f.check_box :materno_succiona_seno %>
+  </p>
+  <p>
+    <%= f.label :cantidad_loquios %><br />
+    <%= f.text_area :cantidad_loquios %>
+  </p>
+  <p>
+    <%= f.label :mamas_inflamadas %><br />
+    <%= f.text_area :mamas_inflamadas %>
+  </p>
+  <p>
+    <%= f.label :salida_calostro %><br />
+    <%= f.text_area :salida_calostro %>
+  </p>
+  <p>
+    <%= f.label :sutura_estado %><br />
+    <%= f.text_area :sutura_estado %>
+  </p>
+  <p>
+    <%= f.label :madre_emocionalmente %><br />
+    <%= f.text_area :madre_emocionalmente %>
+  </p>
+  <p>
+    <%= f.label :madre_apoyo_familiar %><br />
+    <%= f.text_area :madre_apoyo_familiar %>
+  </p>
+  <p>
+    <%= f.label :temsion_arterial_diastolica %><br />
+    <%= f.text_field :temsion_arterial_diastolica %>
+  </p>
+  <p>
+    <%= f.label :tension_arterial_sistolica %><br />
+    <%= f.text_field :tension_arterial_sistolica %>
+  </p>
+  <p>
+    <%= f.label :frecuencia_cardiaca %><br />
+    <%= f.text_field :frecuencia_cardiaca %>
+  </p>
+  <p>
+    <%= f.label :temperatura %><br />
+    <%= f.text_field :temperatura %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @visit %> |
+<%= link_to 'Back', visits_path %>

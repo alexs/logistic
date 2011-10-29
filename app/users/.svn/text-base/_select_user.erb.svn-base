@@ -1,0 +1,9 @@
+        <% if current_user.group.id == 3 %>
+                 <%=  f.select(:user_id,  User.find(:all).collect {|p| [ p.name, p.id ]}) %>
+         <% else if current_user.group.id == 1 %>
+                 <%=  f.select(:user_id,  User.find_all_by_dependency_id(current_user.dependency_id ).collect {|p| [ p.short_name, p.id ]}) %>
+         <% else %>
+                 <%=  f.hidden_field :user_id, :value => current_user.id %>
+                <%= current_user.full_name %>
+         <% end %>
+         <% end %>

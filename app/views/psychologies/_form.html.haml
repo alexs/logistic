@@ -1,0 +1,199 @@
+- remote_form_for @psychology, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        = f.label :date
+      %td
+        = f.date_select :date
+        = f.hidden_field :patient_id, :value => @psychology.patient_id
+      %td
+    %tr
+      %td
+        ¿Esta Embarazada?: 
+        = f.radio_button(:pregnant,true) + "Si"
+        = f.radio_button(:pregnant,false) + "No"
+    %tr
+      %td
+        = f.label "Semanas de gestación: "
+        = f.text_field :weeks_of_gestation, :class => 'short_field'
+  %hr
+  %table
+    %tr
+      %td
+        1.- ¿Se ha sentido bien y con buena salud?
+      %td
+        = question_psychology(f,:good_health_q1,1)
+      %td
+        = question_psychology(f,:good_health_q1,2)
+      %td
+        = question_psychology(f,:good_health_q1,3)
+      %td
+        = question_psychology(f,:good_health_q1,4)
+    %tr
+      %td
+        2.- ¿Se ha sentido agotado y sin fuerzas para nada?
+      %td
+        = question_psychology(f,:exhausted_q2,5)
+      %td
+        = question_psychology(f,:exhausted_q2,6)
+      %td
+        = question_psychology(f,:exhausted_q2,7)
+      %td
+        = question_psychology(f,:exhausted_q2,8)
+    %tr
+      %td
+        3.- ¿Ha tenido la sensacion de estar enfermo?
+      %td
+        = question_psychology(f,:sick_q3,5)
+      %td
+        = question_psychology(f,:sick_q3,9)
+      %td
+        = question_psychology(f,:sick_q3,7)
+      %td
+        = question_psychology(f,:sick_q3,8)
+    %tr
+      %td
+        4.- ¿Ha tenido dolores de cabeza?
+      %td
+        = question_psychology(f,:headache_q4,5)
+      %td
+        = question_psychology(f,:headache_q4,10)
+      %td
+        = question_psychology(f,:headache_q4,11)
+      %td
+        = question_psychology(f,:headache_q4,12)
+    %tr
+      %td
+        5.- ¿Ha tenido calofríos o bochornos?
+      %td
+        = question_psychology(f,:chill_q5,5)
+      %td
+        = question_psychology(f,:chill_q5,2)
+      %td
+        = question_psychology(f,:chill_q5,7)
+      %td
+        = question_psychology(f,:chill_q5,8)
+    %tr
+      %td
+        6.- ¿Se ha sentido lleno de vida o energía?
+      %td
+        = question_psychology(f,:full_of_energy_q6,7)
+      %td
+        = question_psychology(f,:full_of_energy_q6,2)
+      %td
+        = question_psychology(f,:full_of_energy_q6,13)
+      %td
+        = question_psychology(f,:full_of_energy_q6,14)
+    %tr
+      %td
+        7.- ¿Ha tenido dificultad para dormirse o conciliar el sueño?
+      %td
+        = question_psychology(f,:insomnia_q7,5)
+      %td
+        = question_psychology(f,:insomnia_q7,9)
+      %td
+        = question_psychology(f,:insomnia_q7,7)
+      %td
+        = question_psychology(f,:insomnia_q7,8)
+    %tr
+      %td
+        8.- ¿Ha tenido dificultad para dormir de un jalón toda la noche?
+      %td
+        = question_psychology(f,:insomnia_all_night_q8,5)
+      %td
+        = question_psychology(f,:insomnia_all_night_q8,9)
+      %td
+        = question_psychology(f,:insomnia_all_night_q8,7)
+      %td
+        = question_psychology(f,:insomnia_all_night_q8,8)
+    %tr
+      %td
+        9.- ¿Ha pasado noches inquietas o intranquilas?
+      %td
+        = question_psychology(f,:restless_nights_q9,5)
+      %td
+        = question_psychology(f,:restless_nights_q9,9)
+      %td
+        = question_psychology(f,:restless_nights_q9,7)
+      %td
+        = question_psychology(f,:restless_nights_q9,8)
+    %tr
+      %td
+        10.- ¿Se ha sentido satisfecho con su manera de hacer las cosas?
+      %td
+        = question_psychology(f,:satisfied_to_do_things_q10,7)
+      %td
+        = question_psychology(f,:satisfied_to_do_things_q10,2)
+      %td
+        = question_psychology(f,:satisfied_to_do_things_q10,13)
+      %td
+        = question_psychology(f,:satisfied_to_do_things_q10,14)
+    %tr
+      %td
+        11.- ¿Disfruta sus actividades diarias?
+      %td
+        = question_psychology(f,:enjoy_daily_activities_q11,7)
+      %td
+        = question_psychology(f,:enjoy_daily_activities_q11,2)
+      %td
+        = question_psychology(f,:enjoy_daily_activities_q11,13)
+      %td
+        = question_psychology(f,:enjoy_daily_activities_q11,14)
+    %tr
+      %td
+        12.- ¿Se ha sentido irritado y de mal humor?
+      %td
+        = question_psychology(f,:bad_mood_q12,15)
+      %td
+        = question_psychology(f,:bad_mood_q12,9)
+      %td
+        = question_psychology(f,:bad_mood_q12,7)
+      %td
+        = question_psychology(f,:bad_mood_q12,8)
+    %tr
+      %td
+        13.- ¿Se ha sentido asustado y con mucho miedo sin que haya una buena razón?
+      %td
+        = question_psychology(f,:afraid_q13,5)
+      %td
+        = question_psychology(f,:afraid_q13,9)
+      %td
+        = question_psychology(f,:afraid_q13,7)
+      %td
+        = question_psychology(f,:afraid_q13,8)
+    %tr
+      %td
+        14.- ¿Se ha sentido triste y deprimido?
+      %td
+        = question_psychology(f,:sad_q14,15)
+      %td
+        = question_psychology(f,:sad_q14,9)
+      %td
+        = question_psychology(f,:sad_q14,7)
+      %td
+        = question_psychology(f,:sad_q14,8)
+    %tr
+      %td
+        15.- ¿Se ha sentido nervioso y a punto de estallar constantemente?
+      %td
+        = question_psychology(f,:nervous_q15,5)
+      %td
+        = question_psychology(f,:nervous_q15,9)
+      %td
+        = question_psychology(f,:nervous_q15,7)
+      %td
+        = question_psychology(f,:nervous_q15,8)
+  %p
+    = f.hidden_field :user_id, :value => 1
+
+  %p
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :dependency_id, :value => current_user.dependency_id
+    = f.hidden_field :patient_id, :value => @psychology.patient_id
+  %hr
+  .guardar
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, porfavor espere

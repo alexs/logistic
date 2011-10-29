@@ -1,0 +1,2 @@
+module RiskFactorsHelper
+end

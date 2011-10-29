@@ -1,0 +1,51 @@
+<br />
+<%= image_tag('progress_bar.gif', :id => 'loading_indicator', :style => 'display:none') %>
+
+<br />
+
+            <% if current_user.group.id == 3 %>
+            <br />
+               <%= !@users.nil? ? "Registros encontrados = #{@users.size}" : "" %>
+               <br /><br />
+            <% end %>
+
+
+    <p>
+    <h1>Usuarios Sveent</h1>
+    <p>
+
+
+
+<table border=1>
+<% if @users.size > 0 %>
+  <tr>
+    <th>Nombre</th>
+    <th>Login</th>
+    <th>Depedendencia</th>
+    <th>Tipo de Usuario</th>
+    <th colspan="4">Acciones</th>
+  </tr>
+     <% end %>
+
+
+  <% for user in @users %>
+  <tr>
+    <td><%=link_to user.full_name, user%></td>
+    <td><%= user.login %></td>
+    <td><%= user.dependency.name   + " " + user.dependency.category.name%></td>
+    <td><%= user.group.name %></td>
+
+
+    <td><%= link_to 'Seleccionar', user %></td>
+    <td></td>
+
+    <td><%= link_to 'Editar Datos Personales', edit_user_path(user) %></td>
+    <td><%= link_to 'Cambiar Password',  :controller => "users", :action => "change_password", :id => user.id %></td>
+  </tr>
+<% end %>
+
+
+</table>
+
+<br />
+<br />          

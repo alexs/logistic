@@ -1,0 +1,2 @@
+# page.replace_html 'advanced_search_area', :partial => 'category_select'
+

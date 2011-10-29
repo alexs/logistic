@@ -1,0 +1,20 @@
+<h1>Editing socioeconomic_ocupation</h1>
+
+<% form_for(@socioeconomic_ocupation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :point %><br />
+    <%= f.text_field :point %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @socioeconomic_ocupation %> |
+<%= link_to 'Back', socioeconomic_ocupations_path %>

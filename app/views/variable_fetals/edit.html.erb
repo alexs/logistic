@@ -1,0 +1,68 @@
+<h1>Editing variable_fetal</h1>
+
+<% form_for(@variable_fetal) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre_madre %><br />
+    <%= f.text_field :nombre_madre %>
+  </p>
+  <p>
+    <%= f.label :nombre_nacido %><br />
+    <%= f.text_field :nombre_nacido %>
+  </p>
+  <p>
+    <%= f.label :rciu %><br />
+    <%= f.text_field :rciu %>
+  </p>
+  <p>
+    <%= f.label :muerte_fetal %><br />
+    <%= f.text_field :muerte_fetal %>
+  </p>
+  <p>
+    <%= f.label :mortalidad_fetal %><br />
+    <%= f.text_field :mortalidad_fetal %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :edad_gestacional %><br />
+    <%= f.text_field :edad_gestacional %>
+  </p>
+  <p>
+    <%= f.label :trofismo %><br />
+    <%= f.text_field :trofismo %>
+  </p>
+  <p>
+    <%= f.label :calificacion_apgar %><br />
+    <%= f.text_field :calificacion_apgar %>
+  </p>
+  <p>
+    <%= f.label :silverman %><br />
+    <%= f.text_field :silverman %>
+  </p>
+  <p>
+    <%= f.label :morbilidad_neonatal %><br />
+    <%= f.text_field :morbilidad_neonatal %>
+  </p>
+  <p>
+    <%= f.label :muerte_neonatal %><br />
+    <%= f.text_field :muerte_neonatal %>
+  </p>
+  <p>
+    <%= f.label :tasa_mortalidad %><br />
+    <%= f.text_field :tasa_mortalidad %>
+  </p>
+  <p>
+    <%= f.label :muerte_perinatal %><br />
+    <%= f.text_field :muerte_perinatal %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @variable_fetal %> |
+<%= link_to 'Back', variable_fetals_path %>

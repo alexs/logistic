@@ -1,0 +1,68 @@
+<h1>Listing ultra2_sounds</h1>
+
+<table>
+  <tr>
+    <th>Diametrobiparietal</th>
+    <th>Circunferenciacefalica</th>
+    <th>Circunferenciaabdominal</th>
+    <th>Longitudfemur</th>
+    <th>Humero</th>
+    <th>Radio</th>
+    <th>Cubito</th>
+    <th>Tibia</th>
+    <th>Perone</th>
+    <th>Fetometriapromedio</th>
+    <th>Pesofetalestimado</th>
+    <th>Percentila</th>
+    <th>Arteriauterinaderecha</th>
+    <th>Arteriauterinaizquierda</th>
+    <th>Arteriaumbilical</th>
+    <th>Venaumbilical</th>
+    <th>Diametrovenaumbilical</th>
+    <th>Ductovenoso</th>
+    <th>Teiizquierdo</th>
+    <th>Teiderecho</th>
+    <th>Ifi</th>
+    <th>Acm</th>
+    <th>Longitudcervical</th>
+    <th>Posicionplacenta</th>
+    <th>Ila</th>
+  </tr>
+
+<% @ultra2_sounds.each do |ultra2_sound| %>
+  <tr>
+    <td><%=h ultra2_sound.DiametroBiparietal %></td>
+    <td><%=h ultra2_sound.CircunferenciaCefalica %></td>
+    <td><%=h ultra2_sound.CircunferenciaAbdominal %></td>
+    <td><%=h ultra2_sound.LongitudFemur %></td>
+    <td><%=h ultra2_sound.humero %></td>
+    <td><%=h ultra2_sound.radio %></td>
+    <td><%=h ultra2_sound.cubito %></td>
+    <td><%=h ultra2_sound.tibia %></td>
+    <td><%=h ultra2_sound.perone %></td>
+    <td><%=h ultra2_sound.FetometriaPromedio %></td>
+    <td><%=h ultra2_sound.PesoFetalEstimado %></td>
+    <td><%=h ultra2_sound.percentila %></td>
+    <td><%=h ultra2_sound.ArteriaUterinaDerecha %></td>
+    <td><%=h ultra2_sound.ArteriaUterinaIzquierda %></td>
+    <td><%=h ultra2_sound.ArteriaUmbilical %></td>
+    <td><%=h ultra2_sound.VenaUmbilical %></td>
+    <td><%=h ultra2_sound.DiametroVenaUmbilical %></td>
+    <td><%=h ultra2_sound.DuctoVenoso %></td>
+    <td><%=h ultra2_sound.TeiIzquierdo %></td>
+    <td><%=h ultra2_sound.TeiDerecho %></td>
+    <td><%=h ultra2_sound.IFI %></td>
+    <td><%=h ultra2_sound.ACM %></td>
+    <td><%=h ultra2_sound.LongitudCervical %></td>
+    <td><%=h ultra2_sound.PosicionPlacenta %></td>
+    <td><%=h ultra2_sound.ILA %></td>
+    <td><%= link_to 'Show', ultra2_sound %></td>
+    <td><%= link_to 'Edit', edit_ultra2_sound_path(ultra2_sound) %></td>
+    <td><%= link_to 'Destroy', ultra2_sound, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ultra2_sound', new_ultra2_sound_path %>

@@ -1,0 +1,258 @@
+<h1>Listing clinical_histories</h1>
+
+<table>
+  <tr>
+    <th>Responsible family</th>
+    <th>Relationship</th>
+    <th>Cardiovascular mother</th>
+    <th>Cardiovascular father</th>
+    <th>Cardiovascular children</th>
+    <th>Cardiovascular brothers</th>
+    <th>Cardiovascular husband</th>
+    <th>Cardiovascular others</th>
+    <th>Diabetes mother</th>
+    <th>Diabetes father</th>
+    <th>Diabetes children</th>
+    <th>Diabetes brothers</th>
+    <th>Diabetes husband</th>
+    <th>Diabetes others</th>
+    <th>Neoplastic mother</th>
+    <th>Neoplastic father</th>
+    <th>Neoplastic children</th>
+    <th>Neoplastic brothers</th>
+    <th>Neoplastic husband</th>
+    <th>Neoplastic others</th>
+    <th>Infectious mother</th>
+    <th>Infectious father</th>
+    <th>Infectious children</th>
+    <th>Infectious brothers</th>
+    <th>Infectious husband</th>
+    <th>Infectious others</th>
+    <th>Toxicomanias mother</th>
+    <th>Toxicomanias father</th>
+    <th>Toxicomanias children</th>
+    <th>Toxicomanias brothers</th>
+    <th>Toxicomanias husband</th>
+    <th>Toxicomanias others</th>
+    <th>Malformed mother</th>
+    <th>Malformed father</th>
+    <th>Malformed children</th>
+    <th>Malformed brothers</th>
+    <th>Malformed husband</th>
+    <th>Malformed others</th>
+    <th>Feed</th>
+    <th>Vitamins</th>
+    <th>Iron</th>
+    <th>Folic acid</th>
+    <th>Caffeine</th>
+    <th>Drugs</th>
+    <th>Medicaments</th>
+    <th>Medicaments details</th>
+    <th>Alcoholism</th>
+    <th>Smoking</th>
+    <th>Toxina tetanica 1</th>
+    <th>Toxina tetanica 2</th>
+    <th>Influenza h1n1</th>
+    <th>Influenza estacional</th>
+    <th>Hipertension</th>
+    <th>Cardiopatia</th>
+    <th>Hiperlipidemia</th>
+    <th>Enfermedad renal</th>
+    <th>Neurologicas epilepsia</th>
+    <th>Psiquiatricas depresion</th>
+    <th>Enfermedad hepatica</th>
+    <th>Varices flebitis</th>
+    <th>Funcion tiroidea</th>
+    <th>Traumatismo</th>
+    <th>Diabetes</th>
+    <th>Cancer</th>
+    <th>Infecciosos</th>
+    <th>Neumopatias asma</th>
+    <th>Alergias</th>
+    <th>Mamas</th>
+    <th>Cirugia genecologica</th>
+    <th>Cirugias generales</th>
+    <th>Complicaciones anestesicas</th>
+    <th>Inmunizaciones</th>
+    <th>Anomalias uterinas</th>
+    <th>Infertilidad</th>
+    <th>Transplantes</th>
+    <th>Geneticos</th>
+    <th>Menarquia</th>
+    <th>Patron menstrual</th>
+    <th>Fum</th>
+    <th>Ivsa</th>
+    <th>Papanicolau</th>
+    <th>Papanicolau method</th>
+    <th>Gesta</th>
+    <th>Partos</th>
+    <th>Cesareas</th>
+    <th>Abortos</th>
+    <th>Ectopicos</th>
+    <th>Molas</th>
+    <th>Fecha probable parto</th>
+    <th>Altura fondo uterino</th>
+    <th>Num fetos</th>
+    <th>Fcf</th>
+    <th>Ritmico</th>
+    <th>No audible</th>
+    <th>Grupo rh</th>
+    <th>Gammaglobulina</th>
+    <th>Hidrops feta</th>
+    <th>Anticuerpos irregulares</th>
+    <th>Peso anterior</th>
+    <th>Comentarios</th>
+    <th>Diastolica</th>
+    <th>Sistolica</th>
+    <th>Temperatura</th>
+    <th>Peso</th>
+    <th>Talla</th>
+    <th>Masa corporal</th>
+    <th>Cervix</th>
+    <th>Fluidos</th>
+    <th>Sangrado</th>
+    <th>Dilatacion</th>
+    <th>Borramientos</th>
+    <th>Reblandecimientos</th>
+    <th>Inicio acido folico</th>
+    <th>Inicio multivitaminas</th>
+    <th>Inicio suplementos</th>
+    <th>Inicio hierro</th>
+    <th>Inicio aspirina</th>
+    <th>Patient</th>
+    <th>User</th>
+    <th>Dependency</th>
+  </tr>
+
+<% @clinical_histories.each do |clinical_history| %>
+  <tr>
+    <td><%=h clinical_history.responsible_family %></td>
+    <td><%=h clinical_history.relationship %></td>
+    <td><%=h clinical_history.cardiovascular_mother %></td>
+    <td><%=h clinical_history.cardiovascular_father %></td>
+    <td><%=h clinical_history.cardiovascular_children %></td>
+    <td><%=h clinical_history.cardiovascular_brothers %></td>
+    <td><%=h clinical_history.cardiovascular_husband %></td>
+    <td><%=h clinical_history.cardiovascular_others %></td>
+    <td><%=h clinical_history.diabetes_mother %></td>
+    <td><%=h clinical_history.diabetes_father %></td>
+    <td><%=h clinical_history.diabetes_children %></td>
+    <td><%=h clinical_history.diabetes_brothers %></td>
+    <td><%=h clinical_history.diabetes_husband %></td>
+    <td><%=h clinical_history.diabetes_others %></td>
+    <td><%=h clinical_history.neoplastic_mother %></td>
+    <td><%=h clinical_history.neoplastic_father %></td>
+    <td><%=h clinical_history.neoplastic_children %></td>
+    <td><%=h clinical_history.neoplastic_brothers %></td>
+    <td><%=h clinical_history.neoplastic_husband %></td>
+    <td><%=h clinical_history.neoplastic_others %></td>
+    <td><%=h clinical_history.infectious_mother %></td>
+    <td><%=h clinical_history.infectious_father %></td>
+    <td><%=h clinical_history.infectious_children %></td>
+    <td><%=h clinical_history.infectious_brothers %></td>
+    <td><%=h clinical_history.infectious_husband %></td>
+    <td><%=h clinical_history.infectious_others %></td>
+    <td><%=h clinical_history.toxicomanias_mother %></td>
+    <td><%=h clinical_history.toxicomanias_father %></td>
+    <td><%=h clinical_history.toxicomanias_children %></td>
+    <td><%=h clinical_history.toxicomanias_brothers %></td>
+    <td><%=h clinical_history.toxicomanias_husband %></td>
+    <td><%=h clinical_history.toxicomanias_others %></td>
+    <td><%=h clinical_history.malformed_mother %></td>
+    <td><%=h clinical_history.malformed_father %></td>
+    <td><%=h clinical_history.malformed_children %></td>
+    <td><%=h clinical_history.malformed_brothers %></td>
+    <td><%=h clinical_history.malformed_husband %></td>
+    <td><%=h clinical_history.malformed_others %></td>
+    <td><%=h clinical_history.feed %></td>
+    <td><%=h clinical_history.vitamins %></td>
+    <td><%=h clinical_history.iron %></td>
+    <td><%=h clinical_history.folic_acid %></td>
+    <td><%=h clinical_history.caffeine %></td>
+    <td><%=h clinical_history.drugs %></td>
+    <td><%=h clinical_history.medicaments %></td>
+    <td><%=h clinical_history.medicaments_details %></td>
+    <td><%=h clinical_history.alcoholism %></td>
+    <td><%=h clinical_history.smoking %></td>
+    <td><%=h clinical_history.toxina_tetanica_1 %></td>
+    <td><%=h clinical_history.toxina_tetanica_2 %></td>
+    <td><%=h clinical_history.influenza_h1n1 %></td>
+    <td><%=h clinical_history.influenza_estacional %></td>
+    <td><%=h clinical_history.hipertension %></td>
+    <td><%=h clinical_history.cardiopatia %></td>
+    <td><%=h clinical_history.hiperlipidemia %></td>
+    <td><%=h clinical_history.enfermedad_renal %></td>
+    <td><%=h clinical_history.neurologicas_epilepsia %></td>
+    <td><%=h clinical_history.psiquiatricas_depresion %></td>
+    <td><%=h clinical_history.enfermedad_hepatica %></td>
+    <td><%=h clinical_history.varices_flebitis %></td>
+    <td><%=h clinical_history.funcion_tiroidea %></td>
+    <td><%=h clinical_history.traumatismo %></td>
+    <td><%=h clinical_history.diabetes %></td>
+    <td><%=h clinical_history.cancer %></td>
+    <td><%=h clinical_history.infecciosos %></td>
+    <td><%=h clinical_history.neumopatias_asma %></td>
+    <td><%=h clinical_history.alergias %></td>
+    <td><%=h clinical_history.mamas %></td>
+    <td><%=h clinical_history.cirugia_genecologica %></td>
+    <td><%=h clinical_history.cirugias_generales %></td>
+    <td><%=h clinical_history.complicaciones_anestesicas %></td>
+    <td><%=h clinical_history.inmunizaciones %></td>
+    <td><%=h clinical_history.anomalias_uterinas %></td>
+    <td><%=h clinical_history.infertilidad %></td>
+    <td><%=h clinical_history.transplantes %></td>
+    <td><%=h clinical_history.geneticos %></td>
+    <td><%=h clinical_history.menarquia %></td>
+    <td><%=h clinical_history.patron_menstrual %></td>
+    <td><%=h clinical_history.fum %></td>
+    <td><%=h clinical_history.ivsa %></td>
+    <td><%=h clinical_history.papanicolau %></td>
+    <td><%=h clinical_history.papanicolau_method %></td>
+    <td><%=h clinical_history.gesta %></td>
+    <td><%=h clinical_history.partos %></td>
+    <td><%=h clinical_history.cesareas %></td>
+    <td><%=h clinical_history.abortos %></td>
+    <td><%=h clinical_history.ectopicos %></td>
+    <td><%=h clinical_history.molas %></td>
+    <td><%=h clinical_history.fecha_probable_parto %></td>
+    <td><%=h clinical_history.altura_fondo_uterino %></td>
+    <td><%=h clinical_history.num_fetos %></td>
+    <td><%=h clinical_history.fcf %></td>
+    <td><%=h clinical_history.ritmico %></td>
+    <td><%=h clinical_history.no_audible %></td>
+    <td><%=h clinical_history.grupo_rh %></td>
+    <td><%=h clinical_history.gammaglobulina %></td>
+    <td><%=h clinical_history.hidrops_feta %></td>
+    <td><%=h clinical_history.anticuerpos_irregulares %></td>
+    <td><%=h clinical_history.peso_anterior %></td>
+    <td><%=h clinical_history.comentarios %></td>
+    <td><%=h clinical_history.diastolica %></td>
+    <td><%=h clinical_history.sistolica %></td>
+    <td><%=h clinical_history.temperatura %></td>
+    <td><%=h clinical_history.peso %></td>
+    <td><%=h clinical_history.talla %></td>
+    <td><%=h clinical_history.masa_corporal %></td>
+    <td><%=h clinical_history.cervix %></td>
+    <td><%=h clinical_history.fluidos %></td>
+    <td><%=h clinical_history.sangrado %></td>
+    <td><%=h clinical_history.dilatacion %></td>
+    <td><%=h clinical_history.borramientos %></td>
+    <td><%=h clinical_history.reblandecimientos %></td>
+    <td><%=h clinical_history.inicio_acido_folico %></td>
+    <td><%=h clinical_history.inicio_multivitaminas %></td>
+    <td><%=h clinical_history.inicio_suplementos %></td>
+    <td><%=h clinical_history.inicio_hierro %></td>
+    <td><%=h clinical_history.inicio_aspirina %></td>
+    <td><%=h clinical_history.patient_id %></td>
+    <td><%=h clinical_history.user_id %></td>
+    <td><%=h clinical_history.dependency_id %></td>
+    <td><%= link_to 'Show', clinical_history %></td>
+    <td><%= link_to 'Edit', edit_clinical_history_path(clinical_history) %></td>
+    <td><%= link_to 'Destroy', clinical_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New clinical_history', new_clinical_history_path %>

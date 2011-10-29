@@ -1,0 +1,33 @@
+<br />
+<center>
+<table >
+  <tr>
+    <td>
+      <b>Nombre:</b>
+      <%=h @user.full_name %>
+    </td>
+    <td>
+      <b>RFC:</b>
+      <%=h @user.rfc %>
+     </td>
+     <td>
+     <b>Cedula:</b>
+      <%= @user.cedula %>
+     </td>
+</tr>
+<tr>
+     <td>
+        <b>Login:</b>
+        <%=h @user.login %>
+      </td>
+       <td>
+      <b>Rol:</b>
+      <%=h @user.group.name %>
+      </td>
+      <td>
+       <b>Correo electrónico:</b>
+       <%=h @user.email %>
+      </td>
+</tr>
+</table>
+</center>

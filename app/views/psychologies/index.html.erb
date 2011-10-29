@@ -1,0 +1,58 @@
+<h1>Listing psychologies</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Pregnant</th>
+    <th>Weeks of gestation</th>
+    <th>Good health q1</th>
+    <th>Exhausted q2</th>
+    <th>Sick q3</th>
+    <th>Headache q4</th>
+    <th>Chill q5</th>
+    <th>Full of energy q6</th>
+    <th>Insomnia q7</th>
+    <th>Insomnia all night q8</th>
+    <th>Restless nights q9</th>
+    <th>Satisfied to do things q10</th>
+    <th>Enjoy daily activities q11</th>
+    <th>Bad mood q12</th>
+    <th>Afraid q13</th>
+    <th>Sad q14</th>
+    <th>Nervous q15</th>
+    <th>User</th>
+    <th>Dependency</th>
+  </tr>
+
+<% @psychologies.each do |psychology| %>
+  <tr>
+    <td><%=h psychology.date %></td>
+    <td><%=h psychology.pregnant %></td>
+    <td><%=h psychology.weeks_of_gestation %></td>
+    <td><%=h psychology.good_health_q1 %></td>
+    <td><%=h psychology.exhausted_q2 %></td>
+    <td><%=h psychology.sick_q3 %></td>
+    <td><%=h psychology.headache_q4 %></td>
+    <td><%=h psychology.chill_q5 %></td>
+    <td><%=h psychology.full_of_energy_q6 %></td>
+    <td><%=h psychology.insomnia_q7 %></td>
+    <td><%=h psychology.insomnia_all_night_q8 %></td>
+    <td><%=h psychology.restless_nights_q9 %></td>
+    <td><%=h psychology.satisfied_to_do_things_q10 %></td>
+    <td><%=h psychology.enjoy_daily_activities_q11 %></td>
+    <td><%=h psychology.bad_mood_q12 %></td>
+    <td><%=h psychology.afraid_q13 %></td>
+    <td><%=h psychology.sad_q14 %></td>
+    <td><%=h psychology.nervous_q15 %></td>
+    <td><%=h psychology.user_id %></td>
+    <td><%=h psychology.dependency_id %></td>
+    <td><%= link_to 'Show', psychology %></td>
+    <td><%= link_to 'Edit', edit_psychology_path(psychology) %></td>
+    <td><%= link_to 'Destroy', psychology, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New psychology', new_psychology_path %>

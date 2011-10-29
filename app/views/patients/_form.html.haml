@@ -1,0 +1,114 @@
+%h1 Registro de paciente
+%br
+#patients_form
+  -remote_form_for(@patient) do |patient|
+    - if !patient.error_messages.empty?
+      .validation
+        = patient.error_messages
+    %table
+      %tr
+        %th.even Datos Generales
+        %th Domicilio
+      %tr
+        %td
+          %p
+            = patient.label "Fecha Alta"
+          %p
+            = patient.date_select :date
+          %br
+          %p
+            = patient.label "Expediente"
+          %p
+            = patient.text_field :expedient
+          %p 
+            = patient.label "Curp"
+          %p
+            = patient.text_field :curp 
+          %p
+            = patient.label "Nombre"
+          %p
+            = patient.text_field :firstname, :onkeyup => 'this.value=stripAccent(this.value)'
+          %p
+            = patient.label "Apellido Paterno"
+          %p
+            = patient.text_field :lastname1, :onkeyup => 'this.value=stripAccent(this.value)'
+          %p
+            = patient.label "Apellido Materno"
+          %p
+            = patient.text_field :lastname2, :onkeyup => 'this.value=stripAccent(this.value)'
+          %p
+            = patient.label "Lugar de Nacimiento"
+            = patient.select :bornstate_id, State.all.collect {|state| [state.name, state.id]}
+          %p
+            = patient.label "Fecha de nacimiento"
+          %p
+            = patient.date_select(:birthday, :order => [:day, :month, :year], :start_year => 1900, :end_year => Time.now.year - 9)
+          %p
+            = patient.label "Sexo"
+          %p
+            Hombre #{patient.radio_button(:gender,'true')}
+            Mujer #{patient.radio_button(:gender,'false')}
+        %td
+          %p
+            = patient.label "Calle"
+          %p
+            = patient.text_field :street, :onkeyup => 'this.value=stripAccent(this.value)'
+          %p
+            = patient.label "Num. Exterior"
+          %p
+            = patient.text_field :exterior, :class => 'short_field'
+          %p
+            = patient.label "Num Interior"
+          %p
+            = patient.text_field :interior
+          %p
+            = patient.label "Estado: "
+          %p
+            = select_tag "state", options_from_collection_for_select(State.all, 'id', 'name')
+          %p
+            = patient.label "Delegacion o Municipio: "
+          %p
+            = select_tag "county", "<option>Selecciona antes un estado</option>", :name => 'county'
+          %p
+            = patient.label "Colonia y Código postal: "
+          %p
+            = patient.select :square_id, [["Selecciona antes un municipio","Invalid"]]
+          %p
+
+            = observe_field 'state',
+              :url => {:controller => 'patients',
+              :action => 'select_state'},
+              :update => 'county',
+              :with => 'state_select'
+
+            = observe_field 'county',
+              :url => {:controller => 'patients',
+              :action => 'select_county'},
+              :update => 'patient_square_id',
+              :with => 'county_select'
+
+          %p
+            = patient.label "Telefono"
+          %p
+            = patient.text_field :phone
+          %p
+            = patient.label "Correo electrónico"
+          %p
+            = patient.text_field :mail
+      %tr
+        %td{:colspan => "2"}
+          %p
+            = patient.label "Estado Civil"
+          %p
+            = patient.select(:maritalstatus_id, Maritalstatus.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+            = patient.label "Ocupación"
+          %p
+            = patient.select(:ocupation_id, Ocupation.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+            = patient.label "Escolaridad"
+          %p
+            = patient.select(:schooling_id, Schooling.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+     
+    = patient.submit 'Guardar'

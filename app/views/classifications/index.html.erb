@@ -1,0 +1,94 @@
+<h1>Listing classifications</h1>
+
+<table>
+  <tr>
+    <th>Age</th>
+    <th>Weight</th>
+    <th>Height</th>
+    <th>Socioeconomic level</th>
+    <th>Marital status</th>
+    <th>Schooling</th>
+    <th>Attitude to pregnancy</th>
+    <th>Parity</th>
+    <th>Last pregnant</th>
+    <th>Consecutives aborts</th>
+    <th>Prior cesarean</th>
+    <th>Childbirth lower 37 weeks</th>
+    <th>Preeclampsia eclampsia</th>
+    <th>Children low 25 grams</th>
+    <th>Children more 40 grams</th>
+    <th>Perinatals deads</th>
+    <th>Children with congenitals defects</th>
+    <th>Last surgery</th>
+    <th>History diabetes</th>
+    <th>History hypertension</th>
+    <th>Hemoglobin</th>
+    <th>Rh factor</th>
+    <th>Smoking</th>
+    <th>Alcoholism</th>
+    <th>Addiction</th>
+    <th>Diabetes</th>
+    <th>Hypertension cronic</th>
+    <th>Preeclampsia</th>
+    <th>Epilepsia</th>
+    <th>Cardiopatia</th>
+    <th>Colagenopatia</th>
+    <th>Nefropatia</th>
+    <th>Nefropatias</th>
+    <th>Endocrinopatias</th>
+    <th>Consanguinidad</th>
+    <th>Amenaza aborto</th>
+    <th>Amenaza parto pretermino</th>
+    <th>Ruptura membranas</th>
+  </tr>
+
+<% @classifications.each do |classification| %>
+  <tr>
+    <td><%=h classification.age %></td>
+    <td><%=h classification.weight %></td>
+    <td><%=h classification.height %></td>
+    <td><%=h classification.socioeconomic_level %></td>
+    <td><%=h classification.marital_status %></td>
+    <td><%=h classification.schooling %></td>
+    <td><%=h classification.attitude_to_pregnancy %></td>
+    <td><%=h classification.parity %></td>
+    <td><%=h classification.last_pregnant %></td>
+    <td><%=h classification.consecutives_aborts %></td>
+    <td><%=h classification.prior_cesarean %></td>
+    <td><%=h classification.childbirth_lower_37_weeks %></td>
+    <td><%=h classification.preeclampsia_eclampsia %></td>
+    <td><%=h classification.children_low_25_grams %></td>
+    <td><%=h classification.children_more_40_grams %></td>
+    <td><%=h classification.perinatals_deads %></td>
+    <td><%=h classification.children_with_congenitals_defects %></td>
+    <td><%=h classification.last_surgery %></td>
+    <td><%=h classification.history_diabetes %></td>
+    <td><%=h classification.history_hypertension %></td>
+    <td><%=h classification.hemoglobin %></td>
+    <td><%=h classification.rh_factor %></td>
+    <td><%=h classification.smoking %></td>
+    <td><%=h classification.alcoholism %></td>
+    <td><%=h classification.addiction %></td>
+    <td><%=h classification.diabetes %></td>
+    <td><%=h classification.hypertension_cronic %></td>
+    <td><%=h classification.preeclampsia %></td>
+    <td><%=h classification.epilepsia %></td>
+    <td><%=h classification.cardiopatia %></td>
+    <td><%=h classification.colagenopatia %></td>
+    <td><%=h classification.nefropatia %></td>
+    <td><%=h classification.nefropatias %></td>
+    <td><%=h classification.endocrinopatias %></td>
+    <td><%=h classification.consanguinidad %></td>
+    <td><%=h classification.amenaza_aborto %></td>
+    <td><%=h classification.amenaza_parto_pretermino %></td>
+    <td><%=h classification.ruptura_membranas %></td>
+    <td><%= link_to 'Show', classification %></td>
+    <td><%= link_to 'Edit', edit_classification_path(classification) %></td>
+    <td><%= link_to 'Destroy', classification, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New classification', new_classification_path %>

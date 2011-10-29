@@ -1,0 +1,60 @@
+<h1>Editing neonatal</h1>
+
+<% form_for(@neonatal) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :patient %><br />
+    <%= f.text_field :patient %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :edad_gestacional %><br />
+    <%= f.text_field :edad_gestacional %>
+  </p>
+  <p>
+    <%= f.label :trofismo %><br />
+    <%= f.text_field :trofismo %>
+  </p>
+  <p>
+    <%= f.label :calificacion_apgar %><br />
+    <%= f.text_field :calificacion_apgar %>
+  </p>
+  <p>
+    <%= f.label :sirveman %><br />
+    <%= f.text_field :sirveman %>
+  </p>
+  <p>
+    <%= f.label :morbilidad_materna %><br />
+    <%= f.text_field :morbilidad_materna %>
+  </p>
+  <p>
+    <%= f.label :morbilidad_neonatal %><br />
+    <%= f.text_field :morbilidad_neonatal %>
+  </p>
+  <p>
+    <%= f.label :muerte_neonatal %><br />
+    <%= f.text_field :muerte_neonatal %>
+  </p>
+  <p>
+    <%= f.label :tasa_mortalidad %><br />
+    <%= f.text_field :tasa_mortalidad %>
+  </p>
+  <p>
+    <%= f.label :muerte_perinatal %><br />
+    <%= f.text_field :muerte_perinatal %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @neonatal %> |
+<%= link_to 'Back', neonatals_path %>

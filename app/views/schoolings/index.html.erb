@@ -1,0 +1,20 @@
+<h1>Listing schoolings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @schoolings.each do |schooling| %>
+  <tr>
+    <td><%=h schooling.name %></td>
+    <td><%= link_to 'Show', schooling %></td>
+    <td><%= link_to 'Edit', edit_schooling_path(schooling) %></td>
+    <td><%= link_to 'Destroy', schooling, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New schooling', new_schooling_path %>

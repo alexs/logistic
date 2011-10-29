@@ -1,0 +1,33 @@
+#patient_show
+  %table{:border => 1}
+    %tr
+      %th{:colspan => 3, :class => "even"}
+        Datos de paciente
+    %tr
+      %td
+        Nombre: 
+        %b #{@appoiment.patient.fullname}
+      %td
+        Fecha Próxima Consulta: 
+        %b #{@appoiment.date_next_consult}
+      %td
+        Diagnostico Presuntivo
+        %b #{@appoiment.presumptive_diagnosis}
+    %tr
+      %td
+        Medico Solicitante
+        %b #{@appoiment.applicant_doctor}
+
+#menu_patient
+  .button 
+    - if @appoiment.laboratory.nil?
+      = link_to_remote "Llenar Resultados de Laboratorio", :url => {:controller => 'laboratories', :action => :new, :id => @appoiment.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status{ :style => 'display:none'}
+      
+    - else
+      Llenado de Resultados de Laboratorio.
+      .status{ :style => 'display:inline'}
+      = image_tag("checked.png")
+
+#create_questionary_dialog{ :stylefood => 'display:none' }
+  #create_questionary

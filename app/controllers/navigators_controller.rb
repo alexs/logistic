@@ -1,0 +1,2 @@
+class NavigatorsController < ApplicationController
+end

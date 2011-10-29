@@ -1,0 +1,68 @@
+<div style="margin: auto; padding-left:50px; width: 900px;">
+<h1>Administrador de Usuarios</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+<p>
+  <div class="row">
+    <div class="cell_left">Dependencia:</div>
+    <div class="cell_right"><%= render :partial => "user_dependency" , :locals => { :f => f } %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Paterno:</div>
+    <div class="cell_right"><%= f.text_field :paterno %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Materno:</div>
+    <div class="cell_right"><%= f.text_field :materno %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Nombre:</div>
+    <div class="cell_right"><%= f.text_field :name %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">RFC:</div>
+    <div class="cell_right"><%= f.text_field :rfc %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Cédula Profesional:</div>
+    <div class="cell_right"><%= f.text_field :cedula %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Tipo de Usuario:</div>
+    <div class="cell_right"><%= render :partial => "user_type" , :locals => { :f => f } %></div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="cell_left">Correo electrónico:</div>
+    <div class="cell_right"><%= f.text_field :email, :class => "text_pre" %></div>
+  </div>
+</p>
+
+<p style="padding-left: 154px;">
+  <%= submit_tag 'Aceptar' %> | <%= link_to "Cancelar", users_path %>
+  </p>
+
+<% end %>
+
+
+</div>

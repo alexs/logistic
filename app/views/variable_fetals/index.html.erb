@@ -1,0 +1,46 @@
+<h1>Listing variable_fetals</h1>
+
+<table>
+  <tr>
+    <th>Nombre madre</th>
+    <th>Nombre nacido</th>
+    <th>Rciu</th>
+    <th>Muerte fetal</th>
+    <th>Mortalidad fetal</th>
+    <th>Peso</th>
+    <th>Edad gestacional</th>
+    <th>Trofismo</th>
+    <th>Calificacion apgar</th>
+    <th>Silverman</th>
+    <th>Morbilidad neonatal</th>
+    <th>Muerte neonatal</th>
+    <th>Tasa mortalidad</th>
+    <th>Muerte perinatal</th>
+  </tr>
+
+<% @variable_fetals.each do |variable_fetal| %>
+  <tr>
+    <td><%=h variable_fetal.nombre_madre %></td>
+    <td><%=h variable_fetal.nombre_nacido %></td>
+    <td><%=h variable_fetal.rciu %></td>
+    <td><%=h variable_fetal.muerte_fetal %></td>
+    <td><%=h variable_fetal.mortalidad_fetal %></td>
+    <td><%=h variable_fetal.peso %></td>
+    <td><%=h variable_fetal.edad_gestacional %></td>
+    <td><%=h variable_fetal.trofismo %></td>
+    <td><%=h variable_fetal.calificacion_apgar %></td>
+    <td><%=h variable_fetal.silverman %></td>
+    <td><%=h variable_fetal.morbilidad_neonatal %></td>
+    <td><%=h variable_fetal.muerte_neonatal %></td>
+    <td><%=h variable_fetal.tasa_mortalidad %></td>
+    <td><%=h variable_fetal.muerte_perinatal %></td>
+    <td><%= link_to 'Show', variable_fetal %></td>
+    <td><%= link_to 'Edit', edit_variable_fetal_path(variable_fetal) %></td>
+    <td><%= link_to 'Destroy', variable_fetal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New variable_fetal', new_variable_fetal_path %>

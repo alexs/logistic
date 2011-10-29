@@ -1,0 +1,39 @@
+<h1>New ries_par</h1>
+
+<% form_for(@ries_par) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :no_preparada_emb %><br />
+    <%= f.text_field :no_preparada_emb %>
+  </p>
+  <p>
+    <%= f.label :no_razon %><br />
+    <%= f.text_field :no_razon %>
+  </p>
+  <p>
+    <%= f.label :considero_problema_grande %><br />
+    <%= f.text_field :considero_problema_grande %>
+  </p>
+  <p>
+    <%= f.label :cosas_infancia %><br />
+    <%= f.text_field :cosas_infancia %>
+  </p>
+  <p>
+    <%= f.label :no_apoyo_pareja %><br />
+    <%= f.text_field :no_apoyo_pareja %>
+  </p>
+  <p>
+    <%= f.label :no_personas_necesito %><br />
+    <%= f.text_field :no_personas_necesito %>
+  </p>
+  <p>
+    <%= f.label :desconfianza_madre %><br />
+    <%= f.text_field :desconfianza_madre %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', ries_pars_path %>

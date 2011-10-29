@@ -1,0 +1,32 @@
+<h1>Listing appoiments</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Date next consult</th>
+    <th>Presumptive diagnosis</th>
+    <th>Applicant doctor</th>
+    <th>Dependency</th>
+    <th>Patient</th>
+    <th>User</th>
+  </tr>
+
+<% @appoiments.each do |appoiment| %>
+  <tr>
+    <td><%=h appoiment.date %></td>
+    <td><%=h appoiment.date_next_consult %></td>
+    <td><%=h appoiment.presumptive_diagnosis %></td>
+    <td><%=h appoiment.applicant_doctor %></td>
+    <td><%=h appoiment.dependency_id %></td>
+    <td><%=h appoiment.patient_id %></td>
+    <td><%=h appoiment.user_id %></td>
+    <td><%= link_to 'Show', appoiment %></td>
+    <td><%= link_to 'Edit', edit_appoiment_path(appoiment) %></td>
+    <td><%= link_to 'Destroy', appoiment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New appoiment', new_appoiment_path %>

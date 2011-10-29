@@ -1,0 +1,22 @@
+      <h1 class="title">Inicia sesión</h1>
+       <% form_for @user_session, :url => user_session_path do |f| %>
+        <%= f.error_messages %>
+        <p>
+          <label for="login">Usuario</label>
+          <br/>
+          <%= f.text_field  :login %>
+        </p>
+	
+        <p>
+          <label for="password">Contraseña</label>
+          <br/>
+          <%= f.password_field :password %>
+        </p>
+	<br />
+	<p><%= f.submit 'Accesar' %></p>
+	<% end %>
+
+
+
+
+

@@ -1,0 +1,12 @@
+<h1>Editing dependency</h1>
+
+<% form_for(@dependency) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dependency %> |
+<%= link_to 'Back', dependencies_path %>

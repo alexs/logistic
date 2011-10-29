@@ -1,0 +1,2 @@
+module EconomicSituationsHelper
+end

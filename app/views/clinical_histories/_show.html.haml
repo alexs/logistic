@@ -1,0 +1,604 @@
+%p
+  = link_to_remote "Regresar", :update => "workspace", :url => { :controller => "patients", :action => "show", :id => "#{@clinical_history.patient_id}"}, :method => :get, :layout => false
+
+Familiar responsable:
+= h @clinical_history.responsible_family 
+Parentesco:
+= h @clinical_history.relationship
+%br
+  %h1.questionary_title ANTECEDENTES HEREDOFAMILIARES
+  %hr
+%br
+.clinical_form
+  %table
+    %tr.odd
+      %th PADECIMIENTO
+      %th MADRE
+      %th PADRE
+      %th HIJOS
+      %th HERMANOS
+      %th ESPOSO
+      %th OTROS
+    %tr.even
+      %td CARDIOVASCULARES
+      %td.numeric 
+        = h checked_value(@clinical_history.cardiovascular_mother)
+      %td.numeric
+        = h checked_value(@clinical_history.cardiovascular_father)
+      %td.numeric
+        = h checked_value(@clinical_history.cardiovascular_children)
+      %td.numeric
+        = h checked_value(@clinical_history.cardiovascular_brothers)
+      %td.numeric
+        = h checked_value(@clinical_history.cardiovascular_husband)
+      %td.numeric
+        = h @clinical_history.cardiovascular_others
+    %tr.odd
+      %td DIABETES MELLITUS
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_mother)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_father)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_children)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_brothers)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_husband)
+      %td.numeric
+        = h @clinical_history.diabetes_others
+    %tr.even
+      %td NEOPLASICOS
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_mother)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_father)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_children)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_brothers)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_husband)
+      %td.numeric
+        = h @clinical_history.neoplastic_others
+    %tr.odd
+      %td INFECCIOSOS
+      %td.numeric
+        = checked_value(@clinical_history.infectious_mother)
+      %td.numeric
+        = checked_value(@clinical_history.infectious_father)
+      %td.numeric
+        = checked_value(@clinical_history.infectious_children)
+      %td.numeric
+        = checked_value(@clinical_history.infectious_brothers)
+      %td.numeric
+        = checked_value(@clinical_history.infectious_husband)
+      %td.numeric
+        = h @clinical_history.infectious_others
+    %tr.even
+      %td TOXICOMANIAS
+      %td.numeric
+        = checked_value(@clinical_history.toxicomanias_mother)
+      %td.numeric
+        = checked_value(@clinical_history.toxicomanias_father)
+      %td.numeric
+        = checked_value(@clinical_history.toxicomanias_children)
+      %td.numeric
+        = checked_value(@clinical_history.toxicomanias_brothers)
+      %td.numeric
+        = checked_value(@clinical_history.toxicomanias_husband)
+      %td.numeric
+        = h @clinical_history.toxicomanias_others
+    %tr.odd
+      %td SX DOWN/MALFORMADOS
+      %td.numeric
+        = checked_value(@clinical_history.malformed_mother)
+      %td.numeric
+        = checked_value(@clinical_history.malformed_father)
+      %td.numeric
+        = checked_value(@clinical_history.malformed_children)
+      %td.numeric
+        = checked_value(@clinical_history.malformed_brothers)
+      %td.numeric
+        = checked_value(@clinical_history.malformed_husband)
+      %td.numeric  
+        = h @clinical_history.malformed_others
+%br
+  %h1.questionary_title ANTECEDENTES PERSONALES NO PATOLOGICOS
+  %hr
+%br
+%p
+  %b
+    Alimentación: 
+  = get_value(@clinical_history.feed)
+%p
+  %b
+    Vitaminas:
+  = h get_boolean(@clinical_history.vitamins)
+  %b
+    Hierro:
+  = h get_boolean(@clinical_history.iron)
+  %b
+    Ácido folico: 
+  = h get_boolean(@clinical_history.folic_acid)
+  %b
+    Cafeina: 
+  = h get_boolean(@clinical_history.caffeine)
+  %b
+    Drogas: 
+  = h get_boolean(@clinical_history.drugs)
+  %b
+    Medicamentos: 
+  = h get_boolean(@clinical_history.medicaments)
+  %br
+  %b  
+    Mecione Cuales: 
+  = h @clinical_history.medicaments_details
+  %p
+    %b
+      Alcoholismo:
+    = h get_value(@clinical_history.alcoholism)
+    %br
+    %b
+      ¿Cuántas veces a la semana?:
+    = h @clinical_history.alcoholism_times
+  %p
+    %b
+      Tabaquísmo:
+    = h get_value(@clinical_history.smoking)
+    %b
+      ¿Cuántos cigarrillos al dia?:
+    = @clinical_history.cigarretes_day
+    %br
+      %b
+        ¿Hay alguien que fuma en el hogar?
+      = h get_boolean(@clinical_history.fuman_hogar)
+  %p
+    %b
+      Vacunas:
+    %br
+      %b
+        Toxina tetánica 1a.
+    = h get_boolean(@clinical_history.toxina_tetanica_1)
+    %b
+      2a.
+    = h get_boolean(@clinical_history.toxina_tetanica_2)
+    %b
+      Influenza H1N1
+    = h get_boolean(@clinical_history.influenza_h1n1)
+    %b
+      Influenza estacional
+    = h get_boolean(@clinical_history.influenza_estacional)
+    %b
+      Grupo sanguineo
+    = h @clinical_history.grupo_sanguineo + @clinical_history.rh
+    %b
+      ¿Tiene anticuerpos irregulares?
+    = h get_boolean(@clinical_history.anticuerpos_irregulares)  
+  %br
+    %h1.questionary_title ANTECEDENTES PERSONALES PATOLOGICOS
+    %hr
+  %br
+  %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th
+          %th Sí
+        %tr.even
+          %td Hipertensión
+          %td.numeric
+            = checked_value(@clinical_history.hipertension)
+          %td Enfermedad hepática
+          %td.numeric
+            = checked_value(@clinical_history.enfermedad_hepatica)
+          %td Infecciosos
+          %td.numeric
+            = checked_value(@clinical_history.infecciosos)
+          %td Complicaciones anestésicas
+          %td.numeric
+            = checked_value(@clinical_history.complicaciones_anestesicas)
+        %tr.odd
+          %td Cardiopatía
+          %td.numeric
+            = checked_value(@clinical_history.cardiopatia)
+          %td Varices-flebitis
+          %td.numeric
+            = checked_value(@clinical_history.varices_flebitis)
+          %td Neumopatías-asma
+          %td.numeric
+            = checked_value(@clinical_history.neumopatias_asma)
+          %td Inmunizaciones
+          %td.numeric
+            = checked_value(@clinical_history.inmunizaciones)
+        %tr.even
+          %td Hipirlipidemia
+          %td.numeric
+            = checked_value(@clinical_history.hiperlipidemia)
+          %td Función tiroidea
+          %td.numeric
+            = checked_value(@clinical_history.funcion_tiroidea)
+          %td Alergias
+          %td.numeric
+            = checked_value(@clinical_history.alergias)
+          %td Anomalías uterinas
+          %td.numeric
+            = checked_value(@clinical_history.anomalias_uterinas)
+        %tr.odd
+          %td Enfermedad renal
+          %td.numeric
+            = checked_value(@clinical_history.enfermedad_renal)
+          %td Traumatismo
+          %td.numeric
+            = checked_value(@clinical_history.traumatismo)
+          %td Mamas
+          %td.numeric
+            = checked_value(@clinical_history.mamas)
+          %td Infertilidad
+          %td.numeric
+            = checked_value(@clinical_history.infertilidad)
+        %tr.even
+          %td Neurológicas epilepsia
+          %td.numeric
+            = checked_value(@clinical_history.neurologicas_epilepsia)
+          %td Diabetes
+          %td.numeric
+            = checked_value(@clinical_history.diabetes)
+          %td Cirugía genecológica
+          %td.numeric
+            = checked_value(@clinical_history.cirugia_genecologica)
+          %td Transplantes
+          %td.numeric
+            = checked_value(@clinical_history.transplantes)
+        %tr.odd
+          %td Psiquiátricas-depresión
+          %td.numeric
+            = checked_value(@clinical_history.psiquiatricas_depresion)
+          %td Cáncer
+          %td.numeric
+            = checked_value(@clinical_history.cancer)
+          %td Cirugías generales
+          %td.numeric
+            = checked_value(@clinical_history.cirugias_generales)
+          %td Genéticos
+          %td.numeric
+            = checked_value(@clinical_history.geneticos)
+  %br
+    %h1.questionary_title ANTECEDENTES GINECO-OBSTETRICOS
+    %hr
+  %br
+  %p
+    %b
+      Menarquia:
+    = h @clinical_history.menarquia
+    %b
+      Patrón menstrual:
+    = h @clinical_history.patron_menstrual
+    %b
+      FUM:
+    = l @clinical_history.fum
+    %b
+      IVSA:
+    = h @clinical_history.ivsa
+    %b
+      Papanicolau normal:
+    = h get_boolean(@clinical_history.papanicolau_normal)
+    %b
+      Papanicolau normal fecha:
+    = l @clinical_history.papanicolau_normal_fecha
+    %b
+  %p
+    %b
+      Papanicolau anormal:
+    = h get_boolean(@clinical_history.papanicolau_anormal)
+    %b
+      Papanicolau anormal fecha:
+    = l @clinical_history.papanicolau_anormal_fecha
+    %b
+      Número de parejas:
+    = h @clinical_history.num_parejas
+    %b
+      Método anticonceptivo:
+    = h @clinical_history.papanicolau_method
+    %b
+  %p 
+    %b
+      Gesta:
+    = h @clinical_history.gesta
+    %b
+      Partos:
+    = h @clinical_history.partos
+    %b
+      Cesáreas:
+    = h @clinical_history.cesareas
+    %b
+      Abortos:
+    = h @clinical_history.abortos
+    %b
+      Ectópicos:
+    = h @clinical_history.ectopicos
+    %b
+      Molas:
+    = h @clinical_history.molas
+
+  %br
+    %h1.questionary_title EMBARAZOS PASADOS
+    %hr
+  %br
+  %br
+    %h1.questionary_title DATOS DE EMBARAZO
+    %hr
+  %br
+    %b
+      Altura del fondo uterino:
+    = h @clinical_history.altura_fondo_uterino
+    %b
+      Número de fetos:
+    = h @clinical_history.num_fetos
+    %p 
+    %b
+      ¿Se aplicó gammaglobulina en embarazo previo?
+    = h get_boolean(@clinical_history.gammaglobulina)
+    %p
+    %b
+      Antecentes de hidropsfeta:
+    = h get_boolean(@clinical_history.hidrops_feta)
+    %p
+    %b
+      Peso antes del embarazo:
+    = h @clinical_history.peso_anterior
+    %b
+      Comentarios:
+    = h @clinical_history.comentarios
+    %p
+  %br
+    %h1.questionary_title INTERROGATORIO POR APARATOS Y SISTEMAS
+  %hr
+%br
+.clinical_form
+  %table
+    %tr.odd
+      %th SISTEMA
+      %th SDP
+      %th COMENTARIO
+    %tr.even
+      %td DIGESTIVO
+      %td.numeric
+        = h checked_value(@clinical_history.inte_digestivo)
+      %td.numeric
+        = h checked_value(@clinical_history.inte_digestivo_desc)
+    %tr.odd
+      %td CARDIOCIRCULATORIO
+      %td.numeric
+        =  checked_value(@clinical_history.inte_cardiocirculatorio)
+      %td.numeric
+        = checked_value(@clinical_history.inte_cardiocirculatorio_desc)
+    %tr.even
+      %td MUSCULOÉSQUELETICO
+      %td.numeric
+        =  checked_value(@clinical_history.inte_musculoesqueletico)
+      %td.numeric
+        =  checked_value(@clinical_history.inte_musculoesqueletico_desc)
+    %tr.odd
+      %td NEUROLÓGICO
+      %td.numeric
+        = checked_value(@clinical_history.inte_neurologico)
+      %td.numeric
+        = checked_value(@clinical_history.inte_neurologico_desc)
+    %tr.even
+      %td GENITALES
+      %td.numeric
+        = checked_value(@clinical_history.genitales)
+      %td.numeric
+        = checked_value(@clinical_history.genitales_desc)
+%br
+  %h1.questionary_title EXPLORACIÓN FÍSICA
+  %hr
+%br
+%p
+  %b
+    Prurito :
+  = h get_boolean(@clinical_history.gen_prurito)
+  %p
+  %b
+    Ardor:
+  = h get_boolean(@clinical_history.gen_ardor)
+  %p
+  %b
+    Urinario:
+  = h @clinical_history. urinario
+  %p
+  %b
+    Ardor :
+  = h get_boolean(@clinical_history.ardor)
+  %p
+  %b
+    Polaquiuria :
+  = h get_boolean(@clinical_history.polaquiuria)  
+  %p
+  %b
+    Tenesmo Vesical:
+  = h get_boolean(@clinical_history.tenesmo_vesical)
+  %p
+  %b
+    Presión arterial diastólica:
+  = h @clinical_history.diastolica
+  %p
+  %b
+    Presión arterial sistólica:
+  = h @clinical_history.sistolica
+  %p
+  %b
+    temperatura :
+  = h @clinical_history.temperatura 
+  %p
+  %b
+    peso:
+  = h @clinical_history.peso
+  %p
+  %b
+    talla:
+  = h @clinical_history.talla
+  %p
+  %b
+    masa corporal:
+  = h @clinical_history.masa_corporal
+  %p
+  %b
+    cervix :
+  = h @clinical_history.cervix
+  %p
+  %b
+    fluidos:
+  = h get_boolean(@clinical_history.fluidos)
+  %p
+  %b
+    sangrado:
+  = h get_boolean(@clinical_history.sangrado)
+  %p
+  %b
+    dilatacion
+  = h dilated_value(@clinical_history.dilatacion)
+  %p
+  %b
+    longitud
+  = h longitud_value(@clinical_history.longitud)
+  %p
+  %b
+    consistencia
+  = h consistence_value(@clinical_history.consistencia)
+  %p
+  %b
+    posicion:
+  = h @clinical_history.posicion
+  %p
+  %b
+    borramientos:
+  = h get_boolean(@clinical_history.borramientos)
+  %p
+  %b
+    reblandecimientos:
+  = h get_boolean(@clinical_history.reblandecimientos)
+  %p
+  %b
+    Salida de liquido vaginal:
+  = h get_boolean(@clinical_history.salida_liquido_vaginal)
+  %p
+  %b
+    Fetido:
+  = h get_boolean(@clinical_history.vaginal_fetido)
+  %p
+  %b
+    Leucorrea:
+  = h get_boolean(@clinical_history.gen_leucorrea)
+  %p
+  %b
+    Fetido:
+  = h get_boolean(@clinical_history.leucorrea_fetido)
+  %p
+  %b
+    leucorrea_tipo
+  = h lucorre_value(@clinical_history.leucorrea_tipo)
+  %p
+  %b
+    Sangrado Vaginal:
+  = h get_boolean(@clinical_history.gen_sangrado_vaginal)
+  %p
+  %b
+    sangrado_tipo
+  = h sangre_value(@clinical_history.sangrado_tipo)
+  %p
+  %b
+    Fondo de saco
+  = h fondo_value(@clinical_history.fondo_saco)
+  %p
+  %b
+    Dolor al movilizar el útero:
+  = h get_boolean(@clinical_history.gen_sangrado_vaginal)
+
+
+.clinical_form
+  %table
+    %tr.odd
+      %th AREA
+      %th SDP
+      %th COMENTARIO
+    %tr.even
+      %td Cabeza-cuello-tiroides
+      %td.numeric
+        = h checked_value(@clinical_history.cabeza_cuello_tiroides)
+      %td.numeric
+        = h checked_value(@clinical_history.cabeza_cuello_tiroides_desc)
+    %tr.odd
+      %td Cardiorespiratorio
+      %td.numeric
+        =  checked_value(@clinical_history.cardiorespiratorio_desc)
+      %td.numeric
+        = checked_value(@clinical_history.cardiorespiratorio_desc)
+    %tr.even
+      %td Mamas
+      %td.numeric
+        =  checked_value(@clinical_history.explora_mamas)
+      %td.numeric
+        =  checked_value(@clinical_history.explora_mamas_desc)
+    %tr.odd
+      %td Abdomen
+      %td.numeric
+        = checked_value(@clinical_history.abdomen)
+      %td.numeric
+        = checked_value(@clinical_history.abdomen_desc)
+    %tr.even
+      %td Extremidades
+      %td.numeric
+        = checked_value(@clinical_history.extremidades)      
+      %td.numeric
+        = checked_value(@clinical_history.extremidades_desc)
+  %br
+    %h1.questionary_title IMPRESIóN DIAGNÓSTICA
+    %hr
+  %br
+    %b
+      impresion_diagnostica:
+    = h @clinical_history.impresion_diagnostica
+    %p
+  %br
+    %h1.questionary_title TRATAMIENTO
+    %hr
+  %br
+    %b
+      Inicio de ácido fólico:
+    = h @clinical_history.inicio_acido_folico
+    SDG,
+    %p
+    %b
+      Inicio de multivitaminas:
+    = h @clinical_history.inicio_multivitaminas
+    SDG,
+    %p
+    %b
+      Inicio de multivitaminas:
+    = h @clinical_history.inicio_multivitaminas
+    SDG,
+    %p
+    %b
+      Inicio de suplementos:
+    = h @clinical_history.inicio_suplementos
+    SDG,
+    %p
+    %b
+      Inicio de hierro:
+    = h @clinical_history.inicio_hierro
+    SDG,
+    %p
+    %b
+      Inicio de aspirinas:
+    = h @clinical_history.inicio_aspirina
+    SDG,
+    
+    

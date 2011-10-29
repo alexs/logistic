@@ -1,0 +1,7 @@
+page.replace_html 'create_questionary', :partial => 'form'
+page<< "$('#create_questionary_dialog').dialog({
+        title: 'Cuestionario de Riesgo de Parentaje',
+        modal: true,
+        width: 800,
+        close: function(event, ui) { $('#create_questionary_dialog').dialog('destroy') }
+    });"

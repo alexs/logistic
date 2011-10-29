@@ -1,0 +1,136 @@
+<h1>Listing violencies</h1>
+
+<table>
+  <tr>
+    <th>Fecha</th>
+    <th>Edad</th>
+    <th>Estudios</th>
+    <th>Registro</th>
+    <th>Civil</th>
+    <th>Ocupacion</th>
+    <th>Esta</th>
+    <th>Deseaba</th>
+    <th>Planeo</th>
+    <th>Acepto</th>
+    <th>Numhijos</th>
+    <th>Pardeseaba</th>
+    <th>Parplaneo</th>
+    <th>Paracepto</th>
+    <th>Actual</th>
+    <th>Meses</th>
+    <th>Violencia</th>
+    <th>Relacion años</th>
+    <th>Relacion meses</th>
+    <th>Relacion semanas</th>
+    <th>Relacion dias</th>
+    <th>Edadpar</th>
+    <th>Avientaobjeto</th>
+    <th>Tuerza</th>
+    <th>Amenace</th>
+    <th>Destruir</th>
+    <th>Fuerzafisica</th>
+    <th>Menosprecie</th>
+    <th>Celoso</th>
+    <th>Sospeche</th>
+    <th>Insulte</th>
+    <th>Proposito</th>
+    <th>Machete</th>
+    <th>Miedo</th>
+    <th>Domestico</th>
+    <th>Asfixiar</th>
+    <th>Relaciones</th>
+    <th>Matarla</th>
+    <th>Puño</th>
+    <th>Dispuesta</th>
+    <th>Patee</th>
+    <th>Cuchillo</th>
+    <th>Estomago</th>
+    <th>Jalonee</th>
+    <th>Pistola</th>
+    <th>Fea</th>
+    <th>Cosa</th>
+    <th>Mueble</th>
+    <th>Rifle</th>
+    <th>Veces</th>
+    <th>Violenta</th>
+    <th>Insulta</th>
+    <th>Aguanta</th>
+    <th>Anteriores</th>
+    <th>Fisica</th>
+    <th>Emocional</th>
+    <th>User</th>
+    <th>Dependency</th>
+    <th>Patient</th>
+  </tr>
+
+<% @violencies.each do |violency| %>
+  <tr>
+    <td><%=h violency.fecha %></td>
+    <td><%=h violency.edad %></td>
+    <td><%=h violency.estudios %></td>
+    <td><%=h violency.registro %></td>
+    <td><%=h violency.civil %></td>
+    <td><%=h violency.ocupacion %></td>
+    <td><%=h violency.esta %></td>
+    <td><%=h violency.deseaba %></td>
+    <td><%=h violency.planeo %></td>
+    <td><%=h violency.acepto %></td>
+    <td><%=h violency.numhijos %></td>
+    <td><%=h violency.pardeseaba %></td>
+    <td><%=h violency.parplaneo %></td>
+    <td><%=h violency.paracepto %></td>
+    <td><%=h violency.actual %></td>
+    <td><%=h violency.meses %></td>
+    <td><%=h violency.violencia %></td>
+    <td><%=h violency.relacion_años %></td>
+    <td><%=h violency.relacion_meses %></td>
+    <td><%=h violency.relacion_semanas %></td>
+    <td><%=h violency.relacion_dias %></td>
+    <td><%=h violency.edadpar %></td>
+    <td><%=h violency.avientaobjeto %></td>
+    <td><%=h violency.tuerza %></td>
+    <td><%=h violency.amenace %></td>
+    <td><%=h violency.destruir %></td>
+    <td><%=h violency.fuerzafisica %></td>
+    <td><%=h violency.menosprecie %></td>
+    <td><%=h violency.celoso %></td>
+    <td><%=h violency.sospeche %></td>
+    <td><%=h violency.insulte %></td>
+    <td><%=h violency.proposito %></td>
+    <td><%=h violency.machete %></td>
+    <td><%=h violency.miedo %></td>
+    <td><%=h violency.domestico %></td>
+    <td><%=h violency.asfixiar %></td>
+    <td><%=h violency.relaciones %></td>
+    <td><%=h violency.matarla %></td>
+    <td><%=h violency.puño %></td>
+    <td><%=h violency.dispuesta %></td>
+    <td><%=h violency.patee %></td>
+    <td><%=h violency.cuchillo %></td>
+    <td><%=h violency.estomago %></td>
+    <td><%=h violency.jalonee %></td>
+    <td><%=h violency.pistola %></td>
+    <td><%=h violency.fea %></td>
+    <td><%=h violency.cosa %></td>
+    <td><%=h violency.mueble %></td>
+    <td><%=h violency.rifle %></td>
+    <td><%=h violency.veces %></td>
+    <td><%=h violency.violenta %></td>
+    <td><%=h violency.insulta %></td>
+    <td><%=h violency.aguanta %></td>
+    <td><%=h violency.anteriores %></td>
+    <td><%=h violency.fisica %></td>
+    <td><%=h violency.emocional %></td>
+    <td><%=h violency.user_id %></td>
+    <td><%=h violency.dependency_id %></td>
+    <td><%=h violency.patient_id %></td>
+    <td><%= link_to 'Show', violency %></td>
+    <td><%= link_to 'Edit', edit_violency_path(violency) %></td>
+    <td><%= link_to 'Destroy', violency, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New violency', new_violency_path %>

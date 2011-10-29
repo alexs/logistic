@@ -1,0 +1,2059 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 17:59:12) [GET]
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0xb6d7d49c>):
+  
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (21.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:00:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:00:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:00:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:00:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (32.4ms)
+Rendered rescues/_request_and_response (16.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:00:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:01:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:01:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (95.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:01:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:01:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:03:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:03:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:36:in `require_user'
+
+Rendered rescues/_trace (31.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:03:20) [GET]
+
+ActionController::RoutingError (No route matches "/signup" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:03:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:08:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (97.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:10:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:10:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:10:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:36:in `require_user'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:11:25) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:11:26) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:11:26) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:11:27) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:11:28) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:11:31) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:25:in `require_admin'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:11:32) [GET]
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:25:in `require_admin'
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:14:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:36:in `require_user'
+
+Rendered rescues/_trace (86.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:14:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:36:in `require_user'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:14:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:16:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:16:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:16:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (276.3ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (92.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (306.2ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "name" character varying(255), "surname1" character varying(255), "surname2" character varying(255), "rfc" character varying(255), "cedula" character varying(255), "group_id_id" integer, "dependency_id_id" integer, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014181502')[0m
+  [4;35;1mSQL (11.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (36.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (96.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (94.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:18:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NameError (uninitialized constant ApplicationController::UserSession):
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:47:in `require_no_user'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:22:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `searchable_by' for #<Class:0xb6e05ec8>):
+  app/models/user.rb:5
+  authlogic (2.1.6) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.6) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.6) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.6) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.6) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.6) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.6) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.6) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.6) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:16:in `current_user_session'
+  app/controllers/application_controller.rb:21:in `current_user'
+  app/controllers/application_controller.rb:54:in `require_no_user'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:22:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 84ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:22:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:22:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 80ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:25:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 84ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:25:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NoMethodError (undefined method `group_id' for nil:NilClass):
+  app/controllers/application_controller.rb:34:in `require_admin'
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-10-28 18:26:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=index):
+  app/controllers/users_controller.rb:52:in `show'
+
+Rendered rescues/_trace (29.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (50.4ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (91.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (138.2ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "name" character varying(255), "surname1" character varying(255), "surname2" character varying(255), "phone" character varying(255), "group_id_id" integer, "mater_id_id" integer, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014181502')[0m
+  [4;35;1mSQL (21.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-10-28 18:34:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=index):
+  app/controllers/users_controller.rb:52:in `show'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:34:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+NoMethodError (undefined method `group_id' for nil:NilClass):
+  app/controllers/application_controller.rb:34:in `require_admin'
+
+Rendered rescues/_trace (91.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:34:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `group_id' for nil:NilClass):
+  app/controllers/application_controller.rb:34:in `require_admin'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (47.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (85.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (130.9ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "name" character varying(255), "surname1" character varying(255), "surname2" character varying(255), "phone" character varying(255), "group_id" integer, "mater_id" integer, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014181502')[0m
+  [4;35;1mSQL (17.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (13.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:36:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActionView::MissingTemplate (Missing template users/new_form.erb in view path app/views):
+  app/controllers/users_controller.rb:31:in `new'
+  app/controllers/users_controller.rb:30:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-10-28 18:36:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mPGError: ERROR: no existe la relación «categories»
+LINE 1: SELECT * FROM "categories" WHERE ("categories"."id" IN (1,2)...
+ ^
+: SELECT * FROM "categories" WHERE ("categories"."id" IN (1,2)) [0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la relación «categories»
+LINE 1: SELECT * FROM "categories" WHERE ("categories"."id" IN (1,2)...
+                      ^
+: SELECT * FROM "categories" WHERE ("categories"."id" IN (1,2)) ):
+  app/controllers/users_controller.rb:10:in `index'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/user/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/new/user/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:37:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActionView::MissingTemplate (Missing template users/new_form.erb in view path app/views):
+  app/controllers/users_controller.rb:31:in `new'
+  app/controllers/users_controller.rb:30:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:37:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActionView::MissingTemplate (Missing template users/new_form.erb in view path app/views):
+  app/controllers/users_controller.rb:31:in `new'
+  app/controllers/users_controller.rb:30:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-10-28 18:37:15) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:52:in `show'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:37:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActionView::MissingTemplate (Missing template users/new_form.erb in view path app/views):
+  app/controllers/users_controller.rb:31:in `new'
+  app/controllers/users_controller.rb:30:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:37:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path app/views):
+  app/controllers/users_controller.rb:30:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:38:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `master_id' for #<User:0xb7049964>) on line #9 of app/views/users/new.html.erb:
+6: <p>
+7:   <div class="row">
+8:     <div class="cell_left">Maestria:</div>
+9:     <div class="cell_right"><%= f.text_field :master_id %></div>
+10:   </div>
+11: </p>
+12: 
+
+    app/views/users/new.html.erb:9
+    app/views/users/new.html.erb:4
+    app/controllers/users_controller.rb:30:in `new'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (20.5ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (102.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (122.5ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "name" character varying(255), "surname1" character varying(255), "surname2" character varying(255), "phone" character varying(255), "group_id" integer, "master_id" integer, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014181502')[0m
+  [4;35;1mSQL (14.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateMasters (20111028233826)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (58.4ms)[0m   [0mCREATE TABLE "masters" ("id" serial primary key, "name" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111028233826')[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:39:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `calendar_date_select_includes' for #<ActionView::Base:0xb6eeaf28>) on line #10 of app/views/layouts/application.html.erb:
+7:     <title>Integrativas</title>
+8: 
+9:    <%= javascript_include_tag :defaults %>
+10:    <%= calendar_date_select_includes nil, "red",:locale => 'es'%>
+11: 
+12:    <%= stylesheet_link_tag 'application' %>
+13:    <%= stylesheet_link_tag 'scaffold' %>
+
+    app/views/layouts/application.html.erb:10
+    app/controllers/users_controller.rb:30:in `new'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:40:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mSQL (46.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-28 23:30:46.833553') [0m
+Completed in 116ms (View: 55, DB: 48) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:40:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:42:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/user_sessions
+Rendering user_sessions/new
+Completed in 86ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:22) [GET]
+
+ActionController::RoutingError (No route matches "/css/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo-angel-sspdf.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo-angel-sspdf.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:42:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-28 23:32:28.811889') [0m
+Completed in 49ms (View: 33, DB: 2) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-10-28 18:42:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/user_sessions
+Rendering user_sessions/new
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:34) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/css/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo-angel-sspdf.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:42:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo-angel-sspdf.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:43:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-28 23:33:36.955160') [0m
+Completed in 41ms (View: 25, DB: 2) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 18:43:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-28 23:33:43.077331') [0m
+Completed in 34ms (View: 16, DB: 2) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 18:43:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2011-10-28 19:02:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NoMethodError (undefined method `filter_access_to' for UsersController:Class):
+  app/controllers/users_controller.rb:4
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (35.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:03:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NameError (uninitialized constant UsersController::Doctor):
+  app/controllers/users_controller.rb:8:in `new'
+
+Rendered rescues/_trace (87.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:05:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NameError (uninitialized constant UsersController::Doctor):
+  app/controllers/users_controller.rb:8:in `new'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:05:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+NameError (uninitialized constant UsersController::Doctor):
+  app/controllers/users_controller.rb:8:in `new'
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:05:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Rol) on line #44 of app/views/users/new.html.erb:
+41:                 </tr>
+42: 		<tr>
+43:                       <th valign="top"><%= form.label :"Tipo de rol" %></th>
+44:                       <td><%= form.select(:rol_id, Rol.all.collect {|p| [ p.name, p.id ] })%></td>
+45:                 </tr>
+46: 		<tr>
+47:                       <th valign="top"><h3>Datos Generales</h3></th>
+
+    app/views/users/new.html.erb:44
+    app/views/users/new.html.erb:5
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (19.5ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (102.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) NOT NULL, "email" character varying(255) NOT NULL, "crypted_password" character varying(255) NOT NULL, "password_salt" character varying(255) NOT NULL, "persistence_token" character varying(255) NOT NULL, "single_access_token" character varying(255) NOT NULL, "perishable_token" character varying(255) NOT NULL, "name" character varying(255), "surname1" character varying(255), "surname2" character varying(255), "phone" character varying(255), "rol_id" integer, "master_id" integer, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014181502')[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mCOMMIT[0m
+Migrating to CreateMasters (20111028233826)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (88.5ms)[0m   [0mCREATE TABLE "masters" ("id" serial primary key, "name" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111028233826')[0m
+  [4;35;1mSQL (17.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:07:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Rol) on line #44 of app/views/users/new.html.erb:
+41:                 </tr>
+42: 		<tr>
+43:                       <th valign="top"><%= form.label :"Tipo de rol" %></th>
+44:                       <td><%= form.select(:rol_id, Rol.all.collect {|p| [ p.name, p.id ] })%></td>
+45:                 </tr>
+46: 		<tr>
+47:                       <th valign="top"><h3>Datos Generales</h3></th>
+
+    app/views/users/new.html.erb:44
+    app/views/users/new.html.erb:5
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (24.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:07:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Rol) on line #44 of app/views/users/new.html.erb:
+41:                 </tr>
+42: 		<tr>
+43:                       <th valign="top"><%= form.label :"Tipo de rol" %></th>
+44:                       <td><%= form.select(:rol_id, Rol.all.collect {|p| [ p.name, p.id ] })%></td>
+45:                 </tr>
+46: 		<tr>
+47:                       <th valign="top"><h3>Datos Generales</h3></th>
+
+    app/views/users/new.html.erb:44
+    app/views/users/new.html.erb:5
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:10:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRol Load (0.0ms)[0m   [0mPGError: ERROR: no existe la relación «rols»
+LINE 1: SELECT * FROM "rols" 
+ ^
+: SELECT * FROM "rols" [0m
+
+ActionView::TemplateError (PGError: ERROR:  no existe la relación «rols»
+LINE 1: SELECT * FROM "rols" 
+                      ^
+: SELECT * FROM "rols" ) on line #44 of app/views/users/new.html.erb:
+41:                 </tr>
+42: 		<tr>
+43:                       <th valign="top"><%= form.label :"Tipo de rol" %></th>
+44:                       <td><%= form.select(:rol_id, Rol.all.collect {|p| [ p.name, p.id ] })%></td>
+45:                 </tr>
+46: 		<tr>
+47:                       <th valign="top"><h3>Datos Generales</h3></th>
+
+    app/views/users/new.html.erb:44
+    app/views/users/new.html.erb:5
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101014181502)
+Migrating to CreateMasters (20111028233826)
+Migrating to CreateRols (20111029000938)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (110.9ms)[0m   [0mCREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (28.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111029000938')[0m
+  [4;35;1mSQL (32.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:11:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRol Load (0.8ms)[0m   [0mSELECT * FROM "rols" [0m
+  [4;36;1mSQL (42.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-29 00:01:20.332240') [0m
+Completed in 192ms (View: 130, DB: 44) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowleft.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowright.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/blank.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:11:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:12:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRol Load (0.7ms)[0m   [0mSELECT * FROM "rols" [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-29 00:02:12.406102') [0m
+Completed in 46ms (View: 28, DB: 3) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowleft.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowright.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/blank.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:12:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRol Load (0.7ms)[0m   [0mSELECT * FROM "rols" [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-29 00:02:23.607311') [0m
+Completed in 42ms (View: 26, DB: 3) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowleft.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowright.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/blank.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-10-28 19:12:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRol Load (0.8ms)[0m   [0mSELECT * FROM "rols" [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" WHERE (last_request_at > '2011-10-29 00:02:35.752831') [0m
+Completed in 100ms (View: 83, DB: 3) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/screen.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/header.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowleft.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/side_shadowright.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/shared/blank.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-28 19:12:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

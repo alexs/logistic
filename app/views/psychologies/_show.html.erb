@@ -1,0 +1,95 @@
+<p>
+  <b>Fecha:</b>
+  <%=h l @psychology.date, :format => :long %>
+</p>
+
+<p>
+  <b>¿Está embarazada?:</b>
+  <%=h get_boolean(@psychology.pregnant) %>
+</p>
+
+<p>
+  <b>Semanas de gestación:</b>
+  <%=h @psychology.weeks_of_gestation %>
+</p>
+
+<p>
+  <b>1.- ¿Se ha sentido bien y con buena salud?</b>
+  <%=h answer_psychology(@psychology.good_health_q1) %>
+</p>
+
+<p>
+  <b> 2.- ¿Se ha sentido agotado y sin fuerzas para nada?</b>
+  <%=h answer_psychology(@psychology.exhausted_q2) %>
+</p>
+
+<p>
+  <b> 3.- ¿Ha tenido la sensacion de estar enfermo?</b>
+  <%=h answer_psychology(@psychology.sick_q3) %>
+</p>
+
+<p>
+  <b> 4.- ¿Ha tenido dolores de cabeza?</b>
+  <%=h answer_psychology(@psychology.headache_q4) %>
+</p>
+
+<p>
+  <b> 5.- ¿Ha tenido calofríos o bochornos?</b>
+  <%=h answer_psychology(@psychology.chill_q5) %>
+</p>
+
+<p>
+  <b> 6.- ¿Se ha sentido lleno de vida o energía?</b>
+  <%=h answer_psychology(@psychology.full_of_energy_q6) %>
+</p>
+
+<p>
+  <b>7.- ¿Ha tenido dificultad para dormirse o conciliar el sueño?</b>
+  <%=h answer_psychology(@psychology.insomnia_q7) %>
+</p>
+
+<p>
+  <b>8.- ¿Ha tenido dificultad para dormir de un jalón toda la noche?</b>
+  <%=h answer_psychology(@psychology.insomnia_all_night_q8) %>
+</p>
+
+<p>
+  <b> 9.- ¿Ha pasado noches inquietas o intranquilas?</b>
+  <%=h answer_psychology(@psychology.restless_nights_q9) %>
+</p>
+
+<p>
+  <b>   10.- ¿Se ha sentido satisfecho con su manera de hacer las cosas?</b>
+  <%=h answer_psychology(@psychology.satisfied_to_do_things_q10) %>
+</p>
+
+<p>
+  <b>11.- ¿Disfruta sus actividades diarias?</b>
+  <%=h answer_psychology(@psychology.enjoy_daily_activities_q11) %>
+</p>
+
+<p>
+  <b>12.- ¿Se ha sentido irritado y de mal humor?</b>
+  <%=h answer_psychology(@psychology.bad_mood_q12) %>
+</p>
+
+<p>
+  <b>13.- ¿Se ha sentido asustado y con mucho miedo sin que haya una buena razón?</b>
+  <%=h answer_psychology(@psychology.afraid_q13) %>
+</p>
+
+<p>
+  <b> 14.- ¿Se ha sentido triste y deprimido?</b>
+  <%=h answer_psychology(@psychology.sad_q14) %>
+</p>
+
+<p>
+  <b>15.- ¿Se ha sentido nervioso y a punto de estallar constantemente?</b>
+  <%=h answer_psychology(@psychology.nervous_q15) %>
+</p>
+
+
+<br />
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@psychology.patient_id}"}, :method => :get, :layout => false %>
+</p>

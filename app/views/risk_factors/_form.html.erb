@@ -1,0 +1,110 @@
+<% remote_form_for @risk_factor, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+<%= f.error_messages %>
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Factor</th>
+    <th>Si/No</th>
+    <th>¿Se debe Modificar?(Si/No)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Trabaja con substancias tóxicas o químicos, incluyendo gases
+    anestésicos, solventes, pesticidas</td>
+    <td><%= f.check_box :toxicos_quimicos %></td>
+    <td><%= f.check_box :toxico_quimicos_modif %></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Trabaja más de 36 horas por semana o más de 10 horas por día</td>
+    <td><%= f.check_box :trabaja_muchas_horas %></td>
+    <td><%= f.check_box :trabaja_muchas_horas_modif %></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Se mantiene parada por tiempo prolongado (más de 6 horas continuas)</td>
+    <td><%= f.check_box :parado %></td>
+    <td><%= f.check_box :parado_modif %></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Levanta objetos pesados</td>
+    <td><%= f.check_box :objetos_pesados %></td>
+    <td><%= f.check_box :objetos_pesados_modif %><br /></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Expuesta a ruido excesivo</td>
+    <td><%= f.check_box :ruido %></td>
+    <td><%= f.check_box :ruido_modif %><br /></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Expuesta a ruido excesivo</td>
+    <td><%= f.check_box :ruido %></td>
+    <td><%= f.check_box :ruido_modif %><br /></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Combina algunos de los anteriores (más de 4 horas de pie por
+    turno, estrés mental, trabajo en ambiente frío, ruido intenso)</td>
+    <td><%= f.check_box :estres %></td>
+    <td><%= f.check_box :estres_modif %><br /></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Trabaja en contacto con enfermos infecciosos o productos biológicos infecciosos o está en riesgo para enferemedades infecciosas</td>
+    <td><%= f.check_box :enfermedades_infecciosas %></td>
+    <td><%= f.check_box :enfermedades_infecciosas_modif %></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Se auto-medica <%= f.text_field :automedica_cantidad, :size => 3 %> pastillas/dia</td>
+    <td><%= f.check_box :automedica %></td>
+    <td><%= f.check_box :automedica_modif %></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Fuma <%= f.text_field :fuma_cantidad, :size => 3 %> cigarros/dia</td>
+    <td><%= f.check_box :fuma %></td>
+    <td><%= f.check_box :fuma_modif %></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Consume alcohol <%= f.text_field :alcohol_cantidad, :size => 3 %> copas/dia</td>
+    <td><%= f.check_box :alcohol %></td>
+    <td><%= f.check_box :alcohol_modif %></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Consume drogas <%= f.text_field :drogas_cantidad, :size => 3 %> dosis/dia</td>
+    <td><%= f.check_box :drogas %></td>
+    <td><%= f.check_box :drogas_modif %></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Inadecuada Nutrición </td>
+    <td><%= f.check_box :nutricion %></td>
+    <td><%= f.check_box :nutricion_modif %></td>
+  </tr>
+</table>
+
+  <p>
+    <%= f.hidden_field :patient_id, :value => @risk_factor.patient_id %>
+  </p>
+  <p>
+    <%= f.hidden_field :user_id, :value => 1 %>
+  </p>
+  <p>
+    <%= f.hidden_field :dependency_id, :value => 1 %>
+  </p>
+  <div class="created" style = "display:none">
+    Se ha guardado con éxito.
+  </div>
+  <div class="save" style = "display:inline">
+  <%= f.submit "guardar" %>
+  </div>
+  <div class="creating" style = "display:none">
+    Guardando, porfavor espere...
+  </div>
+<% end %>

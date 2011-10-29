@@ -1,0 +1,32 @@
+<h1>Listing socioeconomics</h1>
+
+<table>
+  <tr>
+    <th>Ocupation</th>
+    <th>Ingreso</th>
+    <th>Dependientes</th>
+    <th>Situacion economica</th>
+    <th>Vivienda</th>
+    <th>Dormitorios</th>
+    <th>Calificacion</th>
+  </tr>
+
+<% @socioeconomics.each do |socioeconomic| %>
+  <tr>
+    <td><%=h socioeconomic.ocupation %></td>
+    <td><%=h socioeconomic.ingreso %></td>
+    <td><%=h socioeconomic.dependientes %></td>
+    <td><%=h socioeconomic.situacion_economica %></td>
+    <td><%=h socioeconomic.vivienda %></td>
+    <td><%=h socioeconomic.dormitorios %></td>
+    <td><%=h socioeconomic.calificacion %></td>
+    <td><%= link_to 'Show', socioeconomic %></td>
+    <td><%= link_to 'Edit', edit_socioeconomic_path(socioeconomic) %></td>
+    <td><%= link_to 'Destroy', socioeconomic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New socioeconomic', new_socioeconomic_path %>

@@ -1,0 +1,30 @@
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@variable_fetal.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<br />
+
+
+<p>
+  <b>Nombre madre:</b>
+  <%=h @variable_fetal.nombre_madre %>
+</p>
+
+<p>
+  <b>Nombre nacido:</b>
+  <%=h @variable_fetal.nombre_nacido %>
+</p>
+
+<p>
+  <b>Rciu:</b>
+  <%=h @variable_fetal.rciu %>
+</p>
+
+<p>
+  <b>Muerte fetal:</b>
+  <%=h @variable_fetal.muerte_fetal %>
+</p>
+
+<p>
+  <b>Mortalidad fetal:</b>
+  <%=h @variable_fetal.mortalidad_fetal %>
+</p>

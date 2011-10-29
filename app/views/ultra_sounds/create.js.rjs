@@ -1,0 +1,2 @@
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_ultrasound1').show(); $('.ultrasound1_link').hide();"
+

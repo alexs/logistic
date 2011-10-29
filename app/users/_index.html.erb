@@ -1,0 +1,104 @@
+<% if current_user.group.id == 3 %>
+    <center>
+        <% form_for users_path do |f|%>
+        <% f.select("dependency", current_user.dependency_incharge.collect {|dependency| [dependency.full_name, dependency.id]},{ :include_blank => true }) %>
+        <% f.submit "mostrar" %>
+        <% end %>
+
+
+        <% remote_form_for users_path, :method => 'get' do %>
+        <p>
+            Ingrese usuario a buscar: <%= text_field_tag :search_word %> <%= submit_tag "Buscar", :name => nil %>
+        <a href="#" onclick="$('#advanced_search_area').show('slow');" id = "advanced_search">Búsqueda avanzada</a>
+
+
+</body>
+
+        </p>
+        <% end %>
+        <br />
+
+
+        <div id='advanced_search_area' style="display:none; width:450px; height:150px; background:#EFFBEF; text-align:center; border: solid; border-color: #CEF6CE;">
+          <br />
+          <p>
+           <%= select_tag("category", "<option selected='selected'>  <option value=1> Jurisdicción </option> </option> <option value=2> Centro de Salud </option>" ) %>
+
+          </p>
+         <div id='select_for_juri_or_center_area'>
+
+        </div>
+           <%=
+                observe_field 'category',
+            :url => {:controller => 'users',
+            :action => 'select_category'},
+            :update => 'select_for_juri_or_center_area',
+            :complete => "new Effect.BlindDown('select_for_juri_or_center_area')",
+            :with => 'category_select'
+            %>
+        <p> <br />
+                   <a href="#" onclick="$('#advanced_search_area').hide('slow');" id = "advanced_search">Ocultar Búsqueda Avanzada</a>
+                  </p>
+                  </div>
+
+        </center>
+    <% end %>
+
+
+        <center>
+
+
+
+
+
+<div id="results">
+  <br />
+  <%= image_tag('progress_bar.gif', :id => 'loading_indicator', :style => 'display:none') %>
+
+
+
+
+        <br />
+   <% if current_user.group.id == 3 %>
+     <%= !@total.nil? ? "Registros encontrados = #{@total}" : "" %>
+     <br /><br />
+   <% end %>
+
+
+<p>
+  <h1>Usuarios del Sistema</h1>
+   <br />
+    <%= will_paginate @users %>
+
+<div class="table_result">
+<table>
+<% if @users.size > 0 %>
+  <tr class = <%= "#{cycle ('odd', 'even')}" %>>
+    <th>Nombre</th>
+    <th>Login</th>
+    <th>Depedendencia</th>
+    <th>Tipo de Usuario</th>
+  </tr>
+     <% end %>
+
+
+  <% for user in @users %>
+   <tr class = <%= "#{cycle ('odd', 'even')}" %>>
+    <td><%= user.full_name %></td>
+    <td><%= user.login %></td>
+    <td><%= user.dependency.name   + " " + user.dependency.category.name%></td>
+    <td><%= user.group.name %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<%= will_paginate @users %>
+<br />
+  </p>
+ </div>  
+
+<p>
+Alta de Usuarios: <%= link_to_remote "Alta de nuevo usuario", :loading => "$('.indicator').show();", :url => {:controller => "users", :action => "new"}, :method => :get, :complete => "$('.indicator').hide();" %>
+</p>
+
+</center>

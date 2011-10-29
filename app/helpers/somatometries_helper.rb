@@ -1,0 +1,2 @@
+module SomatometriesHelper
+end

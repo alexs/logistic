@@ -1,0 +1,163 @@
+<h1>New classification</h1>
+
+<% form_for(@classification) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </p>
+  <p>
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :socioeconomic_level %><br />
+    <%= f.text_field :socioeconomic_level %>
+  </p>
+  <p>
+    <%= f.label :marital_status %><br />
+    <%= f.text_field :marital_status %>
+  </p>
+  <p>
+    <%= f.label :schooling %><br />
+    <%= f.text_field :schooling %>
+  </p>
+  <p>
+    <%= f.label :attitude_to_pregnancy %><br />
+    <%= f.text_field :attitude_to_pregnancy %>
+  </p>
+  <p>
+    <%= f.label :parity %><br />
+    <%= f.text_field :parity %>
+  </p>
+  <p>
+    <%= f.label :last_pregnant %><br />
+    <%= f.text_field :last_pregnant %>
+  </p>
+  <p>
+    <%= f.label :consecutives_aborts %><br />
+    <%= f.text_field :consecutives_aborts %>
+  </p>
+  <p>
+    <%= f.label :prior_cesarean %><br />
+    <%= f.text_field :prior_cesarean %>
+  </p>
+  <p>
+    <%= f.label :childbirth_lower_37_weeks %><br />
+    <%= f.text_field :childbirth_lower_37_weeks %>
+  </p>
+  <p>
+    <%= f.label :preeclampsia_eclampsia %><br />
+    <%= f.text_field :preeclampsia_eclampsia %>
+  </p>
+  <p>
+    <%= f.label :children_low_25_grams %><br />
+    <%= f.text_field :children_low_25_grams %>
+  </p>
+  <p>
+    <%= f.label :children_more_40_grams %><br />
+    <%= f.text_field :children_more_40_grams %>
+  </p>
+  <p>
+    <%= f.label :perinatals_deads %><br />
+    <%= f.text_field :perinatals_deads %>
+  </p>
+  <p>
+    <%= f.label :children_with_congenitals_defects %><br />
+    <%= f.text_field :children_with_congenitals_defects %>
+  </p>
+  <p>
+    <%= f.label :last_surgery %><br />
+    <%= f.text_field :last_surgery %>
+  </p>
+  <p>
+    <%= f.label :history_diabetes %><br />
+    <%= f.text_field :history_diabetes %>
+  </p>
+  <p>
+    <%= f.label :history_hypertension %><br />
+    <%= f.text_field :history_hypertension %>
+  </p>
+  <p>
+    <%= f.label :hemoglobin %><br />
+    <%= f.text_field :hemoglobin %>
+  </p>
+  <p>
+    <%= f.label :rh_factor %><br />
+    <%= f.text_field :rh_factor %>
+  </p>
+  <p>
+    <%= f.label :smoking %><br />
+    <%= f.text_field :smoking %>
+  </p>
+  <p>
+    <%= f.label :alcoholism %><br />
+    <%= f.text_field :alcoholism %>
+  </p>
+  <p>
+    <%= f.label :addiction %><br />
+    <%= f.text_field :addiction %>
+  </p>
+  <p>
+    <%= f.label :diabetes %><br />
+    <%= f.text_field :diabetes %>
+  </p>
+  <p>
+    <%= f.label :hypertension_cronic %><br />
+    <%= f.text_field :hypertension_cronic %>
+  </p>
+  <p>
+    <%= f.label :preeclampsia %><br />
+    <%= f.text_field :preeclampsia %>
+  </p>
+  <p>
+    <%= f.label :epilepsia %><br />
+    <%= f.text_field :epilepsia %>
+  </p>
+  <p>
+    <%= f.label :cardiopatia %><br />
+    <%= f.text_field :cardiopatia %>
+  </p>
+  <p>
+    <%= f.label :colagenopatia %><br />
+    <%= f.text_field :colagenopatia %>
+  </p>
+  <p>
+    <%= f.label :nefropatia %><br />
+    <%= f.text_field :nefropatia %>
+  </p>
+  <p>
+    <%= f.label :nefropatias %><br />
+    <%= f.text_field :nefropatias %>
+  </p>
+  <p>
+    <%= f.label :endocrinopatias %><br />
+    <%= f.text_field :endocrinopatias %>
+  </p>
+  <p>
+    <%= f.label :consanguinidad %><br />
+    <%= f.text_field :consanguinidad %>
+  </p>
+  <p>
+    <%= f.label :amenaza_aborto %><br />
+    <%= f.text_field :amenaza_aborto %>
+  </p>
+  <p>
+    <%= f.label :amenaza_parto_pretermino %><br />
+    <%= f.text_field :amenaza_parto_pretermino %>
+  </p>
+  <p>
+    <%= f.label :ruptura_membranas %><br />
+    <%= f.text_field :ruptura_membranas %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', classifications_path %>

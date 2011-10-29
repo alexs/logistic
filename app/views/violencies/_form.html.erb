@@ -1,0 +1,413 @@
+<% remote_form_for @violency, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Fecha %><br />
+    <%= f.date_select :fecha %>
+  </p>
+<br />
+  <p>
+    <%= f.hidden_field :edad, :value => "#{Patient.find(@violency.patient_id).age}" %>
+  </p>
+<br />
+  <p>
+    <%= f.label "¿Cuántos años de estudios?" %>
+    <%= f.text_field :estudios, :size => 4 %>
+    <%= f.label :registro %>
+    <%= f.text_field :registro, :size => 8 %>
+  </p>
+
+<br />
+<br />
+<u>Seleccione la casilla si su respuesta es Sí</u>
+<br />
+<br />
+  <p>
+    <%= f.label "¿Esta embarazada?" %> &nbsp; &nbsp; <%= f.check_box :esta %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Deseaba usted este embarazo?" %>&nbsp;&nbsp;<%= f.check_box :deseaba %>
+  </p>
+<br />
+  <p>
+    <%= f.label "¿Planeó usted este embarazo?" %><%= f.check_box :planeo %>
+  </p>
+<br />
+  <p>
+    <%= f.label "¿Aceptó usted este embarazo?" %><%= f.check_box :acepto %>
+  </p>
+<br />
+  <p>
+    <%= f.label "Numero de hijos vivos" %> <%= f.text_field :numhijos, :size => 3 %>
+  </p>
+<br />
+<br />
+<u>Seleccione una opción.</u>
+<br />
+<br />
+  <p>
+    <%= f.label :"¿Su pareja deseaba este embarazo?" %>
+    <%= question_violence(f,:pardeseaba,1) %><%= question_violence(f,:pardeseaba,2) %><%= question_violence(f,:pardeseaba,3) %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Su pareja planeó este emabarazo?" %>
+    <%= question_violence(f,:parplaneo,1) %><%= question_violence(f,:parplaneo,2) %><%= question_violence(f,:parplaneo,3) %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Su pareja aceptó este embarazo?"%>
+    <%= question_violence(f,:paracepto,1) %><%= question_violence(f,:paracepto,2) %><%= question_violence(f,:paracepto,3) %>
+  </p>
+    <br />
+  <p>
+    <%= f.label :"¿Cuántos embarazos ha tenido incluyendo el actual?"%>
+    <%= f.text_field :embarazos, :size => 3 %>
+   </p>
+    <br />
+    <p>
+      <%= f.label :"¿Cuántos abortos?"%>
+      <%= f.text_field :abortos, :size => 3 %>
+    </p>
+     <br />
+    <p>
+      <%= f.label :"¿Cuántos óbitos?"%>
+      <%= f.text_field :obitos, :size => 3 %>
+      </p>
+     <br />
+    <p>
+     <%= f.label :"¿Cuántos partos?"%>
+     <%= f.text_field :partos, :size => 3 %>
+      </p>
+     <br />
+    <p>
+     <%= f.label :"¿Cuántos cesáreas?"%>
+     <%= f.text_field :cesareas,  :size => 3 %>
+
+       </p>
+     <br />
+    <p>
+
+
+<br /><br />
+<u>Seleccione la casilla si su respuesta es Sí</u>
+<br />
+<br />
+  <p>
+    <%= f.label :"¿Ha sufrido violencia durante este embarazo de parte de su pareja actual?" %> <%= f.check_box :actual %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Ha sufrido violencia antes del embarazo de su pareja actual? " %> <%= f.check_box :meses %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Ha sufrido violencia durante este embarazo de parte del padre de su hijo?" %> <%= f.check_box :violencia %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Cuánto tiempo de relación con la pareja actual?" %><br />
+     <%= f.label :"años" %> <%= f.text_field :relacion_años, :size => 4 %>
+     <%= f.label :"Meses" %> <%= f.text_field :relacion_meses, :size => 4 %>
+     <%= f.label :"Semanas" %> <%= f.text_field :relacion_semanas, :size => 4 %>
+     <%= f.label :"Dias" %> <%= f.text_field :relacion_dias, :size => 4 %>
+  </p>
+<br />
+  <p>
+    <%= f.label :"¿Qué edad tiene su pareja actual?" %> <%= f.text_field :edadpar, :size => 4 %> años.
+  </p>
+
+<br />
+<br />
+   <table border="1">
+     <tr>
+       <th> FORMAS DE VIOLENCIA </th>
+       <th>>Si (seleccionado)/<br />>No (vacío)</th>
+     </tr>
+     <tr>
+       <td>
+	 1. Que su pareja le avienta algún objeto.
+       </td>
+       <td> 
+	 <%= f.check_box :avientaobjeto %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 2. Que le tuerza el brazo.
+       </td>
+       <td>
+	 <%= f.check_box :tuerza %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 3. Que la amenace con golpearla
+       </td>
+       <td>
+	 <%= f.check_box :amenace %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 4. Que se ponga a destruir algunas cosas de usted
+       </td>
+       <td>
+	 <%= f.check_box :destruir %>
+       </td>
+       </tr>
+     <tr>
+       <td>
+	 5. Que use la fuerza fisica para tener relaciones sexuales con usted,en contra de su voluntad.
+       </td>
+       <td>
+	 <%= f.check_box :fuerzafisica %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 6. Que lo rebaje o menosprecie
+       </td>
+       <td>
+	 <%= f.check_box :menosprecie %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 7. Que se ponga celoso.
+       </td>
+       <td>
+	 <%= f.check_box :celoso %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 8. Que su pareja sospeche de sus amistades	 
+       </td>
+       <td>
+	 <%= f.check_box :sospeche %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 9. Que la insulte
+       </td>
+       <td>
+	 <%= f.check_box :insulte %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+       10. Que su pareja la empuje a propósito.
+     </td>
+     <td>
+       <%= f.check_box :proposito %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+    11.Que la agreda con alguna navaja, cuchillo o machete
+       </td>
+     <td>
+    <%= f.check_box :machete %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+  
+    12.Que le haga sentir miedo de él
+       </td>
+     <td>
+    <%= f.check_box :miedo %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+
+    13.Que la golpee con un palo o un cinturón o alǵun objeto doméstico.
+        </td>
+     <td>
+    <%= f.check_box :domestico %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+   14.Que la trate de ahorcar o asfixiar.
+       </td>
+     <td>
+    <%= f.check_box :asfixiar %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    15.Que la amenace con irse con otras mujeres si no accede a tener relaciones sexuales con él.
+       </td>
+     <td>
+    <%= f.check_box :relaciones %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    16.Que la amenace con matarla a usted o matarse él o matar alos niños.
+       </td>
+     <td>
+    <%= f.check_box :matarla %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    17.Que la golpee con la mano o con el puño.
+      </td>
+     <td>
+    <%= f.check_box :puño %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    18.Que le exija tener relaciones sexuales aun que usted no esté dispuesta.
+      </td>
+     <td>
+    <%= f.check_box :dispuesta %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    19.Que su pareja la patee.
+      </td>
+     <td>
+    <%= f.check_box :patee %>
+     </td>
+     </tr>
+     <tr>
+     <td>
+ 20.Que la amenace con alguna navaja o cuchillo o machete.
+        </td>
+     <td>
+    <%= f.check_box :cuchillo %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+  21.Que la golpee en el éstomago.
+        </td>
+     <td>
+    <%= f.check_box :estomago %>
+     </td>
+     </tr>
+     <tr>
+     <td>
+    22.Que la sacuda,zarandee o jalonee.
+       </td>
+     <td>
+    <%= f.check_box :jalonee %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    23.Que le dispare con alguna pistola o rifle.
+      </td>
+     <td>
+    <%= f.check_box :pistola %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    24.Que le diga cosas como que usted es poco atractiva o fea
+      </td>
+     <td>
+    <%= f.check_box :fea %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    25.Que la ataque con algun otra cosa.
+      </td>
+     <td>
+    <%= f.check_box :cosa %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    26.Que se ponga a golpear o patear la pared o algún mueble.
+      </td>
+     <td>
+
+    <%= f.check_box :mueble %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    27.Que la amenace con alguna pistola o rifle.
+       </td>
+     <td>
+    <%= f.check_box :rifle %>
+       </td>
+     </tr>
+    </table>
+    
+
+
+     
+  <br />
+  <br />
+  <p>
+    <%= f.label :"28.-¿Cuántas veces sucede el evento de violencia con su pareja?" %><br />
+    <br />
+    <%= question_violence(f,:veces,4) %> <%= question_violence(f,:veces,5) %> <%= question_violence(f,:veces,6) %> <%= question_violence(f,:veces,7) %>
+
+  </p>
+  <br />
+  <br />
+  <u>Seleccione la casilla solo si su respuesta es Sí </u>
+  <br />
+  <br />
+  <p>
+    <%= f.label :"29.-¿Cuándo su pareja es violenta, usted tambíen lo golpea?" %>   
+    <%= f.check_box :violenta %>
+  </p>
+  <br />
+  <p>
+    <%= f.label :"30.-¿Cuándo su pareja es violenta,usted también lo insulta?" %>
+    <%= f.check_box :insulta %>
+  </p>
+  <br />
+  <p>
+    <%= f.label :"31.-¿Cuando su pareja la insulta o golpea usted quisiera responder pero se aguanta?" %>
+    <%= f.check_box :aguanta %>
+  </p>
+  <br />
+  <p>
+    <%= f.label :"32.-¿Ha tenido otras parejas anteriores con una relación de violencia?" %>
+    <%= f.check_box :anteriores %>
+  </p>
+  <br />
+  <br />
+  <p>
+    <%= f.label :"Violencia fisica" %>
+    <%= f.text_field :fisica, :size => 4 %>
+  </p>
+  <br />
+  <p>
+    <%= f.label :"Violencia emocional" %>
+    <%= f.text_field :emocional, :size => 4 %>
+  </p>
+  <p>
+    <%= f.hidden_field :user_id %>
+  </p>
+  <p>
+    <%= f.hidden_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.hidden_field :patient_id, :value => @violency.patient_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+  </p>
+  <br />
+  <div class="guardar">
+    <%= f.submit 'Guardar' %>                                                                         
+  </div>                                                                                              
+  <div class="creating" style = "display:none">                                                       
+    Guardando, porfavor espere...                                               
+   </div>  
+<% end %>

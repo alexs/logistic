@@ -1,0 +1,36 @@
+.patient_header
+  %table
+    %tr
+      %th.name
+        %h1 Nombre
+      %th.lastname
+        %h1 Apellidos
+      %th.date_next_consult
+        %h1 Fecha Próxima Consulta
+      %th.presumptive_diagnosis
+        %h1 Diagnostico Presuntivo
+      %th.applicant_doctor
+        %h1 Médico Solicitante
+      %th.actions
+        %h1 Acciones
+
+  - @appointments.each do |appoinment|
+    %table
+      %tr{:class => "#{cycle ('odd', 'even')}"}
+        %td.name
+          = appoinment.patient.firstname
+        %td.lastname
+          = appoinment.patient.lastname1
+          = appoinment.patient.lastname2
+        %td.date_next_consult
+          = appoinment.date_next_consult
+        %td.presumptive_diagnosis
+          = appoinment.presumptive_diagnosis
+        %td.applicant_doctor
+          = appoinment.applicant_doctor
+        %td.actions
+          = link_to_remote "Seleccionar Cita", :url => { :controller => "appoiments", :action => "show", :id => appoinment.id }, :method => :get, :layout => false
+
+%br
+Total de citas encontradas: #{@appointments.size}
+					

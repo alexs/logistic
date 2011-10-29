@@ -1,0 +1,2 @@
+html = @patients.empty? ? {:partial => 'not_found'} : {:partial => 'patients'}
+page.replace_html "patient_container", html

@@ -1,0 +1,25 @@
+<h1>Consultas subsecuentes aplicadas</h1>
+<br />
+<center>
+<div class="clinical_form">
+<table>
+  <tr class="even">
+    <th>Fecha</th>
+    <th>Dependencia</th>
+    <th>Acciones</th>
+  </tr>
+
+<% @first_times.each do |first_time| %>
+  <tr class="<%= cycle ('odd', 'even') %>">
+    <td><%=l first_time.date, :format => :long  %></td>
+    <td><%=h first_time.dependency.full_name %></td>
+    <td><%= link_to_remote "Mostrar", :url => {:controller => 'first_times', :action => :show, :id => first_time.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()" %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+</center>
+<br />
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@patient}"}, :method => :get, :layout => false %>
+</p>

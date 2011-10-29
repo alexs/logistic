@@ -1,0 +1,97 @@
+<% remote_form_for @socioeconomic, :url => {:action => :create},
+  :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "ocupación" %><br />
+    <%= f.select(:ocupation, SocioeconomicOcupation.all.collect{|p|
+    [p.name, p.id]}, { :include_blank => true }) %>
+
+  </p>
+  <p>
+    <table border="1">
+      <tr>
+        <th>Ingreso Familiar</th>
+        <th colspan="3">Número De Dependientes</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>1 - 3</td>
+        <td>4 - 9</td>
+        <td> > 10</td>
+      </tr>
+      <tr>
+        <td>Sin salario a - de 1 SM</td>
+        <td><%= f.radio_button(:ingreso,0)%></td>
+        <td><%= f.radio_button(:ingreso,1)%></td>
+        <td><%= f.radio_button(:ingreso,2)%></td>
+      </tr>
+      <tr>
+        <td>1 SM a 1.5 SM</td>
+        <td><%= f.radio_button(:ingreso,3)%></td>
+        <td><%= f.radio_button(:ingreso,4)%></td>
+        <td><%= f.radio_button(:ingreso,5)%></td>
+      </tr>
+      <tr>
+        <td>Más 1.5 SM a 3.0 SM</td>
+        <td><%= f.radio_button(:ingreso,6)%></td>
+        <td><%= f.radio_button(:ingreso,7)%></td>
+        <td><%= f.radio_button(:ingreso,8)%></td>
+      </tr>
+      <tr>
+        <td>Más 3.0 SM a 4.5 SM</td>
+        <td><%= f.radio_button(:ingreso,9)%></td>
+        <td><%= f.radio_button(:ingreso,10)%></td>
+        <td><%= f.radio_button(:ingreso,11)%></td>
+      </tr>
+      <tr>
+        <td>Más 4.5 SM</td>
+        <td><%= f.radio_button(:ingreso,12)%></td>
+        <td><%= f.radio_button(:ingreso,13)%></td>
+        <td><%= f.radio_button(:ingreso,14)%></td>
+      </tr>
+
+    </table>
+    
+  </p>
+
+  <p>
+    <%= f.label "Situación Económica" %><br />
+    <%= f.select(:economic_situation_id,
+    EconomicSituation.all.collect{|p| [p.name + ": " + p.desc, p.id]}, { :include_blank => true }) %>
+  </p>
+  <p>
+    <%= f.label "Tipo de vivienda" %><br />
+    <%= f.select(:tipo_vivienda_id, TipoVivienda.all.collect{|p| [p.name, p.id]}, { :include_blank => true }) %>
+  </p>
+  <p>
+    <table>
+      <tr>
+        <th>Numero de dormitorios</th>
+      </tr>
+      <tr>
+        <td>
+          Vivienda en un cuarto <br />
+          1 a 2 <br />
+          3 <br />
+          4 a más
+        </td>
+        <td>
+          <%= f.radio_button(:dormitorios,0) %><br />
+          <%= f.radio_button(:dormitorios,1) %><br />
+          <%= f.radio_button(:dormitorios,2) %><br />
+          <%= f.radio_button(:dormitorios,3) %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+  <%= f.hidden_field :patient_id, :value => @socioeconomic.patient_id %>
+ <div class="guardar">
+    <%= f.submit 'Guardar' %>
+  </div>
+  <div class="creating" style = "display:none">
+    Guardando, porfavor espere...
+   </div>
+<% end %>

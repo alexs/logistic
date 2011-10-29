@@ -1,0 +1,2 @@
+<%= f.select( :dependency_id, current_user.dependency_incharge.collect {|p| [ p.name  + " " + p.category.name,  p.id ] }) %>
+

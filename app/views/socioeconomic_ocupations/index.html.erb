@@ -1,0 +1,22 @@
+<h1>Listing socioeconomic_ocupations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Point</th>
+  </tr>
+
+<% @socioeconomic_ocupations.each do |socioeconomic_ocupation| %>
+  <tr>
+    <td><%=h socioeconomic_ocupation.name %></td>
+    <td><%=h socioeconomic_ocupation.point %></td>
+    <td><%= link_to 'Show', socioeconomic_ocupation %></td>
+    <td><%= link_to 'Edit', edit_socioeconomic_ocupation_path(socioeconomic_ocupation) %></td>
+    <td><%= link_to 'Destroy', socioeconomic_ocupation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New socioeconomic_ocupation', new_socioeconomic_ocupation_path %>

@@ -1,0 +1,40 @@
+<h1>Editing appoiment</h1>
+
+<% form_for(@appoiment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :date_next_consult %><br />
+    <%= f.date_select :date_next_consult %>
+  </p>
+  <p>
+    <%= f.label :presumptive_diagnosis %><br />
+    <%= f.text_field :presumptive_diagnosis %>
+  </p>
+  <p>
+    <%= f.label :applicant_doctor %><br />
+    <%= f.text_field :applicant_doctor %>
+  </p>
+  <p>
+    <%= f.label :dependency_id %><br />
+    <%= f.text_field :dependency_id %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= f.text_field :patient_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @appoiment %> |
+<%= link_to 'Back', appoiments_path %>

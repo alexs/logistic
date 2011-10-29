@@ -1,0 +1,37 @@
+<% remote_form_for @variable_fetal, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+
+  <%= f.error_messages %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+  <%= f.hidden_field :patient_id, :value => @variable_fetal.patient_id %>
+  <hr />
+
+
+  <p>
+    <%= f.label :nombre_madre %><br />
+    <%= f.text_field :nombre_madre %>
+  </p>
+  <p>
+    <%= f.label :nombre_nacido %><br />
+    <%= f.text_field :nombre_nacido %>
+  </p>
+  <p>
+    <%= f.label :rciu %><br />
+    <%= f.text_field :rciu %>
+  </p>
+  <p>
+    <%= f.label :muerte_fetal %><br />
+    <%= f.text_field :muerte_fetal %>
+  </p>
+  <p>
+    <%= f.label :mortalidad_fetal %><br />
+    <%= f.text_field :mortalidad_fetal %>
+  </p>
+
+ <div class="guardar">
+    <%= f.submit 'Guardar' %>
+  </div>
+  <div class="creating" style = "display:none">
+    Guardando, porfavor espere...
+   </div>
+<% end %>

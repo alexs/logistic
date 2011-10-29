@@ -1,0 +1,7 @@
+page.replace_html 'create_event', :partial => 'form'
+page<< "$('#create_event_dialog').dialog({
+        title: 'Nueva Cita',
+        modal: true,
+        width: 250,
+        close: function(event, ui) { $('#create_event_dialog').dialog('destroy') }
+    });"

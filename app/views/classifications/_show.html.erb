@@ -1,0 +1,51 @@
+
+ <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@classification.patient_id}"}, :method => :get, :layout => false %>  | 
+<%= link_to_remote "Completar", :url => {:controller => 'classifications', :action => :edit, :id => @classification.id}, :method => :get, :layout => false, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()" %>
+<br />
+<br />
+<div class="classification">
+<table>
+<tr>
+<th></th>
+<th>Bajo riesgo</th>
+<th>Mediano riesgo</th>
+<th>Alto riesgo</th>
+</tr>
+<tr><th colspan="4">I. Datos Generales</th></tr>
+<%= eval_age(@classification.age) %>
+<%= eval_weight(@classification.weight) %>
+<%= eval_height(@classification.height) %>
+<%= eval_socioeconomic(@classification.socioeconomic_level) %>
+<%= eval_marital(@classification.maritalstatus_id) %>
+<%= eval_schoolar(@classification.schooling_id) %>
+<%= eval_attitude(@classification.attitude_to_pregnancy) %>
+<tr><th colspan="4">II. Antecedentes</th></tr>
+<%= eval_paridad(@classification.parity) %>
+<%= eval_last_pregnant(@classification.last_pregnant) %>
+<%= eval_aborts(@classification.consecutives_aborts) %>
+<%= eval_childbirth_lower_37_week(@classification.childbirth_lower_37_weeks) %>
+<%= eval_preclampsia(@classification.preeclampsia_eclampsia) %>
+<%= eval_children_low_25_grams(@classification.children_low_25_grams) %>
+<%= eval_children_more_40_grams(@classification.children_more_40_grams) %>
+<%= eval_perinatals_deads(@classification.perinatals_deads) %>
+<%= eval_children_with_congenitals_defects(@classification.children_with_congenitals_defects) %>
+<%= eval_last_surgery(@classification.last_surgery) %>
+<%= eval_history_diabetes(@classification.history_diabetes) %>
+<%= eval_history_hypertension(@classification.history_hypertension) %>
+<tr><th colspan="4">III. Embarazo actual</th></tr>
+<%= eval_hemoglobin(@classification.hemoglobin) %>
+<%= eval_rh_factor(@classification.rh_factor) %>
+<%= eval_smoking(@classification.smoking) %>
+<%= eval_alcoholism(@classification.alcoholism) %>
+<%= eval_addiction(@classification.addiction) %>
+<%= eval_diabetes(@classification.diabetes) %>
+<%= eval_epilepsia(@classification.epilepsia) %>
+<%= eval_cardiopatia(@classification.cardiopatia) %>
+<%= eval_colagenopatia(@classification.colagenopatia) %>
+<%= eval_endocrinopatias(@classification.endocrinopatias) %>
+<%= eval_consanguinidad(@classification.consanguinidad) %>
+<%= eval_amenaza_aborto(@classification.amenaza_aborto) %>
+<%= eval_amenaza_parto_pretermino(@classification.amenaza_parto_pretermino) %>
+<%= eval_ruptura_membranas(@classification.ruptura_membranas) %>
+</table>
+</div>

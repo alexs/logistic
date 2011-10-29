@@ -1,0 +1,24 @@
+<h1>Listing squares</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cp</th>
+    <th>County</th>
+  </tr>
+
+<% @squares.each do |square| %>
+  <tr>
+    <td><%=h square.name %></td>
+    <td><%=h square.cp %></td>
+    <td><%=h square.county %></td>
+    <td><%= link_to 'Show', square %></td>
+    <td><%= link_to 'Edit', edit_square_path(square) %></td>
+    <td><%= link_to 'Destroy', square, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New square', new_square_path %>

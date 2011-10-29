@@ -1,0 +1,20 @@
+<h1>Listing masters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @masters.each do |master| %>
+  <tr>
+    <td><%=h master.name %></td>
+    <td><%= link_to 'Show', master %></td>
+    <td><%= link_to 'Edit', edit_master_path(master) %></td>
+    <td><%= link_to 'Destroy', master, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New master', new_master_path %>

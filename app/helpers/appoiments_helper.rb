@@ -1,0 +1,2 @@
+module AppoimentsHelper
+end

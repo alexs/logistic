@@ -1,0 +1,40 @@
+<h1>Editing socioeconomic</h1>
+
+<% form_for(@socioeconomic) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :ocupation %><br />
+    <%= f.text_field :ocupation %>
+  </p>
+  <p>
+    <%= f.label :ingreso %><br />
+    <%= f.text_field :ingreso %>
+  </p>
+  <p>
+    <%= f.label :dependientes %><br />
+    <%= f.text_field :dependientes %>
+  </p>
+  <p>
+    <%= f.label :situacion_economica %><br />
+    <%= f.text_field :situacion_economica %>
+  </p>
+  <p>
+    <%= f.label :vivienda %><br />
+    <%= f.text_field :vivienda %>
+  </p>
+  <p>
+    <%= f.label :dormitorios %><br />
+    <%= f.text_field :dormitorios %>
+  </p>
+  <p>
+    <%= f.label :calificacion %><br />
+    <%= f.text_field :calificacion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @socioeconomic %> |
+<%= link_to 'Back', socioeconomics_path %>

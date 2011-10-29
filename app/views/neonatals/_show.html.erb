@@ -1,0 +1,45 @@
+<p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@neonatal.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<br />
+<br />
+
+<p>
+  <b>Peso:</b>
+  <%=h @neonatal.peso %>
+</p>
+
+<p>
+  <b>Edad gestacional:</b>
+  <%=h @neonatal.edad_gestacional %>
+</p>
+
+<p>
+  <b>Trofismo:</b>
+  <%=h @neonatal.trofismo %>
+</p>
+
+<p>
+  <b>Calificacion apgar:</b>
+  <%=h @neonatal.calificacion_apgar %>
+</p>
+
+<p>
+  <b>Sirveman:</b>
+  <%=h @neonatal.sirveman %>
+</p>
+
+<p>
+  <b>Morbilidad materna:</b>
+  <%=h @neonatal.morbilidad_materna %>
+</p>
+
+<p>
+  <b>Morbilidad neonatal:</b>
+  <%=h @neonatal.morbilidad_neonatal %>
+</p>
+
+<p>
+  <b>Muerte neonatal:</b>
+  <%=h @neonatal.muerte_neonatal %>
+</p>

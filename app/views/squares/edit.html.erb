@@ -1,0 +1,24 @@
+<h1>Editing square</h1>
+
+<% form_for(@square) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :cp %><br />
+    <%= f.text_field :cp %>
+  </p>
+  <p>
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @square %> |
+<%= link_to 'Back', squares_path %>

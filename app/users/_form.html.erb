@@ -1,0 +1,92 @@
+<h1>Alta de Nuevo Usuario</h1>
+
+
+<% remote_form_for @user, :url => account_path do |f| %>
+  <% if !f.error_messages.empty? %>
+    <div class="validation">
+    <%= f.error_messages %>
+    </div>
+  <% end %>
+
+
+<p>
+  <div class="row">
+    <div class="cell_left">Dependencia:</div>
+    <div class="cell_right"><%= render :partial => "user_dependency" , :locals => { :f => f } %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Paterno:</div>
+    <div class="cell_right"><%= f.text_field :surname1, :onkeyup => 'this.value=stripAccent(this.value)' %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Apellido Materno:</div>
+    <div class="cell_right"><%= f.text_field :surname2, :onkeyup => 'this.value=stripAccent(this.value)' %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Nombre:</div>
+    <div class="cell_right"><%= f.text_field :name, :onkeyup => 'this.value=stripAccent(this.value)' %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">RFC:</div>
+    <div class="cell_right"><%= f.text_field :rfc, :onkeyup => 'this.value=stripAccent(this.value)' %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Cédula Profesional:</div>
+    <div class="cell_right"><%= f.text_field :cedula %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Tipo de Usuario:</div>
+    <div class="cell_right"><%= render :partial => "user_type" , :locals => { :f => f } %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Usuario (login):</div>
+    <div class="cell_right" style="text-transform: none;"><%= f.text_field :login, :class => "text_pre" %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Contraseña:</div>
+    <div class="cell_right"><%= f.password_field :password %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Confirmar Contraseña:</div>
+    <div class="cell_right"><%= f.password_field :password_confirmation %></div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="cell_left">Correo electrónico:</div>
+    <div class="cell_right"><%= f.text_field :email, :class => "text_pre" %></div>
+  </div>
+</p>
+
+<p style="padding-left: 154px;">
+  <%= submit_tag 'Aceptar' %>
+</p>
+<% end %>

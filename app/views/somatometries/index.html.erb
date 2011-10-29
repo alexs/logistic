@@ -1,0 +1,40 @@
+<h1>Listing somatometries</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Talla</th>
+    <th>Sistolica</th>
+    <th>Diastolica</th>
+    <th>Peso</th>
+    <th>Temperatura</th>
+    <th>Fc</th>
+    <th>Fr</th>
+    <th>Patient</th>
+    <th>User</th>
+    <th>Dependency</th>
+  </tr>
+
+<% @somatometries.each do |somatometry| %>
+  <tr>
+    <td><%=h somatometry.date %></td>
+    <td><%=h somatometry.talla %></td>
+    <td><%=h somatometry.sistolica %></td>
+    <td><%=h somatometry.diastolica %></td>
+    <td><%=h somatometry.peso %></td>
+    <td><%=h somatometry.temperatura %></td>
+    <td><%=h somatometry.fc %></td>
+    <td><%=h somatometry.fr %></td>
+    <td><%=h somatometry.patient_id %></td>
+    <td><%=h somatometry.user_id %></td>
+    <td><%=h somatometry.dependency_id %></td>
+    <td><%= link_to 'Show', somatometry %></td>
+    <td><%= link_to 'Edit', edit_somatometry_path(somatometry) %></td>
+    <td><%= link_to 'Destroy', somatometry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New somatometry', new_somatometry_path %>

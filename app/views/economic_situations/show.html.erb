@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @economic_situation.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @economic_situation.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_economic_situation_path(@economic_situation) %> |
+<%= link_to 'Back', economic_situations_path %>

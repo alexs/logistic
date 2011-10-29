@@ -1,0 +1,2 @@
+page<<"$('div #create_questionary_dialog').dialog('destroy');"
+page.replace_html 'menu_patient', :partial => 'show'

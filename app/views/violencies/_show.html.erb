@@ -1,0 +1,398 @@
+ <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@violency.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<br />
+<br />
+<p>
+  <b>Fecha:</b>
+  <%=h l @violency.fecha, :format => :long %>
+</p>
+
+<p>
+  <b>Edad:</b>
+  <%=h @violency.edad %>
+</p>
+
+<p>
+  <b>Años de Estudios:</b>
+  <%=h @violency.estudios %>
+</p>
+
+<p>
+  <b>Registro:</b>
+  <%=h @violency.registro %>
+</p>
+
+<p>
+  <b>¿Esta embarazada?</b>
+  <%=h get_boolean(@violency.esta) %>
+</p>
+
+<p>
+  <b>¿Deseaba usted este embarazo?</b>
+  <%=h get_boolean(@violency.deseaba) %>
+</p>
+
+<p>
+  <b>¿Planeó usted este embarazo?</b>
+  <%=h get_boolean(@violency.planeo) %>
+</p>
+
+<p>
+  <b>¿Aceptó usted este embarazo?</b>
+  <%=h get_boolean(@violency.acepto) %>
+</p>
+
+<p>
+  <b>Numero de hijos vivos:</b>
+  <%=h @violency.numhijos %>
+</p>
+
+<p>
+  <b>¿Su pareja deseaba este embarazo?</b>
+  <%=h answer(@violency.pardeseaba) %>
+</p>
+
+<p>
+  <b>¿Su pareja planeó este emabarazo?</b>
+  <%=h answer(@violency.parplaneo) %>
+</p>
+
+<p>
+  <b>¿Su pareja aceptó este embarazo?</b>
+  <%=h answer(@violency.paracepto) %>
+</p>
+
+
+<p>
+  <b>¿Cuántos embarazos ha tenido incluyendo el actual?</b>
+  <%=h @violency.embarazos %>
+</p>
+
+<p>
+  <b>¿Cuántos abortos?</b>
+  <%=h @violency.abortos %>
+</p>
+
+<p>
+  <b>¿Cuántos óbitos?</b>
+  <%=h @violency.obitos %>
+</p
+
+<p>
+  <b>¿Cuántos partos?</b>
+  <%=h @violency.partos %>
+</p
+
+<p>
+  <b>¿Cuántos cesáreas?</b>
+  <%=h @violency.cesareas %>
+</p
+
+
+<p>
+  <b>¿Ha sufrido violencia durante este embarazo de parte de su pareja actual?</b>
+  <%=h get_boolean(@violency.actual) %>
+</p>
+
+
+<p>
+  <b>¿Ha sufrido violencia antes del embarazo de su pareja actual?</b>
+  <%=h get_boolean(@violency.meses) %>
+</p>
+
+<p>
+  <b>¿Ha sufrido violencia durante este embarazo de parte del padre de su hijo?</b>
+  <%=h get_boolean(@violency.violencia) %>
+</p>
+
+
+
+<p>
+  <b>¿Cuánto tiempo de relación con la pareja actual? años:</b>
+  <%=h @violency.relacion_años %>
+
+  <b>Meses:</b>
+  <%=h @violency.relacion_meses %>
+
+  <b>Semanas:</b>
+  <%=h @violency.relacion_semanas %>
+
+  <b>Dias:</b>
+  <%=h @violency.relacion_dias %>
+</p>
+
+<p>
+  <b>¿Qué edad tiene su pareja actual?</b>
+  <%=h @violency.edadpar %>
+</p>
+
+<br />
+<br />
+
+ <table border="1">
+     <tr>
+       <th> FORMAS DE VIOLENCIA </th>
+       <th> Respuesta </th>
+     </tr>
+     <tr>
+       <td>
+	 1. Que su pareja le avienta algún objeto.
+       </td>
+       <td> 
+	 <%= h get_boolean @violency.avientaobjeto %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 2. Que le tuerza el brazo.
+       </td>
+       <td>
+	 <%= h get_boolean @violency.tuerza %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 3. Que la amenace con golpearla
+       </td>
+       <td>
+	 <%= h get_boolean @violency.amenace %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 4. Que se ponga a destruir algunas cosas de usted
+       </td>
+       <td>
+	 <%= h get_boolean @violency.destruir %>
+       </td>
+       </tr>
+     <tr>
+       <td>
+	 5. Que use la fuerza fisica para tener relaciones sexuales con usted,en contra de su voluntad.
+       </td>
+       <td>
+	 <%= h get_boolean @violency.fuerzafisica %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 6. Que lo rebaje o menosprecie
+       </td>
+       <td>
+	 <%= h get_boolean @violency.menosprecie %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 7. Que se ponga celoso.
+       </td>
+       <td>
+	 <%= h get_boolean @violency.celoso %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 8. Que su pareja sospeche de sus amistades	 
+       </td>
+       <td>
+	 <%= h get_boolean @violency.sospeche %>
+       </td>
+     </tr>
+     <tr>
+       <td>
+	 9. Que la insulte
+       </td>
+       <td>
+	 <%= h get_boolean @violency.insulte %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+       10. Que su pareja la empuje a propósito.
+     </td>
+     <td>
+       <%= h get_boolean @violency.proposito %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+    11.Que la agreda con alguna navaja, cuchillo o machete
+       </td>
+     <td>
+    <%= h get_boolean @violency.machete %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+  
+    12.Que le haga sentir miedo de él
+       </td>
+     <td>
+    <%= h get_boolean @violency.miedo %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+
+    13.Que la golpee con un palo o un cinturón o alǵun objeto doméstico.
+        </td>
+     <td>
+    <%= h get_boolean @violency.domestico %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+   14.Que la trate de ahorcar o asfixiar.
+       </td>
+     <td>
+    <%= h get_boolean @violency.asfixiar %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    15.Que la amenace con irse con otras mujeres si no accede a tener relaciones sexuales con él.
+       </td>
+     <td>
+    <%= h get_boolean @violency.relaciones %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    16.Que la amenace con matarla a usted o matarse él o matar alos niños.
+       </td>
+     <td>
+    <%= h get_boolean @violency.matarla %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    17.Que la golpee con la mano o con el puño.
+      </td>
+     <td>
+    <%= h get_boolean @violency.puño %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    18.Que le exija tener relaciones sexuales aun que usted no esté dispuesta.
+      </td>
+     <td>
+    <%= h get_boolean @violency.dispuesta %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    19.Que su pareja la patee.
+      </td>
+     <td>
+    <%= h get_boolean @violency.patee %>
+     </td>
+     </tr>
+     <tr>
+     <td>
+ 20.Que la amenace con alguna navaja o cuchillo o machete.
+        </td>
+     <td>
+    <%= h get_boolean @violency.cuchillo %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+  21.Que la golpee en el éstomago.
+        </td>
+     <td>
+    <%= h get_boolean @violency.estomago %>
+     </td>
+     </tr>
+     <tr>
+     <td>
+    22.Que la sacuda,zarandee o jalonee.
+       </td>
+     <td>
+    <%= h get_boolean @violency.jalonee %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    23.Que le dispare con alguna pistola o rifle.
+      </td>
+     <td>
+    <%= h get_boolean @violency.pistola %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    24.Que le diga cosas como que usted es poco atractiva o fea
+      </td>
+     <td>
+    <%= h get_boolean @violency.fea %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    25.Que la ataque con algun otra cosa.
+      </td>
+     <td>
+    <%= h get_boolean @violency.cosa %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    26.Que se ponga a golpear o patear la pared o algún mueble.
+      </td>
+     <td>
+
+    <%= h get_boolean @violency.mueble %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    27.Que la amenace con alguna pistola o rifle.
+       </td>
+     <td>
+    <%= h get_boolean @violency.rifle %>
+       </td>
+     </tr>
+    </table>
+    
+
+<br />
+<br />
+
+
+
+
+<p>
+  <b>28.-¿Cuántas veces sucede el evento de violencia con su pareja?</b>
+  <%=h answer(@violency.veces) %>
+</p>
+
+<p>
+  <b>29.-¿Cuándo su pareja es violenta, usted tambíen lo golpea?</b>
+  <%=h get_boolean @violency.violenta %>
+</p>
+
+<p>
+  <b>30.-¿Cuándo su pareja es violenta,usted también lo insulta?</b>
+  <%=h get_boolean @violency.insulta %>
+</p>
+
+<p>
+  <b>31.-¿Cuando su pareja la insulta o golpea usted quisiera responder pero se aguanta?</b>
+  <%=h get_boolean @violency.aguanta %>
+</p>
+
+<p>
+  <b>32.-¿Ha tenido otras parejas anteriores con una relación de violencia?</b>
+  <%=h get_boolean @violency.anteriores %>
+</p>
+
+<p>
+  <b>Violencia fisica:</b>
+  <%=h @violency.fisica %>
+</p>
+
+<p>
+  <b>Violencia emocional:</b>
+  <%=h @violency.emocional %>
+</p>

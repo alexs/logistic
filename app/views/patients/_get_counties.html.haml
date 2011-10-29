@@ -1,0 +1,2 @@
+%option{ :selected => 'selected' ? " " : nil}Elige un municipio
+= options_for_select(@counties.collect {|delomun| [delomun.name, delomun.id ]}.sort)

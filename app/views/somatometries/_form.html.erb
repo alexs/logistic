@@ -1,0 +1,46 @@
+<% remote_form_for @somatometry, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+
+  <%= f.error_messages %>
+
+  <p>
+    Fecha: <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :talla %><br />
+    <%= f.text_field :talla %>
+  </p>
+  <p>
+    <%= f.label "sistólica" %><br />
+    <%= f.text_field :sistolica %>
+  </p>
+  <p>
+    <%= f.label "diastólica" %><br />
+    <%= f.text_field :diastolica %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :temperatura %><br />
+    <%= f.text_field :temperatura %>
+  </p>
+  <p>
+    <%= f.label :fc %><br />
+    <%= f.text_field :fc %>
+  </p>
+  <p>
+    <%= f.label :fr %><br />
+    <%= f.text_field :fr %>
+  </p>
+
+  <p>
+    <%= f.hidden_field :patient_id, :value => @somatometry.patient_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+  </p>
+  <br />
+  <p>
+    <%= f.submit 'Guardar' %>
+  </p>
+<% end %>

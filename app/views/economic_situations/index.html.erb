@@ -1,0 +1,22 @@
+<h1>Listing economic_situations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+  </tr>
+
+<% @economic_situations.each do |economic_situation| %>
+  <tr>
+    <td><%=h economic_situation.name %></td>
+    <td><%=h economic_situation.desc %></td>
+    <td><%= link_to 'Show', economic_situation %></td>
+    <td><%= link_to 'Edit', edit_economic_situation_path(economic_situation) %></td>
+    <td><%= link_to 'Destroy', economic_situation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New economic_situation', new_economic_situation_path %>

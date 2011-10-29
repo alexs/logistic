@@ -1,0 +1,226 @@
+@import partials/base
+$short_field: 60px
+body
+  background:
+    image: image-url("body_bg.jpg")
+    repeat: repeat-x
+    position: top left
+.principal
+  +container
+  background-color: #fff
+  border: solid
+  #header
+    +column(!blueprint-grid-columns)
+    background: $blueprint_table_header_color
+    background:
+      image: image-url("header.png")
+      repeat: no-repeat
+      position: top left
+    height: 136px
+  #content
+    +column(8, true)
+    .indicator
+      +border-radius(6px)
+      color: #FFF
+      text-align: center
+      background-color: #FF0000
+      position: relative
+      border: solid
+      border-color: #FF0000
+      left: 775px
+      width: 110px
+      height: 16px
+      font-size: 12px
+  #footer
+    +column(8)
+    background:
+      image: image-url("footer.png")
+      repeat: no-repeat
+      position: bottom center
+    height: 80px
+.menu
+  +container
+  position: relative
+  top: 116px
+  font-family: Arial,Helvetica,sans-serif
+  ul
+    list-style: url(none) none
+  ul li 
+    display: inline
+    float: left
+    position: relative
+    background-color: #FFF
+    width: 150px
+    margin: 0
+  ul li a
+    color: #FFF
+    text-decoration: none
+    background-color: #000
+    font-size: 16px
+    display: block
+    width: 140px
+    padding: 2px 5px
+  ul li a:hover, ul li a:active
+    background-color: #FFCC33
+    color: #000
+  ul li ul
+    position: relative
+    display: none
+  ul li ul li
+    display: list-item
+    float: none
+    margin: 0
+  ul li ul li a
+    font-size: 14px
+#content #workspace
+  margin: 10px 10px 10px 10px
+  padding-bottom: 25px
+  #clean
+    padding-bottom: 250px
+#create_questionary_dialog
+  font-size: 14px
+  font-family: Arial,Helvetica,sans-serif
+#content #workspace
+  font-size: 13px
+  font-family: Arial,Helvetica,sans-serif
+  +blueprint-form-borders(#207DD4,#DA9A22,#35567B)
+  +blueprint-form-sizes
+  #patient_exterior
+    width: $short_field
+  #patient_interior
+    width: $short_field
+.short_field
+  width: $short_field
+#patients_form
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
+#patient_show
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
+    width: 100%
+.table_header, .table_result
+  table
+    $table-color : #7a98c6
+    +outer-table-borders(1px, #0080FF)
+    +inner-table-borders(ipx, #0080FF)
+    +alternating-rows-and-columns(#E0ECF8, #F2F2F2, #111)
+    .name
+      width: 200px
+    .lastname
+      width: 150px
+    .date_next_consult
+      width: 100px
+    .presumptive_diagnosis
+      width: 150px
+    .applicant_doctor
+      width: 150px 
+    .age
+      width: 60px
+    .address
+      width: 300px
+    .actions
+      width: 100px
+.info, .success, .warning, .error, .validation
+  border: 1px solid
+  margin: 10px 0px
+  padding: 15px 10px 15px 50px
+  background-repeat: no-repeat
+  background-position: 10px center
+.info
+  color: #00529B
+  background-color: #BDE5F8
+  background-image: url('info.png')
+.success
+  color: #4F8A10
+  background-color: #DFF2BF
+  background-image:url('success.png')
+.warning
+  color: #9F6000
+  background-color: #FEEFB3
+  background-image: url('warning.png')
+.error
+  color: #D8000C
+  background-color: #FFBABA
+  background-image: url('error.png')
+.validation
+  color: #D63301
+  background-color: #FFCCBA
+  background-image: image-url('validation.png')
+  +pretty-bullets("bullet-round.png", 5px, 7px)
+  p
+    line-height: 40px
+    color: #61380B
+    font-size: 15px
+.validation h2
+  color: #5E610B
+  background-color: #FEEFB3
+  border-style: dotted
+  border-width: 2px
+  border-color: red
+  text-align: center
+  font-size: 20px
+h1
+  text-align: center
+  font-size: 14px
+.questionary_title
+  text-align: left
+  font-size: 14px
+  font-weight: bold
+#menu_patient
+  padding-top: 50px
+  .button
+    padding: 2px 2px 2px 2px
+    background-color: #FFFFCC
+    display: inline-block
+    color: #003366
+    font-weight: bold
+    line-height: 29px
+    margin-bottom: 14px
+    text-decoration: none
+    border-color: #6699CC
+    border-style: double
+    border-width: medium
+    cursor: pointer
+.fieldWithErrors
+  padding: 2px
+  display: inline-block
+  background-color: #FFBABA
+.classification
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    td.even
+      background-color: #FF6666
+    td.odd
+      background-color: #FFFF99
+    td.normal
+      background-color: #ABFD88
+ 
+
+.clinical_form
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)
+#create_questionary
+  table
+    +button-colors($blueprint-button-font-color,$blueprint-button-background-color,$blueprint-button-border-color, #222)
+    +button-hover-colors($blueprint-button-font-color,$blueprint-button-hover-background-color,$blueprint-button-hover-border-color,#666)
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)  
+

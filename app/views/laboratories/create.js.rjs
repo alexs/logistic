@@ -1,0 +1,5 @@
+page<<"$('#create_questionary_dialog').dialog('destroy');"
+page<<"$('.status_laboratory').css('display','inline');"
+page<<"$('.guardar').css('display','none');"
+page<<"$('.created').css('display','inline');"
+

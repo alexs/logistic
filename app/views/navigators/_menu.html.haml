@@ -1,0 +1,43 @@
+.menu
+  %ul
+    %li 
+      = link_to "Pacientes","#"
+      %ul
+        %li 
+          = link_to_remote "- Alta",  :loading => "$('.indicator').show();", :url => {:controller => "patients", :action => "new"}, :complete => "$('.indicator').hide();"
+        %li
+          = link_to_remote "- Busqueda", :loading => "$('.indicator').show();", :url => {:controller => "patients", :action => "index"}, :method => :get, :complete => "$('.indicator').hide();"
+    %li
+      = # link_to "Citas", "#"
+      %ul
+        %li
+          = # link_to_remote "- Altas", :loading => "$('.indicator').show();", :update => "workspace", :url => {:controller => "meetings", :action => "index"}, :method => :get, :complete => "$('.indicator').hide(); load_calendar();"
+    %li
+      = # link_to "Reportes", "#"
+      %ul
+        %li
+          = # link_to "- Indicadores", "#"
+        %li 
+          = # link_to "- Listados", "#"
+    %li
+      = link_to "Usuarios", "#"
+      %ul
+        %li
+          = link_to_remote "- Nuevo",  :loading => "$('.indicator').show();", :url => {:controller => "users", :action => "new"}, :method => :get, :complete => "$('.indicator').hide();"
+        %li 
+          = link_to_remote "- Busqueda", :loading => "$('.indicator').show();", :url => {:controller => "users", :action => "index"}, :method => :get, :complete => "$('.indicator').hide();"
+
+
+:javascript
+  $(document).ready(function() {
+   $('ul li:has(ul)').hover(
+    function(e)
+    {
+    $(this).find('ul').css({display: "block"});
+    },
+    function(e)
+    {
+    $(this).find('ul').slideUp();
+    }
+  );
+  });

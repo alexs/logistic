@@ -1,0 +1,20 @@
+<h1>Listing rols</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @rols.each do |rol| %>
+  <tr>
+    <td><%=h rol.name %></td>
+    <td><%= link_to 'Show', rol %></td>
+    <td><%= link_to 'Edit', edit_rol_path(rol) %></td>
+    <td><%= link_to 'Destroy', rol, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rol', new_rol_path %>

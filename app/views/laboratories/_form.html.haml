@@ -1,0 +1,361 @@
+- remote_form_for @laboratory, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        = f.label :date
+        = f.date_select :date    
+  %hr
+  %h2 Hematología:
+  %br
+  %table
+    %tr
+      %td
+        = f.check_box :hemoglobina_reactivo
+        = f.label "Hemoglobina:"
+        = f.text_field :hemoglobina
+      %td
+        = f.check_box :hematocrito_reactivo
+        = f.label "Hematócrito:"
+        = f.text_field :hematocrito 
+      %td 
+        = f.check_box :cmhc
+        = f.label "CMHC:"
+        = f.text_field :cmhc 
+    %tr
+      %td
+        = f.check_box :leucocitos_reactivo
+        = f.label "Leucocitos:"
+        = f.text_field :leucocitos 
+      %td
+        = f.check_box :cuenta_diferencial_reactivo
+        = f.label "Cuenta Diferencial:"
+        = f.text_field :cuenta_diferencial
+      %td
+        = f.check_box :linfocitos_reactivo
+        = f.label "Linfocitos:"
+        = f.text_field :linfocitos
+    %tr 
+      %td
+        = f.check_box :monocitos_reactivo
+        = f.label "Monocitos:"
+        = f.text_field :monocitos
+      %td
+        = f.check_box :eosinofilos_reactivo
+        = f.label "Eosinófilos:"
+        = f.text_field :eosinofilos
+      %td
+        = f.check_box :basofilos_reactivo
+        = f.label "Basófilos:"
+        = f.text_field :basofilos
+    %tr
+      %td
+        = f.check_box :neut_segmen_reactivo
+        = f.label "Neut. Segmen."
+        = f.text_field :neut_segmen
+      %td
+        = f.check_box :neut_banda_reactivo
+        = f.label "Neut. en Banda."
+        = f.text_field :neut_banda
+  %br
+  = f.label "alteraciones"
+  %br
+  = f.text_area :alteraciones, :size => "15x5"
+  %br
+  %br
+  %table
+    %tr
+      %td
+        = f.check_box :reticulocitos_reactivo
+        = f.label "Reticulocitos"
+        = f.text_field :reticulocitos
+      %td
+        = f.check_box :plaquetas_reactivo
+        = f.label "Plaquetas"
+        = f.text_field :plaquetas
+      %td
+        = f.check_box :sed_globular_reactivo
+        = f.label "Sed. Globular"
+        = f.text_field :sed_globular
+    %tr
+      %td
+        = f.check_box :grupo_sanguineo_reactivo
+        = f.label "Grupo Sanguineo"
+        = f.text_field :grupo_sanguineo
+      %td
+        = f.check_box :factor_rh_reactivo
+        = f.label "Factor Rh"
+        = f.text_field :factor_rh
+      %td
+        = f.check_box :t_protrombina_reactivo
+        = f.label "T. Protrombina"
+        = f.text_field :t_protrombina
+    %tr
+      %td
+        = f.check_box :t_parcial_tromb_reactivo
+        = f.label "T. Parcial Tromb."
+        = f.text_field :t_parcial_tromb
+  %hr
+  %h2 Química Sanguínea
+  %br    
+
+  %table
+    %tr
+      %td
+        = f.check_box :quimica_sanguinea_glucosa_reactivo
+        = f.label "Glucosa"
+        = f.text_field :quimica_sanguinea_glucosa
+      %td
+        = f.check_box :hb_glicosilada_reactivo
+        = f.label "Hb Glicosilada"
+        = f.text_field :hb_glicosilada
+      %td
+        = f.check_box :urea_reactivo
+        = f.label "Urea"
+        = f.text_field :urea
+    %tr
+      %td
+        = f.check_box :acido_urico_reactivo
+        = f.label "Acido Urico"
+        = f.text_field :acido_urico
+      %td
+        = f.check_box :creatinina_reactivo
+        = f.label "Creatinina"
+        = f.text_field :creatinina
+      %td
+        = f.check_box :colesterol_total_reactivo
+        = f.label "Colesterol Total"
+        = f.text_field :colesterol_total
+    %tr
+      %td
+        = f.check_box :trigliceridos_reactivo
+        = f.label "Triglicéridos"
+        = f.text_field :trigliceridos
+      %td
+        = f.check_box :hdl_reactivo
+        = f.label "-HDL-"
+        = f.text_field :hdl
+      %td
+        = f.check_box :ldl_reactivo
+        = f.label "--LDL--"
+        = f.text_field :ldl
+    %tr
+      %td
+        = f.check_box :bilirrubina_reactivo
+        = f.label "Bilirrubina Total"
+        = f.text_field :bilirrubina_total
+      %td
+        = f.check_box :bilirubina_directa_reactivo
+        = f.label "Bilirrubina Directa"
+        = f.text_field :bilirubina_directa
+      %td
+        = f.check_box :bilirrubina_indirecta_reactivo
+        = f.label "Bilirrubina Indirecta"
+        = f.text_field :bilirrubina_indirecta
+    %tr
+      %td
+        = f.check_box :alat_tgp_reactivo
+        = f.label "ALAT (TGP)"
+        = f.text_field :alat_tgp
+      %td
+        = f.check_box :asat_tgo_reactivo
+        = f.label "ASAT (TGO)"
+        = f.text_field :asat_tgo
+      %td 
+        = f.check_box :f_alcalina_reactivo
+        = f.label "F. Alcalina"
+        = f.text_field :f_alcalina
+  %hr
+  %h2 Otros (Curva de Tolerancia a la Glucosa) 
+  %br
+  
+  %table
+    %tr
+      %td
+        = f.check_box :tolerancia_glucosa_ayuno_reactivo
+        = f.label "Ayuno"
+        = f.text_field :tolerancia_glucosa_ayuno
+      %td
+        = f.check_box :tolerancia_glucosa_1hora_reactivo
+        = f.label "1 Hora"
+        = f.text_field :tolerancia_glucosa_1hora
+      %td
+        = f.check_box :tolerancia_glucosa_2horas_reactivo
+        = f.label "2 Horas"
+        = f.text_field :tolerancia_glucosa_2horas    
+  %br
+  = f.label "Observaciones"
+  %br
+  = f.text_area :alteraciones, :size => "15x5"
+  %br
+  %br
+  
+  %hr
+  %h2 Inmunología
+  %br
+
+  %table
+    %tr
+      %td
+        = f.check_box :vdrl_reactivo
+        = f.label "-VDRl-"
+        = f.text_field :vdrl
+      %td
+        = f.check_box :antiestreptolisinas_reactivo
+        = f.label "Antiestreptolisinas"
+        = f.text_field :antiestreptolisinas
+      %td
+        = f.check_box :factor_reumatoide_reactivo
+        = f.label "Factor Reumatoide"
+        = f.text_field :factor_reumatoide
+    %tr
+      %td
+        = f.check_box :proteina_c_reactiva_reactivo
+        = f.label "Proteina C. Reactiva"
+        = f.text_field :proteina_c_reactiva
+      %td
+        = f.check_box :prueba_embarazo_reactivo
+        = f.label "Prueba de Embarazo"
+        = f.text_field :prueba_embarazo
+  %hr
+  %h2 Parasitología 
+  %br
+  %h2 Coproparasitoscópico
+  %table
+    %tr
+      %td
+        = f.check_box :coproparasitoscopico1_reactivo
+        = f.label "1"
+        = f.text_field :coproparasitoscopico1
+    %tr
+      %td
+        = f.check_box :coproparasitoscopico2_reactivo
+        = f.label "2"
+        = f.text_field :coproparasitoscopico2
+    %tr
+      %td
+        = f.check_box :coproparasitoscopico3_reactivo
+        = f.label "3"
+        = f.text_field :coproparasitoscopico3
+
+  %hr
+  %h2 Urianalisis
+  %br
+  %table
+    %tr
+      %td
+        = f.check_box :fisico_quimico_reactivo
+        = f.label "Fisico_quimico"
+        = f.text_field :fisico_quimico
+      %td
+        = f.check_box :color_reactivo_reactivo
+        = f.label "color"
+        = f.text_field :color
+      %td
+        = f.check_box :ph_reactivo
+        = f.label "PH"
+        = f.text_field :ph
+    %tr
+      %td
+        = f.check_box :densidad_reactivo
+        = f.label "Densidad"
+        = f.text_field :densidad
+      %td
+        = f.check_box :urianalisis_glucosa_reactivo
+        = f.label "Glucosa"
+        = f.text_field :urianalisis_glucosa
+      %td
+        = f.check_box :cetona_reactivo
+        = f.label "Cetona"
+        = f.text_field :cetona
+    %tr
+      %td
+        = f.check_box :proteina_reactivo
+        = f.label "Proteina"
+        = f.text_field :proteina
+      %td
+        = f.check_box :nitrito_reactivo
+        = f.label "Nitrito"
+        = f.text_field :nitrito
+      %td
+        = f.check_box :bilirrubina_reactivo
+        = f.label "Bilirrubina"
+        = f.text_field :bilirrubina
+    %tr
+      %td
+        = f.check_box :urianalisis_hemoglobina_reactivo
+        = f.label "Hemoglobina"
+        = f.text_field :urianalisis_hemoglobina
+      %td
+        = f.check_box :urobilinogeno_reactivo
+        = f.label "Urobilinogeno"
+        = f.text_field :urobilinogeno
+      %td
+        = f.check_box :sedimento_reactivo
+        = f.label "Sedimento"
+        = f.text_field :sedimento
+    %tr
+      %td
+        = f.check_box :urianalisisis_leucocitos_reactivo
+        = f.label "Leucocitos"
+        = f.text_field :urianalisisis_leucocitos
+      %td
+        = f.check_box :eritrocitos_reactivo
+        = f.label "Eritrocitos"
+        = f.text_field :eritrocitos
+      %td
+        = f.check_box :cel_epiteliales_reactivo
+        = f.label "Cel. Epiteliales"
+        = f.text_field :cel_epiteliales
+    %tr
+      %td
+        = f.check_box :bacterias_reactivo
+        = f.label "Bacterias"
+        = f.text_field :bacterias
+      %td
+        = f.check_box :cristales_reactivo
+        = f.label "Cristales"
+        = f.text_field :cristales
+      %td
+        = f.check_box :cilindros_reactivo
+        = f.label "Cilindros"
+        = f.text_field :cilindros
+
+  %hr
+  %h2 Microbiología
+  %br
+  %table
+    %tr
+      %td
+        = f.check_box :exudado_gram_reactivo
+        = f.label "Exudado (GRAM)"
+        = f.text_field :exudado_gram
+  %h2 Baciloscopia
+  %table
+    %tr
+      %td 
+        = f.check_box :basiloscopia_baar1_reactivo
+        = f.label "1"
+        = f.text_field :basiloscopia_baar1
+      %td
+        = f.check_box :basiloscopia_baar2_reactivo
+        = f.label "2"
+        = f.text_field :basiloscopia_baar2
+      %td
+        = f.check_box :basiloscopia_baar3_reactivo
+        = f.label "3"
+        = f.text_field :basiloscopia_baar3
+    %tr
+      %td
+        = f.check_box :cultivo_reactivo
+        = f.label "Cultivo"
+        = f.text_field :cultivo
+      %td
+        = f.label "Otros"
+        = f.text_field :microbiologia_otros
+  .created{:style => "display:inline"}Se ha guardado con éxito la cita    
+  .guardar{:style => "display:inline"}
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, porfavor espere	
