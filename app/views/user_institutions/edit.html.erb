@@ -1,0 +1,40 @@
+<h1>Editing user_institution</h1>
+
+<% form_for(@user_institution) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :institution_id %><br />
+    <%= f.text_field :institution_id %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :visit_date %><br />
+    <%= f.date_select :visit_date %>
+  </p>
+  <p>
+    <%= f.label :hour_visit %><br />
+    <%= f.time_select :hour_visit %>
+  </p>
+  <p>
+    <%= f.label :team %><br />
+    <%= f.check_box :team %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user_institution %> |
+<%= link_to 'Back', user_institutions_path %>

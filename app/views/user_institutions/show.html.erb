@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @user_institution.user_id %>
+</p>
+
+<p>
+  <b>Institution:</b>
+  <%=h @user_institution.institution_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @user_institution.date %>
+</p>
+
+<p>
+  <b>Visit date:</b>
+  <%=h @user_institution.visit_date %>
+</p>
+
+<p>
+  <b>Hour visit:</b>
+  <%=h @user_institution.hour_visit %>
+</p>
+
+<p>
+  <b>Team:</b>
+  <%=h @user_institution.team %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @user_institution.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_institution_path(@user_institution) %> |
+<%= link_to 'Back', user_institutions_path %>

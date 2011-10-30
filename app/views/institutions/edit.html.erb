@@ -1,0 +1,40 @@
+<h3>Modificando Institucion</h3>
+
+<% form_for(@institution) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <b>Nombre:<b/> <%= f.text_field :name %>
+  </p>
+  <p>
+    <b>Dirección: <b/><br/> <%= f.text_area :address, :size => "100X300" %>
+  </p>
+  <p>
+   <b> Telefonos:</b><br />
+    <%= f.text_area :phones, :size => "100X300" %>
+  </p>
+  <p>
+    <b>Contacto:<b/> <%= f.text_field :contact %>
+  </p>
+  <p>
+    <b>Tipo de institución</b>  <%= f.select(:institution_type_id, {"Médica" => "1", "Educativa" => "2", "Otro" => "3"})%>
+  </p>
+  <p>
+    <%= f.hidden_field :user_update_id, :value => current_user.id %>
+  </p>
+  <p>
+    <b>Cantidad máxima de personas para visitar institucion:</b>
+    <%= f.select(:quantity_team, {"1" => "1", "2" => "2", "3" => "3", "4" => "4", "5" => "5", "6" => "6"}, {:include_blank => true})%>
+  </p>
+
+  <p>
+    <b>Informacion Adicional</b><br />
+    <%= f.text_area :desc, :size => "100X300" %>
+  </p>
+<br />
+  <p>
+    <%= f.submit 'Create', :class => 'form-submit' %>
+    <%= link_to 'Regresar', root_path, :class => 'form-reset' %>
+  </p>
+<% end %>
+<br /><br /><br />

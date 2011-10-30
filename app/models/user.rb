@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   belongs_to :rol
   belongs_to :master
+  has_many :institutions
 
   validates_presence_of     :login #, :email
 #  validates_presence_of     :password

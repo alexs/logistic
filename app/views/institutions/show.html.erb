@@ -1,0 +1,46 @@
+<h3>Detalles de la Institucion</h3>
+<p>
+  <b>Nombre:</b>
+  <%=h @institution.name %>
+</p>
+
+<p>
+  <b>Domicilio:</b>
+  <%=h @institution.address %>
+</p>
+
+<p>
+  <b>Telefonos:</b>
+  <%=h @institution.phones %>
+</p>
+
+<p>
+  <b>Contacto:</b>
+  <%=h @institution.contact %>
+</p>
+
+<p>
+  <b>Información adicional:</b>
+  <%=h @institution.desc %>
+</p>
+
+<p>
+  <b>Tipo de Institucion:</b>
+  <%=h institution_type(@institution.institution_type_id) %>
+</p>
+
+<p>
+  <b>Usuario que registro la institución:</b>
+  <%=h @institution.user.full_name %>
+</p>
+
+<p>
+  <b>Cantidad máxima de personas para la visita a institución:</b>
+  <%=h @institution.quantity_team.nil? ? "Sin limite fijado": @institution.quantity_team %>
+</p>
+
+<br />
+<%= link_to 'Edit', edit_institution_path(@institution), :class =>'form-edit' %> <%= link_to 'Back', root_path, :class => 'form-back' %>
+
+<br />
+<br />

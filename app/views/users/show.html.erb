@@ -37,7 +37,11 @@
   <b>Rol:</b>
   <%=h @user.rol.name %>
 </p>
+<br />
+<p>
+<%= link_to 'Modificar', edit_user_path(@user.id), :class =>'form-edit' %> <%= link_to 'Regresar', root_path, :class => 'form-reset' %>
+</p>
 
-
-
-<%= link_to 'Edit', edit_user_path(@user.id) %>
+<br />
+<p><b><%= link_to 'Cambiar Contraseña',  :controller => "users", :action => "change_password", :id => @user.id %></b>
+</p>
