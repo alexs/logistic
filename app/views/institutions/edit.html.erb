@@ -22,10 +22,12 @@
   <p>
     <%= f.hidden_field :user_update_id, :value => current_user.id %>
   </p>
+<% if @institution.user_id == current_user.id %>
   <p>
     <b>Cantidad máxima de personas para visitar institucion:</b>
     <%= f.select(:quantity_team, {"1" => "1", "2" => "2", "3" => "3", "4" => "4", "5" => "5", "6" => "6"}, {:include_blank => true})%>
   </p>
+<% end %>
 
   <p>
     <b>Informacion Adicional</b><br />

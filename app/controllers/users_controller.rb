@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 class UsersController < ApplicationController
-  #before_filter :require_no_user, :only => [ :create, :new]
-  #before_filter :require_user, :only => [:show, :edit, :update, :create, :new]
+  before_filter :require_no_user, :only => [ :create, :new]
+  before_filter :require_user, :only => [:show, :edit, :update, :create, :new]
 
   def index
     @users = User.all

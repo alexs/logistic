@@ -44,8 +44,9 @@ class UserInstitutionsController < ApplicationController
       @team = params[:team][institution.to_s]
 
       @user_institution = UserInstitution.new(:user_id => current_user.id, :institution_id => institution, :date => Date.today, :visit_date  => "#{@visit_date}", :hour_visit => "#{Time.parse(@hora)}", :team => @team, :status => 1)
-
-      @user_institution.save
+      if @user_institution.save
+      else
+      end
     end
 
     # @user_institution = UserInstitution.new(params[:user_institution])
@@ -54,7 +55,7 @@ class UserInstitutionsController < ApplicationController
     #   if @user_institution.save
     format.html { redirect_to(user_institutions_url, :notice => 'Se han registrado los datos, verificalos en la seccion: Instituciones -> Mis visitas') }
     #   else
-         format.html { render :action => "new" }
+    #     format.html { render :action => "new" }
     #   end
     end
   end

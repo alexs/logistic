@@ -1,63 +1,39 @@
-<div style="margin: auto; padding-left:50px; width: 900px;">
-<h1>Administrador de Usuarios</h1>
+<h3>Modificando usuario</h3>
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
 
 
 <p>
-  <div class="row">
-    <div class="cell_left">Apellido Paterno:</div>
-    <div class="cell_right"><%= f.text_field :surname1 %></div>
-  </div>
+Apellido Paterno: <%= f.text_field :surname1 %>
 </p>
 
 <p>
-  <div class="row">
-    <div class="cell_left">Apellido Materno:</div>
-    <div class="cell_right"><%= f.text_field :surname2 %></div>
-  </div>
+Apellido Materno: <%= f.text_field :surname2 %>
 </p>
 
 <p>
-  <div class="row">
-    <div class="cell_left">Nombre:</div>
-    <div class="cell_right"><%= f.text_field :name %></div>
-  </div>
+Nombre: <%= f.text_field :name %>
 </p>
 
 <p>
- <div class="row">
-    <div class="cell_left">Celular:</div>
-    <div class="cell_right"><%= f.text_field :phone %></div>
-  </div>
+   Celular: <%= f.text_field :phone %>
 </p>
 
 <p>
-  <div class="row">
-    <div class="cell_left">Correo electronico:</div>
-    <div class="cell_right"><%= f.text_field :email %></div>
-  </div>
+Correo electronico: <%= f.text_field :email %>
 </p>
 
 <p>
-  <div class="row">
-    <div class="cell_left">Tipo de Usuario:</div>
-    <div class="cell_right"><%=  @user.rol.name %></div>
-  </div>
+  Tipo de Usuario: <%=  @user.rol.name %>
 </p>
 <p>
-  <div class="row">
-    <div class="cell_left">Maestria:</div>
-    <div class="cell_right"><%= f.select(:master_id, Master.all.collect {|p| [ p.name, p.id ] })%></div>
-  </div>
+Maestria: <%= f.select(:master_id, Master.all.collect {|p| [ p.name, p.id ] })%>
 </p>
-
-<p style="padding-left: 154px;">
-  <%= submit_tag 'Aceptar' %> | <%= link_to "Cancelar", user_path(@user.id) %>
-  </p>
-
+<br />
+<p>
+  <%= submit_tag 'Aceptar', :class => 'form-submit' %> <%= link_to "Cancelar", user_path(@user.id), :class => 'form-reset' %>
+</p>
 <% end %>
-
-
-</div>
+<br />
+<br />

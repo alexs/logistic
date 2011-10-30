@@ -11,8 +11,9 @@
 
 <p>
   <b>Telefonos:</b>
-  <%=h @institution.phones %>
+  <%=h simple_format(@institution.phones) %>
 </p>
+
 
 <p>
   <b>Contacto:</b>
@@ -21,7 +22,7 @@
 
 <p>
   <b>Información adicional:</b>
-  <%=h @institution.desc %>
+  <%=h simple_format(@institution.desc) %>
 </p>
 
 <p>
@@ -40,7 +41,7 @@
 </p>
 
 <br />
-<%= link_to 'Edit', edit_institution_path(@institution), :class =>'form-edit' %> <%= link_to 'Back', root_path, :class => 'form-back' %>
+ <%= link_to 'Edit', edit_institution_path(@institution), :class =>'form-edit' %> <%= link_to 'Back', root_path, :class => 'form-back' %>
 
 <br />
 <br />

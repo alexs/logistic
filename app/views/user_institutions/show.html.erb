@@ -1,36 +1,41 @@
 <p>
-  <b>User:</b>
-  <%=h @user_institution.user_id %>
+  <b>Institucion:</b>
+  <%=h @user_institution.institution.name %>
 </p>
 
 <p>
-  <b>Institution:</b>
-  <%=h @user_institution.institution_id %>
+  <b>Direccion:</b>
+  <%=h @user_institution.institution.address %>
 </p>
 
 <p>
-  <b>Date:</b>
-  <%=h @user_institution.date %>
+  <b>Contacto:</b>
+  <%=h @user_institution.institution.contact %>
 </p>
 
 <p>
-  <b>Visit date:</b>
-  <%=h @user_institution.visit_date %>
+  <b>Telefonos:</b>
+  <%=h simple_format(@user_institution.institution.phones) %>
 </p>
 
 <p>
-  <b>Hour visit:</b>
-  <%=h @user_institution.hour_visit %>
+  <b>Detalles:</b>
+  <%=h simple_format(@user_institution.institution.desc) %>
 </p>
 
 <p>
-  <b>Team:</b>
-  <%=h @user_institution.team %>
+  <b>Fecha y hora de visita:</b>
+  <%=l @user_institution.visit_date, :format => :long %> a las <%=l @user_institution.hour_visit, :format => :human %>
 </p>
 
 <p>
-  <b>Status:</b>
-  <%=h @user_institution.status %>
+  <b>Modalidad de la vista:</b>
+  <%=h get_team(@user_institution.team) %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%=h get_status(@user_institution.status) %>
 </p>
 
 

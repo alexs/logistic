@@ -1,40 +1,28 @@
-<h1>Editing user_institution</h1>
+<h3>Modficar datos de la visita</h3>
 
 <% form_for(@user_institution) do |f| %>
   <%= f.error_messages %>
 
+
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <p><b>Institutcion: </b><%= @user_institution.institution.name %></p>
+
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <b>Fecha y hora de la visita:</b> <%= f.date_select :visit_date %>  Hora:   <%= f.time_select :hour_visit %>
   </p>
+<p>
+Modalidad:  
+<br /><%= f.radio_button :team, true %> En equipo:
+<br /> <%= f.radio_button :team, false %> Solo
+
   <p>
-    <%= f.label :institution_id %><br />
-    <%= f.text_field :institution_id %>
+    <b>Estado:</b> <%= get_status( @user_institution.status) %>
   </p>
+<br />
   <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :visit_date %><br />
-    <%= f.date_select :visit_date %>
-  </p>
-  <p>
-    <%= f.label :hour_visit %><br />
-    <%= f.time_select :hour_visit %>
-  </p>
-  <p>
-    <%= f.label :team %><br />
-    <%= f.check_box :team %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update', :class => 'form-submit' %><%= link_to 'Back', user_institutions_path, :class => 'form-reset' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @user_institution %> |
-<%= link_to 'Back', user_institutions_path %>
+<br />
+<br />
+<br />
