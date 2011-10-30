@@ -1,14 +1,13 @@
 <br />
 <h3>Seleccion de instituciones a visitar</h3>
+<br />
+<h5>Si piensas realizar la visita el 31 de octubre elige el numero 31 sin
+importar que diga noviembre.<h5>
+
+
 
 <% form_for(@user_institution) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id, :value => current_user.id %>
-  </p>
-      <%= f.date_select :date %>
 
   <br />
   <table id="product-table">
@@ -33,26 +32,28 @@
     </td>
     
     <td>  
-      <%= f.radio_button(:team, true) %> En equipo:
-      <br /> <%= f.radio_button(:team, false) %> Solo
+      <%= radio_button_tag "team[#{institution.id}]", true, :cheked => true %> En equipo:
+      <br /> <%= radio_button_tag "team[#{institution.id}]", false %> Solo
     </td>
 
     <td>
-      <%= f.date_select :visit_date, :start_year => 2011, :end_year => 2011 %>
+        <% opciones = [] %>
+        <% for i in 1..15 do opciones << "<option>#{i}</option>" end %>
+        <% opciones << "<option>31</option>" %>
+        <%= select_tag "visit_date[#{institution.id}]", opciones.to_s %> de Noviembre de 2011
+        <br />
     </td>
 
     <td>
-      <%= f.time_select :hour_visit, :minute_step => 15  %>
+        <% horas = [] %>
+        <% for i in 9..21 do horas << "<option>#{i}</option>" end %>
+        <%= select_tag "hour_visit[#{institution.id}]", horas.to_s %>:<%= select_tag "minute_visit[#{institution.id}]", "<option>00</option><option>15</option><option>30</option><option>45</option>" %>
+        <br />
     </td>
 
   </tr>
   <% end %>
   <table>
-
-
-  <p>
-    <%= f.hidden_field :status, :value => 1 %>
-  </p>
   <p>
     <%= f.submit 'Create', :class => 'form-submit' %> <%= link_to 'Back', root_path, :class => 'form-reset' %>
   </p>

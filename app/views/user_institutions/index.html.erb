@@ -1,29 +1,46 @@
-<h1>Listing user_institutions</h1>
+<br />
+<h3>Listado instituciones seleccionadas para visita</h3>
 
-<table>
+<table id="product-table">
   <tr>
-    <th>User</th>
-    <th>Institution</th>
-    <th>Date</th>
-    <th>Visit date</th>
-    <th>Hour visit</th>
-    <th>Team</th>
-    <th>Status</th>
+    <th>Institucion</th>
+    <th>Direccion</th>
+    <th colspan="2">Fecha y hora de visita</th>
+    <th>Modalidad</th>
+    <th>Estado</th>
   </tr>
 
 <% @user_institutions.each do |user_institution| %>
-  <tr>
-    <td><%=h user_institution.user_id %></td>
-    <td><%=h user_institution.institution_id %></td>
-    <td><%=h user_institution.date %></td>
-    <td><%=h user_institution.visit_date %></td>
-    <td><%=h user_institution.hour_visit %></td>
-    <td><%=h user_institution.team %></td>
-    <td><%=h user_institution.status %></td>
+  <tr class="alternate-row">
+    <td><%=h user_institution.institution.name %></td>
+    <td><%=h user_institution.institution.address %></td>
+    <td><%=h l user_institution.visit_date %></td>
+    <td><%=h l user_institution.hour_visit, :format => :human %></td>
+    <td><%=h get_team(user_institution.team) %></td>
+    <td><%=h get_status(user_institution.status) %></td>
     <td><%= link_to 'Show', user_institution %></td>
     <td><%= link_to 'Edit', edit_user_institution_path(user_institution) %></td>
-    <td><%= link_to 'Destroy', user_institution, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', user_institution, :confirm => 'Seguro de eliminar el registro?', :method => :delete %></td>
+  </tr>  
+  <tr>
+<td></td>
+    <td colspan="8">
+
+<% @users_in_common = UserInstitution.find(:all, :conditions => ['institution_id = ? AND user_id != ?',user_institution.institution_id,user_institution.user_id]) %>
+
+<table border="1">
+<% @users_in_common.each do |user_institution| %>
+  <tr>
+    <td>El usuario <%=h user_institution.user.full_name %> desea asistir el dia <%=h l user_institution.visit_date %> a las <%=h l user_institution.hour_visit, :format => :human %>, <%=h get_team(user_institution.team) %>. Contactalo para evitar re-trabajo, cel: <%=h user_institution.user.phone %>  mail: <%=h user_institution.user.email %></td>
+    <td><%=h get_status(user_institution.status) %></td>
   </tr>
+<% end %>
+</table>
+    </td>
+
+  </tr>
+
+
 <% end %>
 </table>
 

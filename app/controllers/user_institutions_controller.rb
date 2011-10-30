@@ -1,6 +1,6 @@
 class UserInstitutionsController < ApplicationController
   def index
-    @user_institutions = UserInstitution.all
+    @user_institutions = UserInstitution.find_all_by_user_id(current_user)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,8 +21,7 @@ class UserInstitutionsController < ApplicationController
     @user_institution = UserInstitution.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @user_institution }
+      format.html
     end
   end
 
@@ -35,19 +34,29 @@ class UserInstitutionsController < ApplicationController
     @institutions = params[:institution]
 
     @institutions.each_value do |institution|
-      @user_institution = UserInstitution.new(:user_id => params[:user_institution][:user_id], :institution_id => institution)
+      if params[:visit_date][institution.to_s] == "31"
+        @visit_date = '2011-10-' + params[:visit_date][institution.to_s]
+      else
+        @visit_date = '2011-11-' + params[:visit_date][institution.to_s]
+      end
+
+      @hora = params[:hour_visit][institution.to_s]+":"+params[:minute_visit][institution.to_s]
+      @team = params[:team][institution.to_s]
+
+      @user_institution = UserInstitution.new(:user_id => current_user.id, :institution_id => institution, :date => Date.today, :visit_date  => "#{@visit_date}", :hour_visit => "#{Time.parse(@hora)}", :team => @team, :status => 1)
+
       @user_institution.save
     end
 
     # @user_institution = UserInstitution.new(params[:user_institution])
 
-#    respond_to do |format|
+    respond_to do |format|
     #   if @user_institution.save
-    #     format.html { redirect_to(@user_institution, :notice => 'UserInstitution was successfully created.') }
+    format.html { redirect_to(user_institutions_url, :notice => 'Se han registrado los datos, verificalos en la seccion: Instituciones -> Mis visitas') }
     #   else
-    #     format.html { render :action => "new" }
+         format.html { render :action => "new" }
     #   end
-    # end
+    end
   end
 
   # PUT /user_institutions/1

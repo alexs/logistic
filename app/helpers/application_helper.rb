@@ -17,6 +17,26 @@ module ApplicationHelper
     end
   end
 
+def get_status(value)
+    if value == 1
+      "Solicitada"
+    elsif value == 2
+      "Realizada"
+    else
+      ""
+    end
+  end
+  
+   def get_team(value)
+    if value == true
+      "En equipo"
+    elsif value == false
+      "Solo"
+    else
+      "S/N"
+    end
+  end
+
 
   def link_to_add_fields(name,f,association)
     new_object = f.object.class.reflect_on_association(association).klass.new
