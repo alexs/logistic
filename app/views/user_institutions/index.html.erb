@@ -22,7 +22,8 @@
     <td><%=h get_team(user_institution.team) %></td>
     <td><%= link_to (image_tag "information.png"), user_institution %><%= link_to "Detalle", user_institution %></td>
     <td><%= link_to (image_tag "icon_edit.gif"), edit_user_institution_path(user_institution) %><%= link_to "Modificar", edit_user_institution_path(user_institution) %></td>
-    <td><%= link_to (image_tag "cancel.png"), user_institution, :confirm => 'Seguro de eliminar el registro?', :method => :delete %><%= link_to "Quitar de mi lista", user_institution, :confirm => 'Seguro de eliminar el registro?', :method => :delete %></td>
+    <td><%= link_to (image_tag "cancel.png"), user_institution,
+    :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %><%= link_to "Quitar de mi lista", user_institution, :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %></td>
   </tr>  
   <tr>
 <td></td>

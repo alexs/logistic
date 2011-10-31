@@ -24,7 +24,7 @@
         <%=h current_user.full_name %> | 
         <%= link_to 'Mi Cuenta ', user_path(current_user.id) %> | <%= link_to "Salir", logout_path, :confirm => "Esta seguro que quiere salir?" %>
         <p>
-          <%=l Time.now.to_date, :format => :customize %>
+<%= link_to "VideoTutorial", "http://vimeo.com/31360583", :popup => true %> | <%=l Time.now.to_date, :format => :customize %>
         </p>
 
       <p style="color: green"><%= flash[:notice] %></p>
