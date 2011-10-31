@@ -1,76 +1,49 @@
-<h1>Listing visits</h1>
+<br />
+<h3>Listado de instituciones que los usuarios han seleccionado para visitar</h3>
 
-<table>
+<table id="product-table">
   <tr>
-    <th>Come 3 horas</th>
-    <th>Come seno materno</th>
-    <th>Succion deglucion</th>
-    <th>Bano sol</th>
-    <th>Evacuando</th>
-    <th>Orinando</th>
-    <th>Boca arriba</th>
-    <th>Baño diario</th>
-    <th>Lava cordon</th>
-    <th>Tamiz neonatal</th>
-    <th>Vacuna bcg hepatitis b</th>
-    <th>Amarillo</th>
-    <th>Materno hidratado</th>
-    <th>Materno fiebre</th>
-    <th>Materno despierta llora</th>
-    <th>Materno secresion amarilla ojos</th>
-    <th>Materno peri umbilical roja</th>
-    <th>Materno peri umbilical secresion</th>
-    <th>Materno succiona seno</th>
-    <th>Cantidad loquios</th>
-    <th>Mamas inflamadas</th>
-    <th>Salida calostro</th>
-    <th>Sutura estado</th>
-    <th>Madre emocionalmente</th>
-    <th>Madre apoyo familiar</th>
-    <th>Temsion arterial diastolica</th>
-    <th>Tension arterial sistolica</th>
-    <th>Frecuencia cardiaca</th>
-    <th>Temperatura</th>
+    <th>#</th>
+    <th>Institucion</th>
+    <th>Direccion</th>
+    <th>Telefonos</th>
+    <th>Cuadrante</th>
+    <th>Maximo personas</th>
+  </tr>
+<% i = 0 %>
+<% @institutions.each do |institution| %>
+  <tr class="alternate-row">
+    <td><%=h i += 1 %></td>
+    <td><%=h institution.name %></td>
+    <td><%=h institution.address %></td>
+    <td><%=h simple_format(institution.phones) %></td>
+    <td><%=h institution.quadrant_id %></td>
+    <td><%=h institution.quantity_team %></td>
+  </tr>  
+  <tr>
+<td></td>
+<td colspan="4">
+<% @users_in_common = UserInstitution.find(:all, :conditions => ['institution_id = ?',institution.id], :order => 'visit_date') %>
+<%= @users_in_common.size %> Usuarios solicitaron visitar la institucion.
+<table border="1">
+<% @users_in_common.each do |user_institution| %>
+  <tr>
+    <td><%=h l user_institution.visit_date %></td>
+    <td><%=h l user_institution.hour_visit, :format => :human %></td>
+    <td><%=h user_institution.user.full_name %></td>
+    <td><%=h user_institution.user.phone %></td>
+    <td><%=h user_institution.user.email %></td>
+  </tr>
+<% end %>
+</table>
+</td>
+<td></td>
+
+
   </tr>
 
-<% @visits.each do |visit| %>
-  <tr>
-    <td><%=h visit.come_3_horas %></td>
-    <td><%=h visit.come_seno_materno %></td>
-    <td><%=h visit.succion_deglucion %></td>
-    <td><%=h visit.bano_sol %></td>
-    <td><%=h visit.evacuando %></td>
-    <td><%=h visit.orinando %></td>
-    <td><%=h visit.boca_arriba %></td>
-    <td><%=h visit.baño_diario %></td>
-    <td><%=h visit.lava_cordon %></td>
-    <td><%=h visit.tamiz_neonatal %></td>
-    <td><%=h visit.vacuna_bcg_hepatitis_b %></td>
-    <td><%=h visit.amarillo %></td>
-    <td><%=h visit.materno_hidratado %></td>
-    <td><%=h visit.materno_fiebre %></td>
-    <td><%=h visit.materno_despierta_llora %></td>
-    <td><%=h visit.materno_secresion_amarilla_ojos %></td>
-    <td><%=h visit.materno_peri_umbilical_roja %></td>
-    <td><%=h visit.materno_peri_umbilical_secresion %></td>
-    <td><%=h visit.materno_succiona_seno %></td>
-    <td><%=h visit.cantidad_loquios %></td>
-    <td><%=h visit.mamas_inflamadas %></td>
-    <td><%=h visit.salida_calostro %></td>
-    <td><%=h visit.sutura_estado %></td>
-    <td><%=h visit.madre_emocionalmente %></td>
-    <td><%=h visit.madre_apoyo_familiar %></td>
-    <td><%=h visit.temsion_arterial_diastolica %></td>
-    <td><%=h visit.tension_arterial_sistolica %></td>
-    <td><%=h visit.frecuencia_cardiaca %></td>
-    <td><%=h visit.temperatura %></td>
-    <td><%= link_to 'Show', visit %></td>
-    <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
-    <td><%= link_to 'Destroy', visit, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New visit', new_visit_path %>

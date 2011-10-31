@@ -2,11 +2,11 @@ class VisitsController < ApplicationController
   # GET /visits
   # GET /visits.xml
   def index
-    @visits = Visit.all
+    @institutions = Institution.find(:all, :order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @visits }
+
     end
   end
 

@@ -4,7 +4,6 @@ class UserInstitutionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @user_institutions }
     end
   end
 

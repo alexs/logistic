@@ -18,7 +18,7 @@
     <th>Visita </th>
     <th colspan="2">Fecha y hora en que planea visitar </th>
   </tr>
-  <% Institution.all.each do |institution| %>
+  <% Institution.find(:all, :order => 'name').each do |institution| %>
 
   <tr>
     <td>
