@@ -1,0 +1,27 @@
+<br />
+<h3>Nuevo comentario</h3>
+
+<% form_for(@comment) do |f| %>
+  <%= f.error_messages %>
+
+    <%= f.hidden_field :date, :value => Date.today %>
+
+  <p>
+    <b>Titulo:</b><br />
+    <%= f.text_field :subject %>
+  </p>
+
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <p>
+    <b>Mensaje</b><br />
+    <%= f.text_field :message, :size => "100X300" %>
+  </p>
+<br />
+<br />
+  <p>
+    <%= f.submit 'Guardar', :class => 'form-submit' %><%= link_to 'Back', comments_path, :class => 'form-reset'%>
+  </p>
+<% end %>
+<br />
+<br />

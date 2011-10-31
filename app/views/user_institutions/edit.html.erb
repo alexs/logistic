@@ -16,7 +16,9 @@ Modalidad:
 <br /> <%= f.radio_button :team, false %> Solo
 
   <p>
-    <b>Estado:</b> <%= get_status( @user_institution.status) %>
+    <b>Estado:</b> 
+    <br /><%= f.radio_button :status, 1 %> Solicitada
+    <br /> <%= f.radio_button :status, 2 %> Realizada
   </p>
 <br />
   <p>

@@ -70,10 +70,16 @@
           </ul>
         </li>
         <% end %>
+        <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Mensajes</span></a>
+          <ul class="sub">
+            <li>            
+                <%= link_to "Comentarios", comments_path %>
+            </li>
+          </ul>
+        </li>
+
       </ul>
     </div>
-
-
   <div>
     <%= yield %>
   </div>

@@ -9,6 +9,7 @@
     <th>Telefonos</th>
     <th colspan="2">Fecha y hora de visita</th>
     <th>Modalidad</th>
+    <th>Estatus</th>
   </tr>
 
 <% @user_institutions.each do |user_institution| %>
@@ -20,22 +21,23 @@
     <td><%=h l user_institution.visit_date %></td>
     <td><%=h l user_institution.hour_visit, :format => :human %></td>
     <td><%=h get_team(user_institution.team) %></td>
+    <td><%=h get_status(user_institution.status) %></td>
+
     <td><%= link_to (image_tag "information.png"), user_institution %><%= link_to "Detalle", user_institution %></td>
-    <td><%= link_to (image_tag "icon_edit.gif"), edit_user_institution_path(user_institution) %><%= link_to "Modificar", edit_user_institution_path(user_institution) %></td>
-    <td><%= link_to (image_tag "cancel.png"), user_institution,
-    :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %><%= link_to "Quitar de mi lista", user_institution, :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %></td>
+    <td><%= link_to (image_tag "icon_edit.gif"),
+    edit_user_institution_path(user_institution) %><%= link_to "Cambiar Estatus/Modificar", edit_user_institution_path(user_institution) %></td>
+    <td><%= link_to (image_tag "cancel.png"), user_institution, :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %><%= link_to "Quitar de mi lista", user_institution, :confirm => 'Si ya visitaste la institucion NO DEBES elimnarla desde aqui. ¿No deseas visitar esta institucion, seguro que deseas quitarla de tu lista?', :method => :delete %></td>
   </tr>  
   <tr>
 <td></td>
-    <td colspan="9">
+    <td colspan="10">
 
 <% @users_in_common = UserInstitution.find(:all, :conditions => ['institution_id = ? AND user_id != ?',user_institution.institution_id,user_institution.user_id]) %>
 
 <table border="1">
 <% @users_in_common.each do |user_institution| %>
   <tr>
-    <td>El usuario <%=h user_institution.user.full_name %> asistirá a
-    esta institutción el dia <%=h l user_institution.visit_date %> a las <%=h l user_institution.hour_visit, :format => :human %>, <%=h get_team(user_institution.team) %>. Contactalo para evitar re-trabajo, cel: <%=h user_institution.user.phone %>  mail: <%=h user_institution.user.email %></td>
+    <td>El usuario <%=h user_institution.user.full_name %> asistirá a esta institutción el dia <%=h l user_institution.visit_date %> a las <%=h l user_institution.hour_visit, :format => :human %>, <%=h get_team(user_institution.team) %>. Contactalo para evitar re-trabajo, cel: <%=h user_institution.user.phone %>  mail: <%=h user_institution.user.email %></td>
     <td><%=h get_status(user_institution.status) %></td>
   </tr>
 <% end %>
