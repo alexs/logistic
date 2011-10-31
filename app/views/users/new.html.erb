@@ -67,7 +67,10 @@
                       <td><%= form.select(:master_id, Master.all.collect {|p| [ p.name, p.id ] })%></td>
                 </tr>
 
-
+		<tr>
+                      <th valign="top"><%= form.label :'Celular' %></th>
+                      <td><%= form.text_field :phone %></td>
+                </tr>
 
 		<tr>
                       <th valign="top"><%= form.label :'Correo' %></th>
