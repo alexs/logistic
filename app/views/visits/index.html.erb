@@ -22,7 +22,7 @@
   </tr>  
   <tr>
 <td></td>
-<td colspan="3">
+<td colspan="4">
 <% @users_in_common = UserInstitution.find(:all, :conditions => ['institution_id = ?',institution.id], :order => 'visit_date') %>
 <%= @users_in_common.size %> Usuarios solicitaron visitar la institucion.
 <table border="1">
