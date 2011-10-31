@@ -1,0 +1,106 @@
+"id";"name";"address";"phones";"contact";"institution_type_id";"user_id";"quantity_team";"created_at";"updated_at";"user_update_id";"desc";"quadrant_id"
+1;"HOSPITAL GENERAL CENTRO MEDICO LA RAZA";"DISTRITO FEDERAL  AZCAPOTZALCO  AZCAPOTZALCO  LA RAZA";;;1;1;5;;;;;2
+5;"INSTITUTO NACIONAL DE PEDIATRIA";"Insurgentes Sur 3700  Letra C  Col. Insurgentes Cuicuilco  Delegaciﾢn CoyoacﾠnDISTRITO FEDERAL  COYOACﾵN  COYOACﾵN  INSURGENTES CUICULCO";"1084-0900";;1;1;5;;;;;6
+6;"Universidad Autﾢnoma Metropolitana Xochimilco";"Calzada del Hueso 1110 y Canal NacionalCoyoacan";;;2;1;;;;;;
+8;"HOSPITAL GENERAL DE ZONA NO 24";"Av. Insurgentes Norte 1322   col. Magdalena de las Salinas?DISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  COLONIA LINDAVISTA";"57 47 35 00?";;1;1;2;;;;;3
+9;"HOSPITAL GENERAL LA VILLA";"Av. San Juan de Aragﾢn No 285  Col. Granjas ModernasDISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  GRANGAS MODERNAS";"5577 8867";;1;1;2;;;;;3
+10;"HOSPITAL DE GINECOPEDIATRIA 3A";"Av. Politﾂcnico Nacional y avenida Colector 15 s/n.   col. Magdalena de las SalinasDISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  MAGDALENA DE LAS SALINAS";"57 47 35 00?";;1;1;4;;;;;3
+11;"HOSPITAL JUAREZ DE MEXICO";"Av. Instituto Politecnico Nacional 5160  Col. Magdalena de la SalinasDISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  MAGDALENA DE LAS SALINAS";"5747-7560";;1;1;4;;;;;3
+12;"HOSPITAL GENERAL DE TICOMAN SSA";"Plan de San Luis S/n  Col. Ticomﾠn  Delegaciﾢn Gustavo A. Madero DISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  MAGDALENA DE LAS SALINAS";"5754-3979";;1;1;2;;;;;3
+13;"HOSPITAL REGIONAL 1 DE OCTUBRE";"Av. Politﾂcnico Nacional  Col. Lindavista#1669DISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  MAGDALENA DE LAS SALINAS";"5586-3027";;1;1;4;;;;;3
+14;"HOSPITAL PSIQUIATRICO MORELOS";"Calz. San Juan de Aragﾢn 311DISTRITO FEDERAL  GUSTAVO A. MADERO  GUSTAVO A. MADERO  SAN PEDRO EL CHICO";"56-39-58-22";;1;1;2;;;;;3
+15;"Hospital Materno Infantil Inguarﾠn";"Estaﾤo  Felipe AngelesGustavo A. Madero";"5795 6764";;1;1;2;;;;;
+16;"HOSPITAL ﾵNGELES ?LINDAVISTA";"Rﾡo Bamba No  639. Col. Magdalena de las Salinas C.P. 07760. Del. Gustavo A. MaderoGAM";;;1;1;2;;;;;
+17;"HOSPITAL DE ESPECIALIDADES MIG";"Rﾡo Bamba No. 800. Col. Lindavista. C.P. 07300. Mﾂxico  D.F.GAM";;;1;1;2;;;;;
+18;"Escuela Nacional de Medicina y Homeopatﾡa";"Fracc. La Escalera  Colonia TicomﾠnGAM";;;1;1;2;;;;;
+19;"Universidad Justo Sierra";"Calzada Ticoman 892  Col. Barrio Candeleria TicomanGAM";;;2;1;;;;;;
+28;"Facultad de Estudios Superiores Zaragoza";"Col.  Ejﾂrcito de Oriente  IztapalapaIztacalco";;;2;1;;;;;;7
+29;"HOSPITAL GENERAL DE ZONA NUMERO 30";"Plutarco Elﾡas Calles No. 437 DISTRITO FEDERAL  IZTACALCO  IZTACALCO  SANTA ANITA";"5650 2055 ";;1;1;2;;;;;7
+30;"HOSPITAL GENERAL DE ZONA 2A TRONCOSO";"Aﾤil No. 144 esq. Fco. Del Paso y Troncoso DISTRITO FEDERAL  IZTACALCO  IZTACALCO  GRANJAS MEXICO";"5657? 3211 ";;1;1;2;;;;;7
+32;"HOSPITAL GENERAL DE ZONA 47";"Campaﾤa del ﾂbano y Combate de Celaya S/n DISTRITO FEDERAL  IZTAPALAPA  IZTAPALAPA  UNIDAD HABITACIONAL VICENTE GUERRER0";"56 92 60 66";;1;1;2;;;;;7
+33;"CLINICA DE DISPLACIA SANTA MARTHA";"Av. Ermita Iztapalapa s/n col Lomas de Zaragoza (antes carcel de mujeres)DISTRITO FEDERAL  IZTAPALAPA  IZTAPALAPA  SANTIAGO ACAHUALTEPEC";"5832-6923";;1;1;2;;;;;7
+34;"HOSPITAL BELISARIO DOMINGUEZ";"Av. Tlahuac No. 4866  Esq. Zacatlan  Col San Lorenzo TezoncoDISTRITO FEDERAL  IZTAPALAPA  IZTAPALAPA  PUEBLO DE SAN LORENZO";"5850-0002";;1;1;2;;;;;7
+35;"HOSPITAL GENERAL IZTAPALAPA";"Avenida Ermita Iztapalapa 3018 Citlali  IztapalapaDISTRITO FEDERAL  IZTAPALAPA  IZTAPALAPA  CITLALLY";"5429 3460";;1;1;2;;;;;7
+36;"HOSPITAL MORELOS";"Congreso de Chilpancingo S/N . Col. Ermita Zaragoza . Iztapalapa DF . DISTRITO FEDERAL  IZTAPALAPA  IZTAPALAPA  UNIDAD HABITACIONAL ERMITA ZARAGOZA PRIMERA SECCION";"Tel. (55)5732-1440";;1;1;2;;;;;7
+39;"HOSPITAL MATERNO INFANTIL";"Luis Cabrera 619  San Jerﾢnimo LﾡdiceDISTRITO FEDERAL  LA MAGDALENA CONTRERAS  LA MAGDALENA CONTRERAS  SAN JERONIMO LIDICE";"5683 5094";;1;1;2;;;;;6
+42;"HOSPITAL GENERAL MILPA ALTA MATUTINO";"Carretera Milpa Alta Chalco Km. 2.5  Col. Villa Milpa  AltaDISTRITO FEDERAL  MILPA ALTA  SAN FRANCISCO TECOXPA  BARRIO SANTA CRUZ";;;1;1;2;;;;;12
+43;"Hospital Materno Infantil";"Calz Tlahuac Chalco 231  Tlahuac  La Habanatlahuac";;;1;1;2;;;;;
+44;"Centro Interdisciplinario de Ciencias de la Salud";"Km. 39.5 Carr. Xochimilco OaxtepecMilpa alta";;;1;1;2;;;;;
+47;"UMAE HOSP GINECO OBSTETRICIA 4 LUIS CASTELAZO AYALA";"R�o Magdalena 289. Col Tizap�n San Angel. Delegaci�n �lvaro Obreg�nDISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  TIZAPAN";"5550 64 22 ext.28057";;1;1;2;;;;;6
+48;"HOSPITAL GRAL DE ZONA CON MEDICINA FAMILIAR NUM 8 GILBERTO FLORES IZQUIERDO";"Avenida R�o Magdalena No. 289  Col. Tizap�n San �ngelDISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  TIZAPAN";"55 50 64 22";;1;1;2;;;;;6
+49;"HOSPITAL REGIONAL ADOLFO LOPEZ MATEOS";"AV. UNIVERSIDAD # 1321 COL. FLORIDADISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  COLONIA AXOTLA";"53-22-23-00";;1;1;2;;;;;6
+50;"HOSPITAL GENERAL DR FERNANDO QUIROZ GUTIERREZ";"Felipe �ngeles y Canario  Col. BellavistaDISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  TOLTECA";"5272-6061";;1;1;2;;;;;6
+51;"HOSPITAL GENERAL ENRIQUE CABRERA";"Av. Centenario  esquina prolongaci�n 5 de mayo Exhacienda de TarangoDISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  FRACCIONAMIENTO UNIDAD TARANFO";;;1;1;2;;;;;6
+52;"INSTITUTO NACIONAL DE GENOMA HUMANO";"BOULEVARD ADOLFO RUIZ CORTINES) #4124  JARDINES DEL PEDREGALDISTRITO FEDERAL  �LVARO OBREG�N  �LVARO OBREG�N  JARDINES DEL PEDREGAL";;;1;1;2;;;;;6
+53;"CENTRO MﾐDICO ABC. CAMPUS OBSERVATORIO ";"Sur 136 No. 116. Col. Las Americas Del. ﾵlvaro Obregﾢn C.P. 01120. Mﾂxico D.F.Alvaro Obregon";;;1;1;;;;;;
+54;"Universidad Westhill";"Col. Prados de la Montaﾤa 1  Santa Fﾂ";;;1;1;;;;;;
+55;"Universidad Anahuac sur ";"Av. de las Torres #131 Col. Olivar de los Padres";;;2;1;;;;;;
+56;"ITAM Campus Rﾡo Hondo ";"Rﾡo Hondo #1 Col. Progreso Tizapﾠn  ﾵlvaro Obregﾢn ";;;2;1;;;;;;
+60;"INSTITUTO NACIONAL DE CANCEROLOGIA";"Av San Fernando No. 22 col. Secciﾢn XVI DISTRITO FEDERAL  TLALPAN  TLALPAN  SECCION 16";"5628-0400";;1;1;5;;;;;10
+61;"HOSPITAL GENERAL DR MANUEL GEA GONZALEZ";"Av. Calzada de Tlalpan # 4800 Col. Secciﾢn XVIDISTRITO FEDERAL  TLALPAN  TLALPAN  SECCION 16";"55 4000 3000";;1;1;5;;;;;10
+62;"CENTRO NACIONAL DE REHABILITACION";"Calz. Mﾂxico-Xochimilco No. 289   Col. Arenal de GuadalupeDISTRITO FEDERAL  TLALPAN  TLALPAN  GUADALUPE TLALPAN";"59.99.10.00";;1;1;5;;;;;10
+63;"INSTITUTO DE LA NUTRICION SALVADOR ZUBIRAN";"Vasco de Quiroga 15  Colonia Seccion XVI  TlalpanDISTRITO FEDERAL  TLALPAN  TLALPAN  SECCION 16";"(52 55) 5487 0900";;1;1;5;;;;;10
+64;"HOSPITAL GENERAL TORRE MEDICA TEPEPAN";"CALLE JOYA SN  VALLE ESCONDIDODISTRITO FEDERAL  TLALPAN  TLALPAN  VALLE ESCONDIDO";;;1;1;5;;;;;10
+65;"INSTITIUTO NACIONAL DE ENFERMEDADES RESPIRATORIAS";"Calzada de Tlalpan 4502  Col. Secciﾢn XVI  Delegaciﾢn TlalpanDISTRITO FEDERAL  TLALPAN  TLALPAN  SECCION 16";"Tel. 54871700";;1;1;5;;;;;10
+66;"INSTITUTO NACIONAL DE CARDIOLOGIA";"Juan Badiano #1 Col. Secciﾢn XVI Del. TlalpanDISTRITO FEDERAL  TLALPAN  TLALPAN  SECCION 16";"5573 2911 ext. 1123";;1;1;5;;;;;10
+67;"HOSPITAL MATERNO INFANTIL TOPILEJO";"Calzada Santa Cruz No. 1  Col. San Miguel TopilejoDISTRITO FEDERAL  TLALPAN  SAN MIGUEL TOPILEJO  PUEBLO SAN MIGUEL TOPILEJO";"5848 0870";;1;1;;;;;;10
+68;"HOSPITAL ﾵNGELES PEDREGAL ";"Camino a Santa Teresa No. 1055 piso 14. Col. Hﾂroes de Padierna C.P. 10700.   Mﾂxico D.F. Tlalpan";;;1;1;2;;;;;
+69;"MﾐDICA SUR";"Puente de Piedra No. 150. Col. Toriello Guerra  Del.Tlalpan C.P. 14050. Mﾂxico D.F.";;;1;1;2;;;;;
+70;"SEDNA HOSPITAL ";"Perifﾂrico Sur No. 5246. Colonia Pedregal de Carrasco C.P. 04700. Mﾂxico  D.F. Tlalpan";;;1;1;2;;;;;
+71;"Facultad de medicina Universidad La Salle";"Fuentes No. 17 Colonia Tlalpan";;;1;1;2;;;;;
+72;"Instituto Tecnolﾢgico y de Estudios Superiores de Monterrey";"Calle del Puente 222 Col. Ejidos de Huipulco Tlalpan";;;1;1;2;;;;;
+73;"Anillo Perifﾂrico (Blvd. Adolfo Ruiz Cortines) 4863";" ESCA ";;;1;1;2;;;;;
+77;"Universidad Panamericana";"Donatello 59  Col. Insurgentes Mixcoac";;;1;1;2;;;;;
+78;"HOSPITAL STAR MﾐDICA INFANTIL PRIVADO";"Viaducto Rio Becerra No. 97. Col. Napoles C.P. 03810. Mﾂxico D.F";;;1;1;2;;;;;
+79;"SANATORIO SAN JOSﾐ DEL VALLE ";"Gabriel Mancera No. 1802. Col. Del Valle C.P. 03100. Mﾂxico  D.F.";;;1;1;2;;;;;
+80;"HOSPITAL GENERAL REGIONAL 01 GABRIEL MANCERA";"DISTRITO FEDERAL  BENITO JUﾵREZ  BENITO JUﾵREZ  DEL VALLE";;;1;1;3;;;;;7
+81;"HOSPITAL DE LOS VENADOS DEL IMMS";"DISTRITO FEDERAL  BENITO JUﾵREZ  BENITO JUﾵREZ  POTALES";;;1;1;2;;;;;7
+82;"ISSSTE 20 DE NOVIEMBRE";"DISTRITO FEDERAL  BENITO JUﾵREZ  BENITO JUﾵREZ  COLONIA DEL VALLE";;;1;1;2;;;;;7
+83;"HOSPITAL GENRAL DEL ISSSTE DARIO FERNANDEZ FIERRO";"DISTRITO FEDERAL  BENITO JUﾵREZ  BENITO JUﾵREZ  COLONIA SAN JOSE INSURGENTES";;;1;1;2;;;;;7
+84;"HOSPITAL XOCO";"DISTRITO FEDERAL  BENITO JUﾵREZ  BENITO JUﾵREZ  GENERAL ANAYA";;;1;1;3;;;;;7
+87;"CLINICA DE ESPECIALIDADES INDIANILLA ISSSTE";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  DOCTORES";;;1;1;4;;;;;7
+88;"HOSPITAL GENERAL ZONA 27";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  NONOALCO TLATELOLCO";;;1;1;4;;;;;7
+89;"HOSPITAL GENERAL DE ZONA Y MEDICINA FAMILIAR NO 26";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  COLONIA HIPODROMO";;;1;1;4;;;;;7
+90;"INSTITUTO DE SEGURIDAD SOCIAL DE LOS TRABAJADORES DEL ESTADO DE CHIAPAS";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  COLONIA ROMA SUR";;;1;1;4;;;;;7
+91;"UMAE HOSPITAL DE ONCOLOGIA IMSS";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  DOCTORES";;;1;1;4;;;;;7
+92;"HOSPITAL GENERAL GONZALO CASTAﾥEDA";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  NONOALCO TLATELOLCO";;;1;1;4;;;;;7
+93;"HOSPITAL INFANTIL DE MEXICO FEDERICO GOMEZ";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  DOCTORES";;;1;1;4;;;;;7
+94;"HOSPITAL GENERAL DE MEXICO O D";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  DOCTORES";;;1;1;4;;;;;7
+95;"HOSPITAL DE ESPECIALIDADES BERNARDO CEPULVEDA CENTRO MEDICO NAL SIGLO XXI";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  DOCTORES";;;1;1;4;;;;;7
+96;"CLINICA ESPECIAIZADA CONDESA";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  COLONIA HIPODROMO CONDESA";;;1;1;4;;;;;7
+97;"JURISDICCION SANITERIA";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  SANTA MARIA LA RIBERA";;;1;1;4;;;;;7
+98;"HOSPITAL JUAREZ DEL CENTRO";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  COLONIA CENTRO";;;1;1;4;;;;;7
+99;"HOSPITAL DE GINECOOBSTETRICIA TLATELOLCO";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  NONOALCO TLATELOLCO";;;1;1;4;;;;;7
+100;"HOSPITAL PUBLICO";"DISTRITO FEDERAL  CUAUHTﾐMOC  CUAUHTﾐMOC  ASTURIAS";;;1;1;4;;;;;7
+101;"HOSPITAL �NGELES CL�NICA LONDRES";"Durango No. 50 Bis 1er. Piso. Col. Roma C.P. 06760. M�xico  D. F.  Cuauhtemoc";;;1;1;2;;;;;
+103;"HOSPITAL ﾵNGELES METROPOLITANO ";"Tlacotalpan No. 59 Col. Roma Sur C.P. 06760. Mﾂxico  D.F Cuauhtemoc";;;1;1;2;;;;;
+104;"HOSPITAL ﾵNGELES ROMA";"Querﾂtaro No. 58. Col. Roma. Del. Cuauhtﾂmoc. Mﾂxico  D.F.";;;1;1;2;;;;;
+105;"HOSPITAL DALINDE ";"Tuxpan No. 25. Col. Roma C.P. 06760. Mﾂxico D.F. cuauhtemoc";;;1;1;2;;;;;
+106;"HOSPITAL MARIAJOSﾐ";"Cozumel No. 62. Col. Roma  Del. Cuauhtﾂmoc C.P. 06700. Mﾂxico  D.F";;;1;1;2;;;;;
+107;"HOSPITAL OBREG�N";"�lvaro Obreg�n No. 127 Col. Roma. C.P. 06700 M�xico  D.F Cuauhtemoc";;;1;1;2;;;;;
+108;"HOSPITAL SAN ﾵNGEL INN CHAPULTEPEC ";"Av. Chapultepec 489. Col. Juﾠrez. Del.Cuauhtﾂmoc. Mﾂxico  D.F.";;;1;1;2;;;;;
+109;"HOSPITAL STAR MﾐDICA SANTA FE";"San Luis Potosﾡ No. 143. Col. Roma C.P. 06700. Mﾂxico D.F. Cuauhtemoc";;;1;1;2;;;;;
+110;"NUEVO SANATORIO DURANGO";"Durango No. 296. Col. Roma C.P. 06760. Mﾂxico D.F Cuautemoc";;;1;1;2;;;;;
+111;"SANATORIO TRINIDAD ";"Manzanillo No. 94 Col. Roma C.P. 06760. Mﾂxico D.F. Cuautemoc";;;1;1;2;;;;;
+112;"Universidad la salle";"Universidad La Salle  A.C. Benjamﾡn Franklin 47";;;1;1;2;;;;;
+113;"EBC Campus Dinamarca  ";"Colonia Juﾠrez ";;;1;1;;;;;;
+114;"EBC campus reforma ";"Paseo de la Reforma No. 202 esquina napoles";;;1;1;;;;;;
+119;"INSTITUTODE PERINATOLOGIA ISIDRO ESPINOSA DE LOS REYES";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  LOMAS DE VIRREYES";;;1;1;3;;;;;6
+120;"UNIDAD DE ESPECIALIDADES MEDICAS";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  LOMAS DE SAN ISIDRO";;;1;1;;;;;;6
+121;"HOSPITAL RUBEN LEﾥERO";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  SANTO TOMAS";;;1;1;3;;;;;6
+122;"CLINICA DE SALUD DR MANUEL GONZALEZ";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  SANTO TOMAS";;;1;1;2;;;;;6
+123;"HOSPITAL GENERAL TACUBA";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  TACUBA";;;1;1;2;;;;;6
+124;"HOSPITAL DE LA MUJER";"DISTRITO FEDERAL  MIGUEL HIDALGO  MIGUEL HIDALGO  SANTO TOMAS";;;1;1;3;;;;;6
+125;"HOSPITAL ﾵNGELES MﾐXICO. (Asocaiciﾢn Gineco-Obstetricia  S.A. de C.V.)";"Agrarismo No. 208. Col. Escandﾢn. C.P. 11800. Mﾂxico  D.F.";;;1;1;2;;;;;
+126;"HOSPITAL ﾵNGELES MOCEL";"Gelati No. 29. Col. San Miguel Chapultepec. C.P. 11850. Mﾂxico  D.F.";;;1;1;2;;;;;
+127;"HOSPITAL ESPAﾥOL ";"Av. Ejﾂrcito Nal. 613. Col. Granada C.P. 11520. Mﾂxico  D.F.";;;1;1;2;;;;;
+128;"MﾐDICA SUR LOMAS";"Acueducto Rﾡo Hondo No. 20. Lomas Virreyes  C.P. 11000. Mﾂxico D.F.";;;1;1;2;;;;;
+129;"Escuela Superior de Medicina";"Plan de San Luis y S. Dﾡaz Mirﾢn  Col. Santo Tomas Miguel Hidalgo";;;1;1;2;;;;;
+130;"Unidad santo tomas";"ESCA";;;1;1;2;;;;;
+139;"CLINICA ZARAGOZA";"DISTRITO FEDERAL  VENUSTIANO CARRANZA  VENUSTIANO CARRANZA  AVIACION CIVIL";;;1;1;2;;;;;7
+140;"CENTRO DE ATENCI�N M�DICA INTEGRAL S.A. de C.V. ";"Calzada Ignacio Zaragoza 189 . Col. Jard�n Balbuena  Del. Venustiano Carranza. C.P. 15900  M�xico  D.F.";"http://www.anhp.org.mx/www.camihospital.com.mx";;1;1;2;;;;;
+143;"CENTRO MﾐDICO ABC. CAMPUS SANTA FE";"Av. Carlos Graef Fernﾠndez No. 154. Col. Tlaxala Santa Fe. Del. Cuajimalpa  C.P. 05300. Mﾂxico  DF.";;;1;1;2;;;;;
+146;"Universidad Anahuac Norte ";"Lomas Anﾠhuac # 46  Col. Lomas Anﾠhuac ";;;2;1;2;;;;;
+147;"ITAM Campus Av. Camino a Santa Teresa ";"Av. Camino a Santa Teresa #930 Col. Hﾂroes de Padierna ";;;2;1;2;;;;;
+148;"Instituto Tecnolﾢgico y de Estudios Superiores de Monterrey";"Lago de Guadalupe Km 3.5  Atizapﾠn de Zaragoza";;;2;1;2;;;;;
+149;"Facultad de Estudios Superiores Iztacala";"Av. de los Barrios 1  Fracc. Los Reyes Iztacala";;;2;1;2;;;;;
