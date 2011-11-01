@@ -24,7 +24,6 @@ class UserInstitutionsController < ApplicationController
     end
   end
 
-  # GET /user_institutions/1/edit
   def edit
     @user_institution = UserInstitution.find(params[:id])
   end

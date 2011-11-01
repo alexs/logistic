@@ -1,0 +1,27 @@
+<p>
+  <b>Fecha:</b>
+  <%=l @comment.date, :format => :long %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%=h @comment.subject %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%=h @comment.user.full_name %>
+</p>
+
+<p>
+  <b>Mensaje:</b>
+  <%=h simple_format(@comment.message) %>
+</p>
+
+<br />
+<br />
+<% if @comment.user_id == current_user.id %>
+<%= link_to 'Edit', edit_comment_path(@comment), :class => 'form-edit' %>
+<% end %>
+<%= link_to 'Regresar', comments_path%>
+<br /><br />

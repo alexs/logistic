@@ -28,6 +28,7 @@
 <table border="1">
 <% @users_in_common.each do |user_institution| %>
   <tr>
+    <td><%=h get_status(user_institution.status) %></td>
     <td><%=h l user_institution.visit_date %></td>
     <td><%=h l user_institution.hour_visit, :format => :human %></td>
     <td><%=h user_institution.user.full_name %></td>

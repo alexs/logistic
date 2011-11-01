@@ -1,0 +1,27 @@
+<br />
+<h3>Comentarios</h3>
+
+<table id="product-table">
+  <tr>
+    <th>Usuario</th>
+    <th>Fecha</th>
+    <th>Titulo</th>
+    <th>Mensaje</th>
+  </tr>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%=h comment.user.full_name %></td>
+    <td><%=l comment.date, :format => :long %></td>
+    <td><%=h comment.subject %></td>
+    <td><%=h comment.message %></td>
+    <td><%= link_to 'Mostrar', comment %></td>
+    <td><% if comment.user_id == current_user.id %><%= link_to 'Modificar', edit_comment_path(comment) %><% end %></td>
+    <td><% if comment.user_id == current_user.id %><%= link_to 'Eliminar', comment, :confirm => 'Se eliminara el comentario, continuar?', :method => :delete %><% end %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo comentario', new_comment_path %>
