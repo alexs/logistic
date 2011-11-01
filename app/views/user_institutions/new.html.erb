@@ -1,10 +1,6 @@
 <br />
 <h3>Seleccion de instituciones a visitar</h3>
 <br />
-<h5>Si piensas realizar la visita el 31 de octubre elige el numero 31
-  en la fecha sin importar que diga noviembre.<h5>
-
-
 
 <% form_for(@user_institution) do |f| %>
   <%= f.error_messages %>
@@ -47,8 +43,7 @@
 
     <td>
         <% opciones = [] %>
-        <% for i in 1..15 do opciones << "<option>#{i}</option>" end %>
-        <% opciones << "<option>31</option>" %>
+        <% for i in 1..14 do opciones << "<option>#{i}</option>" end %>
         <%= select_tag "visit_date[#{institution.id}]", opciones.to_s %> de Noviembre de 2011
         <br />
     </td>
