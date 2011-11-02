@@ -342,6 +342,7 @@ a:hover.icon-5  {
         }
 #product-table  td a:hover      {
         text-decoration: underline;
+        color: #50b52c;
         }
 #product-table  th      {
         height: 50px;
@@ -443,7 +444,7 @@ td.checkbox-width       {
         padding: 0 10px 0 0;
         }
 
-        .table-header-options a:hover,
+.table-header-options a:hover,
  .table-header-repeat a:hover,
  .table-header-special a:hover {
 
