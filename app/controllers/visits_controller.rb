@@ -10,6 +10,13 @@ class VisitsController < ApplicationController
     end
   end
 
+  def download_report1
+      title = "reporte1.xls"
+      GenerateSheet.report1
+      send_file "#{::Rails.root.to_s}/public/excel/#{title}", :type => 'application/vnd.ms-excel', :filename => title
+  end
+
+
   # GET /visits/1
   # GET /visits/1.xml
   def show

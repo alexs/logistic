@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :institutions
   map.resources :rols
   map.resources :masters
-  map.resources :visits
+  map.resources :visits, :collection => { :download_report1 => :get}
 
 
   map.resource :navigator
