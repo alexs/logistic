@@ -89,7 +89,7 @@
           </ul>
         </li>
         <% end %>
-        <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Mensajes</span></a>
+        <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Mensajes (<%= Comment.all.size%>)</span></a>
           <ul class="sub">
             <li>            
                 <%= link_to "Comentarios", comments_path %>
