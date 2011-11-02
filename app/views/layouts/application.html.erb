@@ -57,8 +57,27 @@
         <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Documentos</span></a>
           <ul class="sub">
             <li>            
+                <%= link_to "Carta para colocar publicidad", "carta_publicidad.pdf" %>
+            </li>
+            <li>            
                 <%= link_to "Manual de Stands", "MANUAL_EXP_CONGRESO.pdf" %>
             </li>
+            <li>            
+                <%= link_to "Poster Congreso", "poster_congreso.jpg", :popup => true %>
+            </li>
+            <li>            
+                <%= link_to "Cartel 1 Congreso", "cartel_1_mass.jpg", :popup => true %>
+            </li>
+            <li>            
+                <%= link_to "Cartel 2 Congreso", "cartel_2_mass.jpg", :popup => true %>
+            </li>
+            <li>            
+                <%= link_to "Triptico Congreso Exterior", "triptico_congreso_ext.jpg", :popup => true %>
+            </li>
+            <li>            
+                <%= link_to "Triptico Congreso Interior", "triptico_congreso_int.jpg", :popup => true %>
+            </li>
+
           </ul>
         </li>
         <% if current_user.rol_id == 1 %>
