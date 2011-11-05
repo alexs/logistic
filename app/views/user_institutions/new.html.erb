@@ -14,21 +14,49 @@
     <th>Visita </th>
     <th colspan="2">Fecha y hora en que planea visitar </th>
   </tr>
-  <% Institution.find(:all, :order => 'name').each do |institution| %>
+  <% Institution.find(:all, :order => 'institution_type_id, name').each do |institution| %>
 
   <tr>
     <td>
+      <% @UsersSelected = UserInstitution.find_all_by_institution_id(institution.id) %>
+      <% @UsersCompleted = UserInstitution.find_all_by_institution_id_and_status(institution.id,2) %>
+
       <% if !institution.quantity_team.nil? %>
         <% if UserInstitution.find_all_by_institution_id(institution.id).size < institution.quantity_team %>
+        <% if @UsersCompleted.size < 1 %> 
         <%=  check_box_tag "institution[#{institution.id}]",institution.id %>
       <% else %>
-        Saturada       
+        completa <br />
+        <%= @UsersCompleted.size %> de <%= @UsersSelected.size %> ya fueron.
       <% end %>
+        <br />
+         <%= @UsersSelected.size %> solicitudes<br />
+         <%= @UsersCompleted.size %> completas
+
+      <% else %>
+        <% if @UsersCompleted.size < 1 %> 
+        Saturada.<br />
+         <%= @UsersSelected.size %> solicitudes<br />
+         <%= @UsersCompleted.size %> completas
+      <% else %>
+        completa <br />
+        <%= @UsersCompleted.size %> de <%= @UsersSelected.size %> ya fueron.
+  <% end %>
+      <% end %>
+
     <% else %>
+  <% if @UsersCompleted.size < 1 %> 
       <%=  check_box_tag "institution[#{institution.id}]",institution.id %>
+      <br />
+         <%= @UsersSelected.size %> solicitudes<br />
+         <%= @UsersCompleted.size %> completas
+      <% else %>
+        completa <br />
+        <%= @UsersCompleted.size %> de <%= @UsersSelected.size %> ya fueron.
+<% end %>
   <% end %>
 
-    </td>
+</td>
     <td>
       <%= link_to institution.name, institution_path(institution.id) %>
     </td>
