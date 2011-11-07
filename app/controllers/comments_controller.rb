@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    @comments = Comment.find(:all, :order => "update_at desc")
+    @comments = Comment.find(:all, :order => "updated_at desc")
 
     respond_to do |format|
       format.html # index.html.erb
