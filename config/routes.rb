@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :user_activities
+
+  map.resources :activities
+
   map.resources :comments
 
   map.resources :user_institutions

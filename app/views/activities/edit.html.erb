@@ -1,0 +1,29 @@
+<br />
+<h3>Modificar actividad</h3>
+
+<% form_for(@activity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Actividad: <br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :desc %><br />
+    <%= f.text_area :desc, :size => '75x8' %>
+  </p>
+
+  <p>
+    Actividad registrada por: <%= current_user.full_name %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </p>
+  <p>
+    <%= f.submit 'Update', :class => 'form-submit' %>
+  </p>
+<% end %>
+<p>
+<%= link_to 'Show', @activity, :class => 'form-reset' %> <%= link_to 'Back', user_activities_path, :class => 'form-back' %>
+</p>
+
+<br />
+<br />

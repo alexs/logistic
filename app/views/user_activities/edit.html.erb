@@ -1,0 +1,40 @@
+<h3>Modificar la actividad a realizar</h3>
+
+<% form_for(@user_activity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <b>Actividad:</b> <%= @user_activity.activity.name %>
+  </p>
+  <p>
+    <b>Detalles de la actividad:</b> <%= simple_format(@user_activity.activity.desc) %><br />
+  </p>
+  <p>
+    <b>Fecha de apoyo:</b> <br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <b>Hora de inicio</b><br />
+    <%= f.time_select :start_hour %>
+  </p>
+  <p>
+    <b>Hora de fin</b><br />
+    <%= f.time_select :end_hour %>
+  </p>
+<br />
+<p><b>Comentarios: </b><br />
+    <%= f.text_area :desc, :size => '60x3' %>
+</p>
+  <p>
+    <b>Estado:</b> 
+    <br /><%= f.radio_button :status, 1 %> Solicitada
+    <br /> <%= f.radio_button :status, 2 %> Realizada
+  </p>
+<br />
+<p>
+<%= f.submit 'Update', :class => 'form-submit' %><%= link_to 'Back', user_activities_path, :class => 'form-reset' %>
+</p>
+<% end %>
+<br />
+<br />
+<br />

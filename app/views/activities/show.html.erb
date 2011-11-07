@@ -1,0 +1,21 @@
+<br />
+<h3>Detalle de la actividad</h3>
+
+<p>
+  <b>Actividad:</b>
+  <%=h @activity.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h simple_format(@activity.desc) %>
+</p>
+
+<br />
+<% if @activity.user_id == current_user.id %>
+<%= link_to 'Edit', edit_activity_path(@activity), :class => 'form-edit' %>
+<% end %>
+<%= link_to 'Back', new_user_activity_path, :class => 'form-back' %>
+<br />
+<br />
+<br />

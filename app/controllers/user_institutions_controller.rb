@@ -32,11 +32,7 @@ class UserInstitutionsController < ApplicationController
     @institutions = params[:institution]
 
     @institutions.each_value do |institution|
-      if params[:visit_date][institution.to_s] == "31"
-        @visit_date = '2011-10-' + params[:visit_date][institution.to_s]
-      else
-        @visit_date = '2011-11-' + params[:visit_date][institution.to_s]
-      end
+      @visit_date = '2011-11-' + params[:visit_date][institution.to_s]
 
       @hora = params[:hour_visit][institution.to_s]+":"+params[:minute_visit][institution.to_s]
       @team = params[:team][institution.to_s]

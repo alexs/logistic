@@ -1,0 +1,25 @@
+<h1>Nueva Actividad</h1>
+
+<% form_for(@activity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Actividad:<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Descripción<br />
+    <%= f.text_area :desc, :size => '75x8'  %>
+  </p>
+  <p>
+    Nueva actividad registrada por: <%= current_user.full_name %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </p>
+<br />
+  <p>
+    <%= f.submit 'Guardar', :class => 'form-submit' %> <%= link_to 'Back', root_path, :class => 'form-reset' %>
+  </p>
+<br /><br />
+<% end %>
+
+

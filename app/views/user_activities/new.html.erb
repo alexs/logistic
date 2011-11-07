@@ -1,0 +1,63 @@
+<br />
+<h3>Selecciona las actividades que realizaras durantes el evento.</h3>
+
+<% form_for(@user_activity) do |f| %>
+  <%= f.error_messages %>
+
+
+  <table id="product-table">
+  <tr>
+    <th>✔</th>
+    <th>Actividad </th>
+    <th>Descripcion </th>
+    <th>Dia de apoyo </th>
+    <th>Hora inicio</th>
+    <th>Hora Fin</th>
+    <th>Comentarios</th>
+  </tr>
+
+  <% Activity.find(:all, :order => 'name').each do |activity| %>
+    <tr>
+      <td>
+        <%=  check_box_tag "activity[#{activity.id}]",activity.id %>        
+      </td>
+      <td>
+        <%= link_to activity.name, activity_path(activity.id) %>
+      </td>
+      <td>
+        <%= simple_format(activity.desc) %>
+      </td>
+      <td>
+        <% opciones = [] %>
+        <% for i in 15..19 do opciones << "<option>#{i}</option>" end %>
+        <%= select_tag "date[#{activity.id}]", opciones.to_s %> de Noviembre de 2011
+        <br />
+    </td>
+      <td>
+        <% horas = [] %>
+        <% for i in 6..23 do horas << "<option>#{i}</option>" end %>
+        <%= select_tag "start_hour[#{activity.id}]", horas.to_s %>:<%= select_tag "start_minute[#{activity.id}]", "<option>00</option><option>15</option><option>30</option><option>45</option>" %>
+        <br />
+    </td>
+
+   <td>
+     <% horas2 = [] %>
+        <% for i in 6..23 do horas2 << "<option>#{i}</option>" end %>
+        <%= select_tag "end_hour[#{activity.id}]", horas2.to_s %>:<%= select_tag "end_minute[#{activity.id}]", "<option>00</option><option>15</option><option>30</option><option>45</option>" %>
+        <br />
+    </td>
+      <td>
+        <%=  text_area_tag "activity_desc[#{activity.id}]" %>        
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <p>
+    <%= f.submit 'Create', :class => 'form-submit' %>
+  </p>
+<% end %>
+
+        <br />
+        <br />
+

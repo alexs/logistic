@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  activity_id: 1
+  desc: MyString
+  date: 2011-11-06
+  start_hour: 2011-11-06 15:57:34
+  end_hour: 2011-11-06 15:57:34
+  stauts: 1
+
+two:
+  user_id: 1
+  activity_id: 1
+  desc: MyString
+  date: 2011-11-06
+  start_hour: 2011-11-06 15:57:34
+  end_hour: 2011-11-06 15:57:34
+  stauts: 1

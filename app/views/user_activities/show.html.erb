@@ -1,0 +1,32 @@
+<h3>Detalles de la actividad a realizar</h3>
+<p>
+  <b>Actividad:</b>
+  <%=h @user_activity.activity.name %>
+</p>
+
+<p>
+  <b>Detalles de la Actividad:</b>
+  <%=h simple_format(@user_activity.activity.desc) %>
+</p>
+
+<p>
+  <b>Fecha y horario de apoyo:</b>
+  <%=l @user_activity.date, :format => :long %> de <%=l @user_activity.start_hour, :format => :human%> a <%=l @user_activity.end_hour, :format => :human %>
+
+</p>
+
+<p>
+  <b>Comentarios:</b>
+  <%=h simple_format(@user_activity.desc) %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%=h get_status @user_activity.status %>
+</p>
+
+<br />
+
+<%= link_to 'Edit', edit_user_activity_path(@user_activity), :class =>'form-edit'%> <%= link_to 'Back', user_activities_path, :class => 'form-back' %>
+
+<br /><br /><br />
