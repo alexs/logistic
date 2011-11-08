@@ -89,4 +89,24 @@ class GenerateSheet
 
     book.write ::Rails.root.to_s + '/public/excel/instituciones_visitadas.xls'
     end
+
+    def self.report5
+    Spreadsheet.client_encoding = 'UTF-8'
+      book = Spreadsheet.open ::Rails.root.to_s + '/public/excel/Reporte5_machote.xls'
+      sheet = book.worksheet 0
+
+      i = 12
+      UserActivity.all.each do |actividad|
+
+        sheet[i,0] = actividad.user.full_name
+        sheet[i,1] = actividad.activity.name
+        sheet[i,2] = actividad.activity.desc
+        sheet[i,3] = actividad.date
+        sheet[i,4] = actividad.start_hour
+        sheet[i,5] = actividad.end_hour
+        i = i + 1
+      end
+
+    book.write ::Rails.root.to_s + '/public/excel/actividades_seleccionadas.xls'
+    end
   end

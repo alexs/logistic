@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   belongs_to :master
   has_many :institutions
   has_many :user_institutions
+  has_many :user_activities
   has_many :comments
 
   validates_presence_of     :login #, :email
