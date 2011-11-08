@@ -104,6 +104,8 @@ class GenerateSheet
         sheet[i,3] = actividad.date
         sheet[i,4] = actividad.start_hour
         sheet[i,5] = actividad.end_hour
+        sheet[i,6] = actividad.desc
+
         i = i + 1
       end
 
