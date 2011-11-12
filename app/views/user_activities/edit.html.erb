@@ -9,18 +9,7 @@
   <p>
     <b>Detalles de la actividad:</b> <%= simple_format(@user_activity.activity.desc) %><br />
   </p>
-  <p>
-    <b>Fecha de apoyo:</b> <br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <b>Hora de inicio</b><br />
-    <%= f.time_select :start_hour %>
-  </p>
-  <p>
-    <b>Hora de fin</b><br />
-    <%= f.time_select :end_hour %>
-  </p>
+
 <br />
 <p><b>Comentarios: </b><br />
     <%= f.text_area :desc, :size => '60x3' %>

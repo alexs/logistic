@@ -11,9 +11,6 @@
     <th>Actividad </th>
     <th>Descripcion </th>
     <th>Limite de <br />personas</th>
-    <th>Dia de apoyo </th>
-    <th>Hora inicio</th>
-    <th>Hora Fin</th>
     <th>Comentarios</th>
   </tr>
 
@@ -39,25 +36,7 @@
       <td>
         <%= activity.quantity %>
       </td>
-      <td>
-        <% opciones = [] %>
-        <% for i in 14..19 do opciones << "<option>#{i}</option>" end %>
-        <%= select_tag "date[#{activity.id}]", opciones.to_s %> de Noviembre de 2011
-        <br />
-    </td>
-      <td>
-        <% horas = [] %>
-        <% for i in 6..23 do horas << "<option>#{i}</option>" end %>
-        <%= select_tag "start_hour[#{activity.id}]", horas.to_s %>:<%= select_tag "start_minute[#{activity.id}]", "<option>00</option><option>15</option><option>30</option><option>45</option>" %>
-        <br />
-    </td>
 
-   <td>
-     <% horas2 = [] %>
-        <% for i in 6..23 do horas2 << "<option>#{i}</option>" end %>
-        <%= select_tag "end_hour[#{activity.id}]", horas2.to_s %>:<%= select_tag "end_minute[#{activity.id}]", "<option>00</option><option>15</option><option>30</option><option>45</option>" %>
-        <br />
-    </td>
       <td>
         <%=  text_area_tag "activity_desc[#{activity.id}]" %>        
       </td>

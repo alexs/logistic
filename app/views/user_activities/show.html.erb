@@ -10,12 +10,6 @@
 </p>
 
 <p>
-  <b>Fecha y horario de apoyo:</b>
-  <%=l @user_activity.date, :format => :long %> de <%=l @user_activity.start_hour, :format => :human%> a <%=l @user_activity.end_hour, :format => :human %>
-
-</p>
-
-<p>
   <b>Comentarios:</b>
   <%=h simple_format(@user_activity.desc) %>
 </p>
