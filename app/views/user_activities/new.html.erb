@@ -11,6 +11,7 @@
     <th>Actividad </th>
     <th>Descripcion </th>
     <th>Limite de <br />personas</th>
+    <th>Personas <br />registradas</th>
     <th>Comentarios</th>
   </tr>
 
@@ -36,7 +37,9 @@
       <td>
         <%= activity.quantity %>
       </td>
-
+       <td>
+        <%=  UserActivity.find_all_by_activity_id(activity.id).size %>
+      </td>
       <td>
         <%=  text_area_tag "activity_desc[#{activity.id}]" %>        
       </td>
