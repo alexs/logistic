@@ -16,6 +16,25 @@
   </tr>
 
   <% Activity.find(:all, :conditions => ['status = ?',1], :order => 'id').each do |activity| %>
+<% if activity.id == 23 %>
+<tr  class="alternate-row">
+<td colspan="6">
+Lunes despues de la Junta.
+</td>
+</tr>
+<% elsif activity.id == 24 %>
+<tr  class="alternate-row">
+<td colspan="6">
+Recepcion de ponentes.
+</td>
+</tr>
+<% elsif activity.id == 30 %>
+<tr  class="alternate-row">
+<td colspan="6">
+Actividades Durante el congreso
+</td>
+</tr>
+<% end %>
     <tr>
       <td>
         <% if !activity.quantity.nil? %>
