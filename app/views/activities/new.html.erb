@@ -10,6 +10,7 @@
   <p>
     Descripción<br />
     <%= f.text_area :desc, :size => '75x8'  %>
+    <%= f.hidden_field :status, :value => 1  %>
   </p>
   <p>
     Nueva actividad registrada por: <%= current_user.full_name %>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -54,6 +55,19 @@
             <li><%= link_to "Agregar nueva institución", new_institution_path %></li>
           </ul>
         </li>
+
+        <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Actividades</span></a>
+          <ul class="sub">
+            <li>
+                <%= link_to "Seleccionar actividades a realizar", new_user_activity_path %>
+            </li>
+            <li>
+                <%= link_to "Mis actividades", user_activities_path %>
+            </li>
+            <% if current_user.rol_id == 1 %><li><%= link_to "Sugerir actividad", new_activity_path %></li><% end %>
+          </ul>
+        </li>
+
         <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Documentos</span></a>
           <ul class="sub">
             <li>            

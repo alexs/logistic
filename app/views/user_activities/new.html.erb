@@ -16,7 +16,7 @@
     <th>Comentarios</th>
   </tr>
 
-  <% Activity.find(:all, :order => 'name').each do |activity| %>
+  <% Activity.find(:all, :conditions => ['status = ?',1], :order => 'name').each do |activity| %>
     <tr>
       <td>
         <%=  check_box_tag "activity[#{activity.id}]",activity.id %>        
