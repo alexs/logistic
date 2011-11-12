@@ -15,7 +15,7 @@
     <th>Comentarios</th>
   </tr>
 
-  <% Activity.find(:all, :conditions => ['status = ?',1], :order => 'name').each do |activity| %>
+  <% Activity.find(:all, :conditions => ['status = ?',1], :order => 'id').each do |activity| %>
     <tr>
       <td>
         <% if !activity.quantity.nil? %>
