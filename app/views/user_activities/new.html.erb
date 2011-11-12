@@ -10,6 +10,7 @@
     <th>✔</th>
     <th>Actividad </th>
     <th>Descripcion </th>
+    <th>Limite de <br />personas</th>
     <th>Dia de apoyo </th>
     <th>Hora inicio</th>
     <th>Hora Fin</th>
@@ -19,13 +20,24 @@
   <% Activity.find(:all, :conditions => ['status = ?',1], :order => 'name').each do |activity| %>
     <tr>
       <td>
+        <% if !activity.quantity.nil? %>
+          <% if UserActivity.find_all_by_activity_id(activity.id).size < activity.quantity %>
+          <%=  check_box_tag "activity[#{activity.id}]",activity.id %>        
+          <% else %>
+            Llena
+          <% end %>
+      <% else %>
         <%=  check_box_tag "activity[#{activity.id}]",activity.id %>        
+        <% end %>
       </td>
       <td>
         <%= link_to activity.name, activity_path(activity.id) %>
       </td>
       <td>
         <%= simple_format(activity.desc) %>
+      </td>
+      <td>
+        <%= activity.quantity %>
       </td>
       <td>
         <% opciones = [] %>

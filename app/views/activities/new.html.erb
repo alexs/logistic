@@ -16,6 +16,10 @@
     Nueva actividad registrada por: <%= current_user.full_name %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </p>
+  <p>
+    Cantidad Máxima de personas:<br />
+    <%= f.text_field :quantity %>
+  </p>
 <br />
   <p>
     <%= f.submit 'Guardar', :class => 'form-submit' %> <%= link_to 'Back', root_path, :class => 'form-reset' %>
