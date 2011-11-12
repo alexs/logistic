@@ -58,9 +58,11 @@
 
         <li class="top"> <li class="top"><a href="" target="_self" class="top_link"><span>Actividades</span></a>
           <ul class="sub">
+            <% if current_user.rol_id == 1 %>
             <li>
                 <%= link_to "Seleccionar actividades a realizar", new_user_activity_path %>
             </li>
+            <% end %>
             <li>
                 <%= link_to "Mis actividades", user_activities_path %>
             </li>
